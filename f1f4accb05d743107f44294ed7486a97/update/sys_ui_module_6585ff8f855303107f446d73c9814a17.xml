@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Hiring Decision">a985ff8f855303107f446d73c9814a14</application>
+        <filter/>
+        <name>Hiring Decisions</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_snc_aegis.hiring_decision_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>CHAITANYA</sys_created_by>
+        <sys_created_on>2026-09-18 04:10:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6585ff8f855303107f446d73c9814a17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hiring Decisions</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_ui_module_6585ff8f855303107f446d73c9814a17</sys_update_name>
+        <sys_updated_by>CHAITANYA</sys_updated_by>
+        <sys_updated_on>2026-09-18 04:10:50</sys_updated_on>
+        <table>x_snc_aegis_hiring_decision</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

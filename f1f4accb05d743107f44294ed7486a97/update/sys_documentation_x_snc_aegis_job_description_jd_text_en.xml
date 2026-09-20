@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="jd_text" label="Jd text" language="en" table="x_snc_aegis_job_description">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>jd_text</element>
+            <help/>
+            <hint/>
+            <label>Jd text</label>
+            <language>en</language>
+            <name>x_snc_aegis_job_description</name>
+            <plural>Jd texts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 14:22:25</sys_created_on>
+            <sys_id>d2e7384b059b43107f44294ed7486ae0</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Jd text</sys_name>
+            <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_aegis_job_description_jd_text_en</sys_update_name>
+            <sys_updated_by>CHAITANYA</sys_updated_by>
+            <sys_updated_on>2026-09-18 06:41:52</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

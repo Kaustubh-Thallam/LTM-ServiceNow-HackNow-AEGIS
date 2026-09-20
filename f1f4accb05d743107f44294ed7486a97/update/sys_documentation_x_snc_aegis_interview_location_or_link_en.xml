@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="location_or_link" label="Location or Meeting Link" language="en" table="x_snc_aegis_interview">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>location_or_link</element>
+            <help/>
+            <hint/>
+            <label>Location or Meeting Link</label>
+            <language>en</language>
+            <name>x_snc_aegis_interview</name>
+            <plural>Location or Meeting Links</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-09-18 09:59:30</sys_created_on>
+            <sys_id>0955c55f859f03107f446d73c9814a53</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Location or Meeting Link</sys_name>
+            <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_aegis_interview_location_or_link_en</sys_update_name>
+            <sys_updated_by>CHAITANYA</sys_updated_by>
+            <sys_updated_on>2026-09-20 08:04:17</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
