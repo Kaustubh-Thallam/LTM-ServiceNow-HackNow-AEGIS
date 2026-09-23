@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="employment_type" table="x_snc_aegis_job_requisition" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>employment_type</element>
+            <name>x_snc_aegis_job_requisition</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-09-23 09:11:36</sys_created_on>
+            <sys_id>085aa234e4ab03107f44705ba96fabd6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>employment_type</sys_name>
+            <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+            <sys_update_name>sys_choice_x_snc_aegis_job_requisition_employment_type</sys_update_name>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-09-23 09:11:36</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Full time</label>
+            <language>en</language>
+            <name>x_snc_aegis_job_requisition</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-09-23 09:11:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cc5aa234e4ab03107f44705ba96fabd5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-09-23 09:12:33</sys_updated_on>
+            <value>FULL_TIME</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Part time</label>
+            <language>en</language>
+            <name>x_snc_aegis_job_requisition</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-09-23 09:11:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>045a6634e4ab03107f44705ba96fab30</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-09-23 09:12:14</sys_updated_on>
+            <value>PART_TIME</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Contract</label>
+            <language>en</language>
+            <name>x_snc_aegis_job_requisition</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-09-23 09:11:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>045a6634e4ab03107f44705ba96fab41</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-09-23 09:12:18</sys_updated_on>
+            <value>CONTRACT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Internship</label>
+            <language>en</language>
+            <name>x_snc_aegis_job_requisition</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-09-23 09:11:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>045a6634e4ab03107f44705ba96fab52</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-09-23 09:12:24</sys_updated_on>
+            <value>INTERNSHIP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>employment_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Temporary</label>
+            <language>en</language>
+            <name>x_snc_aegis_job_requisition</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-09-23 09:11:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>045a6634e4ab03107f44705ba96fab63</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-09-23 09:12:28</sys_updated_on>
+            <value>TEMPORARY</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

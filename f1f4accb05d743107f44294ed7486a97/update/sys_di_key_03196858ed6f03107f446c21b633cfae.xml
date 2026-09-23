@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_di_key">
+    <sys_di_key action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_details/>
+        <description>The total number of years of relevant professional work experience mentioned in the resume. Return a single number. Examples: 3, 4.5, 7.
+</description>
+        <display_name>years_experience</display_name>
+        <group_index>0</group_index>
+        <key_config/>
+        <key_group/>
+        <mandatory>false</mandatory>
+        <metadata>{"hybridFieldType":"Field","key_prediction_type":"extraction"}</metadata>
+        <name>years_experience</name>
+        <order>1</order>
+        <prediction_method/>
+        <stp_threshold/>
+        <synonym/>
+        <sys_class_name>sys_di_key</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-21 10:30:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>03196858ed6f03107f446c21b633cfae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>years_experience</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_di_key_03196858ed6f03107f446c21b633cfae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-21 10:30:09</sys_updated_on>
+        <target_field/>
+        <target_table/>
+        <task_definition display_value="Resume extraction">c3f7a0d4ed6f03107f446c21b633cf9f</task_definition>
+        <total_used_positive_samples>0</total_used_positive_samples>
+        <type>decimal</type>
+    </sys_di_key>
+</record_update>

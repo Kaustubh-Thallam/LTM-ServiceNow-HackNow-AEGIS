@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="di_skill_config">
+    <di_skill_config action="INSERT_OR_UPDATE">
+        <capability display_value="Document Metadata Extraction">c1ed5cb20763021017741f00ead300d6</capability>
+        <config>{"prompt":{"model_size":"large"},"provider":{"use_aws_api":true},"pipeline":{"document_extraction_inference_layout":"spatial","bounding_box_mapping_method":"default","include_key_info":"true","enable_multiple_requests":"false","enable_native_translation":"false","response_type":"document_extraction","enable_bounding_box_mapping":"false","structured_output_request_enabled":"false","enable_multimodal_input":true}}</config>
+        <flow display_value="Document Data Extraction for Fields">3afeadffa31a1210d6438d4eb31e6112</flow>
+        <key_group/>
+        <skill_config display_value="Extract information from documents">2a61d90d07c61210cf8c1f00ead300e5</skill_config>
+        <sys_class_name>di_skill_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-21 10:25:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>4bf7a0d4ed6f03107f446c21b633cfa8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>di_skill_config_4bf7a0d4ed6f03107f446c21b633cfa8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-21 10:25:14</sys_updated_on>
+        <task_definition display_value="Resume extraction">c3f7a0d4ed6f03107f446c21b633cf9f</task_definition>
+        <type>extraction</type>
+    </di_skill_config>
+</record_update>

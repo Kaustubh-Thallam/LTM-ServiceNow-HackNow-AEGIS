@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_suggestion_reader_group">
+    <sys_suggestion_reader_group action="INSERT_OR_UPDATE">
+        <click_in_mode>true</click_in_mode>
+        <context_config_id/>
+        <limit>5</limit>
+        <order>200</order>
+        <section_header>Popular searches</section_header>
+        <suggestion_type>Popular Search Reader Group for Service Portal Default Search Application</suggestion_type>
+        <sys_class_name>sys_suggestion_reader_group</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 09:51:49</sys_created_on>
+        <sys_id>a950a454ed2f03107f446c21b633cf32</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Popular Search Reader Group for Service Portal Default Search Application</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_suggestion_reader_group_a950a454ed2f03107f446c21b633cf32</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 09:51:49</sys_updated_on>
+    </sys_suggestion_reader_group>
+</record_update>

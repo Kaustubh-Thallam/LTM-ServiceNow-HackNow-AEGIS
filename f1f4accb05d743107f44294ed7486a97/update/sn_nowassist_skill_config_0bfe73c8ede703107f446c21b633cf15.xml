@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config">
+    <sn_nowassist_skill_config action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <description><![CDATA[Coordinates personalized candidate interviews by analyzing the candidate&#39;s application, resume, candidate profile, target job requisition, job description, and screening results. Generates evidence-based interview questions and scoring rubrics tailored to the specific candidate and role.]]></description>
+        <edited_in_nask>false</edited_in_nask>
+        <in_product_active>false</in_product_active>
+        <in_product_roles/>
+        <internal_name>aegis_interview_orchestrator.0bfe73c8ede703107f446c21b633cf15</internal_name>
+        <is_template>false</is_template>
+        <name>AEGIS Interview Orchestrator</name>
+        <nap_skill_applicability/>
+        <order>100</order>
+        <parent/>
+        <skill_family display_value="Other">a5efaf1c93764210aa5730f16489186d</skill_family>
+        <skill_id>36fe33c8ede703107f446c21b633cfb1</skill_id>
+        <skill_table>sys_one_extend_capability</skill_table>
+        <state>0</state>
+        <success_message/>
+        <sys_class_name>sn_nowassist_skill_config</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-21 07:26:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>0bfe73c8ede703107f446c21b633cf15</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>AEGIS Interview Orchestrator</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_0bfe73c8ede703107f446c21b633cf15</sys_update_name>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 05:43:55</sys_updated_on>
+    </sn_nowassist_skill_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=0bfe73c8ede703107f446c21b633cf15"/>
+</record_update>

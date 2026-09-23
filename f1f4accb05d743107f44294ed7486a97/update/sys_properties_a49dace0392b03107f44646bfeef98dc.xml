@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Email from address for all AEGIS notifications</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_aegis.notifications.from_address</name>
+        <read_roles/>
+        <suffix>notifications.from_address</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 05:28:41</sys_created_on>
+        <sys_id>a49dace0392b03107f44646bfeef98dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_aegis.notifications.from_address</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_properties_a49dace0392b03107f44646bfeef98dc</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 05:28:41</sys_updated_on>
+        <type>string</type>
+        <value>aegis-noreply@novatech.com</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=a49dace0392b03107f44646bfeef98dc"/>
+</record_update>

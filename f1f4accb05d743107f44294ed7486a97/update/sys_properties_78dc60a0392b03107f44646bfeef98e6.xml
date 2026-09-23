@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Company tagline for branding in JDs and portal</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_aegis.company.tagline</name>
+        <read_roles/>
+        <suffix>company.tagline</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 05:25:16</sys_created_on>
+        <sys_id>78dc60a0392b03107f44646bfeef98e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_aegis.company.tagline</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_properties_78dc60a0392b03107f44646bfeef98e6</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 05:25:16</sys_updated_on>
+        <type>string</type>
+        <value>Engineering the future of cloud infrastructure</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=78dc60a0392b03107f44646bfeef98e6"/>
+</record_update>
