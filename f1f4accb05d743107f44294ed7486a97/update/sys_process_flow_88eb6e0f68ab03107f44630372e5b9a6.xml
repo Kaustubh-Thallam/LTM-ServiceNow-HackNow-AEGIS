@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_process_flow">
+    <sys_process_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_aegis_job_requisition">stage=INITIAL^EQ<item display_value="Initial" endquery="false" field="stage" goto="false" newquery="false" operator="=" or="false" value="INITIAL"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
+        <label>Initial </label>
+        <name>Initial</name>
+        <order>100</order>
+        <sys_class_name>sys_process_flow</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-30 09:05:52</sys_created_on>
+        <sys_id>88eb6e0f68ab03107f44630372e5b9a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Initial</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_process_flow_88eb6e0f68ab03107f44630372e5b9a6</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-30 09:05:52</sys_updated_on>
+        <table>x_snc_aegis_job_requisition</table>
+    </sys_process_flow>
+</record_update>

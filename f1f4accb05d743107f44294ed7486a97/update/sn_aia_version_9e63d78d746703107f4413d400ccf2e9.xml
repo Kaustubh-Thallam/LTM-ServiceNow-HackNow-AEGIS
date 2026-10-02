@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_version">
+    <sn_aia_version action="INSERT_OR_UPDATE">
+        <condition/>
+        <instructions>1. Read JR by sys_id -&gt; interview_dates_and_timings, interview_time_per_person,
+   panel_members, role_title, responsibilities, interview_type, location_or_link.
+   JR missing, panel_members empty, no usable dates/daily times, or unreadable
+   duration -&gt; stop, create nothing, report reason.
+2. Read latest APPROVED/PUBLISHED JD for the JR (jd_text).
+3. Query applications: requisition = JR, stage = SHORTLISTED, withdrawn = false,
+   oldest first -&gt; queue. Empty -&gt; stop and report.
+4. Get existing Interviews for the JR. Skip applications with a non-cancelled
+   Interview (Already Scheduled). Seed per-panelist interview counts.
+5. Read dates, daily hours, lunch (default 1-2 PM IST) and breaks from the schedule
+   text. Build back-to-back slots per date, length = interview_time_per_person,
+   avoiding lunch/breaks (overlap under 5 min allowed).
+6. For each candidate in the queue: pick the panelist with the fewest interviews
+   (tie: panel_members order) and the earliest slot. Call Check Panelist Conflict.
+   Busy -&gt; next slot, then next panelist. Nothing free -&gt; Unassigned with reason.
+7. For assigned candidates only: get screening result; write 5/7/10 Markdown
+   questions (question, expected answer, rubric), max 4000 chars.
+8. Create Interview record. No sys_id returned -&gt; Unassigned with error.
+9. Repeat 6-8 until the queue is empty.
+10. Write one INTERVIEW_SCHEDULE entry via Log Panel Assignment Run.
+11. Report Scheduled, Already Scheduled, Unassigned (reason each), Total. Sum must
+    equal Total.</instructions>
+        <state>published</state>
+        <sys_class_name>sn_aia_version</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-24 06:49:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>9e63d78d746703107f4413d400ccf2e9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>V1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_version_9e63d78d746703107f4413d400ccf2e9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-01 10:32:43</sys_updated_on>
+        <target_id>a1f05349746703107f4413d400ccf236</target_id>
+        <target_table>sn_aia_agent</target_table>
+        <version_name>V1</version_name>
+        <version_number>1</version_number>
+    </sn_aia_version>
+</record_update>

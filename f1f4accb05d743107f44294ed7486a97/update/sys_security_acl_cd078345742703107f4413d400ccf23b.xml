@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing>Existing</local_or_existing>
+        <name>global.x_snc_aegis.Feedback Synthesis Agent</name>
+        <operation display_value="execute">execute</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-24 05:55:30</sys_created_on>
+        <sys_id>cd078345742703107f4413d400ccf23b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>global.x_snc_aegis.Feedback Synthesis Agent</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_security_acl_cd078345742703107f4413d400ccf23b</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-24 05:55:30</sys_updated_on>
+        <type display_value="gen_ai_agent">fc55e9f79f8222109570e67e8a0a1c34</type>
+    </sys_security_acl>
+</record_update>

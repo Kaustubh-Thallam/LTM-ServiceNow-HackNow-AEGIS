@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-01 05:47:32</sys_created_on>
+        <sys_id>d738cb5f10a703107f44966d0e73c9ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>global.x_snc_aegis.Feedback Synthesis Agent.x_snc_aegis.app_admin</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_security_acl display_value="global.x_snc_aegis.Feedback Synthesis Agent">cd078345742703107f4413d400ccf23b</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_d738cb5f10a703107f44966d0e73c9ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-01 05:47:32</sys_updated_on>
+        <sys_user_role display_value="x_snc_aegis.app_admin" name="x_snc_aegis.app_admin">9bee7c9b855f03107f446d73c9814aba</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

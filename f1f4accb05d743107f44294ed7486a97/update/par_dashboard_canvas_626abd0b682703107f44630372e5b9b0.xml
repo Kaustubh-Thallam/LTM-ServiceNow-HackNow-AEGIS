@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_canvas">
+    <par_dashboard_canvas action="INSERT_OR_UPDATE">
+        <dashboard display_value="AEGIS - Recruitment Performance Dashboard">a26abd0b682703107f44630372e5b945</dashboard>
+        <dashboard_tab display_value="New Tab 72">6e6abd0b682703107f44630372e5b9ac</dashboard_tab>
+        <layout>[]</layout>
+        <sys_class_name>par_dashboard_canvas</sys_class_name>
+        <sys_created_by>CHAITANYA</sys_created_by>
+        <sys_created_on>2026-09-30 05:28:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>626abd0b682703107f44630372e5b9b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>par_dashboard_canvas_626abd0b682703107f44630372e5b9b0</sys_update_name>
+        <sys_updated_by>CHAITANYA</sys_updated_by>
+        <sys_updated_on>2026-09-30 05:28:40</sys_updated_on>
+    </par_dashboard_canvas>
+</record_update>
