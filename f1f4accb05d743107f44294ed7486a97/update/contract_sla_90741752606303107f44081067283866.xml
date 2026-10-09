@@ -2,10 +2,14 @@
     <contract_sla action="INSERT_OR_UPDATE">
         <active>true</active>
         <adv_condition_type>none</adv_condition_type>
-        <cancel_condition/>
+        <cancel_condition table="x_snc_aegis_application">withdrawn=true^ORstage=REJECTED^ORstage=CLOSED^EQ<item endquery="false" field="withdrawn" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item display_value="Rejected" endquery="false" field="stage" goto="false" newquery="false" operator="=" or="true" value="REJECTED"/>
+            <item display_value="Closed" endquery="false" field="stage" goto="false" newquery="false" operator="=" or="true" value="CLOSED"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </cancel_condition>
         <collection>x_snc_aegis_application</collection>
         <condition_class/>
-        <duration>1970-01-06 00:00:00</duration>
+        <duration>1970-01-02 21:00:00</duration>
         <duration_type/>
         <enable_logging>false</enable_logging>
         <flow display_value="Default SLA flow">828f267973333300e289235f04f6a7a3</flow>
@@ -17,7 +21,7 @@
         <resume_condition/>
         <retroactive>false</retroactive>
         <retroactive_pause>true</retroactive_pause>
-        <schedule display_value="8-5 weekdays">08fcd0830a0a0b2600079f56b1adb9ae</schedule>
+        <schedule display_value="AEGIS 9-6 Weekdays IST (excl. India Holidays)">560faf717db703107f445046e28c7862</schedule>
         <schedule_source>sla_definition</schedule_source>
         <schedule_source_field/>
         <set_start_to/>
@@ -33,18 +37,18 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>90741752606303107f44081067283866</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>AEGIS - 5-Day Candidate Screening</sys_name>
         <sys_overrides/>
         <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
         <sys_policy/>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_update_name>contract_sla_90741752606303107f44081067283866</sys_update_name>
-        <sys_updated_by>CHAITANYA</sys_updated_by>
-        <sys_updated_on>2026-09-28 04:09:00</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-09 03:17:30</sys_updated_on>
         <target>resolution</target>
-        <timezone/>
-        <timezone_source>task.caller_id.time_zone</timezone_source>
+        <timezone>Asia/Kolkata</timezone>
+        <timezone_source>sla.timezone</timezone_source>
         <type>SLA</type>
         <vendor/>
         <when_to_cancel>on_condition</when_to_cancel>

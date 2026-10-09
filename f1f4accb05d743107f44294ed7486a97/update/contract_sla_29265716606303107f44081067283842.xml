@@ -5,7 +5,7 @@
         <cancel_condition/>
         <collection>x_snc_aegis_hiring_decision</collection>
         <condition_class/>
-        <duration>1970-01-03 00:00:00</duration>
+        <duration>1970-01-01 18:00:00</duration>
         <duration_type/>
         <enable_logging>false</enable_logging>
         <flow display_value="Default SLA flow">828f267973333300e289235f04f6a7a3</flow>
@@ -17,7 +17,7 @@
         <resume_condition/>
         <retroactive>false</retroactive>
         <retroactive_pause>true</retroactive_pause>
-        <schedule display_value="8-5 weekdays">08fcd0830a0a0b2600079f56b1adb9ae</schedule>
+        <schedule display_value="AEGIS 9-6 Weekdays IST (excl. India Holidays)">560faf717db703107f445046e28c7862</schedule>
         <schedule_source>sla_definition</schedule_source>
         <schedule_source_field/>
         <set_start_to/>
@@ -33,21 +33,21 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>29265716606303107f44081067283842</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>AEGIS - 2-Day Candidate Closure</sys_name>
         <sys_overrides/>
         <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
         <sys_policy/>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_update_name>contract_sla_29265716606303107f44081067283842</sys_update_name>
-        <sys_updated_by>CHAITANYA</sys_updated_by>
-        <sys_updated_on>2026-09-28 04:15:23</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-09 03:20:58</sys_updated_on>
         <target>resolution</target>
-        <timezone/>
-        <timezone_source>task.caller_id.time_zone</timezone_source>
+        <timezone>Asia/Kolkata</timezone>
+        <timezone_source>sla.timezone</timezone_source>
         <type>SLA</type>
         <vendor/>
-        <when_to_cancel>on_condition</when_to_cancel>
+        <when_to_cancel>never</when_to_cancel>
         <when_to_resume>on_condition</when_to_resume>
         <workflow/>
     </contract_sla>
