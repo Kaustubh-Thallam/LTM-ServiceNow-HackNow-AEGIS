@@ -5,7 +5,7 @@
         <active>true</active>
         <allow_high_security_roles>false</allow_high_security_roles>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=1327300000,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=1372718000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>29000</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -16,20 +16,20 @@
         <flow_priority/>
         <generation_source/>
         <internal_name>jd_approval_flow</internal_name>
-        <label_cache>[{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.comments","label":"2➛Approval Record➛Comments","reference":"","reference_display":"Comments","type":"journal_input","base_type":"journal_input","parent_table_name":"sysapproval_approver","column_name":"comments","usedInstances":{"13aa9c61-d31b-4378-b378-edd71979cb13":["additional_comments"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛ Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_description","column_name":"number","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":["ah_subject"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["ah_subject"]}},{"name":"Updated_1.current.requisition.role_title","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Role title","reference":"","reference_display":"Role title","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"role_title","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.requisition.hiring_manager.name","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Hiring manager➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.requisition.number","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"number","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["approval_reason"]}},{"name":"Updated_1.current.requisition.hiring_manager.email","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Hiring manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":["ah_to"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["ah_to"]}},{"name":"Updated_1.current.requisition","label":"Trigger - Record Updated➛ Record➛Job Requisition","reference":"x_snc_aegis_job_requisition","reference_display":"Job Requisition","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_job_description","column_name":"requisition","usedInstances":{}},{"name":"b6a5ef38-b143-4740-b05e-de6f90337fca.record.approved_by.email","label":"4➛ Record➛Approved by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{}},{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.sys_updated_on","label":"2➛Approval Record➛Updated","reference":"","reference_display":"Updated","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sysapproval_approver","column_name":"sys_updated_on","usedInstances":{"b6a5ef38-b143-4740-b05e-de6f90337fca":["approved_at"]}},{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.approver","label":"2➛Approval Record➛Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sysapproval_approver","column_name":"approver","usedInstances":{"b6a5ef38-b143-4740-b05e-de6f90337fca":["approved_by"]}},{"name":"{{static.41c174f400fb03107f440a4ac0cab0a2}}","label":"AEGIS HR Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"21c935c8-bc23-428f-a671-3aee137188bb":["approval_conditions"],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛ Record","reference":"x_snc_aegis_job_description","reference_display":"Job Description","type":"reference","base_type":"reference","usedInstances":{"31664d5d-a7ee-4512-b9a9-3224570dc57d":["record"],"21c935c8-bc23-428f-a671-3aee137188bb":["record"],"8de03bc4-9002-4458-98c6-5570c0d0981b":[null],"b6a5ef38-b143-4740-b05e-de6f90337fca":["record"],"20a37995-f025-46a8-9f98-de3714faf893":["record"],"13aa9c61-d31b-4378-b378-edd71979cb13":["record"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["record"],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["record"]},"attributes":{}},{"name":"8832d1ba-c9cd-471b-ac42-f16e209df9a9.approval_state","label":"1 - Ask For Approval➛Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"df0a3adf-8954-43fe-964d-3dc356736e08":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <label_cache>[{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.comments","label":"2➛Approval Record➛Comments","reference":"","reference_display":"Comments","type":"journal_input","base_type":"journal_input","parent_table_name":"sysapproval_approver","column_name":"comments","usedInstances":{"13aa9c61-d31b-4378-b378-edd71979cb13":["additional_comments"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛ Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_description","column_name":"number","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":["ah_subject"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["ah_subject"]}},{"name":"Updated_1.current.requisition.role_title","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Role title","reference":"","reference_display":"Role title","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"role_title","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.requisition.hiring_manager.name","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Hiring manager➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.requisition.number","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"number","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["approval_reason"]}},{"name":"Updated_1.current.requisition.hiring_manager.email","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Hiring manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":["ah_to"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["ah_to"]}},{"name":"Updated_1.current.requisition","label":"Trigger - Record Updated➛ Record➛Job Requisition","reference":"x_snc_aegis_job_requisition","reference_display":"Job Requisition","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_job_description","column_name":"requisition","usedInstances":{}},{"name":"b6a5ef38-b143-4740-b05e-de6f90337fca.record.approved_by.email","label":"4➛ Record➛Approved by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{}},{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.sys_updated_on","label":"2➛Approval Record➛Updated","reference":"","reference_display":"Updated","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sysapproval_approver","column_name":"sys_updated_on","usedInstances":{"b6a5ef38-b143-4740-b05e-de6f90337fca":["approved_at"]}},{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.approver","label":"2➛Approval Record➛Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sysapproval_approver","column_name":"approver","usedInstances":{"b6a5ef38-b143-4740-b05e-de6f90337fca":["approved_by"]}},{"name":"{{static.41c174f400fb03107f440a4ac0cab0a2}}","label":"AEGIS HR Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"21c935c8-bc23-428f-a671-3aee137188bb":["approval_conditions"],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛ Record","reference":"x_snc_aegis_job_description","reference_display":"Job Description","type":"reference","base_type":"reference","usedInstances":{"31664d5d-a7ee-4512-b9a9-3224570dc57d":["record"],"21c935c8-bc23-428f-a671-3aee137188bb":["record"],"8de03bc4-9002-4458-98c6-5570c0d0981b":[null],"b6a5ef38-b143-4740-b05e-de6f90337fca":["record"],"20a37995-f025-46a8-9f98-de3714faf893":["record"],"13aa9c61-d31b-4378-b378-edd71979cb13":["record"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["record"],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["record"]},"attributes":{}},{"name":"8832d1ba-c9cd-471b-ac42-f16e209df9a9.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"df0a3adf-8954-43fe-964d-3dc356736e08":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
         <master_snapshot>04f11901e42383107f44705ba96fab2a</master_snapshot>
         <master_snapshot_digest/>
         <name>JD Publishing Request Flow</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <remote_trigger_id>0f78984a7d7f03107f445046e28c7848</remote_trigger_id>
+        <remote_trigger_id>e7b5cfce7df383107f445046e28c7839</remote_trigger_id>
         <run_as>user</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>draft</status>
+        <status>published</status>
         <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -37,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>663151cde4ef43107f44705ba96fabcf</sys_id>
-        <sys_mod_count>67</sys_mod_count>
+        <sys_mod_count>73</sys_mod_count>
         <sys_name>JD Publishing Request Flow</sys_name>
         <sys_overrides/>
         <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
@@ -45,11 +45,11 @@
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_update_name>sys_hub_flow_663151cde4ef43107f44705ba96fabcf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:03:04</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:36</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record>c8985c4a7d7f03107f445046e28c787a</version_record>
+        <version_record>08c5cfce7df383107f445046e28c78b4</version_record>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=663151cde4ef43107f44705ba96fabcf"/>
     <sys_variable_value action="delete_multiple" query="document_key=663151cde4ef43107f44705ba96fabcf"/>
@@ -69,15 +69,15 @@
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-10-09 06:02:35</sys_created_on>
+        <sys_created_on>2026-10-09 18:39:33</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>0f78984a7d7f03107f445046e28c7848</sys_id>
+        <sys_id>e7b5cfce7df383107f445046e28c7839</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:35</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:33</sys_updated_on>
         <table>x_snc_aegis_job_description</table>
         <trigger_definition/>
     </sys_flow_record_trigger>
@@ -88,14 +88,14 @@
         <identifier_type>flow</identifier_type>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-10-09 06:02:35</sys_created_on>
-        <sys_id>0f78984a7d7f03107f445046e28c7849</sys_id>
+        <sys_created_on>2026-10-09 18:39:33</sys_created_on>
+        <sys_id>ebb5cfce7df383107f445046e28c783a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:35</sys_updated_on>
-        <trigger display_value="">0f78984a7d7f03107f445046e28c7848</trigger>
+        <sys_updated_on>2026-10-09 18:39:33</sys_updated_on>
+        <trigger display_value="">e7b5cfce7df383107f445046e28c7839</trigger>
     </sys_trigger_runner_mapping>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=663151cde4ef43107f44705ba96fabcf^sys_idNOT IN0f78984a7d7f03107f445046e28c7849"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=663151cde4ef43107f44705ba96fabcf^sys_idNOT INebb5cfce7df383107f445046e28c783a"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=663151cde4ef43107f44705ba96fabcf"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=663151cde4ef43107f44705ba96fabcf^sys_idNOT IN263151cde4ef43107f44705ba96fabd0"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -380,12 +380,12 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-23 21:20:52</sys_created_on>
         <sys_id>a23191cde4ef43107f44705ba96fab19</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:54</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:30</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
-        <trigger_inputs>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</trigger_inputs>
+        <trigger_inputs>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</trigger_inputs>
         <trigger_outputs/>
         <trigger_type>record_update</trigger_type>
         <updation_source/>
@@ -502,13 +502,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-10-09 05:59:50</sys_created_on>
         <sys_id>36d7500a7d7f03107f445046e28c786d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:32</sys_updated_on>
+        <sys_updated_on>2026-10-09 09:39:57</sys_updated_on>
         <ui_id>8832d1ba-c9cd-471b-ac42-f16e209df9a9</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1Y32+jOBD+VxDPJGcCISRvlaKetrq7ldLuvjQVMmZIXRFDMW6bi/K/3xhMQtNuNuplt9fVvSB57Jn5ZuYb/+B6bfPEntijMB3AeDwgsUuIR0g4ZCT0IPZGwcijjNiOLegScGUJLC8THD/QTGnBev2lSGgFSeT2mSpLENVmg/MJl0VGV1/NMpSwW54lOG9Prm8cu6AlWqygtCfrvalqVUCU0RgyVJzmTC3RqPVpijaORdtqz1q4+/C1DxwnxnrEtRCnNB7i2PBUgUgAvaU0k+DYSyowyrxc2ZOqVCgogSafRbbarrjlomoCXdInyf9G895Ar0sBI2MmCdthZBLU5ibnDD4XFc9FI6lonLWJyzO1FH81EejUQkpVVnVSqyTag0JD1iAahOnlbf44a/2dc1EHZ9BmOaPZdkSrquSxqkDqakAGdU6WtCi4WERFmT/wWhmhLPuLDAf9NMsf0afkC9GnTOPuY4Jo/xzl01r8lZZcB/EnmkHlTR18dK+03yYMAziqY24CxlWSlbyoztDmAxiEG8cQNWYHS892lW7M7Xj6FEnBIgoLLqO7PNbQaz864adj65X2atWlco5G/Ez5ZQSGqvUwEo1pw1T3MFON5BiqhuR9qGoQfTCufo+m4AfeED+j1CPuwCUhBGHIxoSyMAiGvrcrMvpDxDSLsEiypmJL2IuZ1bNe2V37JdwrLnkdhlDLGMrNxrEuphaXli71ykrz0ipUnHGJlV441iPF1WJRy1e5Kq3Wa/8l9X+W27f11yXWXiza3joiza3imXFtzdo8f7MApt9k68r02uBkveYGH7TZFL/C3PyxX4sf04OOcdctheJfBL9X8ElXPxjEwZiESS9JSdzzQ2/YowxIDwJ3CMMkYEPX+9edTNxD23cSvkKklEPWvSGd8Hg516afHS9H4HvRAucG4LeAmwaoh3sHzumaICTknbrg170dsYNkgM6xc4fbsfjZXD0CXqt80eDbp+o+7ANM9f5n6n+Yqf7wIBXgld2J5SKpbx+yw9dmTwM5gztglTwTq9+v12tZ0Yqzvu8yd+SnPiFpTDyXjFLfJ9THFyKjMaGDzebmJd9PYPFt/bK7oagMZNszRyRq+9Y1egcTZzpmd+sxSqZr/FM9fd+vaX7NFwU7yIN0vKt7ojAdeHfv/qOZ2w3IuT2Z2yIXMLedua1XRZoQtRhXILjtRC1bb5qxKqlRdzvDnW5CV7JeKdktJEipWvpM0vDcyE/5g+jSOLCmiPq3K945b76fs+1fJtXov5rG9kHQRtLkjXdPm+HJThv/g7aN4lG7qehDADeKH/YyeGsv3fwDS1nK7u8UAAA=</values>
+        <values>H4sIAAAAAAAA/+1Y32/iOBD+V6I8A+eQEAJvlVBXW93dSrS7L6WKHGdCXRknjeO2HOJ/v3HiAKVdFvXY7e1qXyJ57Jn5ZuYb/8j1yuWpO3aHUdaH0ahPEo8Qn5BowEjkQ+IPw6FPGXE7rqQLwJUlsLxMcfxAhTaC1epzkdIK0tjrMV2WIKv1GudTrgpBl1/sMpSwWy5SnHfH1zcdt6AlWqygdMervalqWUAsaAICFSc50ws06nycoI1j0bba0xbuPnzjA8eptR5zI8Qpg4d0XHiqQKaA3jIqFHTcBZUYZV4u3XFVahSUQNNPUiw3K265rJpAF/RJ8X/QvN836zLAyJhNwmYY2wS1uck5g09FxXPZSCqaiDZxudAL+XcTgUktZFSLaie1WqE9KAxkA6JBmF3e5o/T1t85l3VwFq3IGRWbEa2qkie6AmWqAQLqnCxoUXA5j4syf+C1MkJZ9OYCB71M5I/oU/G57FFmcPcwQbR3jvJJLf5CS26C+AvNoPK6Dj6+18ZvE4YFHNcxNwHjKsVKXlRnaPMBLMJ1xxI1YQdLz7aVbsxtefoUK8liCnOu4rs8MdBrPybhp2PrlfHq1KXqHI34mfLLCCxV62EsG9OWqd5hplrJMVSNyPtQ1SL6ybj6LZpCEPoD/Awzn3h9j0QQRhEbEcqiMBwE/rbI6A8RUxFjkVRNxZawF1On67yyu/ZKuNdc8ToMqRcJlOt1x7mYOFw5ptRLJ8tLp9CJ4AorPe84jxRXy3ktX+a6dFqvvZfU/1Fu39Zfl1h7OW9764g0t4pn1rUzbfP81QLYflOtK9tr/ZP1mhf+pM2m+dVebhrJn/vV+T5dadx9lvxew0dT/bCfhCMSpd00I0k3iPxBlzIgXQi9AQzSkA08/z93MvEObd9p9AqRMg5i94Z0wuPl3Jh+drwcge9FC5xbgF8DbhugHu4dOKdrgoiQd+qCX/d2xA6SAXaOnTvcjuWP5uoR8FrliwbfPlX3YR9gqv+bqf9jpgaDg1SAV3Ynlsu0vn2oHb42exqoKdwBq9SZXH64Xq1URSvOeoHHvGGQBYRkCfE9MsyCgNAAX4iMJoT21+ubl3w/gcW39cv2hqIFqLZnjkjU5q1r9Q4mznbM9tZjlWzXBKd6+r5f0/yaLwp2kAfZaFv3VGM68O6++49m5jYgZ+545spcwsztzFyzKjaEqMW4AsFtJmrZat2MdUmturcz3OqmdKnqlYrdQoqUqqXPJA3PrfyUP4gurQNngqj/uOI75823c7b5y6Qb/VfT2D4I2kiavPHd02ZwstMm+N02e1f+uN2szOGCG9Cbe+nmXyimhM7vFAAA</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=36d7500a7d7f03107f445046e28c786d"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
@@ -555,10 +555,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-10-07 16:12:16</sys_created_on>
         <sys_id>a6d0986db43b43107f443abc21313829</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:32</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:30</sys_updated_on>
         <ui_id>df0a3adf-8954-43fe-964d-3dc356736e08</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1UTY/TMBD9KyjnNMpHW5reKtBKSMBK7GovsIom9qS1cOxgO+2Wqv+dcT66FdsKhPbILX7jmXlv/CaHQLeuaZ291ytrxVoFy6+PYSCUx+j7ECioMVgGTCsunNCq6IAw2IJsfWDVNEZvkRPEhW0k7B9eRthGSG5wqN6AoRoOTbA8/BZy+wYLCSVKKnDnjFBrShecTlUMVZKzhGXpPEvjOF1Mk3KelUnKM0DI6N6Y+G4k++Zjh4RXVfh+hNuxkzbc00riMMAnh4oT/WUF0mIY1KA4OG32J8Qg8Fsln4GNUI7KBf7ykxU/qXY6m/mLFZJGhn3wdCyGkfUw22jB8LbxBHvEQSmHHKZlW6vPvQ4/bKyglW4cNiGtpXrYeNKexUCputvo3Zex4Y1QncAhKDUDeTqBozGUrUPrHwYl1lSoqKFpaDiFf0zRJROXOlpLOkSV1Dtq6p0TAfPEI5oRRDeEv+/gBzDCq/hEZSi5p1mCFazoXEblnCEJx24sxY/WE+oFDlKKfhp0wTIjGreiPlscWB/DlxY9c+fhsFhkKU9KmLCc8cn0bVJOgE3TSZXMMY1zXuWQR9BZFWRhHTg8Hr+1cZxxuGrt1yr7GnuRw6yaJfHs8l5M55f24sJGXF+G9A/L4J/vL3chjuP/y3C+DMIWvakHbV3zf96FR2/8voPtfcORCUtE7j32Yfyr+8CeDCDYObTT5ruX8IwdfwGI2yaPHwYAAA==</values>
@@ -582,10 +582,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-10-07 16:44:39</sys_created_on>
         <sys_id>4d4858e9b47b43107f443abc21313835</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:32</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:30</sys_updated_on>
         <ui_id>4aa0f3b2-7870-42b5-b569-2adc1c358056</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
@@ -798,7 +798,7 @@
         <description/>
         <flow_priority/>
         <internal_name>jd_approval_flow</internal_name>
-        <label_cache>[{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.comments","label":"2➛Approval Record➛Comments","reference":"","reference_display":"Comments","type":"journal_input","base_type":"journal_input","parent_table_name":"sysapproval_approver","column_name":"comments","usedInstances":{"13aa9c61-d31b-4378-b378-edd71979cb13":["additional_comments"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛ Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_description","column_name":"number","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":["ah_subject"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["ah_subject"]}},{"name":"Updated_1.current.requisition.role_title","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Role title","reference":"","reference_display":"Role title","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"role_title","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.requisition.hiring_manager.name","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Hiring manager➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.requisition.number","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"number","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["approval_reason"]}},{"name":"Updated_1.current.requisition.hiring_manager.email","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Hiring manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":["ah_to"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["ah_to"]}},{"name":"Updated_1.current.requisition","label":"Trigger - Record Updated➛ Record➛Job Requisition","reference":"x_snc_aegis_job_requisition","reference_display":"Job Requisition","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_job_description","column_name":"requisition","usedInstances":{}},{"name":"b6a5ef38-b143-4740-b05e-de6f90337fca.record.approved_by.email","label":"4➛ Record➛Approved by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{}},{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.sys_updated_on","label":"2➛Approval Record➛Updated","reference":"","reference_display":"Updated","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sysapproval_approver","column_name":"sys_updated_on","usedInstances":{"b6a5ef38-b143-4740-b05e-de6f90337fca":["approved_at"]}},{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.approver","label":"2➛Approval Record➛Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sysapproval_approver","column_name":"approver","usedInstances":{"b6a5ef38-b143-4740-b05e-de6f90337fca":["approved_by"]}},{"name":"{{static.41c174f400fb03107f440a4ac0cab0a2}}","label":"AEGIS HR Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"21c935c8-bc23-428f-a671-3aee137188bb":["approval_conditions"],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛ Record","reference":"x_snc_aegis_job_description","reference_display":"Job Description","type":"reference","base_type":"reference","usedInstances":{"31664d5d-a7ee-4512-b9a9-3224570dc57d":["record"],"21c935c8-bc23-428f-a671-3aee137188bb":["record"],"8de03bc4-9002-4458-98c6-5570c0d0981b":[null],"b6a5ef38-b143-4740-b05e-de6f90337fca":["record"],"20a37995-f025-46a8-9f98-de3714faf893":["record"],"13aa9c61-d31b-4378-b378-edd71979cb13":["record"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["record"],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["record"]},"attributes":{}},{"name":"8832d1ba-c9cd-471b-ac42-f16e209df9a9.approval_state","label":"1 - Ask For Approval➛Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"df0a3adf-8954-43fe-964d-3dc356736e08":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <label_cache>[{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.comments","label":"2➛Approval Record➛Comments","reference":"","reference_display":"Comments","type":"journal_input","base_type":"journal_input","parent_table_name":"sysapproval_approver","column_name":"comments","usedInstances":{"13aa9c61-d31b-4378-b378-edd71979cb13":["additional_comments"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛ Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_description","column_name":"number","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":["ah_subject"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["ah_subject"]}},{"name":"Updated_1.current.requisition.role_title","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Role title","reference":"","reference_display":"Role title","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"role_title","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.requisition.hiring_manager.name","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Hiring manager➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null]}},{"name":"Updated_1.current.requisition.number","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"number","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":[null],"80f1aa4b-3019-4f69-b589-b599202b0d2a":[null],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["approval_reason"]}},{"name":"Updated_1.current.requisition.hiring_manager.email","label":"Trigger - Record Updated➛ Record➛Job Requisition➛Hiring manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"20a37995-f025-46a8-9f98-de3714faf893":["ah_to"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["ah_to"]}},{"name":"Updated_1.current.requisition","label":"Trigger - Record Updated➛ Record➛Job Requisition","reference":"x_snc_aegis_job_requisition","reference_display":"Job Requisition","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_job_description","column_name":"requisition","usedInstances":{}},{"name":"b6a5ef38-b143-4740-b05e-de6f90337fca.record.approved_by.email","label":"4➛ Record➛Approved by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{}},{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.sys_updated_on","label":"2➛Approval Record➛Updated","reference":"","reference_display":"Updated","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sysapproval_approver","column_name":"sys_updated_on","usedInstances":{"b6a5ef38-b143-4740-b05e-de6f90337fca":["approved_at"]}},{"name":"8de03bc4-9002-4458-98c6-5570c0d0981b.Record.approver","label":"2➛Approval Record➛Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sysapproval_approver","column_name":"approver","usedInstances":{"b6a5ef38-b143-4740-b05e-de6f90337fca":["approved_by"]}},{"name":"{{static.41c174f400fb03107f440a4ac0cab0a2}}","label":"AEGIS HR Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"21c935c8-bc23-428f-a671-3aee137188bb":["approval_conditions"],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛ Record","reference":"x_snc_aegis_job_description","reference_display":"Job Description","type":"reference","base_type":"reference","usedInstances":{"31664d5d-a7ee-4512-b9a9-3224570dc57d":["record"],"21c935c8-bc23-428f-a671-3aee137188bb":["record"],"8de03bc4-9002-4458-98c6-5570c0d0981b":[null],"b6a5ef38-b143-4740-b05e-de6f90337fca":["record"],"20a37995-f025-46a8-9f98-de3714faf893":["record"],"13aa9c61-d31b-4378-b378-edd71979cb13":["record"],"80f1aa4b-3019-4f69-b589-b599202b0d2a":["record"],"8832d1ba-c9cd-471b-ac42-f16e209df9a9":["record"]},"attributes":{}},{"name":"8832d1ba-c9cd-471b-ac42-f16e209df9a9.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"df0a3adf-8954-43fe-964d-3dc356736e08":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
         <master>true</master>
         <name>JD Publishing Request Flow</name>
         <natlang/>
@@ -815,7 +815,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>04f11901e42383107f44705ba96fab2a</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -823,7 +823,7 @@
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:34</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:32</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow_snapshot>
@@ -908,14 +908,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-23 21:23:59</sys_created_on>
         <sys_id>40f11901e42383107f44705ba96fab53</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:34</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -993,14 +993,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-23 21:23:58</sys_created_on>
         <sys_id>c0f11901e42383107f44705ba96fab2c</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:34</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1113,10 +1113,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-23 21:23:59</sys_created_on>
         <sys_id>44f11901e42383107f44705ba96fab64</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-07 17:02:43</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:32</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs>H4sIAAAAAAAA/+VaW3ObOBj9KwxPuzPpDhjb2NmnbC5tZrpJxnG7D9mMRkjCZhcLFwSpt5P/vp+4BXMxduw0NH1JghDS+c53OyjcfVOF78xmzL/kgcCcsNtVcEnVY5USG2tsNDbNvqHpumbozLAMMuxbAzweY1s9Ul1sMRemTrHlMrh2uGA+x+50tWQwLOQw4ngh7y0wp1h4/ko9Fn7IjlTb9xZTtli6WMBkG7sBDHo+Zb56rB+p8WPpGvB4hN1QXn9FAScIs5kToH88C1EWEN9ZCsfjMIs6Aay3+pxOhpEl9mEhIRf9ppK541KfcfX47h7QSit1SrHeYxoxdKPX07TeqK9bQ8PSe9TADI9qrCwhEzXGPpnBvgrGKaO5hRUefIbpNXdX+Yw50JiAX+CvgfMfrD7S5DybAXaSGpZfotToZJjMPYew64SQeCTBmdz03HDBrxL8ki5m49AVBbrCANZjSwlZgkgR2bdz72GSbXjh8Ni69KbrEezmV1hAOFmhYIEk3HZcoB4l3ARe6MfoJ+en15Mz9NfJ9PTD+QRNzm+nk8vT6fmZ+hjbhb6EcsUEYYoFJebAhMTfJ0Q4URY3j0eHiOJTj1MnDaRSJJPsVlDEVAiCglczzjaFt6blYUQKu2ZBjpdL34MLBLYI9neoaQa9Ob86u7x6j05ubibXn08+bhHbljXGlOGG2B6aDbbXABM1NBRt2RTl6cg2Yd7XtFcK9LQkPTfOFx5l7lkxLpJoRA5fhkKylTGEvCXzJTPwnApuPP1wcvX+/Pb39PfF5PrP7O/pNTz3gLkIkPAQphQV+JdbgC1tCZNw8phXxguHuTSZ+WJ55IccNkd5TFSzKXZd7sOPTgCU3UG1uGVfwsTx76B02pm7Ymww3f6Y7jAJueJBLMEPhYQ+eEsoWSbalws8S51s32QZEnspDewI+wgtULAK0Dy00JqrkGUNxwM2bOoHgzWK43yFpe9U9b46jhZ4KbfdCPjxUYYdcxkRhfSxPwXFqz+dIHD4rOClJqrioKgwle8JWalkfkkABN2mbCPy53B3v0+trkZ2VArRkgDZFKht1XtIqN63zKFmSlIh4yxb10xtgG1qaNrY2JhxjYBFKQVfpIrvVsODOPndLXK7zHYGXmaEu0vER+vpkq7Te7zPW8VpB6GVWp6xU8/LIzQZPts+UA+sCTGNZGOh27awF9V8MkFs13uAUrZ/n7Iw+XfmeyGn5RIst1AcrjzNUH5JHfFrlwvwRtwHbl2257PN7K3P6DpnBbSv0qiewjp/reCraotKBtuaUZ8Rag77Qw16kAHtxxqMxxbBPds2hybTaGNK1QL6IZpQS85GdUnfVPVrIziqC/wdWtHrA9yrIaXRWNuOkntvvfE8zBlHYKSPXNlaKv1n5jqUZff2KwaVraKnV+HdD80Me0QHA9MkJhROqAZ2n1lY7/fASnNosGGbnZuAiRrbv8tRg+wTEkhDpfiU3OrW+Vo3QzpgQshOtreg4vDuEi+BE7QFXSD9q8SVy/OVK4+/u3yap9wyaKXxwVUnVcJW2A+srrahUYa48qPy2Aj+wERanphXBCrs/weMr+0vX+8anNvpQ5fdjXkVeVuqNNG6e2rOYZ7jpFZZPDLGA2ob9Y3Q7G2ujs3WdF4gb1l+o8ZCXidEty1GUW1Ny4VpWdo+w++laEqXNlpE+c9Lyl4vAlnKNh5MPQfsTyG0Yt18QLUlwTPk2cX+duYpcEOBPRXHVlLwjCrWShFzBr5x4dUR9lckmM42th2tOLBmqLKaZ/UPzOlONhyY0eSAoCLCYFhJ3+E6SVkF5+tJp1Lt2HhGWENvmzIi9tiiY6PhiGDQfETQLI9KtzuvkXaunFFdId6oCXZbt7xmrSoo+Hg9JrYUQW/Y6hc77qxB8Zb1izR3mqyyv2rxOCmdaJDOfgYSYztwJwy5A+OIzDGfJV9zZExcQEQxTOZKMkVJpnSVmwa0h9YN7gNeBWpZiUFFkUUr/c83DED54kmb6SRZm0EfmDMWMX9VCSw5qIRLKvVGR1mq4PxOaqvw9XJqZSB8mDlbrbUlUvPBUFq9WtWVPh70DDoCvsZGlS+9sdg242qUUy0fMbfIqcL2qS+Es2Bxy86/ZlQWWJA5C44UcFj8FUrc0R0/EPHs3w55bkVY1Ql1aqOxekZNhbdOX7RVl6hcl3K9UYaynm9RKTfTx/qtJ1Rv3/y9VFqWlbUyLWXvsNLsuUrs/n9W5j7vujEAAA==</trigger_inputs>
         <trigger_outputs/>
@@ -1288,10 +1288,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-10-07 17:02:43</sys_created_on>
         <sys_id>716c9ce1b4bb43107f443abc2131385c</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:34</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:32</sys_updated_on>
         <ui_id>df0a3adf-8954-43fe-964d-3dc356736e08</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1VXW/aMBT9K5OfQ5QPYMAboqo0qVulterLVkU3tgPWHDuzHSiL+O+7zgeglmqr1se94XN9r885uUc0RNeuqp2910trxVqRxbfHgAjlMfzdEAUlJwtCtWLCCa2yFgjIFmTtC8uqMnrLGUJM2ErC/uFlhW6EZIb30yswOMNxQxbNs5Jg2FhEUMRzGtM0maZJFCWzcZxP0zxOWAocUhwoIecSr64GWh9uWiR4la/bVx63zgi17s83/ZS7AdSGeVZxFBD+5LhiyH5RgLQ8ICUoBk6b/RExHNitkidgI5TDccRffrLiFz6YTCb+YsFRIuVd8XjMesc6uLgCB0ilpq42/VW60YJy25nDeAG1dKtzrLtwW3mpXYuDXA7dWtal+tI5Qo4Dhg+ESG2RBK+8Uk+911HcbfTu68DyWqjWlb4oNQV5PIFD7/LaeT4N4ZKXOCgroarQ0cwvgGibkUsZriUewkLqHT7qty0E6omHaCyE14hftfADGOFVfMYx2NzRzMEKmrWbiePQJk4OAbF7u5Jg7Ukkupv9rD3FTnIvLuv88S3UiMot8eUt73UcgpeLfrbjTTObpQmLcxjROWWj8cc4HwEdJ6MinvIkmrNiDvMQ2oUHmVkHjh8O3+soShm8GpD3Gvu2dM1hUkziaHI5XePppXRdyNUbI5X8IVL+e/5loqIo+h+pf46UsFkXhF5b+/g7JurRx6d78+g1FRap3Xvs0/AP4wt7XC5Bz6GdNj+8qBN2+A0HeTGBqwYAAA==</values>
@@ -1315,10 +1315,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-10-07 17:02:43</sys_created_on>
         <sys_id>3d6c9ce1b4bb43107f443abc2131385d</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:34</sys_updated_on>
+        <sys_updated_on>2026-10-09 18:39:32</sys_updated_on>
         <ui_id>4aa0f3b2-7870-42b5-b569-2adc1c358056</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
@@ -1533,12 +1533,12 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>50f11901e42383107f44705ba96fab6c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 06:02:35</sys_updated_on>
-        <trigger display_value="">0f78984a7d7f03107f445046e28c7848</trigger>
+        <sys_updated_on>2026-10-09 18:39:33</sys_updated_on>
+        <trigger display_value="">e7b5cfce7df383107f445046e28c7839</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=663151cde4ef43107f44705ba96fabcf"/>
 </record_update>
