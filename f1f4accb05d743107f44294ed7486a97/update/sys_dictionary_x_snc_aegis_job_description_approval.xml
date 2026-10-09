@@ -5,7 +5,7 @@
         <attributes/>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
         <column_label>Approval</column_label>
@@ -55,7 +55,7 @@
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_aegis_job_description_approval</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-10-09 05:14:57</sys_updated_on>
+        <sys_updated_on>2026-10-09 05:25:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
