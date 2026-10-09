@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Panel Assignment Agent">a1f05349746703107f4413d400ccf236</agent>
+        <description>Fetch one Job Requisition by sys_id. Returns interview_dates_and_timings (text with schedule dates, daily timings, lunch and breaks), interview_time_per_person, panel_members, role_title, responsibilities, interview_type, location_or_link.</description>
+        <display_mode>inline</display_mode>
+        <display_output>false</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>a1f05349746703107f4413d400ccf236</entity_id>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"requisition_sys_id","value":"","description":"","mandatory":true},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_aegis_job_requisition","displayValue":"Job Requisition"},"query":"sys_id={{requisition_sys_id}}","returnFields":[{"name":"number","label":"Number","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"number","sublabel":"number"},{"name":"sys_id","label":"Sys ID","type":"GUID","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"sys_id","sublabel":"sys_id"},{"name":"role_title","label":"Role title","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"role_title","sublabel":"role_title"},{"name":"responsibilities","label":"Responsibilities","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"responsibilities","sublabel":"responsibilities"},{"name":"interview_dates_and_timings","label":"Interview Dates and Timings","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"interview_dates_and_timings","sublabel":"interview_dates_and_timings"},{"name":"interview_time_per_person","label":"Interview Time per person","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"interview_time_per_person","sublabel":"interview_time_per_person"},{"name":"panel_members","label":"Panel members","type":"glide_list","referenceTable":"sys_user","referenceTableDefaultField":"name","referenceKey":null,"id":"panel_members","sublabel":"panel_members"},{"name":"interview_type","label":"Interview type","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"interview_type","sublabel":"interview_type"},{"name":"location_or_link","label":"Location or link","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"location_or_link","sublabel":"location_or_link"}],"limit":"1","orderBy":"","sortType":""},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Get Requisition Record</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-24 09:24:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>76e6730974ab03107f4413d400ccf28f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Get Requisition Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_76e6730974ab03107f4413d400ccf28f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 14:01:15</sys_updated_on>
+        <timeout/>
+        <tool display_value="Get Requisition Record">7ae6730974ab03107f4413d400ccf289</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions>undefined</transformation_instructions>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+</record_update>

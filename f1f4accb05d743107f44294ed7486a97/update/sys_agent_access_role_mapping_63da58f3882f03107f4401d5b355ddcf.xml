@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_agent_access_role_mapping">
+    <sys_agent_access_role_mapping action="INSERT_OR_UPDATE">
+        <agent_access_config display_value="318536c9742303107f4413d400ccf23f">de074745742703107f4413d400ccf28d</agent_access_config>
+        <role display_value="x_snc_aegis.app_admin" name="x_snc_aegis.app_admin">9bee7c9b855f03107f446d73c9814aba</role>
+        <sys_class_name>sys_agent_access_role_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 06:26:39</sys_created_on>
+        <sys_id>63da58f3882f03107f4401d5b355ddcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>318536c9742303107f4413d400ccf23f.x_snc_aegis.app_admin</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_agent_access_role_mapping_63da58f3882f03107f4401d5b355ddcf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 06:26:39</sys_updated_on>
+    </sys_agent_access_role_mapping>
+</record_update>

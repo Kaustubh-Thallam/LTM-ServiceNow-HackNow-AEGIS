@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Resume Intelligence Agent">73649d45e42383107f44705ba96fabe5</agent>
+        <description>Create one Screening Result for one application after scoring. Leave a score input empty when there is no evidence. Returns the new sys_id.</description>
+        <display_mode>inline</display_mode>
+        <display_output>false</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>73649d45e42383107f44705ba96fabe5</entity_id>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"application_sys_id","value":"","description":"","mandatory":true},{"name":"candidate_sys_id","value":"","description":"","mandatory":true},{"name":"requisition_sys_id","value":"","description":"","mandatory":true},{"name":"certifications_score","value":"","description":"","mandatory":false},{"name":"education_score","value":"","description":"","mandatory":false},{"name":"explanation","value":"","description":"","mandatory":false},{"name":"fit_score","value":"","description":"","mandatory":true},{"name":"is_blind_scored","value":"","description":"","mandatory":false},{"name":"matched_skills","value":"","description":"","mandatory":false},{"name":"missing_skills","value":"","description":"","mandatory":false},{"name":"projects_score","value":"","description":"","mandatory":false},{"name":"skills_score","value":"","description":"","mandatory":false},{"name":"experience_score","value":"","description":"","mandatory":false},{"name":"transferable_skills","value":"","description":"","mandatory":false},{"name":"screening_status","value":"","description":"","mandatory":false},{"name":"crudInputs","value":{"operation":"create","table":{"value":"x_snc_aegis_screening_result","displayValue":"Screening Result"},"fieldValues":[{"field":{"name":"application","label":"Application","type":"reference","referenceTable":"x_snc_aegis_application","referenceTableDefaultField":"closed_at","referenceKey":null,"id":"application","sublabel":"application"},"value":{"fieldValue":"{{application_sys_id}}"}},{"field":{"name":"candidate","label":"Candidate","type":"reference","referenceTable":"x_snc_aegis_candidate","referenceTableDefaultField":"number","referenceKey":null,"id":"candidate","sublabel":"candidate"},"value":{"fieldValue":"{{cadidate_sys_id}}"}},{"field":{"name":"certifications_score","label":"Certifications score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"certifications_score","sublabel":"certifications_score"},"value":{"fieldValue":"{{certifications_score}}"}},{"field":{"name":"education_score","label":"Education score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"education_score","sublabel":"education_score"},"value":{"fieldValue":"{{education_score}}"}},{"field":{"name":"experience_score","label":"Experience score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"experience_score","sublabel":"experience_score"},"value":{"fieldValue":"{{experience_score}}"}},{"field":{"name":"explanation","label":"Explanation","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"explanation","sublabel":"explanation"},"value":{"fieldValue":"{{explanation}}"}},{"field":{"name":"fit_score","label":"Fit score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"fit_score","sublabel":"fit_score"},"value":{"fieldValue":"{{fit_score}}"}},{"field":{"name":"is_blind_scored","label":"Is blind scored","type":"boolean","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"is_blind_scored","sublabel":"is_blind_scored"},"value":{"fieldValue":"{{is_blind_scored}}"}},{"field":{"name":"matched_skills","label":"Matched skills","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"matched_skills","sublabel":"matched_skills"},"value":{"fieldValue":"{{matched_skills}}"}},{"field":{"name":"missing_skills","label":"Missing skills","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"missing_skills","sublabel":"missing_skills"},"value":{"fieldValue":"{{missing_skills}}"}},{"field":{"name":"projects_score","label":"Projects score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"projects_score","sublabel":"projects_score"},"value":{"fieldValue":"{{projects_score}}"}},{"field":{"name":"requisition","label":"Requisition","type":"reference","referenceTable":"x_snc_aegis_job_requisition","referenceTableDefaultField":"closed_at","referenceKey":null,"id":"requisition","sublabel":"requisition"},"value":{"fieldValue":"{{requisition_sys_id}}"}},{"field":{"name":"skills_score","label":"Skills score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"skills_score","sublabel":"skills_score"},"value":{"fieldValue":"{{skills_score}}"}},{"field":{"name":"transferable_skills","label":"Transferable skills","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"transferable_skills","sublabel":"transferable_skills"},"value":{"fieldValue":"{{transferable_skills}}"}},{"field":{"name":"screening_status","label":"Screening status","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"screening_status","sublabel":"screening_status"},"value":{"fieldValue":"{{screening_status}}"}}]},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Create Screening Result</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 23:04:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>64e8290de4a383107f44705ba96fab19</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Create Screening Result</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_64e8290de4a383107f44705ba96fab19</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:27:55</sys_updated_on>
+        <timeout/>
+        <tool display_value="Create Screening Result">ace8290de4a383107f44705ba96fab15</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+</record_update>

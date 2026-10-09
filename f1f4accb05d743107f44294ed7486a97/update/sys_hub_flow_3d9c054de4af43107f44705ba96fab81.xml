@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=1197389000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>51cbc6c97743011031e3b3c64b5a9907</copied_from>
+        <copied_from_name>FlowTemplate: Record Trigger</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>aegis__f5_shortlisting</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.fit_score","label":"Trigger - Record Created or Updated➛ Record➛Fit score","reference":"","reference_display":"Fit score","type":"decimal","base_type":"decimal","parent_table_name":"x_snc_aegis_screening_result","column_name":"fit_score","choices":[{"order":0.0}],"usedInstances":{"afe04b1f-c822-4b07-9e9f-794c5da18f57":["condition"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛ Record","reference":"x_snc_aegis_screening_result","reference_display":"Screening Result","type":"reference","base_type":"reference","usedInstances":{"c1912538-7f04-49a0-a5d6-7fd577a81793":["record"]},"attributes":{}},{"name":"Created or Updated_1.current.application","label":"Trigger - Record Created or Updated➛ Record➛Application","reference":"x_snc_aegis_application","reference_display":"Application","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_screening_result","column_name":"application","usedInstances":{"c1912538-7f04-49a0-a5d6-7fd577a81793":["record"],"b3d3434c-1237-4885-9977-25367bbe6c3e":["record"]}}]</label_cache>
+        <master_snapshot>a6d0158de4ef43107f44705ba96fabf2</master_snapshot>
+        <master_snapshot_digest/>
+        <name>AI based Applications Shorlisting Flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>3544e4e1b4fb43107f443abc2131383a</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:00:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3d9c054de4af43107f44705ba96fab81</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>AI based Applications Shorlisting Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_hub_flow_3d9c054de4af43107f44705ba96fab81</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:13</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>4244e4e1b4fb43107f443abc2131388e</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=3d9c054de4af43107f44705ba96fab81"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3d9c054de4af43107f44705ba96fab81"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_aegis_screening_result">screening_status=COMPLETED<item display_value="Completed" endquery="false" field="screening_status" goto="false" newquery="false" operator="=" or="false" value="COMPLETED"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:37:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3544e4e1b4fb43107f443abc2131383a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:07</sys_updated_on>
+        <table>x_snc_aegis_screening_result</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>3d9c054de4af43107f44705ba96fab81</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:37:07</sys_created_on>
+        <sys_id>3144e4e1b4fb43107f443abc2131383b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:07</sys_updated_on>
+        <trigger display_value="">3544e4e1b4fb43107f443abc2131383a</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=3d9c054de4af43107f44705ba96fab81^sys_idNOT IN3144e4e1b4fb43107f443abc2131383b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3d9c054de4af43107f44705ba96fab81"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3d9c054de4af43107f44705ba96fab81^sys_idNOT INfd9c054de4af43107f44705ba96fab82"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3d9c054de4af43107f44705ba96fab81</id>
+        <name>AEGIS - F5 Shortlisting</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:00:36</sys_created_on>
+        <sys_id>fd9c054de4af43107f44705ba96fab82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:00:36</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=fd9c054de4af43107f44705ba96fab82"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3d9c054de4af43107f44705ba96fab81^sys_idNOT IN7d9c454de4af43107f44705ba96fabf8,b99c454de4af43107f44705ba96fabf2,f19c854de4af43107f44705ba96fab23"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AI based Applications Shorlisting Flow">3d9c054de4af43107f44705ba96fab81</model>
+        <model_id>3d9c054de4af43107f44705ba96fab81</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3d9c054de4af43107f44705ba96fab81</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:00:37</sys_created_on>
+        <sys_id>7d9c454de4af43107f44705ba96fabf8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7d9c454de4af43107f44705ba96fabf8"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AI based Applications Shorlisting Flow">3d9c054de4af43107f44705ba96fab81</model>
+        <model_id>3d9c054de4af43107f44705ba96fab81</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3d9c054de4af43107f44705ba96fab81</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:00:36</sys_created_on>
+        <sys_id>b99c454de4af43107f44705ba96fabf2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b99c454de4af43107f44705ba96fabf2"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="AI based Applications Shorlisting Flow">3d9c054de4af43107f44705ba96fab81</model>
+        <model_id>3d9c054de4af43107f44705ba96fab81</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_3d9c054de4af43107f44705ba96fab81</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:00:37</sys_created_on>
+        <sys_id>f19c854de4af43107f44705ba96fab23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:00:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f19c854de4af43107f44705ba96fab23"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=3d9c054de4af43107f44705ba96fab81"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3d9c054de4af43107f44705ba96fab81"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=3d9c054de4af43107f44705ba96fab81^sys_idNOT IN029c854de4af43107f44705ba96fab89"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">3d9c054de4af43107f44705ba96fab81</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:00:37</sys_created_on>
+        <sys_id>029c854de4af43107f44705ba96fab89</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:36:16</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=3d9c054de4af43107f44705ba96fab81^sys_idNOT INd05f8d89e4ef43107f44705ba96fabb5,6fa01d4de4ef43107f44705ba96fabcd"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">3d9c054de4af43107f44705ba96fab81</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>afe04b1f-c822-4b07-9e9f-794c5da18f57</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:12:31</sys_created_on>
+        <sys_id>d05f8d89e4ef43107f44705ba96fabb5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:13</sys_updated_on>
+        <ui_id>c1912538-7f04-49a0-a5d6-7fd577a81793</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UUW/aMBD+KyjPUZQQilreqjG0SluRgPWlrSzHPsCS42S2Q2GI/75z4lBo1w5VSNOk5Sk+3333fXeffL8NBA8GQQ94nFwlfZYmadqN4+5lL8n6aZZ0eUoBkiAMFM0BMzWwQnM8r6isXGC7/aSBWuCdQne+l9z9kiRildagbETLUgpGrSjUbodlXJhS0s2dr8YIWwrJMTcY3D+GQUk1NrKgg8H2xZXdlEAkzUBi4bBgVY4NOjdDxDhVRFs9aVW8VOV64Jl7dCJcEK8cnyQOA1hbUByw3ZxKA2GQU4WSC70JBlZXGMBh8LGSm33GUijbKM3p2oifiN+LXd4cUBrzU9gfiZ9QO5xCMBiXbn5NxNJMtpMrZJWr20aCmy3MaSXtwWwrg3hQOsqORMNwPl0WT5O230ioWp1nKwtG5f5ErdUiqywYtw6QUA8lx6UKtSClLlaiLkYqebSQeIjmsnjCnkYsVESZ4x3hgGg0wviwDt9RLZyIbwiDxbtaPPlRub6NDE+Y1JprwaReFKYapkVprxF4BZ7mLvQuzi7eMwC7et73Aeazk9fEKEYoLIQhB7Z9bdrro8uP+XfmGHRuGwansj8qfkONd/BRzBv44mwGvvxLBvaM/jEH/8m3cffdh+tg07VVzYFnjaULeKjiOOXTL+PJ7OvNdPZ5+Nqyb+Z90L2QI7qFToMfnqyjBRgJkNz8RlhrX9+ArHyD/Rt8Ng8n/bj+/j/FZ3yKH38Bds+E1lIIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d05f8d89e4ef43107f44705ba96fabb5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">3d9c054de4af43107f44705ba96fab81</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>43ba6c2a-29a9-4291-8ee6-5c80b2757d03</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:18:28</sys_created_on>
+        <sys_id>6fa01d4de4ef43107f44705ba96fabcd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:13</sys_updated_on>
+        <ui_id>b3d3434c-1237-4885-9977-25367bbe6c3e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UUW/aMBD+KyjPKEoIRS1vVQGJh7VS1rKHrrIc+6CWHCezHQpD/PedE4dC2zFUIU2Tlqf4fHff99198uMmEDwYBn3gUXwVD1gSJ0kvinqX/TgbJFnc4wkFiINuoGgOmKmBFZrjeUll5QKbzY0GaoF3Ct15KLn7JXHIKq1B2ZCWpRSMWlGo7RbLuDClpOuZr8YIexaSY24wfHzqBiXVCGRBB8PNmyu7LoFImoHEwlHBqhwBOtMR9jhVRFudtireqnIYeOa+OxEuiFeOTxx1A1hZUBwQbk6lgW6QU4WSC70OhlZXGMBh8Dsl17uMZ6FsozSnKyN+Yv9+5PLmgNKYn8LuSPyE2uEUgsFd6ebXRCzNZDu5Qla5um0kuNnCnFbS7s22MtgPSkfZkWgYzr8+Fy9pizcRqlbn2cqCUbk7UWu1yCoLxq0DJNRDyXGpQi1IqYulqIuRSh4uJB7CuSxeENOIhQopc7xDHBANJxgf1eEZ1cKJ+IJtsHhbiyc/KofbyPCESa25FkzqRWGqYVqU9hobL8HT3Ha9i7OLYwZgV6/73uv56uQVMYoRCgthyJ5t35v2+uDyc/69dww6tw2DU9kfFP9GjXfwQcwb+OJsBr78Swb2jP4xB//Jt1Hv6MO1t+naqmbPs8bSBXyvoijh6fgmfZjej1OSjmfT8bf3vj2e/EkfQ44QFjoNSPdkRW2DiQDJzQcSWyN7ALL0ALvX+GxujgdR/f1/lM/4KD/9Ap/7t0tcCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6fa01d4de4ef43107f44705ba96fabcd"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=3d9c054de4af43107f44705ba96fab81"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=3d9c054de4af43107f44705ba96fab81^sys_idNOT IN12dc4d8de4af43107f44705ba96fab6e,f080594de4ef43107f44705ba96fab31"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">56dc4d8de4af43107f44705ba96fab6d</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">3d9c054de4af43107f44705ba96fab81</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:01:44</sys_created_on>
+        <sys_id>12dc4d8de4af43107f44705ba96fab6e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:05</sys_updated_on>
+        <ui_id>afe04b1f-c822-4b07-9e9f-794c5da18f57</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXW/TMBT9K5Gfqyhp1sL6Ng1VQgIm0bEXmCLHvlktHDvYTrtS9b9zr5N0FSsfAh55ieLj+3HOvUfeM9uFtgv+1l55rx4MW3y8nzBlCMP/PTO8AbZgwhqpgrKGTdiG646w/f7aAQ8gE+uSD62k3zJPReccmJDWKpReWAeHw6cuywqIX/kiwxJS+Vbz3d3fVxJrpSVG9cRb7pBvAMcW+++uwq6FUvMKNDZcBafMA6YriadLPqtneTYTxXReTLNs+vIir+ZFlU9lweFijnFj4vXJHM6Mhpog5Mfy1kniMs0mDB4DGAnYr+baw4Q13KBQ63ZsEVyHAI5A3hi9O0aslQlYjVHso1dfgSplGUXWgMIE9LfHYznMtYfF2ioBN23kFpHAKz3kCKu7xrzrJdBGoOadDuNGEOk81oOWSBONgVO9Wtvt+7HhUpkocLjUVnB9PPGAY6i6AJ62ARoaLFQ2vG1xOGXr7EbFZOTSpA8aD2mt7RabkhNTLoh4ijPi6RLxVxG+406RirdYBpNxgx694VQ7aovN2SFOpfzSEZ9e36Ck7IeBAX3aFbbZwED6MHnu+DICT7ZfqpCsyI3JqRmTc77+Wei/MG6d8Tq/FPl54/LinHGTNxF5bt9R5w88nP/CwwPyWyaezf57+NTDRLPiXokyvrxYjl6EPzbxPZm1b+F7D0kQyiOTW8Jej687Xexw60qcQlvrPpOGJ+zwDcHSJhknBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">56d0158de4ef43107f44705ba96fabcb</block>
+        <comment/>
+        <connected_to>afe04b1f-c822-4b07-9e9f-794c5da18f57</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">3d9c054de4af43107f44705ba96fab81</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:17:45</sys_created_on>
+        <sys_id>f080594de4ef43107f44705ba96fab31</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:05</sys_updated_on>
+        <ui_id>43ba6c2a-29a9-4291-8ee6-5c80b2757d03</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3d9c054de4af43107f44705ba96fab81"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3d9c054de4af43107f44705ba96fab81"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3d9c054de4af43107f44705ba96fab81</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:00:37</sys_created_on>
+        <sys_id>759c854de4af43107f44705ba96fab21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:00:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3d9c054de4af43107f44705ba96fab81</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:00:37</sys_created_on>
+        <sys_id>7d9c854de4af43107f44705ba96fab26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:00:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3d9c054de4af43107f44705ba96fab81</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:00:37</sys_created_on>
+        <sys_id>bd9c454de4af43107f44705ba96fabf6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:00:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3d9c054de4af43107f44705ba96fab81"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3d9c054de4af43107f44705ba96fab81"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>51cbc6c97743011031e3b3c64b5a9907</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <internal_name>aegis__f5_shortlisting</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.fit_score","label":"Trigger - Record Created or Updated➛ Record➛Fit score","reference":"","reference_display":"Fit score","type":"decimal","base_type":"decimal","parent_table_name":"x_snc_aegis_screening_result","column_name":"fit_score","choices":[{"order":0.0}],"usedInstances":{"afe04b1f-c822-4b07-9e9f-794c5da18f57":["condition"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛ Record","reference":"x_snc_aegis_screening_result","reference_display":"Screening Result","type":"reference","base_type":"reference","usedInstances":{"c1912538-7f04-49a0-a5d6-7fd577a81793":["record"]},"attributes":{}},{"name":"Created or Updated_1.current.application","label":"Trigger - Record Created or Updated➛ Record➛Application","reference":"x_snc_aegis_application","reference_display":"Application","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_screening_result","column_name":"application","usedInstances":{"c1912538-7f04-49a0-a5d6-7fd577a81793":["record"],"b3d3434c-1237-4885-9977-25367bbe6c3e":["record"]}}]</label_cache>
+        <master>true</master>
+        <name>AI based Applications Shorlisting Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="AI based Applications Shorlisting Flow">3d9c054de4af43107f44705ba96fab81</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a6d0158de4ef43107f44705ba96fabf2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:07</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=a6d0158de4ef43107f44705ba96fabf2^sys_idNOT IN62d0158de4ef43107f44705ba96fabf4"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>a6d0158de4ef43107f44705ba96fabf2</id>
+        <name>AEGIS - F5 Shortlisting</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>62d0158de4ef43107f44705ba96fabf4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:14</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=62d0158de4ef43107f44705ba96fabf4"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=a6d0158de4ef43107f44705ba96fabf2^sys_idNOT IN2ad0158de4ef43107f44705ba96fabf5,ead0558de4ef43107f44705ba96fab0a,ead0558de4ef43107f44705ba96fab21"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AI based Applications Shorlisting Flow">a6d0158de4ef43107f44705ba96fabf2</model>
+        <model_id>a6d0158de4ef43107f44705ba96fabf2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a6d0158de4ef43107f44705ba96fabf2</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>2ad0158de4ef43107f44705ba96fabf5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2ad0158de4ef43107f44705ba96fabf5"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="AI based Applications Shorlisting Flow">a6d0158de4ef43107f44705ba96fabf2</model>
+        <model_id>a6d0158de4ef43107f44705ba96fabf2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a6d0158de4ef43107f44705ba96fabf2</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>ead0558de4ef43107f44705ba96fab0a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:36:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ead0558de4ef43107f44705ba96fab0a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AI based Applications Shorlisting Flow">a6d0158de4ef43107f44705ba96fabf2</model>
+        <model_id>a6d0158de4ef43107f44705ba96fabf2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a6d0158de4ef43107f44705ba96fabf2</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>ead0558de4ef43107f44705ba96fab21</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ead0558de4ef43107f44705ba96fab21"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=a6d0158de4ef43107f44705ba96fabf2^sys_idNOT INf2d0558de4ef43107f44705ba96fab36"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">a6d0158de4ef43107f44705ba96fabf2</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>f2d0558de4ef43107f44705ba96fab36</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:36:17</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=a6d0158de4ef43107f44705ba96fabf2^sys_idNOT INf6d0558de4ef43107f44705ba96fab34,bed0558de4ef43107f44705ba96fab34"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">a6d0158de4ef43107f44705ba96fabf2</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>afe04b1f-c822-4b07-9e9f-794c5da18f57</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>f6d0558de4ef43107f44705ba96fab34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:14</sys_updated_on>
+        <ui_id>c1912538-7f04-49a0-a5d6-7fd577a81793</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPKEqAopa3CoZWiRUJGC9dFTn2DVhyPmY7FIb477tOHMig66jUl2o8cb/sc07uSZ72RHAyID3gfnAX9Fk36HY7vt+57QVRvxsFHd6lAAFpk5QmgJ0KWKY4xhsqC5vY74cKqAHeylTre87t3zDwWKEUpMajeS4Fo0Zk6eGAY1zoXNLd0k1jhq2F5NhLBk/PbZJThRcZUGSwPytdi1TSCCS2zmqo59DNLrcxz1iRIMZQ1MmJmxy5SuthhBUcsnACv01gayDlgEBiKjW0SUJTZJypHRkYVWACteDTVO6OHWuRmopoQrda/MKbe77tiwGZMSfCMQydQFU6HlFD53gyM4U66pUJBrrShENMC2mGzVzVMM2t5tWIoZGspzNZJOljpQg5HtB4HoVGEJBbnhZ5RSuer7OXWQ1yLNJSEkdRZozKY0SNUSIqjIWzJyCh1DjBRRDpKsxVthHlMEJJvJXEwItl9oJ3arFKPcosbg9Vpd4Y86MyvaRKWBLf8BgcPrSJ3umhpFqfqKCG4c/CIqmIOQphqUIpQVhugh1mSuTmHq/agAN+aDsvRDdvbRi7Oy1U48yTH7ahTllIYSV02Fj+y9W//6P4PhdcgbF2waJ89q9jdka4yE2as63HquBscPNhNrj9TDZwND69D/61/X7nzfdrY5PKhdeNzdeGruBH4ftdPv86nS0mD/PFl9Hl4v+1730euAJp7YGxAMn1K9BrA0CCAA2EFZUzE7hia+mKx+/Bhzkh6Pvl7xP54b/5LDz/BgaVkgAkCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f6d0558de4ef43107f44705ba96fab34"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">a6d0158de4ef43107f44705ba96fabf2</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>43ba6c2a-29a9-4291-8ee6-5c80b2757d03</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>bed0558de4ef43107f44705ba96fab34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:14</sys_updated_on>
+        <ui_id>b3d3434c-1237-4885-9977-25367bbe6c3e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9FeQ1ihKgqGVX8ZCQOq2UtsyirSJjX8CS8xjboTCIf5/rxAkZqBgqdVMNK+7LPufknuRlRwQnA9ID7gc3QZ91g2634/ud614w73fnQYd3KUBA2iShMWCnApYqjvGaytwmdruhAmqAt1LVes64/RsFHsuVgsR4NMukYNSINNnvcYwLnUm6nblpzLCVkBx7yeDlrU0yqvAiA4oMdkelS5FKOgeJrWEF9Ri62WY25inLY8QYiSp55yZHrtKajrCCQxZO4LcJbAwkHBDIgkoNbRLTBBmnaksGRuWYQC34QyK3dcdKJKYkGtONFr/x5p5v+xaAzJgToQ4jJ1CZXoyooY94MjO5qvVKBQNdasJhQXNphs1c2fCQWc3LEUPnsppOZR4n96UipD6g8TxyjSAgszwt8pLW4nGVvocVyIlICkkcRZkyKuuIGqPEPDcWzo6AhELjGBdBJMsoU+laFMMIJfaWEgNvIdN3vFOLZeJRZnF7qCr1JpgfFekZVcKS+IHH4PC+TfRWDyXV+kAFNYx+5RZJScxRiAoVCgmiYhPsMFMiM7d41Roc8H3beWF+dW7D2M1hoRpnHvywiXTCIgpLoaPG8p+u/u1fxc+54AKMlQueimf/MWZnhJPcXXO2dV8WnA2uvswG19/JBo7Gt/fBv7bf75x9vzY2qVh43dh8begSXnPf7/JwPAyfp0/jMArHs+n45+n2n2/+nBsuwFy5YSJAcv0BicoKECNKA1FJ6sgOrtiauWL9ZfgyTwR9v/h9I2f8Nx+Itz8zHZr5LgkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=bed0558de4ef43107f44705ba96fab34"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=a6d0158de4ef43107f44705ba96fabf2^sys_idNOT INbed0558de4ef43107f44705ba96fab31,3ad0558de4ef43107f44705ba96fab33"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">56dc4d8de4af43107f44705ba96fab6d</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">a6d0158de4ef43107f44705ba96fabf2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>bed0558de4ef43107f44705ba96fab31</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:07</sys_updated_on>
+        <ui_id>afe04b1f-c822-4b07-9e9f-794c5da18f57</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K5Wfoyhp1sL6NnWqhARMomMvMEU3ttNaOHbwR7sQ9b9znY+2YhUwjUdeqvj4fpxzem/SEu1d7Z291zfWio0iiy+PEREqYPjcEgUVJwtCtWLCCa1IRHYgfcDadmk4OM4m2kw+1yw85mlMvTFcubgULrdUG344fPVJkvHul71JsAQTtpbQPLy+Et0KyTCqJ16DQb6OG7Jof7kSDBtdw6ycpcmMZtN5Nk2S6durtJhnRTplGfCrORaUUHCJocszxRdMcE0dIOuMUJvh/H5IXY+gNixQmSYR4U+OK8aRRAnS8ohUoFCnNg1ZOOMRQAfYnZLNMWIrlMNqJMQ+WfGDh0pJEiJLjroo72+Px3ywtYfLW3CAVDx13gyhdKsF5bZ3hPESvHTLc6wPuKs7lV2Kg0KO2Vr6Sn3szSDHAuO/iIi3SILXQWngPggp11u9/zSyXAnVuTJcSk1BHk/g0LvCu8CnJVzyCgvlFdQ1OprXRu9El4xcqngj8RCXUu+xaZjeGGggHqOxEK8Qv+3gBzAiqPiAZTAZZ8HiPBlRj9q65uQQEdvYpQRrTxrR3Py7Dwx7xYO2vLcnpHSFbrDxjg8yDtHzvck74LQ8K+Em6zDTk/ORnlzajt+Fvmz8ywTK9Jqml8cfskvjP+mn+vkSjIpesgnpHzZhQP5qFWaz/5vw6k0INAuwgubdOx/LhZfRP1yFxzDyfdOj2VRY5HYfsHfjlyZcNDhRgp5De22+BVUn7PATzHmXKLMGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">56d0158de4ef43107f44705ba96fabcb</block>
+        <comment/>
+        <connected_to>afe04b1f-c822-4b07-9e9f-794c5da18f57</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="AI based Applications Shorlisting Flow">a6d0158de4ef43107f44705ba96fabf2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>3ad0558de4ef43107f44705ba96fab33</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:07</sys_updated_on>
+        <ui_id>43ba6c2a-29a9-4291-8ee6-5c80b2757d03</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a6d0158de4ef43107f44705ba96fabf2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>62d0558de4ef43107f44705ba96fab06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a6d0158de4ef43107f44705ba96fabf2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>a2d0558de4ef43107f44705ba96fab11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a6d0158de4ef43107f44705ba96fabf2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_id>aed0558de4ef43107f44705ba96fab27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:19:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a6d0158de4ef43107f44705ba96fabf2"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>3d9c054de4af43107f44705ba96fab81</sys_id>
+        <latest_snapshot>a6d0158de4ef43107f44705ba96fabf2</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=3d9c054de4af43107f44705ba96fab81^sys_idNOT INbad0558de4ef43107f44705ba96fab42"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>3d9c054de4af43107f44705ba96fab81</plan_id>
+        <snapshot>a6d0158de4ef43107f44705ba96fabf2</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:19:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bad0558de4ef43107f44705ba96fab42</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:37:07</sys_updated_on>
+        <trigger display_value="">3544e4e1b4fb43107f443abc2131383a</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=3d9c054de4af43107f44705ba96fab81"/>
+</record_update>

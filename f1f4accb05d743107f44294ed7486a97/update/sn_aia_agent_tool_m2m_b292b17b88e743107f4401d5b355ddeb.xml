@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Panel Assignment Agent">a1f05349746703107f4413d400ccf236</agent>
+        <description>Write one AI Decision Log entry at the end of a run.</description>
+        <display_mode>inline</display_mode>
+        <display_output>false</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>a1f05349746703107f4413d400ccf236</entity_id>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"requisition_sys_id","value":"","description":"","mandatory":true},{"name":"input_summary","value":"","description":"","mandatory":true},{"name":"output_summary","value":"","description":"","mandatory":true},{"name":"guardrails_applied","value":"","description":"","mandatory":true},{"name":"appliation_sys_id","value":"","description":"","mandatory":true},{"name":"crudInputs","value":{"operation":"create","table":{"value":"x_snc_aegis_ai_decision_log","displayValue":"AI Decision Log"},"fieldValues":[{"field":{"name":"input_summary","label":"Evaluated Input Data","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"input_summary","sublabel":"input_summary"},"value":{"fieldValue":"{{input_summary}}"}},{"field":{"name":"output_summary","label":"Output Recommendation","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"output_summary","sublabel":"output_summary"},"value":{"fieldValue":"{{output_summary}}"}},{"field":{"name":"guardrails_applied","label":"Governance Guardrails","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"guardrails_applied","sublabel":"guardrails_applied"},"value":{"fieldValue":"{{guardrails_applied}}"}},{"field":{"name":"related_requisition","label":"Related requisition","type":"reference","referenceTable":"x_snc_aegis_job_requisition","referenceTableDefaultField":"closed_at","referenceKey":null,"id":"related_requisition","sublabel":"related_requisition"},"value":{"fieldValue":"{{requisition_sys_id}}"}},{"field":{"name":"agent_name","label":"Governed Agent Persona","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"agent_name","sublabel":"agent_name"},"value":{"fieldValue":"Panel Assignment Agent"}},{"field":{"name":"action_type","label":"Action type","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"action_type","sublabel":"action_type"},"value":{"fieldValue":"INTERVIEW_SCHEDULE"}},{"field":{"name":"related_application","label":"Related application","type":"reference","referenceTable":"x_snc_aegis_application","referenceTableDefaultField":"closed_at","referenceKey":null,"id":"related_application","sublabel":"related_application"},"value":{"fieldValue":"{{appliation_sys_id}}"}}]},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Log Panel Assignment Run</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 12:49:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>b292b17b88e743107f4401d5b355ddeb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Log Panel Assignment Run</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_b292b17b88e743107f4401d5b355ddeb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 14:28:39</sys_updated_on>
+        <timeout/>
+        <tool display_value="Log Panel Assignment Run">3e923d3b88e743107f4401d5b355dd94</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions>undefined</transformation_instructions>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+</record_update>

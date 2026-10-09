@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Resume Intelligence Agent">73649d45e42383107f44705ba96fabe5</agent>
+        <description>List applications for one requisition that still need screening: not withdrawn, screening_status PENDING or ERROR, oldest first. Returns sys_id, number and candidate. Does not return resumes; use Get Application Resume.</description>
+        <display_mode>inline</display_mode>
+        <display_output>false</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>73649d45e42383107f44705ba96fabe5</entity_id>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"requsition_sys_id","value":"","description":"","mandatory":false},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_aegis_application","displayValue":"Application"},"query":"requisition.sys_id={{requsition_sys_id}}^withdrawn=false^screening_statusINPENDING,ERROR","returnFields":[{"name":"sys_id","label":"Sys ID","type":"GUID","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"sys_id","sublabel":"sys_id"},{"name":"candidate","label":"Candidate","type":"reference","referenceTable":"x_snc_aegis_candidate","referenceTableDefaultField":"number","referenceKey":null,"id":"candidate","sublabel":"candidate"},{"name":"number","label":"Number","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"number","sublabel":"number"}],"limit":"200","orderBy":"sys_created_on","sortType":"z_to_a"},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Query Applications by Requisition</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 23:04:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e4e8e50de4a383107f44705ba96fabf8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Query Applications by Requisition</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_e4e8e50de4a383107f44705ba96fabf8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 19:46:09</sys_updated_on>
+        <timeout/>
+        <tool display_value="Query Applications by Requisition">20e8e50de4a383107f44705ba96fabf5</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions>undefined</transformation_instructions>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+</record_update>

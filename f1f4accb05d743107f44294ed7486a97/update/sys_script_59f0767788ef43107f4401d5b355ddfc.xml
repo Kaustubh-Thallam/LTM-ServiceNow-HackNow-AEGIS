@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_aegis_job_requisition</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Validate Offerings on record creation</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous) {
+
+    var offerings = current.getValue('offerings') || '';
+
+    // Normalize line endings and remove unnecessary spaces
+    offerings = offerings
+        .replace(/\r\n/g, '\n')
+        .replace(/\r/g, '\n')
+        .trim();
+
+    var errors = [];
+
+    // Split into individual lines
+    var lines = offerings.split('\n');
+
+    // Helper function to get the value after a label
+    function getValueAfterLabel(label) {
+
+        for (var i = 0; i < lines.length; i++) {
+
+            var line = lines[i].trim();
+
+            if (line.indexOf(label) === 0) {
+                return line.substring(label.length).trim();
+            }
+        }
+
+        return '';
+    }
+
+    // Get values
+    var salary = getValueAfterLabel('Salary Offered:');
+    var bonus = getValueAfterLabel('Bonus Offered:');
+    var workMode = getValueAfterLabel('Work Mode Offered(On-site / Hybrid / Remote):');
+    var workingHours = getValueAfterLabel('Working Hours Offered:');
+    var others = getValueAfterLabel('Others:');
+
+    // Salary validation
+    if (!salary || salary.indexOf('___') !== -1) {
+        errors.push('Salary Offered');
+    }
+
+    // Bonus validation
+    if (!bonus) {
+        errors.push('Bonus Offered');
+    }
+
+    // Work mode validation
+    if (!workMode) {
+        errors.push('Work Mode Offered');
+    }
+
+    // Working hours validation
+    if (!workingHours) {
+        errors.push('Working Hours Offered');
+    }
+
+    // Others validation
+    if (!others) {
+        errors.push('Others');
+    }
+
+    // Stop record creation
+    if (errors.length > 0) {
+
+        gs.addErrorMessage(
+            'Please fill in the following Offerings fields before creating the Job Requisition: ' +
+            errors.join(', ')
+        );
+
+        current.setAbortAction(true);
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 17:26:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>59f0767788ef43107f4401d5b355ddfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Offerings on record creation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_script_59f0767788ef43107f4401d5b355ddfc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 17:26:20</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=59f0767788ef43107f4401d5b355ddfc"/>
+</record_update>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Panel Assignment Agent">a1f05349746703107f4413d400ccf236</agent>
+        <description>Create one Interview after the conflict check passes. Returns the new sys_id.</description>
+        <display_mode>inline</display_mode>
+        <display_output>false</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>a1f05349746703107f4413d400ccf236</entity_id>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"application_sys_id","value":"","description":"","mandatory":true},{"name":"candidate_sys_id","value":"","description":"","mandatory":true},{"name":"panelist_sys_id","value":"","description":"","mandatory":true},{"name":"scheduled_start","value":"","description":"","mandatory":true},{"name":"scheduled_end","value":"","description":"","mandatory":true},{"name":"location_or_link","value":"","description":"","mandatory":true},{"name":"question_set","value":"","description":"","mandatory":true},{"name":"crudInputs","value":{"operation":"create","table":{"value":"x_snc_aegis_interview","displayValue":"Interview"},"fieldValues":[{"field":{"name":"application","label":"Application","type":"reference","referenceTable":"x_snc_aegis_application","referenceTableDefaultField":"closed_at","referenceKey":null,"id":"application","sublabel":"application"},"value":{"fieldValue":"{{application_sys_id}}"}},{"field":{"name":"question_set","label":"Tailored Questions &amp; Rubric","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"question_set","sublabel":"question_set"},"value":{"fieldValue":"{{question_set}}"}},{"field":{"name":"location_or_link","label":"Location or Meeting Link","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"location_or_link","sublabel":"location_or_link"},"value":{"fieldValue":"{{location_or_link}}"}},{"field":{"name":"candidate","label":"Candidate","type":"reference","referenceTable":"x_snc_aegis_candidate","referenceTableDefaultField":"number","referenceKey":null,"id":"candidate","sublabel":"candidate"},"value":{"fieldValue":"{{candidate_sys_id}}"}},{"field":{"name":"scheduled_start","label":"Scheduled Start","type":"glide_date_time","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"scheduled_start","sublabel":"scheduled_start"},"value":{"fieldValue":"{{scheduled_start}}"}},{"field":{"name":"scheduled_end","label":"Scheduled End","type":"glide_date_time","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"scheduled_end","sublabel":"scheduled_end"},"value":{"fieldValue":"{{scheduled_end}}"}},{"field":{"name":"panelist","label":"Panelist","type":"reference","referenceTable":"sys_user","referenceTableDefaultField":"name","referenceKey":null,"id":"panelist","sublabel":"panelist"},"value":{"fieldValue":"{{panelist_sys_id}}"}},{"field":{"name":"outcome","label":"Outcome","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"outcome","sublabel":"outcome"},"value":{"fieldValue":"PENDING"}},{"field":{"name":"candidate_confirmed","label":"Candidate Confirmed","type":"boolean","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"candidate_confirmed","sublabel":"candidate_confirmed"},"value":{"fieldValue":"f"}},{"field":{"name":"interview_status","label":"Interview Status","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"interview_status","sublabel":"interview_status"},"value":{"fieldValue":"PENDING_CONFIRMATION"}}]},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Create Interview Record</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 14:01:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8fe28e7b886b43107f4401d5b355dd18</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Create Interview Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_8fe28e7b886b43107f4401d5b355dd18</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 14:28:39</sys_updated_on>
+        <timeout/>
+        <tool display_value="Create Interview Record">c7e28e7b886b43107f4401d5b355dd15</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config">
+    <sys_generative_ai_prompt_config action="INSERT_OR_UPDATE">
+        <ai_config display_value="OneExtend Capability Definition: AEGIS JD Bias Checking AI (AWS Claude - Amazon Bedrock Chat Completions)">039ab711b4b743107f443abc21313865</ai_config>
+        <definition display_value="AEGIS JD Bias Checking AI (AWS Claude - Amazon Bedrock Chat Completions)">16192401e4ab43107f44705ba96fab33</definition>
+        <filter_properties>{}</filter_properties>
+        <filter_type>default</filter_type>
+        <is_default>true</is_default>
+        <order>0</order>
+        <sys_class_name>sys_generative_ai_prompt_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 14:35:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c79ab711b4b743107f443abc21313869</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>039ab711b4b743107f443abc21313865</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_generative_ai_prompt_config_c79ab711b4b743107f443abc21313869</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:57:25</sys_updated_on>
+    </sys_generative_ai_prompt_config>
+</record_update>

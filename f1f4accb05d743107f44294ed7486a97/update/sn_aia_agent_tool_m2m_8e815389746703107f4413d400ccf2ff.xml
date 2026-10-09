@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Feedback Synthesis Agent">318536c9742303107f4413d400ccf23f</agent>
+        <description>Creates a new Hiring Decision record for a candidate who does not yet have one, populating Candidate, AI Recommendation, and AI Evidentiary Justification.</description>
+        <display_mode>inline</display_mode>
+        <display_output>false</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>318536c9742303107f4413d400ccf23f</entity_id>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"Candidate_id","value":"","description":"","mandatory":true},{"name":"Recomendation","value":"","description":"","mandatory":true},{"name":"Justification","value":"","description":"","mandatory":true},{"name":"crudInputs","value":{"operation":"create","table":{"value":"x_snc_aegis_hiring_decision","displayValue":"Hiring Decision"},"fieldValues":[{"field":{"name":"candidate","label":"Candidate","type":"reference","referenceTable":"x_snc_aegis_candidate","referenceTableDefaultField":"number","referenceKey":null,"id":"candidate","sublabel":"candidate"},"value":{"fieldValue":"{{Candidate_id}}"}},{"field":{"name":"ai_recommendation","label":"Ai recommendation","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"ai_recommendation","sublabel":"ai_recommendation"},"value":{"fieldValue":"{{Recomendation}}"}},{"field":{"name":"ai_reasoning","label":"AI Evidentiary Justification","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"ai_reasoning","sublabel":"ai_reasoning"},"value":{"fieldValue":"{{Justification}}"}}]},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Create Hiring Decision Record</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-24 06:41:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8e815389746703107f4413d400ccf2ff</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Create Hiring Decision Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_8e815389746703107f4413d400ccf2ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 14:20:53</sys_updated_on>
+        <timeout/>
+        <tool display_value="Create Hiring Decision Record">02815389746703107f4413d400ccf2fc</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+</record_update>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Panel Assignment Agent">a1f05349746703107f4413d400ccf236</agent>
+        <description>Fetch the latest screening result for one application. Returns fit_score, subscores, matched_skills, missing_skills, transferable_skills, explanation.</description>
+        <display_mode>inline</display_mode>
+        <display_output>false</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>a1f05349746703107f4413d400ccf236</entity_id>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"application_sys_id","value":"","description":"","mandatory":true},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_aegis_screening_result","displayValue":"Screening Result"},"query":"application={{application_sys_id}}","returnFields":[{"name":"fit_score","label":"Fit score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"fit_score","sublabel":"fit_score"},{"name":"skills_score","label":"Skills score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"skills_score","sublabel":"skills_score"},{"name":"experience_score","label":"Experience score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"experience_score","sublabel":"experience_score"},{"name":"education_score","label":"Education score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"education_score","sublabel":"education_score"},{"name":"projects_score","label":"Projects score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"projects_score","sublabel":"projects_score"},{"name":"certifications_score","label":"Certifications score","type":"decimal","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"certifications_score","sublabel":"certifications_score"},{"name":"matched_skills","label":"Matched skills","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"matched_skills","sublabel":"matched_skills"},{"name":"missing_skills","label":"Missing skills","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"missing_skills","sublabel":"missing_skills"},{"name":"transferable_skills","label":"Transferable skills","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"transferable_skills","sublabel":"transferable_skills"},{"name":"explanation","label":"Explanation","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"explanation","sublabel":"explanation"},{"name":"sys_id","label":"Sys ID","type":"GUID","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"sys_id","sublabel":"sys_id"}],"limit":"1","orderBy":"","sortType":""},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Get Screening Result</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-24 09:24:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>32e6b30974ab03107f4413d400ccf2a3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Get Screening Result</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_32e6b30974ab03107f4413d400ccf2a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 14:28:38</sys_updated_on>
+        <timeout/>
+        <tool display_value="Get Screening Result">b2e6b30974ab03107f4413d400ccf29f</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+</record_update>

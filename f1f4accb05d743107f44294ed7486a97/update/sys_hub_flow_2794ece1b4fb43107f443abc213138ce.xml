@@ -1,0 +1,1414 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=5669000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Automatically processes HR shortlisting decisions and advances selected candidates to the next stage of the recruitment process.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>hr_candidate_shortlisting_for_interview_round_flow</internal_name>
+        <label_cache>[{"name":"540eca66-f8bc-42af-bc44-cbf8ca5981f6.Record.fit_score","label":"4➛Screening Result Record➛Fit score","reference":"","reference_display":"Fit score","type":"decimal","base_type":"decimal","parent_table_name":"x_snc_aegis_screening_result","column_name":"fit_score","usedInstances":{"7353f50d-ff77-4f2a-bfea-7034c3d11010":[null]}},{"name":"540eca66-f8bc-42af-bc44-cbf8ca5981f6.Record.missing_skills","label":"4➛Screening Result Record➛Missing skills","reference":"","reference_display":"Missing skills","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_screening_result","column_name":"missing_skills","usedInstances":{"7353f50d-ff77-4f2a-bfea-7034c3d11010":[null]}},{"name":"Updated_1.current.candidate.full_name","label":"Trigger - Record Updated➛Application Record➛Candidate➛Full name","reference":"","reference_display":"Full name","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_candidate","column_name":"full_name","usedInstances":{"a680820d-da6c-45c5-9157-e407080d09b5":[null],"7353f50d-ff77-4f2a-bfea-7034c3d11010":[null]}},{"name":"Updated_1.current.requisition.role_title","label":"Trigger - Record Updated➛Application Record➛Requisition➛Role title","reference":"","reference_display":"Role title","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"role_title","usedInstances":{"a680820d-da6c-45c5-9157-e407080d09b5":[null],"7353f50d-ff77-4f2a-bfea-7034c3d11010":[null]}},{"name":"Updated_1.current.candidate.email","label":"Trigger - Record Updated➛Application Record➛Candidate➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_candidate","column_name":"email","usedInstances":{"a680820d-da6c-45c5-9157-e407080d09b5":["ah_to"],"7353f50d-ff77-4f2a-bfea-7034c3d11010":["ah_to"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Application Record","reference":"x_snc_aegis_application","reference_display":"Application","type":"reference","base_type":"reference","usedInstances":{"a680820d-da6c-45c5-9157-e407080d09b5":["record"],"7353f50d-ff77-4f2a-bfea-7034c3d11010":["record"],"540eca66-f8bc-42af-bc44-cbf8ca5981f6":[null],"55dbac28-0af5-4599-a39e-50d85acaacfe":["record"]},"attributes":{}},{"name":"Updated_1.current.stage","label":"Trigger - Record Updated➛Application Record➛Stage","reference":"","reference_display":"Stage","type":"choice","base_type":"choice","parent_table_name":"x_snc_aegis_application","column_name":"stage","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":0.0,"used":false,"label":"Applied","reference":false,"image":"","rawLabel":"Applied","selected":false,"missing":false,"value":"APPLIED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Applied"}}},{"sequence":1.0,"used":false,"label":"Received","reference":false,"image":"","rawLabel":"Received","selected":false,"missing":false,"value":"RECEIVED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Received"}}},{"sequence":2.0,"used":false,"label":"Screening","reference":false,"image":"","rawLabel":"Screening","selected":false,"missing":false,"value":"SCREENING","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Screening"}}},{"sequence":3.0,"used":false,"label":"Recruiter review","reference":false,"image":"","rawLabel":"Recruiter review","selected":false,"missing":false,"value":"RECRUITER_REVIEW","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Recruiter review"}}},{"sequence":4.0,"used":false,"label":"Shortlisted","reference":false,"image":"","rawLabel":"Shortlisted","selected":false,"missing":false,"value":"SHORTLISTED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Shortlisted"}}},{"sequence":5.0,"used":false,"label":"Interview","reference":false,"image":"","rawLabel":"Interview","selected":false,"missing":false,"value":"INTERVIEW","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Interview"}}},{"sequence":6.0,"used":false,"label":"Offered","reference":false,"image":"","rawLabel":"Offered","selected":false,"missing":false,"value":"OFFERED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Offered"}}},{"sequence":7.0,"used":false,"label":"Rejected","reference":false,"image":"","rawLabel":"Rejected","selected":false,"missing":false,"value":"REJECTED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Rejected"}}},{"sequence":8.0,"used":false,"label":"Closed","reference":false,"image":"","rawLabel":"Closed","selected":false,"missing":false,"value":"CLOSED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Closed"}}}],"usedInstances":{"265c669d-a8c0-45ec-bd48-9543797d74af":["condition"]}}]</label_cache>
+        <master_snapshot>7cf970a1b4bf43107f443abc2131388c</master_snapshot>
+        <master_snapshot_digest/>
+        <name>HR Candidate Shortlisting for Interview Round Flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>504a7ca1b4bf43107f443abc213138b9</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:38:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2794ece1b4fb43107f443abc213138ce</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>HR Candidate Shortlisting for Interview Round Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_hub_flow_2794ece1b4fb43107f443abc213138ce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:14</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>3c4abca1b4bf43107f443abc21313827</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=2794ece1b4fb43107f443abc213138ce"/>
+    <sys_variable_value action="delete_multiple" query="document_key=2794ece1b4fb43107f443abc213138ce"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_aegis_application">stageINSHORTLISTED,REJECTED<item display_value="SHORTLISTED,REJECTED" endquery="false" field="stage" goto="false" newquery="false" operator="IN" or="false" value="SHORTLISTED,REJECTED"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:13:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>504a7ca1b4bf43107f443abc213138b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:09</sys_updated_on>
+        <table>x_snc_aegis_application</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>2794ece1b4fb43107f443abc213138ce</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:13:09</sys_created_on>
+        <sys_id>5c4a7ca1b4bf43107f443abc213138b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:09</sys_updated_on>
+        <trigger display_value="">504a7ca1b4bf43107f443abc213138b9</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=2794ece1b4fb43107f443abc213138ce^sys_idNOT IN5c4a7ca1b4bf43107f443abc213138b9"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=2794ece1b4fb43107f443abc213138ce"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=2794ece1b4fb43107f443abc213138ce^sys_idNOT INe794ece1b4fb43107f443abc213138cf"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>2794ece1b4fb43107f443abc213138ce</id>
+        <name>HR Candidate Shortlisting for Interview Round Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:38:37</sys_created_on>
+        <sys_id>e794ece1b4fb43107f443abc213138cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:38:37</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=e794ece1b4fb43107f443abc213138cf"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=2794ece1b4fb43107f443abc213138ce^sys_idNOT IN22152465b4fb43107f443abc21313803,22152465b4fb43107f443abc2131383f,e2152465b4fb43107f443abc2131384b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</model>
+        <model_id>2794ece1b4fb43107f443abc213138ce</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_2794ece1b4fb43107f443abc213138ce</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:40:43</sys_created_on>
+        <sys_id>22152465b4fb43107f443abc21313803</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 18:59:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=22152465b4fb43107f443abc21313803"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</model>
+        <model_id>2794ece1b4fb43107f443abc213138ce</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_2794ece1b4fb43107f443abc213138ce</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:40:44</sys_created_on>
+        <sys_id>22152465b4fb43107f443abc2131383f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 18:59:10</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=22152465b4fb43107f443abc2131383f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</model>
+        <model_id>2794ece1b4fb43107f443abc213138ce</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_2794ece1b4fb43107f443abc213138ce</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:40:44</sys_created_on>
+        <sys_id>e2152465b4fb43107f443abc2131384b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:40:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e2152465b4fb43107f443abc2131384b"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=2794ece1b4fb43107f443abc213138ce"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2794ece1b4fb43107f443abc213138ce"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=2794ece1b4fb43107f443abc213138ce^sys_idNOT IN5615e065b4fb43107f443abc2131381a"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:40:43</sys_created_on>
+        <sys_id>5615e065b4fb43107f443abc2131381a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:48</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=2794ece1b4fb43107f443abc213138ce^sys_idNOT INc14730e9b47f43107f443abc21313856,aea93861b4bf43107f443abc2131381b,716870edb47f43107f443abc21313811,4c3af4a1b4bf43107f443abc213138cc"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>265c669d-a8c0-45ec-bd48-9543797d74af</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:00:06</sys_created_on>
+        <sys_id>c14730e9b47f43107f443abc21313856</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:49</sys_updated_on>
+        <ui_id>a680820d-da6c-45c5-9157-e407080d09b5</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c14730e9b47f43107f443abc21313856"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>65dfc8ca-03de-4c77-af36-3bebb23c684c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:10:34</sys_created_on>
+        <sys_id>aea93861b4bf43107f443abc2131381b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:06</sys_updated_on>
+        <ui_id>540eca66-f8bc-42af-bc44-cbf8ca5981f6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VYyW7bMBD9FUFnx5W8yc6taGCgQNsASdpLGhCUSNlEaVIlqWyG/71DUbQd73FcND1qOMubmTcjSrfTkJHwPCSDaJAPBt1+EkXtdhT1eu0Mx2na7mVplOJO2AgFnlDQNDjlFB7vMS/t8yPSIkOYjphGOlOUCiZGSFFdcgNqhOmC46cftfa11wiuvEY2ZpwoKsLz27tGWGAFcQxV4fl05cg8FRRxnFIOjm4sjOCbxdQ4OIUXxusp2QD+EQnnWipisUSNkD4aKgiFUDnmmjbCCRYEG6me5hJFMbkUfCEYM2HAY2iVHzV7Bvf9yOrlFNLKqDubP6K6Wk6cjSXL6GVhmBRO4oC6Q8nLifjmErB1pjmGevo6g6TU4I8WFrMFUSPKr8fy4coHHDJRpVcfcplhPn/CxiiWloZq2wvK6QQcoQkuCtvhQsl7VhkDlklzxOGhmXP5AEE1G4kmzizwJpQIN4cgv6jEP7BiNouv4AaMARDj0G3kiq5lqaqq3KOMl7o6UFho5yucVbVCv0uL0mVd54dciUABOMgK8xEM7mmdyqzhWd7dSZHBghKZFITZmHqJ6gCZswxb8c8SPJDp9HsB+VGC4mZWKiipmc3WSX+w3XGj8GkZ66F5bjTelHw9FC9k9VDEJxuKThT9o7Ewqnx/U7GP5y7hPWSPyU4SkEW/tVQGucotsX2dx0czdMgoJy+W9QHgvPGlJVuQPm3DWxM0tzFWtnbrv9/a75KeAIggV28mOBPVSxOAnoa33Z3USOMVHlTtX7C2kmGdbdjCgZHB8/Fbtuqr5+8BIL3hNSAKbhzKDcD9fvXua+q2T0bddut11AXi3E7n6OdV21BgfzeyrfP6z1Yfr+oDu5YM4tndnPqfjosZvzZmy8Zcmc32q4ZzmVnu5GILwU5889oybI2/Od1jMK3jITes6IGRETWL6F6LSPOA+a9N5zW75jNUpffmW1y886KfLt3iWI4m0CdWwNVS0QyooBFWFOWyFATVl8oFbWzfcqa0qZXXd8gVNaUSgYSRC8yYBpV2MNc+xWY5IDtv+DkPfHo1Bh1AekGVXjBP73XF2LKPOie8671lHw0x41Xp4eOgWOodVUqqLTtpT9d2tP/AhXUgqPikoN6+0TbxfeNm24P1v/jSfOvWyShOOy3cS9pxHEVxRJKonyRxv5fmPZx08sWgoeqPCJHgOQdigHvkieC7Gq2vFrcbj/4dAjv3w7B2cSheb3zhvktbiQksYOhz4AHvT6neF6mUnGKxoGf3ny2M9/LHpGQ3q7Vxoi+bmva3XuYl+y7Y75J+tqTo06jVj0l21k/i5KyTk97ZgODuGR6k3aRNaNbJj38/3/0BrP14j00UAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=aea93861b4bf43107f443abc2131381b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>65dfc8ca-03de-4c77-af36-3bebb23c684c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:05:04</sys_created_on>
+        <sys_id>716870edb47f43107f443abc21313811</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:49</sys_updated_on>
+        <ui_id>7353f50d-ff77-4f2a-bfea-7034c3d11010</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=716870edb47f43107f443abc21313811"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>65dfc8ca-03de-4c77-af36-3bebb23c684c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:12:52</sys_created_on>
+        <sys_id>4c3af4a1b4bf43107f443abc213138cc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:06</sys_updated_on>
+        <ui_id>55dbac28-0af5-4599-a39e-50d85acaacfe</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXW/aMBT9KyjPUZQQilreqlGmPoxKdOtLV1mOfQOeHCdzHApD/PddOw6FdmOoQpomzW/3+5zro/u4CQQPRsEAeJxcJUOWJmnaj+P+5SDJhmmW9HlKAZIgDBQtADM1sFJztJdUNtax2XypODXASRKxRmtQZrvFOBd1Jen6waehhy2E5BgPRo9PYVBRjR0N6GC0eRUy6wqIpBlILByXrCmwae92jD1ORdtVzzq4r+HbGWhz350I68SQxZPEYQArA4oDjsuprCEMCqqQZqnXwcjoBh0aKL9Tcr3LWAhlWqYFXdXiB/YfxDYvB6TG/BZ2JvEb6pZTCgZ3lRGlaj2GZrLbXCmbQk1bCna3kNNGmr3dNjX2g8pCtiBahPn9onyedfMmQjl2Hq0sGZU7ixqjRdYYqO13gAS3lIJWlVBzUulyKVwxQimiuUQjymX5jDNrMVcRZRZ3hAui0QT9Y+d+oFpYEp+wDRZvHXnyvbFzWxoeMHGcHWHiPgpTa6ZFZa6x8RI8zG3o5ZpdHBMAu3r5772eL5JdkVoxQmEuaoLQpGDUrf2NaK8Pgu/T72eLoDdtEZyK/qD4N2y8gg98XsAXZxPw5V8SsEf0jyn4T7qN+0cP195PO6nWe5rV8A2YvbLUfG3iOOX3H2Y3N9Pb6ce3sj2a+04VQ4ETDPTaGeHJfLoGEwGS178g2MnYDyBLP2B3i8+m5WQYu/f/JJ/xJD/9BEOian9DCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4c3af4a1b4bf43107f443abc213138cc"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=2794ece1b4fb43107f443abc213138ce"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=2794ece1b4fb43107f443abc213138ce^sys_idNOT IN7127f8a9b47f43107f443abc2131384b,d868bcadb47f43107f443abc213138a5"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">bcf970a1b4bf43107f443abc2131383b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 18:59:36</sys_created_on>
+        <sys_id>7127f8a9b47f43107f443abc2131384b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:06</sys_updated_on>
+        <ui_id>265c669d-a8c0-45ec-bd48-9543797d74af</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lYJnQdAjNhrfgqZBA6Q1ELu5NIGwIlc2UYpUScqOa/jfu9TDCRoHfaDH3sRZ7u7McKA9M61vWu+W5sI5udJs9uUhYlIHjL73TEONbMa40UJ6aXTRARHbgGpDYbE21ivpPApChXSNgt3dySJfSyUsDjsasDTJo2Wz/U8lv2uwUFCiCjO8lXpF7VLQqUqgSs95yvNsmmdJkr09S8tpXqaZyAEhp3tj47uR8pubDole1RL2Ee7GTcaKQCtNIoaPHrUg+rMKlMOI1aAFeGN3R8QiiLlWT8Baak/jWLj86OR3mp1NJuFihaSRY188HovBtR7mayM5zptAsEc8lGro4Ua1tf7U6wh+YwWt8qPfhLSO5mETSAcWA6WKXmJ7Oy68kroTOBSV4aCOJ/BkQ9l6dOFhUGFNg4oamobMKRprNrJrJi51vFJ0iCtltrQ05CcGHojH5BHEV4RfdvAdWBlUfKQx1NzTLMFJXnRZo3HekoRDZ0vxrQ2EeoGDlKJ3gy44bmXjL2jPBgfWh+hlUJ9ldL//3BAhFEUa89aSBz52HlZ4ONy3SZKLxYf57fLmerF8f/kyxH/Y/S9Sfg6TapImk9MpP5ueSvmJfL8e7ewX0Q6P8ZvJTpLkf7SfR1u6oo/ooK1b/tfJfggx7je4PjcCuXREZBmw6/FPHQo7CoDkz6GtsV+DhCfs8AMbWbRw8wUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b8f970a1b4bf43107f443abc2131383f</block>
+        <comment/>
+        <connected_to>265c669d-a8c0-45ec-bd48-9543797d74af</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:04:57</sys_created_on>
+        <sys_id>d868bcadb47f43107f443abc213138a5</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:06</sys_updated_on>
+        <ui_id>65dfc8ca-03de-4c77-af36-3bebb23c684c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=2794ece1b4fb43107f443abc213138ce^sys_idNOT INe558f8adb47f43107f443abc21313856,e158f8adb47f43107f443abc21313857,0e99f821b4bf43107f443abc213138ff,c2993c21b4bf43107f443abc21313800,ffe9f861b4bf43107f443abc213138b2,37e9f861b4bf43107f443abc213138b3"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2794ece1b4fb43107f443abc213138ce</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.candidate.full_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:04:46</sys_created_on>
+        <sys_id>e558f8adb47f43107f443abc21313856</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:04:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>adced928-ea84-4a07-a6e9-94c13aaff5b7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2794ece1b4fb43107f443abc213138ce</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.requisition.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:04:46</sys_created_on>
+        <sys_id>e158f8adb47f43107f443abc21313857</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:04:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>bdb56df6-e269-4190-a84d-41c6789ecbd7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2794ece1b4fb43107f443abc213138ce</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.requisition.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:10:16</sys_created_on>
+        <sys_id>0e99f821b4bf43107f443abc213138ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:10:16</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c0fd72c1-0200-4486-8e2a-7ac01945a504</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2794ece1b4fb43107f443abc213138ce</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.candidate.full_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:10:16</sys_created_on>
+        <sys_id>c2993c21b4bf43107f443abc21313800</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:10:16</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b3de3c4f-2124-4355-a121-76acc0432ab8</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2794ece1b4fb43107f443abc213138ce</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{540eca66-f8bc-42af-bc44-cbf8ca5981f6.Record.fit_score}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:44</sys_created_on>
+        <sys_id>ffe9f861b4bf43107f443abc213138b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:44</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1be44879-cbbb-45f6-a3dd-90d4089d5675</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2794ece1b4fb43107f443abc213138ce</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{540eca66-f8bc-42af-bc44-cbf8ca5981f6.Record.missing_skills}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:44</sys_created_on>
+        <sys_id>37e9f861b4bf43107f443abc213138b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:44</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0807b17a-2066-4925-b58c-97e8455408bc</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=2794ece1b4fb43107f443abc213138ce"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2794ece1b4fb43107f443abc213138ce</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:40:44</sys_created_on>
+        <sys_id>6a152465b4fb43107f443abc21313845</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:40:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2794ece1b4fb43107f443abc213138ce</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:40:45</sys_created_on>
+        <sys_id>76152465b4fb43107f443abc21313853</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:40:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2794ece1b4fb43107f443abc213138ce</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 17:40:44</sys_created_on>
+        <sys_id>ea152465b4fb43107f443abc2131382a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 17:40:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_2794ece1b4fb43107f443abc213138ce"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_2794ece1b4fb43107f443abc213138ce"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Automatically processes HR shortlisting decisions and advances selected candidates to the next stage of the recruitment process.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>hr_candidate_shortlisting_for_interview_round_flow</internal_name>
+        <label_cache>[{"name":"540eca66-f8bc-42af-bc44-cbf8ca5981f6.Record.fit_score","label":"4➛Screening Result Record➛Fit score","reference":"","reference_display":"Fit score","type":"decimal","base_type":"decimal","parent_table_name":"x_snc_aegis_screening_result","column_name":"fit_score","usedInstances":{"7353f50d-ff77-4f2a-bfea-7034c3d11010":[null]}},{"name":"540eca66-f8bc-42af-bc44-cbf8ca5981f6.Record.missing_skills","label":"4➛Screening Result Record➛Missing skills","reference":"","reference_display":"Missing skills","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_screening_result","column_name":"missing_skills","usedInstances":{"7353f50d-ff77-4f2a-bfea-7034c3d11010":[null]}},{"name":"Updated_1.current.candidate.full_name","label":"Trigger - Record Updated➛Application Record➛Candidate➛Full name","reference":"","reference_display":"Full name","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_candidate","column_name":"full_name","usedInstances":{"a680820d-da6c-45c5-9157-e407080d09b5":[null],"7353f50d-ff77-4f2a-bfea-7034c3d11010":[null]}},{"name":"Updated_1.current.requisition.role_title","label":"Trigger - Record Updated➛Application Record➛Requisition➛Role title","reference":"","reference_display":"Role title","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"role_title","usedInstances":{"a680820d-da6c-45c5-9157-e407080d09b5":[null],"7353f50d-ff77-4f2a-bfea-7034c3d11010":[null]}},{"name":"Updated_1.current.candidate.email","label":"Trigger - Record Updated➛Application Record➛Candidate➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_candidate","column_name":"email","usedInstances":{"a680820d-da6c-45c5-9157-e407080d09b5":["ah_to"],"7353f50d-ff77-4f2a-bfea-7034c3d11010":["ah_to"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Application Record","reference":"x_snc_aegis_application","reference_display":"Application","type":"reference","base_type":"reference","usedInstances":{"a680820d-da6c-45c5-9157-e407080d09b5":["record"],"7353f50d-ff77-4f2a-bfea-7034c3d11010":["record"],"540eca66-f8bc-42af-bc44-cbf8ca5981f6":[null],"55dbac28-0af5-4599-a39e-50d85acaacfe":["record"]},"attributes":{}},{"name":"Updated_1.current.stage","label":"Trigger - Record Updated➛Application Record➛Stage","reference":"","reference_display":"Stage","type":"choice","base_type":"choice","parent_table_name":"x_snc_aegis_application","column_name":"stage","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"sequence":0.0,"used":false,"label":"Applied","reference":false,"image":"","rawLabel":"Applied","selected":false,"missing":false,"value":"APPLIED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Applied"}}},{"sequence":1.0,"used":false,"label":"Received","reference":false,"image":"","rawLabel":"Received","selected":false,"missing":false,"value":"RECEIVED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Received"}}},{"sequence":2.0,"used":false,"label":"Screening","reference":false,"image":"","rawLabel":"Screening","selected":false,"missing":false,"value":"SCREENING","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Screening"}}},{"sequence":3.0,"used":false,"label":"Recruiter review","reference":false,"image":"","rawLabel":"Recruiter review","selected":false,"missing":false,"value":"RECRUITER_REVIEW","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Recruiter review"}}},{"sequence":4.0,"used":false,"label":"Shortlisted","reference":false,"image":"","rawLabel":"Shortlisted","selected":false,"missing":false,"value":"SHORTLISTED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Shortlisted"}}},{"sequence":5.0,"used":false,"label":"Interview","reference":false,"image":"","rawLabel":"Interview","selected":false,"missing":false,"value":"INTERVIEW","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Interview"}}},{"sequence":6.0,"used":false,"label":"Offered","reference":false,"image":"","rawLabel":"Offered","selected":false,"missing":false,"value":"OFFERED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Offered"}}},{"sequence":7.0,"used":false,"label":"Rejected","reference":false,"image":"","rawLabel":"Rejected","selected":false,"missing":false,"value":"REJECTED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Rejected"}}},{"sequence":8.0,"used":false,"label":"Closed","reference":false,"image":"","rawLabel":"Closed","selected":false,"missing":false,"value":"CLOSED","parameters":{"name":"x_snc_aegis_application","dependent_values":[""],"dependent_values_map":{"":"Closed"}}}],"usedInstances":{"265c669d-a8c0-45ec-bd48-9543797d74af":["condition"]}}]</label_cache>
+        <master>true</master>
+        <name>HR Candidate Shortlisting for Interview Round Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="HR Candidate Shortlisting for Interview Round Flow">2794ece1b4fb43107f443abc213138ce</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7cf970a1b4bf43107f443abc2131388c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:08</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=7cf970a1b4bf43107f443abc2131388c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7cf970a1b4bf43107f443abc2131388c"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=7cf970a1b4bf43107f443abc2131388c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7cf970a1b4bf43107f443abc2131388c^sys_idNOT INfcf970a1b4bf43107f443abc2131388e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7cf970a1b4bf43107f443abc2131388c</id>
+        <name>HR Candidate Shortlisting for Interview Round Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:49</sys_created_on>
+        <sys_id>fcf970a1b4bf43107f443abc2131388e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:49</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=fcf970a1b4bf43107f443abc2131388e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=7cf970a1b4bf43107f443abc2131388c^sys_idNOT IN0df970a1b4bf43107f443abc213138c1,c1f970a1b4bf43107f443abc213138b6,c5f970a1b4bf43107f443abc21313890"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</model>
+        <model_id>7cf970a1b4bf43107f443abc2131388c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7cf970a1b4bf43107f443abc2131388c</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>0df970a1b4bf43107f443abc213138c1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0df970a1b4bf43107f443abc213138c1"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</model>
+        <model_id>7cf970a1b4bf43107f443abc2131388c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7cf970a1b4bf43107f443abc2131388c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>c1f970a1b4bf43107f443abc213138b6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c1f970a1b4bf43107f443abc213138b6"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</model>
+        <model_id>7cf970a1b4bf43107f443abc2131388c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7cf970a1b4bf43107f443abc2131388c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:49</sys_created_on>
+        <sys_id>c5f970a1b4bf43107f443abc21313890</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c5f970a1b4bf43107f443abc21313890"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=7cf970a1b4bf43107f443abc2131388c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7cf970a1b4bf43107f443abc2131388c"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=7cf970a1b4bf43107f443abc2131388c^sys_idNOT IN9df970a1b4bf43107f443abc213138d9"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>9df970a1b4bf43107f443abc213138d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:50</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=7cf970a1b4bf43107f443abc2131388c^sys_idNOT INc9f970a1b4bf43107f443abc213138d5,49f970a1b4bf43107f443abc213138d6,19f970a1b4bf43107f443abc213138d8,cc4a7ca1b4bf43107f443abc21313870"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>265c669d-a8c0-45ec-bd48-9543797d74af</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>c9f970a1b4bf43107f443abc213138d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:50</sys_updated_on>
+        <ui_id>a680820d-da6c-45c5-9157-e407080d09b5</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c9f970a1b4bf43107f443abc213138d5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>65dfc8ca-03de-4c77-af36-3bebb23c684c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>49f970a1b4bf43107f443abc213138d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:50</sys_updated_on>
+        <ui_id>540eca66-f8bc-42af-bc44-cbf8ca5981f6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VY32/iOBD+V6I8Uy7hV6Bvp1ZIK+1tpba7L3sry7EdsM7YWdtpSxH/+43jBBCkQHRUanWPHo/tb2a+b+zk5yrkNLwO6SSaZJPJcJxEUb8fRaNRn+A4TfsjkkYpHoSdUOIFA0+LU8Fg+IRF4cYvyEiCMJtxgwzRjEkuZ0gzUwgLbpSbXODlj8r7ofYI7msPMueCaibD65+/OmGONZxjmQ6vV3tT5wIVOGUCXB8rpHvA7TLfDFE5521fd5cF3/yE0tRBiTohe7FMUgYYMiwM64QLLCm2Si83Fs0wvZNia5hzaWHH0Dm/GP4K544j55cxiIowP7cZoipZ3pzdYosfrC6ILXTlSuaKE2Z8PijLMKTwZtfmHe5yy5X0S3zYfrUSxUJ+8+kINxvUtQFLYQAEy12gDnkVRvYwV8/3Ncopl2VOqkmhCBabEbZW87SwDs8qZIItYCO0wHnuWJFr9cTLxYBl0Z0JGHQzoZ7hUMNnsouJA96FvOLuFOy3pfkH1txF8RdsA4sBEBfAEORLaFShy1Q+ISIKU05oLI3fK1x3QrM0NwIbs40cUo5+Fw63z0MVMfJJc0uI5rn9E7Z4YlVw606tleFRCk62lCNKUu5QmB3BQBCCE+zMfxewA12tvucQMaMo7pJCQ5Lten0onbPXtRTU6WhqQd3shtMUYiWtA9vXpg0qacUXk9Ygij6TuODwj6et9mrxKTghmZgeJRnd8skobZHP5Y5mDtXQmudnQKh5fueYGaTLt1BVNM84E7TpBpm6ib0bpPf/vEE+JMkBEEW+elwKLsvnAAB9L/YPj1Ivjfd4VtJry/3Shg1puBECq4LX1ko4A06thAc4O3j0eBog1v2+pMx+r6+NlQD6FxNAv3cZAaw2YW4S2ZDz+gXoqln7vzp/vO8PFNxZEK+bBNbqzLjtmb31oYD7rRS8SzY/c/sG5y78VHxDkZ33bAFzWFqdh7x+0TOnM2a3p9deVNlnLP5pmq8Yh+pCleG9w7MzPvrlk+48O3mGFlA5nsPrWDMC5DAIa4YyVUiKqnfxlkiukhnXxlbOh43mnoF+ZKBAmIGds6D0DjbeLS/i03HUqfySBXUg1WkmgECCMpBgE0i7sNs0rcEFH6eXblpTzEVZDfjkyXfKybRW+o3GdaKQRxhxZlc7E1R8UVD/ve01SaCx/Z3A+im+ny/fmgjD6aCHR0k/jqMojmgSjZMkHo/SbISTQbbVKCr/FlEFO2dAFdge1dSo6xwd9h/fUts2mjNQ1RS89d/UvcQGDhbUN6hhnQZeNZRUKcGw3Osoj3BP/DGt8Fd8HX64rvIp/iYV/HE/097UmOv3ejcU/Lvkvwv2xVFszKLeOKbkapzEydUgo6OrCcXDKzxJh0mfMjLILvkU+PUvTzT9Ja8VAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=49f970a1b4bf43107f443abc213138d6"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>65dfc8ca-03de-4c77-af36-3bebb23c684c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>19f970a1b4bf43107f443abc213138d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:50</sys_updated_on>
+        <ui_id>7353f50d-ff77-4f2a-bfea-7034c3d11010</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=19f970a1b4bf43107f443abc213138d8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>65dfc8ca-03de-4c77-af36-3bebb23c684c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:13:08</sys_created_on>
+        <sys_id>cc4a7ca1b4bf43107f443abc21313870</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:08</sys_updated_on>
+        <ui_id>55dbac28-0af5-4599-a39e-50d85acaacfe</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPCCVAUctbBWWq1FEJNl66Krqxb8CT8zHboTDEf99N4gCDilGpL2h58/2wz7k+J37ZMClYn3VReP6d3+Mdv9Npe177tuuHvU7ot0UHEH3WZAnESJUaeaoFrZeg8iKw2XzPBFgUgd/iudaY2O2W8kKaTMF65soowhdSCcqz/strk2WgaUeLmvU3R6lLISkIUVHppMZ0jNGus2ItUp7HhCuQdfDJdQ5dpvE4pAw1FXB8r8lwZTERSEAiUAabLIaEWKZ6zfpW5xTQCOI5UetdxUImtiIaw8rI33Ry1yvqIiRm3A1htwzcgKpwNAQLU9qZ21zv5pVKjqaaicAIcmUHh7Gq4DmzMk2qFguhqrtTlcfJuJoI221wcB+5IRCYFTwL5BWtaLpI3yY1yJFMypE4iirloHYrsFbLMLcFnA1DheWMY8gymcyDTKdLWTYTlLg1V7RoRSp9ozONnCct4AXuFk0VWiOKD8vwDLQsSHylbah522RmbQYKjNlToRkGv/ICSUXMUQjKKZQjCEolFM1cy8ze01FLdMC3TSf68OacwvjdXlAHe+6FvwpMwgPAuTQBgVWSQ3kRJ9K//yv5MRdcgLF2wbfy7t/H7IxwEns67G2Mq4Szwc2n2eD2mmzgaFy9D/6lfq999v96oKRS8OZA+Rp/Ii/++GB/5J7XEdPB5OFh/Dj+cir+s7Uf88IFiGsvjCQqYd6hUBsBYwJpMagoHZnBJRszl9y9C5/mCL/nld8V+eK/eR5e/wDzCB7iFQkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cc4a7ca1b4bf43107f443abc21313870"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=7cf970a1b4bf43107f443abc2131388c"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=7cf970a1b4bf43107f443abc2131388c^sys_idNOT IN05f970a1b4bf43107f443abc213138d2,8df970a1b4bf43107f443abc213138d3"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">bcf970a1b4bf43107f443abc2131383b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>05f970a1b4bf43107f443abc213138d2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:08</sys_updated_on>
+        <ui_id>265c669d-a8c0-45ec-bd48-9543797d74af</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V247TMBD9FeTnKMplW7F9W7WsWKlQaVv2BVbRxHZaCycOvrRbov4741zaii2CCh55i894Zs4cz1EaopytnTUrdWeMWFdk8vk5IKLyGH43pIKSkwmhqmLCClVlLRCQLUjnA8uN0lYKYzlDlAlTS9g/XQzSjZBM875HDRorWa7JpPkpJBjmFhEU8S2NaZqM0ySKkrc3cT5O8zhhKXBIsaCEnEu8Oh3IvZm3SPBL1nZfe9xYLap1f573VZYDqDTzrOIoIPzF8ooh+0kB0vCAlFAxsErvj4jmwBaVPAEbUVksR/zlFyO+Y8NkNPIXC44jUt4Fj8esF62DixlYQCqOWqf7q3SjBOWmE4fxApy003Osu7Co/ahdioVcDtlKurL62ClCjgWGN0LEGSTBaz+pp97PUeDr7R4HlveialXpg1JRkMcTWNQud9bzaQiXvMRCWQl1jYpmtVZb0SYjlzJcSzyEhVQ7bOp3LgTqiYcoLIT3iM9a+Am08FN8wDKY3NHMwQiatfuJ5VAmTg4BMXszlWDMaUhUN/vmPMVu5H64rNPHp1AtanuHnbe8n+MQvF73s01vmk81UuQsi0PqNKpiQ2NhzQ+HLy6KUrZ8v3hczR+Wq3ez11a4Mvs6r9zCqBjF0eiyV27Gl7xywSVXGiT5jUH86/yhP6Io+m+QvzaIMFm31v1sbfN/6I9nb4au51FrKgxSW3nsYfhr+MAel0vQc2in9Fc/1Ak7/ADcWjPMfwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b8f970a1b4bf43107f443abc2131383f</block>
+        <comment/>
+        <connected_to>265c669d-a8c0-45ec-bd48-9543797d74af</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="HR Candidate Shortlisting for Interview Round Flow">7cf970a1b4bf43107f443abc2131388c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>8df970a1b4bf43107f443abc213138d3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:08</sys_updated_on>
+        <ui_id>65dfc8ca-03de-4c77-af36-3bebb23c684c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7cf970a1b4bf43107f443abc2131388c^sys_idNOT IN55f970a1b4bf43107f443abc213138da,19f970a1b4bf43107f443abc213138da,d9f970a1b4bf43107f443abc213138da,9df970a1b4bf43107f443abc213138da,51f970a1b4bf43107f443abc213138db,15f970a1b4bf43107f443abc213138db"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7cf970a1b4bf43107f443abc2131388c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.candidate.full_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:51</sys_created_on>
+        <sys_id>55f970a1b4bf43107f443abc213138da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>adced928-ea84-4a07-a6e9-94c13aaff5b7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7cf970a1b4bf43107f443abc2131388c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{540eca66-f8bc-42af-bc44-cbf8ca5981f6.Record.fit_score}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:51</sys_created_on>
+        <sys_id>19f970a1b4bf43107f443abc213138da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1be44879-cbbb-45f6-a3dd-90d4089d5675</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7cf970a1b4bf43107f443abc2131388c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{540eca66-f8bc-42af-bc44-cbf8ca5981f6.Record.missing_skills}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:51</sys_created_on>
+        <sys_id>d9f970a1b4bf43107f443abc213138da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0807b17a-2066-4925-b58c-97e8455408bc</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7cf970a1b4bf43107f443abc2131388c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.requisition.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:51</sys_created_on>
+        <sys_id>9df970a1b4bf43107f443abc213138da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>bdb56df6-e269-4190-a84d-41c6789ecbd7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7cf970a1b4bf43107f443abc2131388c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.requisition.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:51</sys_created_on>
+        <sys_id>51f970a1b4bf43107f443abc213138db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c0fd72c1-0200-4486-8e2a-7ac01945a504</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>7cf970a1b4bf43107f443abc2131388c</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.candidate.full_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:51</sys_created_on>
+        <sys_id>15f970a1b4bf43107f443abc213138db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:51</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b3de3c4f-2124-4355-a121-76acc0432ab8</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=7cf970a1b4bf43107f443abc2131388c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7cf970a1b4bf43107f443abc2131388c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>0df970a1b4bf43107f443abc213138b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7cf970a1b4bf43107f443abc2131388c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>45f970a1b4bf43107f443abc213138bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7cf970a1b4bf43107f443abc2131388c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:50</sys_created_on>
+        <sys_id>81f970a1b4bf43107f443abc213138c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:11:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7cf970a1b4bf43107f443abc2131388c"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7cf970a1b4bf43107f443abc2131388c"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>2794ece1b4fb43107f443abc213138ce</sys_id>
+        <latest_snapshot>7cf970a1b4bf43107f443abc2131388c</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=2794ece1b4fb43107f443abc213138ce^sys_idNOT IN11f970a1b4bf43107f443abc213138ed"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>2794ece1b4fb43107f443abc213138ce</plan_id>
+        <snapshot>7cf970a1b4bf43107f443abc2131388c</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 19:11:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>11f970a1b4bf43107f443abc213138ed</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 19:13:09</sys_updated_on>
+        <trigger display_value="">504a7ca1b4bf43107f443abc213138b9</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=2794ece1b4fb43107f443abc213138ce"/>
+</record_update>

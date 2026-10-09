@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Panel Assignment Agent">a1f05349746703107f4413d400ccf236</agent>
+        <description>Check whether a panelist is busy in a time slot, across all requisitions. One or more rows means busy. Zero rows means free. Call before every booking.</description>
+        <display_mode>inline</display_mode>
+        <display_output>false</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>a1f05349746703107f4413d400ccf236</entity_id>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"panelist_sys_id","value":"","description":"","mandatory":true},{"name":"slot_start","value":"","description":"","mandatory":true},{"name":"slot_end","value":"","description":"","mandatory":true},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_aegis_interview","displayValue":"Interview"},"query":"panelist={{panelist_sys_id}}^interview_status!=CANCELLED^scheduled_startON{{slot_start}}^ORscheduled_endON{{slot_end}}","returnFields":[{"name":"sys_id","label":"Sys ID","type":"GUID","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"sys_id","sublabel":"sys_id"},{"name":"scheduled_start","label":"Scheduled Start","type":"glide_date_time","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"scheduled_start","sublabel":"scheduled_start"},{"name":"scheduled_end","label":"Scheduled End","type":"glide_date_time","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"scheduled_end","sublabel":"scheduled_end"},{"name":"candidate","label":"Candidate","type":"reference","referenceTable":"x_snc_aegis_candidate","referenceTableDefaultField":"number","referenceKey":null,"id":"candidate","sublabel":"candidate"},{"name":"number","label":"Number","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"number","sublabel":"number"},{"name":"question_set","label":"Tailored Questions &amp; Rubric","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"question_set","sublabel":"question_set"}],"limit":"5","orderBy":"","sortType":""},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Check Panelist Conflict</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 14:01:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>cbe28e7b886b43107f4401d5b355dd0f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Check Panelist Conflict</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_cbe28e7b886b43107f4401d5b355dd0f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 14:28:39</sys_updated_on>
+        <timeout/>
+        <tool display_value="Check Panelist Conflict">4fe24e7b886b43107f4401d5b355ddf2</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+</record_update>

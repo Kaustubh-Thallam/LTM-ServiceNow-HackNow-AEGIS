@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=1470454000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>eeeac6897743011031e3b3c64b5a99bd</copied_from>
+        <copied_from_name>FlowTemplate: Record Trigger</copied_from_name>
+        <description>Governance approval gate that routes newly submitted job requisitions to the designated hiring manager for review, updates approval states, notifies the requisition creator, and logs the authorization event to the immutable decision log.</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>aegis__f1_requisition_approval</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.hiring_manager.email","label":"Trigger - Record Created or Updated➛Job Requisition Record➛Hiring manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"81300d30-3db8-4c78-b5ea-56e42d41d492":["ah_to"],"2887597d-97e1-45d5-ad5c-2574e60a60ca":["ah_to"]}},{"name":"Created or Updated_1.run_start_date_time","label":"Trigger - Record Created or Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"{{static.41c174f400fb03107f440a4ac0cab0a2}}","label":"AEGIS HR Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_conditions"]}},{"name":"Created or Updated_1.current.number","label":"Trigger - Record Created or Updated➛Job Requisition Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"number","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_reason"],"81300d30-3db8-4c78-b5ea-56e42d41d492":["ah_subject"],"2887597d-97e1-45d5-ad5c-2574e60a60ca":["ah_subject"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Job Requisition Record","reference":"x_snc_aegis_job_requisition","reference_display":"Job Requisition","type":"reference","base_type":"reference","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["record"],"e0dfa806-58fd-4a8f-9b4a-8e16889d2a70":["record"],"68367cb7-b37a-4f66-b2cd-8dbfef667b31":["record"],"81300d30-3db8-4c78-b5ea-56e42d41d492":["record"],"a39e450f-1298-48ce-afd0-52a24d0af5cf":[null]},"attributes":{}},{"name":"Updated_1.current.hiring_manager.manager","label":"Trigger - Record Updated➛ Record➛Hiring manager➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","choices":[{"order":0.0}],"usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_conditions"]}},{"name":"Updated_1.current.hiring_manager","label":"Trigger - Record Updated➛ Record➛Hiring manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_job_requisition","column_name":"hiring_manager","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛ Record","reference":"x_snc_aegis_job_requisition","reference_display":"Job Requisition","type":"reference","base_type":"reference","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["record"],"e0dfa806-58fd-4a8f-9b4a-8e16889d2a70":["record"],"81300d30-3db8-4c78-b5ea-56e42d41d492":["record"],"68367cb7-b37a-4f66-b2cd-8dbfef667b31":["record"],"2887597d-97e1-45d5-ad5c-2574e60a60ca":["record"],"4b912c49-36ba-45ae-b941-ad0915408574":["requisition"],"a7fb1eca-ca95-4c14-85de-a515abc14fc8":["trigger_record"],"be90f1ef-1ff4-45e6-8b08-8aa732252672":["trigger_record1"]},"attributes":{}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛ Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_aegis_job_requisition","column_name":"sys_id","usedInstances":{"a7fb1eca-ca95-4c14-85de-a515abc14fc8":["requisition_sys_id"]}},{"name":"Updated_1.current.requested_by.email","label":"Trigger - Record Updated➛ Record➛Requested by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"81300d30-3db8-4c78-b5ea-56e42d41d492":["ah_to"],"2887597d-97e1-45d5-ad5c-2574e60a60ca":["ah_to"]}},{"name":"18e65a39-de28-46b6-899c-2b5e674c6f88.__action_status__","label":"1 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","usedInstances":{},"attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.role_title","label":"Trigger - Record Updated➛ Record➛Role title","reference":"","reference_display":"Role title","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"role_title","usedInstances":{"2887597d-97e1-45d5-ad5c-2574e60a60ca":["ah_subject"],"81300d30-3db8-4c78-b5ea-56e42d41d492":["ah_subject"],"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_reason"],"a7fb1eca-ca95-4c14-85de-a515abc14fc8":["role_title"]}},{"name":"Updated_1.current.requested_by","label":"Trigger - Record Updated➛ Record➛Requested by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_job_requisition","column_name":"requested_by","usedInstances":{}},{"name":"18e65a39-de28-46b6-899c-2b5e674c6f88.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"52becca3-daf0-436c-ac50-0238904fa0dd":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a39e450f-1298-48ce-afd0-52a24d0af5cf.Record.comments","label":"2 - Look Up Record➛Approval Record➛Comments","reference":"","reference_display":"Comments","type":"journal_input","base_type":"journal_input","parent_table_name":"sysapproval_approver","column_name":"comments","usedInstances":{"e0dfa806-58fd-4a8f-9b4a-8e16889d2a70":["additional_comments"],"68367cb7-b37a-4f66-b2cd-8dbfef667b31":["additional_comments"]}}]</label_cache>
+        <master_snapshot>b288944c6de343107f44d98064d8973e</master_snapshot>
+        <master_snapshot_digest/>
+        <name>HR Requisition Approval on JR</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>93d3bf51b47743107f443abc213138bf</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:37:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b08acc406da343107f44d98064d89740</sys_id>
+        <sys_mod_count>107</sys_mod_count>
+        <sys_name>HR Requisition Approval on JR</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_hub_flow_b08acc406da343107f44d98064d89740</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:36</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>0dd33f51b47743107f443abc2131384f</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=b08acc406da343107f44d98064d89740"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b08acc406da343107f44d98064d89740"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_aegis_job_requisition">status=PENDING_APPROVAL^approval_state=REQUESTED<item display_value="Pending Approval" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="PENDING_APPROVAL"/>
+            <item display_value="Requested" endquery="false" field="approval_state" goto="false" newquery="false" operator="=" or="false" value="REQUESTED"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 14:05:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>93d3bf51b47743107f443abc213138bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:36</sys_updated_on>
+        <table>x_snc_aegis_job_requisition</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>b08acc406da343107f44d98064d89740</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 14:05:36</sys_created_on>
+        <sys_id>97d3bf51b47743107f443abc213138c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:36</sys_updated_on>
+        <trigger display_value="">93d3bf51b47743107f443abc213138bf</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=b08acc406da343107f44d98064d89740^sys_idNOT IN97d3bf51b47743107f443abc213138c0"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b08acc406da343107f44d98064d89740"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b08acc406da343107f44d98064d89740^sys_idNOT INf88acc406da343107f44d98064d89744"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b08acc406da343107f44d98064d89740</id>
+        <name>AEGIS - F1 Requisition Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:37:58</sys_created_on>
+        <sys_id>f88acc406da343107f44d98064d89744</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 13:37:58</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f88acc406da343107f44d98064d89744"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b08acc406da343107f44d98064d89740^sys_idNOT IN788acc406da343107f44d98064d89769,7c8acc406da343107f44d98064d8974d,f88acc406da343107f44d98064d89787"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</model>
+        <model_id>b08acc406da343107f44d98064d89740</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b08acc406da343107f44d98064d89740</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:37:59</sys_created_on>
+        <sys_id>788acc406da343107f44d98064d89769</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:31:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=788acc406da343107f44d98064d89769"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</model>
+        <model_id>b08acc406da343107f44d98064d89740</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b08acc406da343107f44d98064d89740</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:37:59</sys_created_on>
+        <sys_id>7c8acc406da343107f44d98064d8974d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:31:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7c8acc406da343107f44d98064d8974d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</model>
+        <model_id>b08acc406da343107f44d98064d89740</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b08acc406da343107f44d98064d89740</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:37:59</sys_created_on>
+        <sys_id>f88acc406da343107f44d98064d89787</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 13:37:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f88acc406da343107f44d98064d89787"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b08acc406da343107f44d98064d89740"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b08acc406da343107f44d98064d89740"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=b08acc406da343107f44d98064d89740^sys_idNOT IN4348225db4fb03107f443abc213138d6"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 08:35:27</sys_created_on>
+        <sys_id>4348225db4fb03107f443abc213138d6</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 08:45:10</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=b08acc406da343107f44d98064d89740^sys_idNOT IN8d43bb11b47743107f443abc2131386c,cdeac4406da343107f44d98064d89718,9cbb44046da343107f44d98064d89748,620c00446da343107f44d98064d89705,68d790c86de343107f44d98064d8971f,5d08540c6de343107f44d98064d897a8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 14:02:59</sys_created_on>
+        <sys_id>8d43bb11b47743107f443abc2131386c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:32</sys_updated_on>
+        <ui_id>a39e450f-1298-48ce-afd0-52a24d0af5cf</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VYW2/iOBT+K1GeKZtwC/Rt1ApppN2pNLeXbmU5tlOsNXbGdtqhqP99j+MYKFCgwO503mL7XL5zzndOnNzOY07jy5iOklExGvWHWZJ0u0kyGHQJTvO8OyB5kuNe3IolnjKQtDgXDJYPWFRubWYGl6VWsEb+gWk4ptyUAs++N1IfGhE4IRMuqGYyvry9a8Ul1mDXgs7lfO3IzkqGBM6ZAANfndvok8PQOhjyC+XNEJyDsETSm1aaOixJK2Y/LZOUgasCC8Na8RRLiq3Ss8WOZpjeSLHcmHBpwWLshH8a/gTmh4mTKxiERZg/WyxRkyW/TSaKE3ZTWq6k3/FA/aES1VR+8gG4/LICV8KG/MJOZcAeKx1mB6JBVHyZqMfPweGYyzq85lAoAiUJK2yt5nllmXG1YIJNwRCaQlG5vEeufrxWBizT9r2ARbsQ6hGcGn4v25g44G1IEW6PYf+63v6ONXdR/AVmamIUXEC1kU+6UZWus/KAiKhMfaCxNN5W/FznCv2oHEofdRMf8ikCAUM0L+0HUHhgTSjPrcDq/k6KjJaUIEpS7nyaFWpTRao6B5z+XYEFOp9fQckto5HS0beSukeUtkmlIbv2+XmT98eYOK5BrlYjODT6rcrbUtK0you9plXSs7VKL0l+UbNYXb2/XtnHfh/wnhZI6U4S0GW9jdIW+cyt9MAmpY9m6JgzQV+M8APABeUbR7Yon72GtyFo4XyszfLObz/LT6RnQZHPC5eCy/qVBwbBzTvmbX8nNfJ0jQd1+VcuJW4PG7LJXhxZFT0dP2Xrugb+HgAyKH4BRNFXj3IL8DBfg/mGut2zUbfbeRt1gTi38wX6Rda2JDjcmFzpgvyTk8fr8kCiFYX0+W5B/avjfKZv9dlxPtd6s/um5lxllj+5foVgZ76P/c9N3HIOJ6Da+EO+WdEjp/fMLr0HKarsIxb/bDtv2LXooTq8k+926c7rf75yt+MFmkKdeAkXTs0IUMEgrBkqVCUpaq6aS9q4uhVcG9sIb86Qz8xWWkYKWi6yExbV0tFC+hyT5YDoguLHIgrhNRhMBOFFdXjRIry3JeOVedQ7413vlHk0xlzUqYdPhnKldkxrpV+ZSXuqtqP8Bw6sA0GlZwV1+kTbxvetk20P1t/i+/PUqUMYznsdPMi6aZokaUKzZJhl6XCQFwOc9YployFkJIGxCJYLIAaYR4EIoarJ5mjxs/HonyQwc/8YNyYOxRuUr5V0n6idzEYOMNQ5CoD3h9TMi1wpwbBc0rP/ywbGe/mPUnF36/tzW4X+qze3d/miHBX/JvmPin10pBiypDNMKbkYZml20Svo4GJEcf8Cj/J+1qWM9Irj3893/wLd/rCdUxQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8d43bb11b47743107f443abc2131386c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:39:38</sys_created_on>
+        <sys_id>cdeac4406da343107f44d98064d89718</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 09:45:14</sys_updated_on>
+        <ui_id>18e65a39-de28-46b6-899c-2b5e674c6f88</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YW2/iOBT+K1GegXXIhdC3aquOZrS7I9HOvLRV5Ngnxd3gMHYyLYv473McJ4TSlqKW7sxIFRLCxz7370uOuVi6grtHLgSRH+LXKPOJN/RIDFEcszGhLI6iMPDdnivpDPAknc9V8Z3miQKqC4kbuKjMzqcidSbwrRJalKKQTnvSUSgEXQJ3skIdOc5y+Scqm3WhnC9zbn4m3oBVSoEsB7KapaBWKzTNhZ7ndPH17Tywqcg5Ct2ji6ueO6cKsyxBuUfLra1yMYckpynkGMhZqYS8RvV9i9cqHrcRT9rqPVlW4xA3dOuqUNzENey5cFeC5ICuM5pr6LkzKjHFQi3WErTCP8u8E0yFLNGaaw7fafEfmvYiYg5mgDkysJvrZdKU3orZtBAMPs9N1a2kpGne6LAir2byH5uHaRpktMrLtmkoqTTag7kJ2kTRhJSdTYvbSevwVMg6v2YzLxjN1ytaYhXSqgRtGlOJ863aWMlf292BHGboMZlhdVGSmBKL2gsGPRtc57gYZHlxi9FpcS0HlJkMB1hMOjhF+Ukt/kqVMOn+jWZQ2bj7IgUi7qPpfjRMozGJeZ9nJO0HsR/2KQPSh8gLIeQRCz3fXdWlTb5VJilbpKYcia0oHtBMiXl5jCF8hybzVa/hJ/GyIYzHQ5J6hPiExCEjsQ+pP4pGPuXxI0DKBOR8g54P6fRi+J8a007d8d7e8T2gwGkT4FOBNwSol4m0zg5OgpiQn8SCUlWvIcHbYPs5nNqEnwEr2wkG2HiZ3BSVkv83VvcIr1X+ZOPbhup22DuQ6r8j9RdG6ijeBQVGupYrYNjRDYjuHjEem15eDOGTglWmgs7HkxbDewTeak/ayLczaVDLG+uJ4B1syW7YWkTsg1p/+I7ZAz9dw12tz8Zdp3mFJUFcbqL20rWRXrpHl64sJFy6vUvXnEoMHmqxgpwaz+utWvoE4FUlE11SVSbWiJjBamU1K0UbV97GsvPD6ULXJzWbAq9yKyVxxjhmRCh+0mGEj73ROAuj1KM8HVO4p2E5UuvF/dC5BfjXWj0k/84aZ84JZvjHudh4lTzfizWJK6v/aHvaWb/Nal3KjpHhwV4kwW869r/dNJ+0s6fhID44Xj2uBztxARsgWE+9rJC8vtXqDbraWRn0BG6AlfpYLj5cLJdIt1KwQeAxbxRkASFZSnyPjLIgIDTApz+jKaHD1erqIQkOYPFlJOpuvghw3RJoj0Kt32ON3s7CNUTqbtONUkOi4FCvtZ83jP2aLHotYVK2c55hXd9t7TqK3CVasoTCtdDJTZEmqvt/6Nk/kF4M5nMTxL1LxR4J3FN+mFAD3Xq5dYnwDniJeEft61F79QNknoswNxUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cdeac4406da343107f44d98064d89718"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>52becca3-daf0-436c-ac50-0238904fa0dd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:43:08</sys_created_on>
+        <sys_id>9cbb44046da343107f44d98064d89748</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:32</sys_updated_on>
+        <ui_id>e0dfa806-58fd-4a8f-9b4a-8e16889d2a70</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9KyjPEOUDKuCtGkPapLUV2/rSdZZj31BPTpzaDi1D/PddJw6FruuqCmmbNJ7w/Tzn3hP7ahMIHkyDIfAonsQnLI3TNImiZDyMs5M0ixOeUoA46AclLQAjNTClOZ5XVNbOsNm80UAt8J7Svc8Vd39JHLJaayjtdouhXJhK0vWlz0ALuxGSoz+YXl33g4pqLG5BB9PNI5ddV0AkzUBi4kyxusCivXczrPFS4F32okP+mInrgWfuqxPhjOhyeOKoH8C9hZIDtsupNNAPCloiTaXXwdTqGg04AH5eyvUu4kaUtmVa0HsjvmP9YeTickBqzE9hdyR+Qt1wlGBwXlmhytZiaSa7ySlZF+VZS8HNFnJaS7s329pgPagcZAeiRZh/vFF3i67fXJQNO49WKkbl7kSt1SKrLRi3DpDQDKWgVSXKJam0WokmGaEU4VLiIcylusOeRizLkDKHO8QB0XCO9lljvqRaOBIfsAwmbxvy5LZ2fVsaHjBpODeESbMoDDVMi8qeYuEVeJjbvlduNnpOAGzysO+9mg/qvSemZITCUhjyTWVEw20tjGhG/5Nw36ustzgIeJ2OPzkkvbMWyUtZHCT/gpVX8oHNC3l0NCGP/5CQPaJ/TMm/02+UPHuB7W26kazZ066x1NbmSx1FKT+9uFicX76dfUVUyItK4rzw2Ml5o1x0I2U3DZ++2dB0AsNRlA/iZDIeDMcMBjTn0WCU0GTII5qPWB62V2jY5T51uf8doF75XUKBVCz0WjL9F2+oKzAXILl5YmXdh+kbkJVvsHtljvZ1xidR8/v/2Bzxsbn+AbFb6tkoCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9cbb44046da343107f44d98064d89748"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>52becca3-daf0-436c-ac50-0238904fa0dd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:44:40</sys_created_on>
+        <sys_id>620c00446da343107f44d98064d89705</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:02:59</sys_updated_on>
+        <ui_id>81300d30-3db8-4c78-b5ea-56e42d41d492</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Y3W7bNhR+FULXhir/yXF2lSUI1mFtgdZrMXSFQJGUxY4SVYqK4wV+lz3LnqyHEmVJcaIYdhZ0gG+S6JDn//t4yHy+czh1zp0JPfP8MJrgmTcejT3vbDSfh+N55J3N5t6QUGfgpDhhsFMxIpX5vsGiMIK7u0vFsGYUSYV+z6j5Mxi6pFCKpXqzga2U55nA649WAyQk5oLCunP++cvAybAC45op5/zu3pJeZywQOGQCFK8kKRIwil5fgY19A6+1F1gtmUbv6wTuJ2RcwTe1TgJuhLBkwvIGDrvVLKUMnEZY5GzgJDiFZKVabyVQB/ouFY0g5qkGkxd5LgmHwuRIxwyxBHOBVlzHCKPKvesYe7c5/xtCGI+MqYhBEYiJiKeEU4jIaYkDW1NYft0sk1hywt5lmsu0KrTGoahrLkWRpG+rrE1XWIQLoVtdKXKwyzKTpolbqwJyiD7EcvW+9nvN07IgNkEhCRbbL6y14mEBeZaNFAyrxl5QhmRsgicmWFnjBGcZT5dBpuQNLw1DmIm7FPDhRkKuQD/ny9TFxOTkQsGxew3yq1L8EStuEnwDZkB5UxYo+FaYmKoUu87N3qDsO2zNieKZvgDDN8ymsBlYPgznfbCikwY+LZsNJ26DPCUBZkueB19lGCj2reA5L9uyQ4dfZQigbG84jB0LEwl6W0WybxYd5UeyssToyCwvhkfxYgFk0BUrKxogbcPYcuHM63LhEQ48O/ZtoAeD/78BOPQ1Dyrc2txK508C/ym4e74fhn44nY0boMxJRGdh5OMZGTfAWMEpphKs/grKU6yF+eEusi3ZD4QzKL+6LtMb7B1lrQxnoigoQ5/qcPsysPgOpYQTK23APToK3BUSkZYIeifWcNRvPRthMwh0jDXiOcqhXS5aSMRt8C2NAVrLAiVFrmGbhpUObTrTY/IijLGttdKrB/v+v6DUsdSZ9p+xuAEejgMtW4RB/TcnN+bKpAmIw0um3BIsmw3apdnhhg5j5gdt7NWs3KMAW0rL3WpY8uW1Tcu9cT/3qqvJDvVaY8M7DY7O4KBM8ISXza34eSzwaW/fmddpNSEt4D/ji6ALxT1CqhUvL3fjewSKk8PGwAmLL4fFYe8rkPmdXocvA8Y9YqoVf76HxrAPjtMTHH90OE77W086zc6L8CsjugXJ1mMQXWQmS0bPnxryaZGETD3075ZjzT3LJeHpimwVt/V4qEaPkMI/XRd+pEsx7m13NOqedpKuW+j/s/C8McnKX+wPWSjU+u8JigCt1Q6AgEyX1TYretWWmZ8jPw3z7KcY5yhkLDUvsRL+KFyXD7DqZmxeUaowB4Br7Vjvu1x6ruD+/eeImA4j5C+LN7/VdNyjP9vZVHVnp12WiLFOREPD2ZGzyZ9Ox/6JiO3hlK3oiCqZZTa3owbUl+9J9pIc8BcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=620c00446da343107f44d98064d89705"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>b387ffd6-21c7-42a5-8e48-00a087cbad1d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:36:07</sys_created_on>
+        <sys_id>68d790c86de343107f44d98064d8971f</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:26</sys_updated_on>
+        <ui_id>68367cb7-b37a-4f66-b2cd-8dbfef667b31</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1U204bMRD9lWifk9VeEpTkrSJEKlJBSikvlFpeezZx5bUX2wukUf69472EQAFFiApV6j7tjOdyzsyxrzaB4ME0iBIexZP4iKVxmiZRlIyHcXaUZnHCUwoAQT9QtACMvKWyAot2/YMOWpZGo0Gsow6+V1GU8sXJ6cnxxcnsB+VcOKEVHjNdFKCcbSI2G5pOYDiK8kGcTMaD4ZjBgOY8GowSmgx5RPMRy8MFMG142OVut9iYC1tKur78qP5sJSQ3oILp1XU/KKnBwTgwwXTz5MitSyCSZiAR5gUUiNpBr8HdP3juXYG5AMntM4vwbdB2bQNy2zZA4B5VHEX9AO4dKA7YMqfSQj8oqOLUabMOps5U6DBA+bmS613ESiiHZQMfe2/FL+wRH0X156NzQJ4MmoidSdrlNG620oLBeek30HgczWSbw7SsCnXWkPFrhZxW0nVrRU9lsR6UHriH0uDMv6703aLrNxeqJtlilppRubOoc0ZklcMp4W5Agt8hKVAwQi2JV42okxFKES4lGmEu9R32tGKpQso87hDHRMM5+me1+5Ia4Ul8wTKYvK3Jk5vK921otIBJzbkmTOqVYahlRpTuExa+hRbmtt9ewSG8KoX4YfOmFuXeFdxsjnF9DnhPm963kvtfEoesMjgk99ylebOMZ5pVfoy9z7NOwwcA77IXHfKnTFoN87Y6EXxfwO+l3+F/5f4N5Waj1wTAJg/73qv5oN57YhUjFJbCkp86IwZuKmHrZ/tP4Z7qrLd4FPDG59gj6Z01SA5l8Sj5BVbda7zva4U8ejchjz9IyC2if0zJL+n3+je9VDgS/ggAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=68d790c86de343107f44d98064d8971f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>b387ffd6-21c7-42a5-8e48-00a087cbad1d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:36:59</sys_created_on>
+        <sys_id>5d08540c6de343107f44d98064d897a8</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:02:59</sys_updated_on>
+        <ui_id>2887597d-97e1-45d5-ad5c-2574e60a60ca</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1XbW/bNhD+K4Q+G6r8HqefugTBCqztkHothq4QKJKyuFKiSlJx3cD/Zb9lv2xHibKkuLENOwk6IJ9sHXV3z909D0l9uvU49c69ET0LJlE8wtNgOBgGwdlgNouGszg4m86CPqFez8twyuBNxYhU9vkGi8Ia4C/lOhd49aGxkIQLqljmnX/63PNyrMDZMOWd395ZMquchQJHTIDjpSRFyjKDXl9CjEOB1d5zrBbMoOsa4F3ANhU8U5ck5NYISxZW0PPYN8MyyiBpjIVmPS/FGcVGqtXGohim7zLRGBKeGQj5SmtJODZMI5MwxFLMBVpykyCMqvS+Z+N90/w7QBgObKiYQROIRcQzwikg8lrm0PUUll83yySRnLB3ueEyqxptcCTqnktRpNnbqmo7FRbjQpjWVAoNcVluy7S4jSqghvh9IpfXdd4rnpUNcQUKSbDYPGFjFI8KqLMcpGBYNfHCEpKNCZmYYGWPU5znPFuEuZI3vAwMMFN/IeDBj4Vcgr/mi8zHxNbkQ8OxfwX2y9L8AStuC3wDYcB5XTYo/FpYTFWJ3eT23bCcO7yqieK5eQWBb5grYd1zfO/PdtGKjhr6tGI+CufnNj56W8U/FFvH+R6sju4dm2N7/yS2z4HiptJaRW5kHIwNw8+CLsPvYfaDM9oBPZrSj0NbmKsOKza62srke+m8j8TBZBJFk2g8HTZEmZGYTqN4gqdk2BBjCXuTSrH6EpZ7U4vJ/W0qOwkfSWdwfnFVltc7GGXtDDudKChDH2u4uypw/I6khH0oa8g9OIncFRORkQhmJ1awgW8yW2OzvZsEG8Q10jAuH80l4g58y6OHVrJAaaENvGZgpSObzpkwehLFuNE66+UP5/6/kNSp0hnv3mNxQzychEa2BINuby+APIZRJBX6I6f2b9j3SaGUpULClS0TGIcXTPklWdZrtC2z4wMdp8z3xsarVXlAAzaSltvdcOLTdUynveFu7VUXji3ptY6N4Png6BwclAme8nK4lT5PJT7dOXcWdEZNyOPcebpUPABS7XhxsY3vHiqOjjsGnrn4dFzs7/y2Y5POrKOnIeMBmGrHX+6wMdpFx/EzHX92Oo53j550hq2L6G9GTIuS1+xrwTUvr4/lf8U0ukhwtmD6HO077bMijZhar7eJ/WBxH+TasL9HG8dNh37UtXtkMnm+QPxM12S8c9zxoLv/Sbpq6eGvIgiGJC9/2J+yUPDZ0zA5lsquDCZZpPOX8MmkYdlyg1Ef/Q5fdJqB4YazJYoZoxEmX5DrCYVPLYQpLQNhgaA/tnXarzK+cCm3lbQX0b//PBKQ46T36/zNb7XwDpjE5lyq5rA1GCe5xKSiEdz0xHNpMh4PJ8+Sax9M+ZIOqJJ57mo76XD6/B/jEJpiohcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5d08540c6de343107f44d98064d897a8"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=b08acc406da343107f44d98064d89740"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=b08acc406da343107f44d98064d89740^sys_idNOT INe15bc4c06da343107f44d98064d897f4,fdc71cc86de343107f44d98064d8972b"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e1d618486de343107f44d98064d897c6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:41:35</sys_created_on>
+        <sys_id>e15bc4c06da343107f44d98064d897f4</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:32</sys_updated_on>
+        <ui_id>52becca3-daf0-436c-ac50-0238904fa0dd</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTY/TMBD9KyjnNMpHE9LeKtBKSMBK7GovsIom9qS1cOwQO+2Wqv+dcT66FdsKhPbILX7jmXlv/CYHT3e26ay51ytjxFp5y6+PvieUw+j74Cmo0Vt6TCsurNCq6AHf24LsXGDVNK3eIieIC9NI2D+8jLCNkLzFsXoDLdWw2HrLw28hu2+wkFCipAJ3thVqTemC06kKoYoWLGJJnCVxGMb5PCqzpIxingBCQvemxHcT2Tcfe8S/qsL1I9xMnXTLHa0o9D18sqg40V9WIA36Xg2Kg9Xt/oS0CPxWyWdgI5Slcp67/GTET6odp6m7WCFpZDgET8diHNkAs40WDG8bR3BALJRyzGFadrX6POhww8YKOmmnYRPSGaqHjSPtWIyUqruN3n2ZGt4I1Qscg1IzkKcTWBpD2Vk07mFQYk2FihqahoZTuMcUfTJxqYO1pENQSb2jps45ATBHPKAZQXBD+PsefoBWOBWfqAwlDzRLMIIVvcuonG1JwrEfS/Gjc4QGgaOUYpgGXTCsFY1dUZ8tjqyP/kuLnrnzcIhyzFJIFjOOcT6bZ2U2yxcLNovLFLO3c5ZVeR5Ab1WQhbFg8Xj81oVhwuGqtV+r7GvsxQLSKo3C9PJezLNLe3FhI64vQ/yHZXDP95e7EIbh/2U4XwZhisHUo7a++T/vwqMz/tDBDL7hyIQhIvcO+zD91V1gTwYQ7Bza6fa7k/CMHX8BpxYt0x8GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">6a88544c6de343107f44d98064d897ea</block>
+        <comment/>
+        <connected_to>52becca3-daf0-436c-ac50-0238904fa0dd</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:35:57</sys_created_on>
+        <sys_id>fdc71cc86de343107f44d98064d8972b</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:32</sys_updated_on>
+        <ui_id>b387ffd6-21c7-42a5-8e48-00a087cbad1d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b08acc406da343107f44d98064d89740^sys_idNOT IN542d4c846da343107f44d98064d89724,902d4c846da343107f44d98064d89725,5488904c6de343107f44d98064d897e6"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b08acc406da343107f44d98064d89740</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:49:25</sys_created_on>
+        <sys_id>542d4c846da343107f44d98064d89724</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 13:49:25</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>707cdaaa-c062-4f5c-b4af-badbbd11435d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b08acc406da343107f44d98064d89740</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:49:25</sys_created_on>
+        <sys_id>902d4c846da343107f44d98064d89725</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 13:49:25</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>6abf96db-a886-4176-90af-fc19a79c09ce</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b08acc406da343107f44d98064d89740</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:06</sys_created_on>
+        <sys_id>5488904c6de343107f44d98064d897e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:39:06</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f32d9055-0bcc-43bb-8ec4-f97bdfd852af</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b08acc406da343107f44d98064d89740"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b08acc406da343107f44d98064d89740</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:37:59</sys_created_on>
+        <sys_id>7c8acc406da343107f44d98064d8976c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 13:37:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b08acc406da343107f44d98064d89740</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:37:59</sys_created_on>
+        <sys_id>7c8acc406da343107f44d98064d8978b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 13:37:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b08acc406da343107f44d98064d89740</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 13:37:59</sys_created_on>
+        <sys_id>f08acc406da343107f44d98064d89767</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 13:37:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b08acc406da343107f44d98064d89740"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b08acc406da343107f44d98064d89740"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>eeeac6897743011031e3b3c64b5a99bd</copied_from>
+        <copied_from_name/>
+        <description>Governance approval gate that routes newly submitted job requisitions to the designated hiring manager for review, updates approval states, notifies the requisition creator, and logs the authorization event to the immutable decision log.</description>
+        <flow_priority/>
+        <internal_name>aegis__f1_requisition_approval</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.hiring_manager.email","label":"Trigger - Record Created or Updated➛Job Requisition Record➛Hiring manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"81300d30-3db8-4c78-b5ea-56e42d41d492":["ah_to"],"2887597d-97e1-45d5-ad5c-2574e60a60ca":["ah_to"]}},{"name":"Created or Updated_1.run_start_date_time","label":"Trigger - Record Created or Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"{{static.41c174f400fb03107f440a4ac0cab0a2}}","label":"AEGIS HR Group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_conditions"]}},{"name":"Created or Updated_1.current.number","label":"Trigger - Record Created or Updated➛Job Requisition Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"number","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_reason"],"81300d30-3db8-4c78-b5ea-56e42d41d492":["ah_subject"],"2887597d-97e1-45d5-ad5c-2574e60a60ca":["ah_subject"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Job Requisition Record","reference":"x_snc_aegis_job_requisition","reference_display":"Job Requisition","type":"reference","base_type":"reference","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["record"],"e0dfa806-58fd-4a8f-9b4a-8e16889d2a70":["record"],"68367cb7-b37a-4f66-b2cd-8dbfef667b31":["record"],"81300d30-3db8-4c78-b5ea-56e42d41d492":["record"],"a39e450f-1298-48ce-afd0-52a24d0af5cf":[null]},"attributes":{}},{"name":"Updated_1.current.hiring_manager.manager","label":"Trigger - Record Updated➛ Record➛Hiring manager➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager","choices":[{"order":0.0}],"usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_conditions"]}},{"name":"Updated_1.current.hiring_manager","label":"Trigger - Record Updated➛ Record➛Hiring manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_job_requisition","column_name":"hiring_manager","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_conditions"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛ Record","reference":"x_snc_aegis_job_requisition","reference_display":"Job Requisition","type":"reference","base_type":"reference","usedInstances":{"18e65a39-de28-46b6-899c-2b5e674c6f88":["record"],"e0dfa806-58fd-4a8f-9b4a-8e16889d2a70":["record"],"81300d30-3db8-4c78-b5ea-56e42d41d492":["record"],"68367cb7-b37a-4f66-b2cd-8dbfef667b31":["record"],"2887597d-97e1-45d5-ad5c-2574e60a60ca":["record"],"4b912c49-36ba-45ae-b941-ad0915408574":["requisition"],"a7fb1eca-ca95-4c14-85de-a515abc14fc8":["trigger_record"],"be90f1ef-1ff4-45e6-8b08-8aa732252672":["trigger_record1"]},"attributes":{}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛ Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_aegis_job_requisition","column_name":"sys_id","usedInstances":{"a7fb1eca-ca95-4c14-85de-a515abc14fc8":["requisition_sys_id"]}},{"name":"Updated_1.current.requested_by.email","label":"Trigger - Record Updated➛ Record➛Requested by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"81300d30-3db8-4c78-b5ea-56e42d41d492":["ah_to"],"2887597d-97e1-45d5-ad5c-2574e60a60ca":["ah_to"]}},{"name":"18e65a39-de28-46b6-899c-2b5e674c6f88.__action_status__","label":"1 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","usedInstances":{},"attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.role_title","label":"Trigger - Record Updated➛ Record➛Role title","reference":"","reference_display":"Role title","type":"string","base_type":"string","parent_table_name":"x_snc_aegis_job_requisition","column_name":"role_title","usedInstances":{"2887597d-97e1-45d5-ad5c-2574e60a60ca":["ah_subject"],"81300d30-3db8-4c78-b5ea-56e42d41d492":["ah_subject"],"18e65a39-de28-46b6-899c-2b5e674c6f88":["approval_reason"],"a7fb1eca-ca95-4c14-85de-a515abc14fc8":["role_title"]}},{"name":"Updated_1.current.requested_by","label":"Trigger - Record Updated➛ Record➛Requested by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_snc_aegis_job_requisition","column_name":"requested_by","usedInstances":{}},{"name":"18e65a39-de28-46b6-899c-2b5e674c6f88.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"52becca3-daf0-436c-ac50-0238904fa0dd":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a39e450f-1298-48ce-afd0-52a24d0af5cf.Record.comments","label":"2 - Look Up Record➛Approval Record➛Comments","reference":"","reference_display":"Comments","type":"journal_input","base_type":"journal_input","parent_table_name":"sysapproval_approver","column_name":"comments","usedInstances":{"e0dfa806-58fd-4a8f-9b4a-8e16889d2a70":["additional_comments"],"68367cb7-b37a-4f66-b2cd-8dbfef667b31":["additional_comments"]}}]</label_cache>
+        <master>true</master>
+        <name>HR Requisition Approval on JR</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="HR Requisition Approval on JR">b08acc406da343107f44d98064d89740</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b288944c6de343107f44d98064d8973e</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:35</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=b288944c6de343107f44d98064d8973e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b288944c6de343107f44d98064d8973e"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b288944c6de343107f44d98064d8973e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b288944c6de343107f44d98064d8973e^sys_idNOT IN3e88944c6de343107f44d98064d8973f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b288944c6de343107f44d98064d8973e</id>
+        <name>AEGIS - F1 Requisition Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:17</sys_created_on>
+        <sys_id>3e88944c6de343107f44d98064d8973f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:39:17</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3e88944c6de343107f44d98064d8973f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b288944c6de343107f44d98064d8973e^sys_idNOT IN3288944c6de343107f44d98064d89757,3688944c6de343107f44d98064d89761,f288944c6de343107f44d98064d89741"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</model>
+        <model_id>b288944c6de343107f44d98064d8973e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b288944c6de343107f44d98064d8973e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:17</sys_created_on>
+        <sys_id>3288944c6de343107f44d98064d89757</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-21 05:23:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3288944c6de343107f44d98064d89757"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</model>
+        <model_id>b288944c6de343107f44d98064d8973e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b288944c6de343107f44d98064d8973e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:17</sys_created_on>
+        <sys_id>3688944c6de343107f44d98064d89761</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3688944c6de343107f44d98064d89761"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</model>
+        <model_id>b288944c6de343107f44d98064d8973e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b288944c6de343107f44d98064d8973e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:17</sys_created_on>
+        <sys_id>f288944c6de343107f44d98064d89741</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f288944c6de343107f44d98064d89741"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b288944c6de343107f44d98064d8973e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b288944c6de343107f44d98064d8973e"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=b288944c6de343107f44d98064d8973e^sys_idNOT IN0f88944c6de343107f44d98064d89778"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>0f88944c6de343107f44d98064d89778</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 08:45:12</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VZ2XLbNhT9FQ6f2hmlw0WL5T65tpy4k9iprKQPrssBQVBCS4EKAdJRM/n3XnCRKG6WTCpR/GBbAAice3HuOYD48EX1kE089VydIdsjak+lTJCAIW+2XhFoFrLZYmgp+5aIOUj4wVo9F0FIeqob+MsZWa48JGCwizwOjX7gkEA913tqhLyQ3K/5jQMzwfPxNOmcatoNnz9bnGELkTnl1j++bQXkU0g5FdRnMMqhHOZff0wH/+7bynRnAF5QzwkIU88fHnvqCgWwipAIvhS6qISBXZ3o4zMNmwb8aJpx1tftoWnrhmMigjSYsJiSAmxRkZltzOSzIMwhziYdpaQFBDl3zFvnRnzm9D+Y80yTvS4BxJgkKdt8tNI8JM144VNM7lZxCuKWBF3S6Xvhkt0mqGUGiYtCT2QZhJaQw3xkJYEyscHh3i/8p2m24DVlcUxpp+dj5G0+ISECaoeCcJlml3qQcCvJCPfDIEY/nVzeTa+sPy9ml28mU2s6uZ9Nby5nkyv1axyX9SmUMyYIUyxWEs7XzbZfU+LJbWPh0gY0PZXjgK7EBRY0yij3tbel8aXPnIwYBSrjrIvvUjmLvonLmlbLZpxbMWM0F0iE/K9Q00zn/eT26ub2tXXx/v307uPF27/RahX4MNKSo0gyaDr54wPkB3JzKJ9H2shx9Do+YzvH53xuKsCLijTl429idtpST+2+pn0ncqdK9VJuL32HeFfb6VTonM+B7ZStQiFzlOXF8lckkPmA51TY6Ms3F7evJ/e/pn+vp3fvsv9nd/DcE2KCW8K3kONYuazLJSCW54okyUm5Up6vkSBkMIW12c9ypcQbsNmJt5RD4A9Q5/cgvMn2vQKpc7OkxyvAcPdtusI0ZIoPPIBfCg4DyLlQMvl0b5Zonm4VTOgRLHKccj/w/Kd3lHPK5rkg6jDEOStB2KwOVFWygBMovCWWxy5FpLwlUSG3BRs8WCd03Dc00x5qI6kSOvzr6tpIGyDXMTXNPsvpRBlMLUpRIEyHenGYWvCYoN4e/CsmNoWs5StkL/JEu8zLQpfESEXpshtoekfQDAmtIK7mQeq6IWPSfLXLyabQOj5xICdC8ISzr1jKAXuoouv5TyDs7RXRRvjfeeCHzClqklxCoUzZjlB+StP58/HU0fUD0oxnd8Qp6eJ2UzJaI7buQBENUyejYX+ogRCaUgMH47GNkeG6o+GI6HpBEbcwKrGdsBI+Q7moirN1qlhJl6iKZQfoYQuAJW08GGB7VUzpWKmJSd+PoX5PC8IsgBpYntS3kgjOPeqQrK/bGi8tHW2rum2dY3vsDAajER7B7Qjq3O0TG+l9Y4DGo6FJ3EKdl6A0wRQVmTninYmvebx8jQZ8SLpO68uBY5KVEyGk9bT2awbH2ngKlKyZM0m5N0qsLH6g3Prs1c12nHJPwPvi2/ORjHsfUHLblW+KyvbFonSQACS/QfsOEnk8rcnZyd2/CoyKdmNtq0LIMNBYN2tUaDSsUqEtmHqYJ3ru2LNqotr6qzqA7Mv6qLJ4ak8MLyBugRz5o0TDWaerpOidJ8U4XlLM1uerrAJrL50vAfsDuVx84OjQ6iQEYvluXsGvfAU6FFhToa6SfsdJHMVeK2JBIMMenKthfUWCaSvdDc5SRrbh93fFlZzjS4YHzUp6IDs9LyvwptvbM3FMPHbq/Kw/qj1V15taoftEne3gSomqCq/R3g6btzhnpcHliLrLgz2tq9Ooq/2rXdSVDvZc1O29qenuX4Hi9F1Hgp4l29Dea3yGC9cWfMRXQCGj0G7hBWLz5PVOtu417AJBeKEkQ5RkyBHdwntCa64WXQwYLoso/W4cGqCcWCJ2RwJCIhKsS5mQjUq4cqSxfGPjMhqMK3uzykUAT87XO9WOu3gJZthjKNWBhk1dN0svywf5l+W7dVCPsMaljJe61ILGb5lzy6f7JeiSxJq4eVWsLJHAC8J7Cmxq/OIllkwacBGP/kXt8DqHSXk7qkysttSiuiqtNYWGcomKhVblAhVcjwp1kfeBxotbQ/h6J+EbXYRvviz8fmsbzOqz0gfT7HXrfS+1usf/AYRt6sP0JgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=b288944c6de343107f44d98064d8973e^sys_idNOT IN3ad3bf51b47743107f443abc21313864,4b88944c6de343107f44d98064d89773,4788944c6de343107f44d98064d89774,c788944c6de343107f44d98064d89775,8b88944c6de343107f44d98064d89776,c788944c6de343107f44d98064d89777"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 14:05:34</sys_created_on>
+        <sys_id>3ad3bf51b47743107f443abc21313864</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:34</sys_updated_on>
+        <ui_id>a39e450f-1298-48ce-afd0-52a24d0af5cf</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOjlfyl+zcigQGCnQboEl76RYEJVIxsTSpklTSxPB/36FI2YKt2NbWARL0Zg6H5JuZ94aUv69CRsLLkMyiWT6bjadJFA2HUTSZDDMcp+lwkqVRikdhLxR4ScHT4JRTGD5gXtqxftK4KJSEMXI/qIJpwnTB8dM37/XBu8BMtmCcKCrCy+8/emGBFexrYM3lamfqVGAcp5SD651HtgPUPBWbIarmnO1Tc1nw2U1IRSyUqBfSX4YKQgFDjrmmvXCJBcFGqqeNRVFMbgTfGhZMGNgxtM6/NHuGc6eR9cspRJVRN7cZIp8kZ86vscG3RpWZKZV3zRaSZVS7fBCa45Kbq6bNOdwUhknhlriw3WrJy6X47NIRbjaoawKWUgMIWthALXIfRn67kI9fapRzJqqc+EkuMyhjPcLGKJaWxuJZhZTTJWyElkAEJu6RrTmrFgOWZf+ew6Cfc/kIh2p2L/o4s8D7kFfcn4P9ujJ/w4rZKP6GbSoy5YwDQ5AroZalqlL5gDJe6mpCYaHdXuG6Zyl5xbHW28gh5ehnaXG7PPiIkUuaXZIpVpgPsMUD9cGte7U2xgcpONtSLpOCMItCNwRCZFZWWWHknxJ2IKvVFTDHUBJIFXwtiP2J4n5WKsi3Wa/31fN/tugos+Mx1jK7agbZFrgX3J7tU9sGXnDx2QQ3iqL3JDk4/O0prruGXAqOCCkmB0lGtnzSUhnkctlQ0r4wOvP8BAg1z28sM4P06SVUnuY5o5y03StzO7Fzrwz+zHvlTZIcABHkqscEZ6J6JADQ12L/+CD10niHZxW9Gs8sa8M629cADowMnjsr4QQ4tRJu4ezgzuFpgVj3+4oyu72+NnoBDM8mgOHgPAJYbcLcJLIl5/W70Faz9n+2/njXHyjYWBCv2wTW6cy465mD9b6Ah50U3CSbm7l+gXNnfkC+oMjea7aABSz15yGnX/TIyD0129NrLyLNI+b/ts17xqG6UFV4r/AYjQ9+D6WNxyjL0RIqxwp4MyuaATk0woqiXJaCIP9a3hLJVjJnShvvvN9ovlDQjwgkCDMwCxpU3sHGu+NFfDyOOpUf86AOxJ+mAwgkqAIJNoF0C7tL0xqd8XF67qY1x4xX1YAPoaJRTqqUVC80riOFPMCIE7vaiaDis4L6/bbXJoHW9ncE67v4qj5/a8ooTkcDPEmGcRxFcUSSaJok8XSS5hOcjPKtRhHSIoNuCjvnQBXYHtXUqOsc7fcf11K7NpoTUNUUvJbCfl4PEhNYWFDfoIZ1HLhvKKmUnGKx01Hu4J74a+7xe76O31xXeRf/MZXsbjfTztSa69d6N5Tsq2A/S/rRUmxKo8E0JtnFNImTi1FOJhczgscXeJaOkyGh2Sg/51Pgx399sWmntRUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3ad3bf51b47743107f443abc21313864"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>4b88944c6de343107f44d98064d89773</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 09:45:16</sys_updated_on>
+        <ui_id>18e65a39-de28-46b6-899c-2b5e674c6f88</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9K1GegXXIB6FvVVFXM9qdkTqdeWmryLFvWneDw9jJtCziv891nBCGthR2qNSuKiSEr++1j4/PwXEuFq7g7pELQeSH+DXKfOINPRJDFMdsTCiLoygMfLfnSjoFzKSzmSp+0DxRQHUhsQMblen5WKTOGXyvhBalKKTTZjoKg6BL4E5WqCPHWSxOsNi0C+V8nXHzM/EGrFIKZDmQ1TQFtVzi0FzoWU7n315uBnYjco5B9+jiqufOqMJVlqDco8VG16405TSFHFOPW2xnLU9PEljOZ6ZDl0rI66b9VzPMlzZYKG5gDXsu3JcgOSCejOYaeu6USlxhoearCA7NP8u8C9wIWeJorkm+1+JfnM+LiEnMAJfIwHaumknDvA1nE1pSRFKxslJNKrspBANtyeGQ0SovT9ZjNuHzzOyULSlpmrfVRV5N5SfLiLsaoN1ojFQaQcDMrNRAb9aRfbkp7s5alKdC1qQ0nXnBaL5q0RKpS6vS4Fm4lTjfYNlGHvAMOUxxxmSK+4SRxGyWqGdB0NPBdY6NQZYXd4hOi2s5oMyscIA7QAenGJ/U4W9UCbPcv3EYLDbTfZUCVfrB6CgaptGYxLzPM5L2g9gP+5QB6UPkhRDyiIWe7y57rp7rk5xq3RGFO5R8r8wyLW0NQYnl2JQwJWblMYL6AQ0Xy17jcuJlQxiPhyT1CPEJiUNGYh9SfxSNfMrjR0SaCcj5mskfmnJvE+2A4oGJThsYT8FrLFQ3kzrpVxvV9c4n23FwK8WEvCUv4eS/Y6WXccj+arcUPCN5tlVssHaw3RaVki+j+B1AtIr/aFFsCn4T3H/Ru/+u9/+/3kfxNqkx0klKAUNhrAl9+0PTY89jexthB3StEc5aeJtwG+nzglX1tgi+of1J0+N8mHTiJ9vFbyWyi/b94bvyX6XyWbhNW9m4kxKvkCRU97r2L12L/dI9unRlIeHS7V26Jisx2qrDCnJqZl511dEnbKMqmeiSqjKxg4gpLJe2slK0mcpba3bzcDrXdaZmN8Cr3EZJnDGOKyIUP+kwwv/g0TgLo9SjPB1T+KUiqW1U18X90LkD+MeOeggX78B06+JJBc7EUv2Q/Pbe02JeEbV5B2oS6pH+OBfrh1p4sEMteEtH2u9eh17ulpO0z+bGt/j38wLXmGCr/mBNbKt7Aiskr98Z6DXT29sF6DO4BVbqYzn/82KxQNOWgg0Cj3mjIAsIyVLie2SUBQGhAR5SjKaEDpfLq4dWOsCI+1lxBypWByo6SD9HTWPJ7h1FU7Rux+7NRtPZWDE41BH7xh4vX6cXD2+7lG19eGOdtiybndHuEy1ZQuFa6OS2SBPVvcN79iXf3pbYAWZrifMG5wbsxgR187HLVV22cbny9jyHrBseFf+79F+N9K9+AnLVJ0cgFwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4b88944c6de343107f44d98064d89773"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>52becca3-daf0-436c-ac50-0238904fa0dd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>4788944c6de343107f44d98064d89774</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:35</sys_updated_on>
+        <ui_id>e0dfa806-58fd-4a8f-9b4a-8e16889d2a70</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5Wf2ygfLWr7huiQNjFAZesLY9GNfVM8OR/YDtBV/e/cJE7pCmIg8TC0PtX3wz7n+J74cs2kYFM2ROEHk+CAR0EUhb4fjodBchAlQSgiQAxYn+WQIVVq5IUWtL4FVdWB9fpII1gUvUL3vpei/hsHHq+0xtxuNlQqpCkVrBaugyL8WipBeTa9vOqzEjRtblGz6Xov9Vp0ChJUVDrv4O3DtauyXouCVxnhimUXPHGdM5fpfZ5RhppqOIHfZ3hvMRdIQFJQBvssg5xYFnrFplZXFCD+4ixXq23FtcxtSzSDeyN/08lDv65LkZhxJ8J2GTuB2nA6AwsXtDO3ld7qVUiOptVEYAqVske7sbbgrLSyyNsWC4nqugtVZflpqwjbbrBzH5UhEFjWPGvkLa304rq4m3cgj2XeSOIoqoKD2q7AWi2TytZw1gwVNhpnUJYyX8alLm5l00xQMm+paOGlqrijM41c5h7wGrdHqoJ3TPFZE16AljWJr7QNNW/6zKzMkQJjHqmQhvFNVSNpiTkKcaNCI0HcTELdzLUs7SEddYsO+Kbv5j8ZvTRhfPI4UDt7PnrgPjY5jwGX0sS/iiTWeFNJI5vLeDL+X4qkN/+j4G1ueAXWzg3fmhl4HrszxJPYyW5v77RNODuM3s0O449kB0fjw/vhby7wwxe/szuT1Ay+2XGAsWAr86Py/Ugcnp/PzxafZj8JJzEFFddZ3E8K0cw/pUmEWh/Xvl5DNMHhyE8HQTgZD4ZjjgNIhT8YhRAOhQ/piKde+6X3ut7nHpp/A9Tb3P2KO+jcfSxRCfPMpXTWxozUsBi3l7Rnb5fsLVxy++K9m8eDA7/5fSCn/zcP39UDny8YdvoJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4788944c6de343107f44d98064d89774"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>52becca3-daf0-436c-ac50-0238904fa0dd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>c788944c6de343107f44d98064d89775</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:35</sys_updated_on>
+        <ui_id>81300d30-3db8-4c78-b5ea-56e42d41d492</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2Y7W7bNhSGb4XQb0OVv+PsV2YjWIe0Beqsw9AVAkVRFjtKVEkqiRv4XnYtu7IdStSH7cyxYw9LsPxpqsOv9xy+Dyn5873DQufcGYRn3iiIBnjs9Xt9zzvrTSZBfxJ5Z+OJ1yWh03FSnFDoKSkR0jzfYJ6bwP39VFKsaYiERL9kofmv33VJLiVN9WoFXUOmMo6Xn+wIiJCY8RDanfPPXzpOhiVMrql0zu83mvZVx3FAOXS9xnJBNfpYqdxUrZeZeQ4FyROQ57MqeGUnmNkW9HYGLTDIqPI6Dr3TNA0pyIkwV7TjJDiFXIVc1hEoQ/gh5U0gZqmGKS+UEoRBXRTSMUU0wYyjW6ZjhFEpzHXMfHeKfQdx/Z6ZKqJQA2K0spSwEBQ5rbBvSwrNb5vmaIY1nmuZE53LutKCEarKaoY0wjnX03as7PAh00yk5RCNA16NFjxP0vdlEZ16gtZO5grE0MzUxiQLi0Pi0TwWtx8rsZcsLapoq8IFwbx+iuYUSxJfMsrNVqd5EkDfjoO1lizItZEJpuDQq1nHL6SataAn5bTYygRnGUsXfibFDSsWBPmJu+Dw4EZc3MJ4xRapi4nJ1YXdw+4lxGdF+BOWzCT+DqaBwauOo5ZqyrFSTfpQf/9bbtSXxViXY0b7heHMYCJZpi9gqRtqk111LG3dyS4/h4PGt605G+LufJUSH9MFU/5XEfiSfsuZYsUGbsH2swiAhnaHw9jbQ2vDnvHNw9otd1uxq/ZY9L5ssNR1D6Su9J6F7hpI0+VhUDKGtJVXg3bmrYP2D4A9D7BqXPYma52gf4cSMInyS6vb3IrFn0DPY8x4o1EQjILhuN/4cEKicBxEIzwm/cZ3t3DSygTLP/zipG2B093Gw54hhzGxh5aKCTideR5S9GslapdOC0kgBBx36SYhoPTNZVHdmpDeUfdSaU2kBYLN5Eu4jWpJJtjcVTrGGjGFFOyWi64FYjar1ogOWoocJbnS0E1Dyxp8axfc4PlyZ+1go7MHvfIiwDw9gMPdFwFujI1jX4sWdmj3K6IbM2kSB+PiBZVu4bnVCm3D+vSJDuN7j1TrO09s520xVtqo2aB4XgUtwf3dBJdX2hbArSvMe74wvRRWjHDOElYYoqT89PiEOz1FvTUbEdLC5wQfUHssXhl6Ot1WcoihB0+7kl4d/eIc3d35VU5Haz4KTm3pPVavLP3jhqeDg009fDX1/8TUw922ImtGUnnwlRLdMnbrSxtdZCZvGp4/9tpS/ubx0C9lx0534GvP47lXSM3rzB+qxiFojV5fgP5zsk6PEd5ppai3fh6LcNli6Pfc8/okK/7Q30QuUesHLhSB58seYC+RLspuNvSmHTP/9kZpoLIfYqxQQGlqPnQLiFCwLL5vyy8G85Eqc3OwuHYeu/o2kacS99efR2g6DOs99qK+Kcud2NoaC3SsE76B80/X764amMdH3pOj4bA/esX56Isyuw17oRRZZnM78WX55W/ZLTzHNxoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c788944c6de343107f44d98064d89775"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>b387ffd6-21c7-42a5-8e48-00a087cbad1d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>8b88944c6de343107f44d98064d89776</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:35</sys_updated_on>
+        <ui_id>68367cb7-b37a-4f66-b2cd-8dbfef667b31</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXU/bMBT9K5Wf2ygfLWr7NrUgDTGQCuOFscixb1pPThxsB+ii/neu89F2HUMgIW1I61Pvl33u8TnKTUUEJ1Pih9wPJsERi4IoCn0/HA+D5ChKgpBHFABIn+Q0A+y8p7IEg3H9BxO0KLTCIDaWWvhW+n7EF8enx7Or4/l3yrmwQuVYZirLILem6agqGk1gOPLTQRBOxoPhmMGAptwfjEIaDrlP0xFLvQUwpbnXzW42eDEXppB0ff237mcrIbmGnExvbvukoBqJsaDJtDoovZZZSROQ2HoiQHLzDNV2XbjYQoaLW4gb6pv8WTt81RZ7120RcTtQge/3CTxayDkgnpRKA32S0ZxTq/SaTK0uMaGB8otcrrcdK5FbPJa43kcjfiKA4Mivf647BVyTQdOxDeP2bZp0OqeWXuL5zJa6bWUrJRguVRPEIaWltLP9XNNwUbhXa0YsTWQ3rWSZ5ecNPWR7QCcFzJQGQUDhtnX4m+XSy5V6WHQgT0ReM9MuKhWjchtRa7VISuvgVAQkuHePMxSZyJexU5qohxFK5i0lBl4q1QPeacQy9yhzuD3klnonmJ/X6WuqhVviCx6Dw5s+MWszk9SY3SrIYXxXOiTNYu0Kcc1CTUFcy8INMy0K+wmvuocW+KbfGnkIL8ot2KlL19LeM3JVzVAFFnhP6d7Xgru/ceCxUiNt9jnrvdkMr0DXmWHRwTuE25qBK1bWbyP4gRPmbaX3eb5vg/dywfC//v9h/SejlxTGJjtB7Z2588BjbHIWU1gKE/9QSazhrhSm/oT8Lv9TlfQWvzS8zQ2vwNq54arWwPPYu6/DYe5sf7Z33hRaO4zezQ7jj2SHdo0P74c/ueD2CUZ3yOTQCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8b88944c6de343107f44d98064d89776"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>b387ffd6-21c7-42a5-8e48-00a087cbad1d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>c788944c6de343107f44d98064d89777</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:35</sys_updated_on>
+        <ui_id>2887597d-97e1-45d5-ad5c-2574e60a60ca</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2Y7W7bNhSGb4XQb0OVv+PsV2cjWIG0HeKsxdAVBkVSFldKVEkqrhf4XnYtu7IeSrQk25ljJy6WYPkV6/Dr5eH78Ej5dOtx6p17PXoWDMKoh4dBt9MNgrPOaBR2R1FwNhwFbUK9lpfihEFPxYhU9vkGi9wG4CflOhN4+aGOkJgLqljqnX/63PIyrGCwYco7v91qOnR1gUMmoOs1VnNm0NVaxbYqs8zsM5UkT1hqZnwdvHQTTFwLejOBFhhkVQUtj30zLKUM5ERYaNbyEpxSbKRaVhHFMH2fijoQ89TAlK+1loRjwzQyMUMswVygBTcxwqgU5nt2vm+a/wXiuh07VcQgB8Rq5SnhFBR5jfDMpRSa39TN0QQbPDUqJyZXVaYlJ0yX2aQswrkw42as7PA+M1ym5RCDQ7EeLUWepO/KJHrVBI2TzDWIYZnNjd0sLA4bj6axXFytxV7wtMiiy4qQBIvqKZoyrEh8wZmwR53mSQh9Wx42RvEwN1YmmEJAr3qdWSHVrgU9mWDFUSY4y3g6n2VK3vBiQZCf+HMBD34k5ALGaz5PfUzsXn04PexfQHxShD9gxe3G38I0MHjV8vRSjwXWut4+5H/2Nbfqy2RsyrGjZ4Xh7GCieGZew1I3zG121XI0tUf7/Ex7tW8bc56UqAMU1ERZN9ytyNG0E7tsjkXvygbHUvtIlkpHOZSugR9TIl6Sg4yTV+FzFmzi8y/YPA1cKggO5mWTix/jfTCJnpUGdnsrFn8AE/eREAwGYTgI+8Nu7cMRiegwjAZ4SLq17xZwf6oEqy+z4v5s4NDe5cHdDMcxcYCWNRNw54qcMvRxLWqfTgdJKCVcYuk2IaD01UWR3YqQzqOqTWlNZCSCwxRLqDGVJBusK5CJsUFcIw2n5aNribjbVWNECy1ljpJcG+hmoGUDvo2y1Xu63Dk7uOjkTq88CzBPD2B/fyHAtbFxPDOygR26vR2DBw2jSCr0W0btz1nbJ7lS1lExV3bjYFw8Z8ovPLdaoV1YHz7RcXwfsNWq5sndfTuMtbFqtiieroOO4O5+gsuStgNwo4QFTxem58KKFS54wgtDlJSfHh+611Ms2LARIad9iTtg8bWhx+NdJccYuvewkvTi6Gfn6Pbeb2022PBReGpLH7D62tI/b3k6PNrU/RdT/09M3d9vK7JhJJ2HfzJiGsa+Yl9zrnnxXl38VkyjcYzTOdPn6L73l/JfGqvVLh4nm/fIF6H7s7GGbFrl4q78HAPb4OWV6D9n7fRg4b1WijqbN7SkywZVf+RB0CVZ8Yf9LnMFX5U1D5FUtqUzSEOd/QRfpBqare8Y9dGv8CWtGQRuOFugiDEaYvIFuSxR+JJFmNJiIiwQZMwmU/vliq/ckrs83qvon79/kJDjAD4g61WVLHO+cwgO3dgkYgvcX67fXtbYDh9ZIwf9fnfwAu6ji2S2oB2qZJa5vZ24UH7+Dgnm9wfpGQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c788944c6de343107f44d98064d89777"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=b288944c6de343107f44d98064d8973e"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=b288944c6de343107f44d98064d8973e^sys_idNOT IN8b88944c6de343107f44d98064d89772,8388944c6de343107f44d98064d89771"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">6a88544c6de343107f44d98064d897ea</block>
+        <comment/>
+        <connected_to>52becca3-daf0-436c-ac50-0238904fa0dd</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>8b88944c6de343107f44d98064d89772</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:35</sys_updated_on>
+        <ui_id>b387ffd6-21c7-42a5-8e48-00a087cbad1d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e1d618486de343107f44d98064d897c6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="HR Requisition Approval on JR">b288944c6de343107f44d98064d8973e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>8388944c6de343107f44d98064d89771</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:35</sys_updated_on>
+        <ui_id>52becca3-daf0-436c-ac50-0238904fa0dd</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnWdDDUmXfDAcBCqQN0AS5tIGwIimbKEWqImXHNfzvXephG4mDNmiOvZmz3OXMaAfeE93aurXmXi+MEStF5t8ePSKUw/D3niioOJkTqhUTVmiVd4BHNiBbV1jUdaM3nCHEhKkl7B5eVuhaSNbwYXoNDc6wvCHz/bOSYNhYBlCGMxrSOErjKAiibBoWaVyEEYuBQ4wDJRRc4tXlSOvDTYd4r/K1u9rhxjZCrYbzzTDlbgR1wxyrMPAIf7JcMWQ/L0Ea7pEKFAOrm90RaTiwWyVPwFooi+OIu/xkxC98MEoSd7HkKJHyvng85oNjPVxegQWk0lLbNsNVutaCctObw3gJrbTLc6y/cFs7qX2LhUKO3Vq2lfrSO0KOA8YPhEhrkASvnVJHfdBR3q319uvI8lqozpWhKDUFeTyBRe+K1jo+e8Ilr3BQXkFdo6O5WwDRNSOXyl9JPPil1Ft81G2bD9QR99FY8K8Rv+rgB2iEU/EZx2BzT7MAI2jebSaOQ5s4OXjE7MxSgjEnkehu/rN1FHvJg7i898e10EbUdoEvb/ig4+C9XPSzHd/vw4ynCcSzCeNRNpmmRTrJZjM6iYqEpx+nNC2zzIdu4UHmxoLlh8P3NghiBq8G5L3Gvi1dM0jKJAySy+mappfSdSFXb4xU9IdIue/5l4kKguB/pP45UsLkfRAGbd3j75ioRxef/s2j11QYpHbvsE/jP4wr7HC5BD2Htrr54USdsMNv2m8Fg6sGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b288944c6de343107f44d98064d8973e^sys_idNOT INc388944c6de343107f44d98064d89779,8788944c6de343107f44d98064d89779,4b88944c6de343107f44d98064d89779"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b288944c6de343107f44d98064d8973e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>c388944c6de343107f44d98064d89779</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:39:18</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f32d9055-0bcc-43bb-8ec4-f97bdfd852af</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b288944c6de343107f44d98064d8973e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>8788944c6de343107f44d98064d89779</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:39:18</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>707cdaaa-c062-4f5c-b4af-badbbd11435d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b288944c6de343107f44d98064d8973e</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.role_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:18</sys_created_on>
+        <sys_id>4b88944c6de343107f44d98064d89779</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:39:18</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>6abf96db-a886-4176-90af-fc19a79c09ce</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b288944c6de343107f44d98064d8973e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b288944c6de343107f44d98064d8973e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:17</sys_created_on>
+        <sys_id>7288944c6de343107f44d98064d8975d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:39:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b288944c6de343107f44d98064d8973e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:17</sys_created_on>
+        <sys_id>7288944c6de343107f44d98064d89767</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:39:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b288944c6de343107f44d98064d8973e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:17</sys_created_on>
+        <sys_id>7e88944c6de343107f44d98064d89752</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 14:39:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b288944c6de343107f44d98064d8973e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b288944c6de343107f44d98064d8973e"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>b08acc406da343107f44d98064d89740</sys_id>
+        <latest_snapshot>b288944c6de343107f44d98064d8973e</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch3-hotfix1-06-18-2026_06-19-2026_0938.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=b08acc406da343107f44d98064d89740^sys_idNOT INe388944c6de343107f44d98064d897bc"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"e388944c6de343107f44d98064d897bc","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>b08acc406da343107f44d98064d89740</plan_id>
+        <snapshot>b288944c6de343107f44d98064d8973e</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 14:39:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e388944c6de343107f44d98064d897bc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 14:05:36</sys_updated_on>
+        <trigger display_value="">93d3bf51b47743107f443abc213138bf</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=b08acc406da343107f44d98064d89740"/>
+</record_update>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="rejected_at" table="x_snc_aegis_application" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>rejected_at</element>
+            <name>x_snc_aegis_application</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-10-05 12:19:22</sys_created_on>
+            <sys_id>535889f8007f03107f440a4ac0cab0a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>rejected_at</sys_name>
+            <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+            <sys_update_name>sys_choice_x_snc_aegis_application_rejected_at</sys_update_name>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-10-05 12:19:22</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>rejected_at</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Received</label>
+            <language>en</language>
+            <name>x_snc_aegis_application</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-10-05 12:21:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1898c57400bf03107f440a4ac0cab0ca</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-10-05 12:23:10</sys_updated_on>
+            <value>RECEIVED</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>rejected_at</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Screening</label>
+            <language>en</language>
+            <name>x_snc_aegis_application</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-10-05 12:19:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b848cd3400bf03107f440a4ac0cab0f8</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-10-05 12:21:55</sys_updated_on>
+            <value>SCREENING</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>rejected_at</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Recruiter review</label>
+            <language>en</language>
+            <name>x_snc_aegis_application</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-10-05 12:19:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>db588db8007f03107f440a4ac0cab005</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-10-05 12:22:55</sys_updated_on>
+            <value>RECRUITER_REVIEW</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>rejected_at</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Shortlisted</label>
+            <language>en</language>
+            <name>x_snc_aegis_application</name>
+            <sequence>400</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-10-05 12:20:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d27801f000bf03107f440a4ac0cab0c8</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-10-05 12:23:01</sys_updated_on>
+            <value>SHORTLISTED</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>rejected_at</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Interview</label>
+            <language>en</language>
+            <name>x_snc_aegis_application</name>
+            <sequence>500</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-10-05 12:20:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8a88c57400bf03107f440a4ac0cab0c9</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-10-05 12:23:05</sys_updated_on>
+            <value>INTERVIEW</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>rejected_at</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Offered</label>
+            <language>en</language>
+            <name>x_snc_aegis_application</name>
+            <sequence>600</sequence>
+            <synonyms/>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-10-05 12:21:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>74e8c57400bf03107f440a4ac0cab0cc</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-10-05 12:23:14</sys_updated_on>
+            <value>OFFERED</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

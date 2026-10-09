@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Job Details" section_id="d8496ac768ab03107f44630372e5b923" sys_domain="global" table="x_snc_aegis_job_requisition" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-10-04 10:30:22</sys_created_on>
+            <sys_id>09d56790a0fb03107f44a987da6f3c58</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Job Details" display_value="Job Details" name="x_snc_aegis_job_requisition" sys_domain="global" view="Default view">d8496ac768ab03107f44630372e5b923</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-10-04 10:30:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-10-04 10:30:22</sys_created_on>
+            <sys_id>4dd56790a0fb03107f44a987da6f3c59</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Job Details" display_value="Job Details" name="x_snc_aegis_job_requisition" sys_domain="global" view="Default view">d8496ac768ab03107f44630372e5b923</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-10-04 10:30:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>offerings</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-10-04 10:30:22</sys_created_on>
+            <sys_id>09d56790a0fb03107f44a987da6f3c5a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Job Details" display_value="Job Details" name="x_snc_aegis_job_requisition" sys_domain="global" view="Default view">d8496ac768ab03107f44630372e5b923</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-10-04 10:30:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Job Details</caption>
+            <header>false</header>
+            <name>x_snc_aegis_job_requisition</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-09-30 08:53:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d8496ac768ab03107f44630372e5b923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_aegis_job_requisition</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+            <sys_update_name>sys_ui_section_d8496ac768ab03107f44630372e5b923</sys_update_name>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-09-30 08:53:18</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

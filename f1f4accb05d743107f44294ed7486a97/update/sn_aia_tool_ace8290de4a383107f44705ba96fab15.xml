@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_tool">
+    <sn_aia_tool action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Create one Screening Result for one application after scoring. Leave a score input empty when there is no evidence. Returns the new sys_id.</description>
+        <input_schema>[{"name":"application_sys_id","description":"","mandatory":true},{"name":"candidate_sys_id","description":"","mandatory":true},{"name":"requisition_sys_id","description":"","mandatory":true},{"name":"certifications_score","description":"","mandatory":false},{"name":"education_score","description":"","mandatory":false},{"name":"explanation","description":"","mandatory":false},{"name":"fit_score","description":"","mandatory":true},{"name":"is_blind_scored","description":"","mandatory":false},{"name":"matched_skills","description":"","mandatory":false},{"name":"missing_skills","description":"","mandatory":false},{"name":"projects_score","description":"","mandatory":false},{"name":"skills_score","description":"","mandatory":false},{"name":"experience_score","description":"","mandatory":false},{"name":"transferable_skills","description":"","mandatory":false},{"name":"screening_status","description":"","mandatory":false},{"name":"crudInputs","description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</input_schema>
+        <name>Create Screening Result</name>
+        <record_type>custom</record_type>
+        <script><![CDATA[(function (inputs) {
+    function getChoiceList(tableName, fieldName) {
+        var choices = GlideChoiceList.getChoiceList(tableName, fieldName);
+        if (!choices) return [];
+
+        var choicesArray = [];
+        for (var i = 0; i < choices.getSize(); i++) {
+            choicesArray.push({
+                value: choices.getChoice(i).getValue() + '',  // force string cast to avoid NativeJavaObject
+                label: choices.getChoice(i).getLabel() + '',  // force string cast to avoid NativeJavaObject
+            });
+        }
+        return choicesArray;
+    }
+
+    // parses {{value}} and obtains the correct value for a choice or reference field.
+    function parseValue(table, value, field, inputs) {
+        if (!value || typeof value === 'object') return '';
+        // regex to parse {{var}} and check if the inputs contain that prop
+        var fieldValue = value.replace(
+            /{{\s*(\w+)\s*}}/g,
+            function (match, variableName) {
+                if (inputs && inputs.hasOwnProperty(variableName)) {
+                    return inputs[variableName];
+                }
+                return '';
+            }
+        );
+        if (!fieldValue) return field.type === 'string' ? '' : null;
+        if (field.type === 'choice') {
+            var choices = getChoiceList(table, field.id);
+
+            // First pass: exact match on internal value or display label
+            // Using strict equality instead of substring match to avoid false positives
+            // from scripted/dynamic choice labels (e.g. javascript:gs.getMessage(...))
+            for (var i = 0; i < choices.length; i++) {
+                if (
+                    choices[i].value === fieldValue ||
+                    choices[i].label.toLowerCase() === fieldValue.toLowerCase()
+                ) {
+                    return choices[i].value;
+                }
+            }
+
+            // Second pass: GlideChoiceList returns labels localized to the current session
+            // language, so a label mismatch can occur when the stored value was entered in
+            // a different locale. Fall back to a direct sys_choice lookup across all
+            // languages to resolve the correct internal value from the label.
+            var choiceGr = new GlideRecord('sys_choice');
+            choiceGr.addQuery('name', table);
+            choiceGr.addQuery('element', field.id);
+            choiceGr.addQuery('label', fieldValue);
+            choiceGr.setLimit(1);
+            choiceGr.query();
+            if (choiceGr.next()) {
+                return choiceGr.getValue('value');
+            }
+
+            // Third pass: try matching directly on the internal value in sys_choice,
+            // in case the stored value is already the correct internal key.
+            choiceGr = new GlideRecord('sys_choice');
+            choiceGr.addQuery('name', table);
+            choiceGr.addQuery('element', field.id);
+            choiceGr.addQuery('value', fieldValue);
+            choiceGr.setLimit(1);
+            choiceGr.query();
+            if (choiceGr.next()) {
+                return choiceGr.getValue('value');
+            }
+
+            // No match found across any resolution strategy — return null to prevent
+            // an unresolved value from reaching gr.setValue() and corrupting the field.
+            gs.error(
+                '[AIA AGENTS MSG] Invalid choice field value or label: {0}',
+                fieldValue
+            );
+            return null;
+        } else if (field.referenceTable) {
+            // First check if the input is a valid sys_id
+            var refGr = new GlideRecordSecure(field.referenceTable);
+            refGr.addQuery('sys_id', fieldValue);
+            refGr.query();
+            if (refGr.getRowCount() === 1) {
+                return fieldValue; // User input is a valid sys_id
+            }
+
+            if (field.referenceTableDefaultField) {
+                // If not, try to find a record with matching display value
+                var refName = field.referenceTableDefaultField;
+                refGr = new GlideRecordSecure(field.referenceTable);
+
+                // Check for both exact match and display value containing the input
+                var qr = refGr.addQuery(refName, fieldValue);
+                qr.addOrCondition(refName, 'CONTAINS', fieldValue);
+                refGr.setLimit(1);
+                refGr.query();
+
+                if (refGr.next()) {
+                    return refGr.getUniqueValue(); // Return the sys_id
+                }
+            }
+            // No match found
+            gs.error(
+                '[AIA AGENTS MSG] Invalid reference field value or label: {0}',
+                fieldValue
+            );
+        }
+        return fieldValue;
+    }
+
+    var table = inputs.crudInputs.table.value;
+    var tableName = inputs.crudInputs.table.displayValue;
+    var fieldValues = inputs.crudInputs.fieldValues
+        ? inputs.crudInputs.fieldValues
+        : [];
+    // each field is passed as an {id, label} obj to be displayed when editing the tool
+    // each value is not passed directly, but in an object containing the fieldValue prop
+    fieldValues = fieldValues.map(function (item) {
+        var fieldValue = item.value ? item.value.fieldValue : '';
+        return {
+            field: item.field.id,
+            value: parseValue(table, fieldValue, item.field, inputs),
+        };
+    });
+
+    var gr = new GlideRecordSecure(table);
+    if (gr.canCreate()) {
+        gr.initialize();
+        fieldValues.forEach(function (item) {
+            // Skip fields where value resolved to null — this means the value could not
+            // be resolved to a valid choice or reference and should not be written to
+            // the record to avoid corrupting the field with an invalid value.
+            if (gr.isValidField(item.field) && item.value !== null) {
+                gr.setValue(item.field, item.value);
+            }
+        });
+    } else {
+        return {
+            output: sn_i18n.Message.getMessage(
+                'sn_aia',
+                'Cannot create record due to security constraints.'
+            ),
+            status: sn_i18n.Message.getMessage('sn_aia', 'error'),
+        };
+    }
+    var sysId = gr.insert();
+
+    if (!sysId) {
+        gs.error('[AIA AGENTS MSG] Failed to insert the record.');
+        return {
+            output: sn_i18n.Message.getMessage(
+                'sn_aia',
+                'Failed to insert the record'
+            ),
+            status: sn_i18n.Message.getMessage('sn_aia', 'error'),
+        };
+    }
+    return {
+        sysId: sysId,
+        message: sn_i18n.Message.getMessage(
+            'sn_aia',
+            'Record successfully inserted into the {table} table.',
+            {
+                table: tableName,
+            }
+        ),
+        status: sn_i18n.Message.getMessage('sn_aia', 'success'),
+    };
+})(inputs);]]></script>
+        <sys_class_name>sn_aia_tool</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 23:04:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>ace8290de4a383107f44705ba96fab15</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Create Screening Result</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_tool_ace8290de4a383107f44705ba96fab15</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:27:53</sys_updated_on>
+        <target_document/>
+        <target_document_table>sn_aia_tool</target_document_table>
+        <type>crud</type>
+    </sn_aia_tool>
+</record_update>

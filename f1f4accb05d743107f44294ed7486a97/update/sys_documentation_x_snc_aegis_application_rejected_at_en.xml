@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="rejected_at" label="Rejected at" language="en" table="x_snc_aegis_application">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>rejected_at</element>
+            <help/>
+            <hint/>
+            <label>Rejected at</label>
+            <language>en</language>
+            <name>x_snc_aegis_application</name>
+            <plural>Rejected ats</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>DEEPTHI</sys_created_by>
+            <sys_created_on>2026-10-05 12:18:23</sys_created_on>
+            <sys_id>1528893400bf03107f440a4ac0cab0f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Rejected at</sys_name>
+            <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_aegis_application_rejected_at_en</sys_update_name>
+            <sys_updated_by>DEEPTHI</sys_updated_by>
+            <sys_updated_on>2026-10-05 12:18:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_version">
+    <sn_aia_version action="INSERT_OR_UPDATE">
+        <condition/>
+        <instructions>1. Read JR by sys_id -&gt; number, role_title, required_skills, nice_to_have_skills,
+   experience_years_required, education_required, responsibilities, stage.
+   JR missing -&gt; stop and report.
+2. Read latest APPROVED/PUBLISHED JD (jd_text). Missing -&gt; stop and report.
+3. Query applications: requisition = JR, withdrawn = false, screening_status =
+   PENDING or ERROR, oldest first. Empty -&gt; stop and report. Fix the queue.
+4. Take the next application. Get its resume (one call per application).
+5. Resume empty, under 100 chars or unreadable -&gt; Create Screening Result with
+   screening_status ERROR, empty scores, "None evidenced" skill lists, reason in
+   explanation, is_blind_scored false. Update Application screening_status ERROR.
+   Go to step 9.
+6. Score (blind, resume text only):
+   a. skills = 0.8*required% + 0.2*nice%; per skill used 1, listed only 0.5, absent 0.
+   b. experience = min(100, relevant years / required years * 100); empty if required = 0
+      or no dates/years.
+   c. education = met/above 100, one below 50, else 0; empty if unstated.
+   d. projects = min(100, points/4*100) over the top 3 projects; empty if none.
+   e. certifications = share of certs named in JR/JD that are evidenced and unexpired;
+      empty if none named.
+   f. Round each factor to a whole number.
+7. fit_score = sum(weight * score) / sum(weights of scored factors), rounded.
+   Weights: skills 35, experience 25, education 15, projects 15, certifications 10.
+   Write the weights used in the explanation. Build matched, missing, transferable lists
+   ("None evidenced" if empty) and the explanation.
+8. Create Screening Result (COMPLETED). Sys ID returned -&gt; Update Application
+   screening_status COMPLETED. No sys_id -&gt; Update Application ERROR.
+9. More applications in the queue -&gt; step 4. Else continue.
+10. Log Resume Screening Run once.
+11. Report Completed, Error, Total. Completed + Error = Total.</instructions>
+        <state>published</state>
+        <sys_class_name>sn_aia_version</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 22:17:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>4f1eddc5e46383107f44705ba96fabaf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>V1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_version_4f1eddc5e46383107f44705ba96fabaf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 19:18:29</sys_updated_on>
+        <target_id>73649d45e42383107f44705ba96fabe5</target_id>
+        <target_table>sn_aia_agent</target_table>
+        <version_name>V1</version_name>
+        <version_number>1</version_number>
+    </sn_aia_version>
+</record_update>

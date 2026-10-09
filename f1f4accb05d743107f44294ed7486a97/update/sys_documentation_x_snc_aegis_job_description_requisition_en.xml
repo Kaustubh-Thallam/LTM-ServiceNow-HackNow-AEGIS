@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="requisition" label="Job Requisition" language="en" table="x_snc_aegis_job_description">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>requisition</element>
+            <help/>
+            <hint/>
+            <label>Job Requisition</label>
+            <language>en</language>
+            <name>x_snc_aegis_job_description</name>
+            <plural>Job Requisitions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 14:22:25</sys_created_on>
+            <sys_id>d2e7384b059b43107f44294ed7486af2</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Job Requisition</sys_name>
+            <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_aegis_job_description_requisition_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-10-04 23:12:27</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
