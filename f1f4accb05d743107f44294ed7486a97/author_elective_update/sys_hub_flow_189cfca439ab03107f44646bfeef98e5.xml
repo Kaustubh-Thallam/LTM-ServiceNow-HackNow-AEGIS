@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>labelCacheCleanUpExecuted=true</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>When an application moves to INTERVIEW stage (manually by recruiter or after shortlisting), create an Interview record and generate personalized interview questions using AI (or the template fallback).</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>aegis__schedule_interview_amp_generate_questions</internal_name>
+        <label_cache>[{"name":"Updated_1.current","label":"Trigger - Record Updated➛Application Record","reference":"x_snc_aegis_application","reference_display":"Application","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0}],"usedInstances":{"59d079c2-0f13-4ec8-bb93-d7f0f49054d4":["trigger_record"]},"attributes":{"":""}},{"name":"Updated_1.table_name","label":"Trigger - Record Updated➛Application Table","reference":"x_snc_aegis_application","reference_display":"Application","type":"table_name","base_type":"table_name","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0}],"usedInstances":{"59d079c2-0f13-4ec8-bb93-d7f0f49054d4":["trigger_record"]},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>AEGIS - Schedule Interview &amp; Generate Questions</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:33:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>189cfca439ab03107f44646bfeef98e5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>AEGIS - Schedule Interview &amp; Generate Questions</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_hub_flow_189cfca439ab03107f44646bfeef98e5</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:40:13</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>960eb0a839ab03107f44646bfeef983c</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_variable_value action="DELETE" query="document_key=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=189cfca439ab03107f44646bfeef98e5^sys_idNOT INd49cfca439ab03107f44646bfeef98e6"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>189cfca439ab03107f44646bfeef98e5</id>
+        <name>AEGIS - Schedule Interview &amp; Generate Questions</name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:33:38</sys_created_on>
+        <sys_id>d49cfca439ab03107f44646bfeef98e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:33:38</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=d49cfca439ab03107f44646bfeef98e6"/>
+    <sys_hub_flow_input action="DELETE" query="model=189cfca439ab03107f44646bfeef98e5^sys_idNOT IN0cacf0e439ab03107f44646bfeef989f,8cacb0e439ab03107f44646bfeef98c8,c0acf0e439ab03107f44646bfeef98a9"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AEGIS - Schedule Interview &amp; Generate Questions">189cfca439ab03107f44646bfeef98e5</model>
+        <model_id>189cfca439ab03107f44646bfeef98e5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:33:53</sys_created_on>
+        <sys_id>0cacf0e439ab03107f44646bfeef989f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:33:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=0cacf0e439ab03107f44646bfeef989f"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AEGIS - Schedule Interview &amp; Generate Questions">189cfca439ab03107f44646bfeef98e5</model>
+        <model_id>189cfca439ab03107f44646bfeef98e5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:33:53</sys_created_on>
+        <sys_id>8cacb0e439ab03107f44646bfeef98c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:33:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=8cacb0e439ab03107f44646bfeef98c8"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="AEGIS - Schedule Interview &amp; Generate Questions">189cfca439ab03107f44646bfeef98e5</model>
+        <model_id>189cfca439ab03107f44646bfeef98e5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:33:53</sys_created_on>
+        <sys_id>c0acf0e439ab03107f44646bfeef98a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:33:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=c0acf0e439ab03107f44646bfeef98a9"/>
+    <sys_hub_flow_output action="DELETE" query="model=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=189cfca439ab03107f44646bfeef98e5^sys_idNOT INdb9cb0e439ab03107f44646bfeef98c2"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="AEGIS - Schedule Interview &amp; Generate Questions">189cfca439ab03107f44646bfeef98e5</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:33:50</sys_created_on>
+        <sys_id>db9cb0e439ab03107f44646bfeef98c2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:34:24</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/91a227bOBD9FUFPu0C6kCxf4uxT1nG2AdIEsN32oVsIlEjZRGnSFSkl3qD/vqRu1tWJLauo9ykWSZFnhmfODMV8edEJcBDRr/RZQLWFj5dL5OsXOqYC+RSQxXaDZKe7YthFsj3+cY+50K++vOjeHH0PEJVdV+/MC937BEigxjMajfbuk8kfk+e7NViqfvV7jghyBYL6lQcIR7LlI88/fcCcY7pMGn5cNK+GQuRv88vdMl+LGrVgA4HocOmAYtluuytAl4hXMAB3pcVDtHhId0gAeQJbXnQ62WrY0ygTmhv4PqJCNvgBpWrGdkC+XuhrQKVvmfR8Nshn6wVab4hyedrIfCgZdWUaEmyosM63/A7Gq1KwVuuLmHY2F758c6m2MiwSCWIuZ92mtkZExARKkyQNJZYN8OVUQi30knH3HtNvdYOxWt01x4OeBS9dyxxbPcPoXfZNZ2g5Zg9aAAFTvlUfGc2YRSlW1HO6F5O0Me8O9CwQhTkvV13qIwDVPmYNK2ldEVPCdIHXSBMrSTRGIRaYUW0NhLtC/EKTVGSKDKrbwz4X0eg/dLXiM8f/Sth9Qy3mIT+mlvJa9mgn7k+ocgMEmAs/cEXgZ7uhzOORJpBizJd2MrHfUFQmr4VK2BRlqRfzs7xG97AcKMkkvQqUonKEJZVJXrNUDEDkgYCIyaHmmycxv3cK863jzO8r8+Ntf9wotskhliI9cEhKCkaCNX2I40XPnFXKEUnrTTHCE+8FXJIPbVSUKNqnOjNfsadZys5bTCNESSdhLiDZExAyUJ1AqM150RWOHxc63/IJAZzvoEmq298D9V4MNFnRjsyKXnF9vBHXrsAhyolx6rdJGnM1qTPt4vrhmmk0aqabWzHdIi6knv8TGIYF7x4W09mnu+nnTsTTccYAImBI8bR6FfEcjnLimfdMDXRR46SCbuY78m45RjtzYmecSO7qNKAaGAfFRZX2cvE2rE9dZbMN8pWLZKv+6fp+8v764e/p/M/k7+3s8UP6e/EoUTwBKrgtmA0gtHM7pJJfoKJzzSAiNzucWVLEdBMIfkSoxV76kXH2FiOS8P6VCJRCJ6ewM1q0LmETG7NqSmVcmVMTadUk27R0MS2Czbur7aIBVTBS33OIYt/99LKuWaKqWxKW7Dm9Mg1daPad0dAYKV0yDcvxTGNkDIAHLcMYWzllqsJrxH1YZddenU5diu2jS3lP6gq0N3E/LAZOVunsL5OOgGaeCFqvdQmT8bi2htln2okLGwBDIN+AqY2dFDkqLjzCnqS8t5dXj/lo6bOAwrKuqSU0LP8WRnQjrA5wv+1HsRuh/ZZs8++/msjuNiUr8um2E3ntIxeOhv2hIVXVkoLqDMZjxwU9zxsNR8iAJXndAatF+3+Q1Vd4EtYRrUlia5kf1gXMAeLaAmBFaA8G2F5iEybXCmzcd65S+rRC1JbgfZsosawo6pJgiNK+0wpGZelwJxGnFw3Lu4SDwWjkjuRJUYqG10cOMPu9ARiPhhYalkSjAm4fcFHjq7yM3MdNHZ4cJTkiRA1y8jHu+gVOkecVGBwJEX+4alloRK+DeL3yx/FI05ivqU3S7nYDtTmSGTv6QNFV4cHEqlJySCR/yfYCElXQPjD6rgZdhwdOKs8/b3FcA7JfrUAqMSosbkIHZdKlNR5Az6pXvFGvTvF28JqBn3vB9EbuhI0srKuc3hrJYa0gNJY6RwRjiVf5GmjvRcFpnFK9DGnrlF53TrFaF4Zp8DYevY8Be9YpM6qLTpY3GUU282qVH3ta8qUXQc1JrhUZkYcDubKmYHSYmuKiv5I4ZbOWlGGd5US1J2Wn3LDoxs3/KW7pJjGWeNP1NwTXGztwbDUcBwbNx4HmDFnqPvc0eTCnwjqK7s2Vh81bnrM2W+YisEihN+bBk1pdnwzbWV2bDl+zun2i2/cFpAbFOaawRfJVvJSyIh/ZUbAXQjK5D92ne83/a1S6W3i2OXVtgJaY22CzIdgFydV0SfmuC51tRdCEEJg91HCDDi5zIpg6p2SAqPFRXuii17SHuGPnln1SF/u1Wekuz+nSvC3xPUzkPtqxfzkL/Mjk2XTyOLuxP18vJu+nM3s2nS9md5PF9ObIwCjdc7uEyfxvA/XNqi5mvv4H+IojbrEpAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=189cfca439ab03107f44646bfeef98e5^sys_idNOT INecad746839ab03107f44646bfeef98e0"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value=" Create Interview &amp; Generate Questions">b49df06839ab03107f44646bfeef9867</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="AEGIS - Schedule Interview &amp; Generate Questions">189cfca439ab03107f44646bfeef98e5</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:38:18</sys_created_on>
+        <sys_id>ecad746839ab03107f44646bfeef98e0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:40:02</sys_updated_on>
+        <ui_id>59d079c2-0f13-4ec8-bb93-d7f0f49054d4</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41SXWvjMBD8K4eeHWM3rp3k7WgpFO6u0K+XUsxaWjkCWXb1kTYX8t9vFTtpKXdcH3d2djUzq6cdU4KtmFwshczKxXwJTTbPs0oWRVmUjUSUy0UJLGEGOiSmt6pt0dYWeW8F4RvQITZ2u4dBgEdR5ykP1qLx+z31hXKDhu3jf2h8rbSgiq2enhM2gKXnPFq22n1qfVWvhgY1Ue9Hwd9uj4L/ZcRvh4g7aph2qn9MS+6OIFGjqDxh+ObRCCQ1ErTDhHVgyFhvtyfEIogbo9+BtTKetrFIfnPqN723yLIsMiWSQ45j91TWU3ojLC/BA0kJ3Ac7Ufm6VxzdmI1ACUH7i4/YSLgZvOrNOOKh0cfpXofO/BoTYacFx2MREhyJwCFajdonI/Ju3b/eHlVeKXNIZWrqnoM+VeApuyb4qGfHgrr/W6yosaP9dQfDQEg92H6jDjtJYpe2mopU6v6VtDjVmhR49JNS4JBeEX55gB/BqmjuJ62h4WR67uNVg3ow6iXgdfxG58tqeY6NmPF5WcyKQlYzqLCa5Xl1diZLkZe5ZPuEua270ODce1B0ofolRJtjbFNA9ZhxHOFWDf47ydzglMX++Q/cbZpBbwMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=ecad746839ab03107f44646bfeef98e0"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_hub_flow_variable action="DELETE" query="model=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:33:53</sys_created_on>
+        <sys_id>08acf0e439ab03107f44646bfeef989b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:33:53</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:33:53</sys_created_on>
+        <sys_id>40acf0e439ab03107f44646bfeef98a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:33:53</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:33:53</sys_created_on>
+        <sys_id>ccacf0e439ab03107f44646bfeef98ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:33:53</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_189cfca439ab03107f44646bfeef98e5"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=189cfca439ab03107f44646bfeef98e5"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_hub_flow_189cfca439ab03107f44646bfeef98e5</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;labelCacheCleanUpExecuted=true&lt;/attributes&gt;&lt;authored_on_release_version&gt;29000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;When an application moves to INTERVIEW stage (manually by recruiter or after shortlisting), create an Interview record and generate personalized interview questions using AI (or the template fallback).&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;aegis__schedule_interview_amp_generate_questions&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"Updated_1.current","label":"Trigger - Record Updated➛Application Record","reference":"x_snc_aegis_application","reference_display":"Application","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0}],"usedInstances":{"59d079c2-0f13-4ec8-bb93-d7f0f49054d4":["trigger_record"]},"attributes":{"":""}},{"name":"Updated_1.table_name","label":"Trigger - Record Updated➛Application Table","reference":"x_snc_aegis_application","reference_display":"Application","type":"table_name","base_type":"table_name","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0}],"usedInstances":{"59d079c2-0f13-4ec8-bb93-d7f0f49054d4":["trigger_record"]},"attributes":{"test_input_hidden":"true"}}]&lt;/label_cache&gt;&lt;latest_snapshot/&gt;&lt;master_snapshot/&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;AEGIS - Schedule Interview &amp;amp; Generate Questions&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:33:38&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;189cfca439ab03107f44646bfeef98e5&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS - Schedule Interview &amp;amp; Generate Questions&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_189cfca439ab03107f44646bfeef98e5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:40:13&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record&gt;960eb0a839ab03107f44646bfeef983c&lt;/version_record&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=189cfca439ab03107f44646bfeef98e5^sys_idNOT INd49cfca439ab03107f44646bfeef98e6"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;189cfca439ab03107f44646bfeef98e5&lt;/id&gt;&lt;name&gt;AEGIS - Schedule Interview &amp;amp; Generate Questions&lt;/name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:33:38&lt;/sys_created_on&gt;&lt;sys_id&gt;d49cfca439ab03107f44646bfeef98e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:33:38&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=d49cfca439ab03107f44646bfeef98e6"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=189cfca439ab03107f44646bfeef98e5^sys_idNOT IN0cacf0e439ab03107f44646bfeef989f,8cacb0e439ab03107f44646bfeef98c8,c0acf0e439ab03107f44646bfeef98a9"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="AEGIS - Schedule Interview &amp;amp; Generate Questions"&gt;189cfca439ab03107f44646bfeef98e5&lt;/model&gt;&lt;model_id&gt;189cfca439ab03107f44646bfeef98e5&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:33:53&lt;/sys_created_on&gt;&lt;sys_id&gt;0cacf0e439ab03107f44646bfeef989f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:33:53&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0cacf0e439ab03107f44646bfeef989f"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="AEGIS - Schedule Interview &amp;amp; Generate Questions"&gt;189cfca439ab03107f44646bfeef98e5&lt;/model&gt;&lt;model_id&gt;189cfca439ab03107f44646bfeef98e5&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:33:53&lt;/sys_created_on&gt;&lt;sys_id&gt;8cacb0e439ab03107f44646bfeef98c8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:33:53&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8cacb0e439ab03107f44646bfeef98c8"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="AEGIS - Schedule Interview &amp;amp; Generate Questions"&gt;189cfca439ab03107f44646bfeef98e5&lt;/model&gt;&lt;model_id&gt;189cfca439ab03107f44646bfeef98e5&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:33:53&lt;/sys_created_on&gt;&lt;sys_id&gt;c0acf0e439ab03107f44646bfeef98a9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:33:53&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c0acf0e439ab03107f44646bfeef98a9"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=189cfca439ab03107f44646bfeef98e5^sys_idNOT INdb9cb0e439ab03107f44646bfeef98c2"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="AEGIS - Schedule Interview &amp;amp; Generate Questions"&gt;189cfca439ab03107f44646bfeef98e5&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Updated&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:33:50&lt;/sys_created_on&gt;&lt;sys_id&gt;db9cb0e439ab03107f44646bfeef98c2&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:34:24&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Updated"&gt;bb695e60c31322002841b63b12d3aea5&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/91a227bOBD9FUFPu0C6kCxf4uxT1nG2AdIEsN32oVsIlEjZRGnSFSkl3qD/vqRu1tWJLauo9ykWSZFnhmfODMV8edEJcBDRr/RZQLWFj5dL5OsXOqYC+RSQxXaDZKe7YthFsj3+cY+50K++vOjeHH0PEJVdV+/MC937BEigxjMajfbuk8kfk+e7NViqfvV7jghyBYL6lQcIR7LlI88/fcCcY7pMGn5cNK+GQuRv88vdMl+LGrVgA4HocOmAYtluuytAl4hXMAB3pcVDtHhId0gAeQJbXnQ62WrY0ygTmhv4PqJCNvgBpWrGdkC+XuhrQKVvmfR8Nshn6wVab4hyedrIfCgZdWUaEmyosM63/A7Gq1KwVuuLmHY2F758c6m2MiwSCWIuZ92mtkZExARKkyQNJZYN8OVUQi30knH3HtNvdYOxWt01x4OeBS9dyxxbPcPoXfZNZ2g5Zg9aAAFTvlUfGc2YRSlW1HO6F5O0Me8O9CwQhTkvV13qIwDVPmYNK2ldEVPCdIHXSBMrSTRGIRaYUW0NhLtC/EKTVGSKDKrbwz4X0eg/dLXiM8f/Sth9Qy3mIT+mlvJa9mgn7k+ocgMEmAs/cEXgZ7uhzOORJpBizJd2MrHfUFQmr4VK2BRlqRfzs7xG97AcKMkkvQqUonKEJZVJXrNUDEDkgYCIyaHmmycxv3cK863jzO8r8+Ntf9wotskhliI9cEhKCkaCNX2I40XPnFXKEUnrTTHCE+8FXJIPbVSUKNqnOjNfsadZys5bTCNESSdhLiDZExAyUJ1AqM150RWOHxc63/IJAZzvoEmq298D9V4MNFnRjsyKXnF9vBHXrsAhyolx6rdJGnM1qTPt4vrhmmk0aqabWzHdIi6knv8TGIYF7x4W09mnu+nnTsTTccYAImBI8bR6FfEcjnLimfdMDXRR46SCbuY78m45RjtzYmecSO7qNKAaGAfFRZX2cvE2rE9dZbMN8pWLZKv+6fp+8v764e/p/M/k7+3s8UP6e/EoUTwBKrgtmA0gtHM7pJJfoKJzzSAiNzucWVLEdBMIfkSoxV76kXH2FiOS8P6VCJRCJ6ewM1q0LmETG7NqSmVcmVMTadUk27R0MS2Czbur7aIBVTBS33OIYt/99LKuWaKqWxKW7Dm9Mg1daPad0dAYKV0yDcvxTGNkDIAHLcMYWzllqsJrxH1YZddenU5diu2jS3lP6gq0N3E/LAZOVunsL5OOgGaeCFqvdQmT8bi2htln2okLGwBDIN+AqY2dFDkqLjzCnqS8t5dXj/lo6bOAwrKuqSU0LP8WRnQjrA5wv+1HsRuh/ZZs8++/msjuNiUr8um2E3ntIxeOhv2hIVXVkoLqDMZjxwU9zxsNR8iAJXndAatF+3+Q1Vd4EtYRrUlia5kf1gXMAeLaAmBFaA8G2F5iEybXCmzcd65S+rRC1JbgfZsosawo6pJgiNK+0wpGZelwJxGnFw3Lu4SDwWjkjuRJUYqG10cOMPu9ARiPhhYalkSjAm4fcFHjq7yM3MdNHZ4cJTkiRA1y8jHu+gVOkecVGBwJEX+4alloRK+DeL3yx/FI05ivqU3S7nYDtTmSGTv6QNFV4cHEqlJySCR/yfYCElXQPjD6rgZdhwdOKs8/b3FcA7JfrUAqMSosbkIHZdKlNR5Az6pXvFGvTvF28JqBn3vB9EbuhI0srKuc3hrJYa0gNJY6RwRjiVf5GmjvRcFpnFK9DGnrlF53TrFaF4Zp8DYevY8Be9YpM6qLTpY3GUU282qVH3ta8qUXQc1JrhUZkYcDubKmYHSYmuKiv5I4ZbOWlGGd5US1J2Wn3LDoxs3/KW7pJjGWeNP1NwTXGztwbDUcBwbNx4HmDFnqPvc0eTCnwjqK7s2Vh81bnrM2W+YisEihN+bBk1pdnwzbWV2bDl+zun2i2/cFpAbFOaawRfJVvJSyIh/ZUbAXQjK5D92ne83/a1S6W3i2OXVtgJaY22CzIdgFydV0SfmuC51tRdCEEJg91HCDDi5zIpg6p2SAqPFRXuii17SHuGPnln1SF/u1Wekuz+nSvC3xPUzkPtqxfzkL/Mjk2XTyOLuxP18vJu+nM3s2nS9md5PF9ObIwCjdc7uEyfxvA/XNqi5mvv4H+IojbrEpAAA=&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_update&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=189cfca439ab03107f44646bfeef98e5^sys_idNOT INecad746839ab03107f44646bfeef98e0"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value=" Create Interview &amp;amp; Generate Questions"&gt;b49df06839ab03107f44646bfeef9867&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="AEGIS - Schedule Interview &amp;amp; Generate Questions"&gt;189cfca439ab03107f44646bfeef98e5&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:38:18&lt;/sys_created_on&gt;&lt;sys_id&gt;ecad746839ab03107f44646bfeef98e0&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:40:02&lt;/sys_updated_on&gt;&lt;ui_id&gt;59d079c2-0f13-4ec8-bb93-d7f0f49054d4&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/41SXWvjMBD8K4eeHWM3rp3k7WgpFO6u0K+XUsxaWjkCWXb1kTYX8t9vFTtpKXdcH3d2djUzq6cdU4KtmFwshczKxXwJTTbPs0oWRVmUjUSUy0UJLGEGOiSmt6pt0dYWeW8F4RvQITZ2u4dBgEdR5ykP1qLx+z31hXKDhu3jf2h8rbSgiq2enhM2gKXnPFq22n1qfVWvhgY1Ue9Hwd9uj4L/ZcRvh4g7aph2qn9MS+6OIFGjqDxh+ObRCCQ1ErTDhHVgyFhvtyfEIogbo9+BtTKetrFIfnPqN723yLIsMiWSQ45j91TWU3ojLC/BA0kJ3Ac7Ufm6VxzdmI1ACUH7i4/YSLgZvOrNOOKh0cfpXofO/BoTYacFx2MREhyJwCFajdonI/Ju3b/eHlVeKXNIZWrqnoM+VeApuyb4qGfHgrr/W6yosaP9dQfDQEg92H6jDjtJYpe2mopU6v6VtDjVmhR49JNS4JBeEX55gB/BqmjuJ62h4WR67uNVg3ow6iXgdfxG58tqeY6NmPF5WcyKQlYzqLCa5Xl1diZLkZe5ZPuEua270ODce1B0ofolRJtjbFNA9ZhxHOFWDf47ydzglMX++Q/cbZpBbwMAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=ecad746839ab03107f44646bfeef98e0"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:33:53&lt;/sys_created_on&gt;&lt;sys_id&gt;08acf0e439ab03107f44646bfeef989b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:33:53&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:33:53&lt;/sys_created_on&gt;&lt;sys_id&gt;40acf0e439ab03107f44646bfeef98a5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:33:53&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:33:53&lt;/sys_created_on&gt;&lt;sys_id&gt;ccacf0e439ab03107f44646bfeef98ae&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:33:53&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=189cfca439ab03107f44646bfeef98e5"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1462846164</payload_hash>
+        <record_name>AEGIS - Schedule Interview &amp; Generate Questions</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 06:40:13</sys_created_on>
+        <sys_id>3c1ef0a839ab03107f44646bfeef983e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c7d7f1c40000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:40:13</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>301ef0a8baab03103f13b9bb57e0e63e</update_guid>
+        <update_guid_history>301ef0a8baab03103f13b9bb57e0e63e:-1462846164,0fadf468beab0310c36ce565ed4cf647:490030293,42cc78e432ab03104ea166bebaa0d553:-485335413,39ac34e481ab0310dd7b297c64831b8a:-352063023,1c9cfca40cab03107e1cf785d3140de9:191280896</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-23 08:47:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>a1c45d842c79450096a6c183fd869000</sys_id>
+        <sys_metadata>189cfca439ab03107f44646bfeef98e5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS - Schedule Interview &amp; Generate Questions</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_189cfca439ab03107f44646bfeef98e5</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_189cfca439ab03107f44646bfeef98e5">3c1ef0a839ab03107f44646bfeef983e</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-23 08:47:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

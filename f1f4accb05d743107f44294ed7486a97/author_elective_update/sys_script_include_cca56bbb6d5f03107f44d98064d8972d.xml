@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_snc_aegis.AEGISDecisionLogger</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AEGISDecisionLogger</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AEGISDecisionLogger = Class.create();
+AEGISDecisionLogger.prototype = {
+    initialize: function() {},
+
+    /**
+     * Writes an immutable audit entry to x_snc_aegis_ai_decision_log.
+     * Protected against update/delete by BR-1 and BR-2.
+     *
+     * @param {string} agentName - e.g. 'Resume Intelligence', 'JD Architect', 'Workflow'
+     * @param {string} actionType - STAGE_TRANSITION | JD_DRAFT | RESUME_SCORE |
+     *                              SHORTLIST_RECOMMENDATION | INTERVIEW_SCHEDULE |
+     *                              FEEDBACK_SYNTHESIS | HIRING_RECOMMENDATION | CLOSURE_COMMUNICATION
+     * @param {string} appSysId - sys_id of x_snc_aegis_application (or null)
+     * @param {string} reqSysId - sys_id of x_snc_aegis_job_requisition (or null)
+     * @param {string} inputSummary - Summary of inputs evaluated
+     * @param {string} outputSummary - Decision/recommendation produced
+     * @param {number} confidence - Confidence level 0.0 to 1.0 (or null)
+     * @param {string} guardrails - Guardrail policies enforced
+     * @returns {string} sys_id of created log record, or null on failure
+     */
+    logAction: function(agentName, actionType, appSysId, reqSysId,
+                        inputSummary, outputSummary, confidence, guardrails) {
+        try {
+            var gr = new GlideRecord('x_snc_aegis_ai_decision_log');
+            gr.initialize();
+            gr.setValue('agent_name', agentName);
+            gr.setValue('action_type', actionType);
+
+            if (appSysId) gr.setValue('related_application', appSysId);
+            if (reqSysId) gr.setValue('related_requisition', reqSysId);
+
+            gr.setValue('input_summary', inputSummary);
+            gr.setValue('output_summary', outputSummary);
+
+            if (confidence !== null && confidence !== undefined) {
+                gr.setValue('confidence_level', confidence);
+            }
+
+            if (guardrails) gr.setValue('guardrails_applied', guardrails);
+
+            gr.setValue('logged_at', new GlideDateTime());
+
+            var sysId = gr.insert();
+            if (!sysId) {
+                gs.error('[AEGIS] FAILED to insert decision log: ' + gr.getLastErrorMessage());
+                return null;
+            }
+
+            gs.info('[AEGIS] Logged: ' + agentName + ' | ' + actionType + ' | Log: ' + sysId);
+            return sysId;
+        } catch (ex) {
+            gs.error('[AEGIS] EXCEPTION in logAction: ' + ex.toString());
+            return null;
+        }
+    },
+
+    type: 'AEGISDecisionLogger'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-20 11:02:58</sys_created_on>
+        <sys_id>cca56bbb6d5f03107f44d98064d8972d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>AEGISDecisionLogger</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_script_include_cca56bbb6d5f03107f44d98064d8972d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:38:14</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_script_include_cca56bbb6d5f03107f44d98064d8972d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_snc_aegis.AEGISDecisionLogger&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;AEGISDecisionLogger&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var AEGISDecisionLogger = Class.create();
+AEGISDecisionLogger.prototype = {
+    initialize: function() {},
+
+    /**
+     * Writes an immutable audit entry to x_snc_aegis_ai_decision_log.
+     * Protected against update/delete by BR-1 and BR-2.
+     *
+     * @param {string} agentName - e.g. 'Resume Intelligence', 'JD Architect', 'Workflow'
+     * @param {string} actionType - STAGE_TRANSITION | JD_DRAFT | RESUME_SCORE |
+     *                              SHORTLIST_RECOMMENDATION | INTERVIEW_SCHEDULE |
+     *                              FEEDBACK_SYNTHESIS | HIRING_RECOMMENDATION | CLOSURE_COMMUNICATION
+     * @param {string} appSysId - sys_id of x_snc_aegis_application (or null)
+     * @param {string} reqSysId - sys_id of x_snc_aegis_job_requisition (or null)
+     * @param {string} inputSummary - Summary of inputs evaluated
+     * @param {string} outputSummary - Decision/recommendation produced
+     * @param {number} confidence - Confidence level 0.0 to 1.0 (or null)
+     * @param {string} guardrails - Guardrail policies enforced
+     * @returns {string} sys_id of created log record, or null on failure
+     */
+    logAction: function(agentName, actionType, appSysId, reqSysId,
+                        inputSummary, outputSummary, confidence, guardrails) {
+        try {
+            var gr = new GlideRecord('x_snc_aegis_ai_decision_log');
+            gr.initialize();
+            gr.setValue('agent_name', agentName);
+            gr.setValue('action_type', actionType);
+
+            if (appSysId) gr.setValue('related_application', appSysId);
+            if (reqSysId) gr.setValue('related_requisition', reqSysId);
+
+            gr.setValue('input_summary', inputSummary);
+            gr.setValue('output_summary', outputSummary);
+
+            if (confidence !== null &amp;&amp; confidence !== undefined) {
+                gr.setValue('confidence_level', confidence);
+            }
+
+            if (guardrails) gr.setValue('guardrails_applied', guardrails);
+
+            gr.setValue('logged_at', new GlideDateTime());
+
+            var sysId = gr.insert();
+            if (!sysId) {
+                gs.error('[AEGIS] FAILED to insert decision log: ' + gr.getLastErrorMessage());
+                return null;
+            }
+
+            gs.info('[AEGIS] Logged: ' + agentName + ' | ' + actionType + ' | Log: ' + sysId);
+            return sysId;
+        } catch (ex) {
+            gs.error('[AEGIS] EXCEPTION in logAction: ' + ex.toString());
+            return null;
+        }
+    },
+
+    type: 'AEGISDecisionLogger'
+};
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 11:02:58&lt;/sys_created_on&gt;&lt;sys_id&gt;cca56bbb6d5f03107f44d98064d8972d&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGISDecisionLogger&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_cca56bbb6d5f03107f44d98064d8972d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-23 14:38:14&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1229190471</payload_hash>
+        <record_name>AEGISDecisionLogger</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 14:38:14</sys_created_on>
+        <sys_id>3415b37ce4e343107f44705ba96fab88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ceb3f3720000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:38:14</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>f015b37cbbe34310d52937408d0ec987</update_guid>
+        <update_guid_history>f015b37cbbe34310d52937408d0ec987:1229190471,04a4fabc08eb0310be75bc99445aee15:-768001804,f384f6bcbfeb0310e8af2e4db4be81f1:1229190471,de07af7fa45f0310022cad2193184ea9:-768001804</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-30 06:22:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0b018d019da74fe89213e87057213c40</sys_id>
+        <sys_metadata>cca56bbb6d5f03107f44d98064d8972d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGISDecisionLogger</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_script_include_cca56bbb6d5f03107f44d98064d8972d</sys_update_name>
+        <sys_update_version display_value="sys_script_include_cca56bbb6d5f03107f44d98064d8972d">3415b37ce4e343107f44705ba96fab88</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-30 06:22:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

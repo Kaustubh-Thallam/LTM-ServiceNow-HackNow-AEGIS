@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_agent_access_role_configuration">
+    <sys_agent_access_role_configuration action="DELETE">
+        <action>limit_to_roles</action>
+        <agent>0bfe73c8ede703107f446c21b633cf15</agent>
+        <agent_table>sn_nowassist_skill_config</agent_table>
+        <allow_all_session_roles>false</allow_all_session_roles>
+        <description/>
+        <name>AEGIS Interview Orchestrator</name>
+        <role_list/>
+        <sys_class_name>sys_agent_access_role_configuration</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-21 07:26:09</sys_created_on>
+        <sys_id>7bfe73c8ede703107f446c21b633cf7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Interview Orchestrator</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_agent_access_role_configuration_7bfe73c8ede703107f446c21b633cf7d</sys_update_name>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-21 07:26:09</sys_updated_on>
+    </sys_agent_access_role_configuration>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_agent_access_role_configuration_7bfe73c8ede703107f446c21b633cf7d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_agent_access_role_configuration"><sys_agent_access_role_configuration action="INSERT_OR_UPDATE"><action>limit_to_roles</action><agent>0bfe73c8ede703107f446c21b633cf15</agent><agent_table>sn_nowassist_skill_config</agent_table><allow_all_session_roles>false</allow_all_session_roles><description/><name>AEGIS Interview Orchestrator</name><role_list/><sys_class_name>sys_agent_access_role_configuration</sys_class_name><sys_created_by>RAKESH</sys_created_by><sys_created_on>2026-09-21 07:26:09</sys_created_on><sys_id>7bfe73c8ede703107f446c21b633cf7d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>AEGIS Interview Orchestrator</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_agent_access_role_configuration_7bfe73c8ede703107f446c21b633cf7d</sys_update_name><sys_updated_by>RAKESH</sys_updated_by><sys_updated_on>2026-09-21 07:26:09</sys_updated_on></sys_agent_access_role_configuration></record_update>]]></payload>
+        <payload_hash>-1946724908</payload_hash>
+        <record_name>AEGIS Interview Orchestrator</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-21 07:26:09</sys_created_on>
+        <sys_id>77fe73c8ede703107f446c21b633cfa5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c2dba4c70000001</sys_recorded_at>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-21 07:26:09</sys_updated_on>
+        <type>Agent Access Role Configuration</type>
+        <update_guid>37fe73c848e70310a3fa46a378e1687f</update_guid>
+        <update_guid_history>37fe73c848e70310a3fa46a378e1687f:-1946724908</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-10-01 06:09:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_agent_access_role_configuration">sys_agent_access_role_configuration</sys_db_object>
+        <sys_id>a27be521c3264308924a9c1709e41e84</sys_id>
+        <sys_metadata>7bfe73c8ede703107f446c21b633cf7d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Interview Orchestrator</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_agent_access_role_configuration_7bfe73c8ede703107f446c21b633cf7d</sys_update_name>
+        <sys_update_version display_value="sys_agent_access_role_configuration_7bfe73c8ede703107f446c21b633cf7d">77fe73c8ede703107f446c21b633cfa5</sys_update_version>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-10-01 06:09:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

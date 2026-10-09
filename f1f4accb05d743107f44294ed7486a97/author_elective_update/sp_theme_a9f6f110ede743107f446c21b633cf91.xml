@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="DELETE">
+        <css_variables/>
+        <footer/>
+        <footer_fixed>true</footer_fixed>
+        <header/>
+        <icon/>
+        <logo/>
+        <logo_alt_text/>
+        <matching_now_experience_theme/>
+        <name>AEGIS Careers Portal Theme</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 16:10:46</sys_created_on>
+        <sys_id>a9f6f110ede743107f446c21b633cf91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Careers Portal Theme</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sp_theme_a9f6f110ede743107f446c21b633cf91</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 16:10:46</sys_updated_on>
+        <turn_off_scss_compilation>false</turn_off_scss_compilation>
+    </sp_theme>
+    <sys_translated_text action="DELETE" query="documentkey=a9f6f110ede743107f446c21b633cf91"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sp_theme_a9f6f110ede743107f446c21b633cf91</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme"><sp_theme action="INSERT_OR_UPDATE"><css_variables/><footer/><footer_fixed>true</footer_fixed><header/><icon/><logo/><logo_alt_text/><matching_now_experience_theme/><name>AEGIS Careers Portal Theme</name><navbar_fixed>true</navbar_fixed><sys_class_name>sp_theme</sys_class_name><sys_created_by>DEEPTHI</sys_created_by><sys_created_on>2026-09-21 16:10:46</sys_created_on><sys_id>a9f6f110ede743107f446c21b633cf91</sys_id><sys_mod_count>0</sys_mod_count><sys_name>AEGIS Careers Portal Theme</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sp_theme_a9f6f110ede743107f446c21b633cf91</sys_update_name><sys_updated_by>DEEPTHI</sys_updated_by><sys_updated_on>2026-09-21 16:10:46</sys_updated_on><turn_off_scss_compilation>false</turn_off_scss_compilation></sp_theme><sys_translated_text action="delete_multiple" query="documentkey=a9f6f110ede743107f446c21b633cf91"/></record_update>]]></payload>
+        <payload_hash>2075883730</payload_hash>
+        <record_name>AEGIS Careers Portal Theme</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 16:10:46</sys_created_on>
+        <sys_id>2017f510ede743107f446c21b633cf23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c4bbf2780000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 16:10:46</sys_updated_on>
+        <type>Theme</type>
+        <update_guid>2017f51008e743102b42319634d64322</update_guid>
+        <update_guid_history>2017f51008e743102b42319634d64322:2075883730</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AEGIS Careers Portal Theme">3bde3f15f46303107f4473c8b3ef4ce5</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-25 04:38:01</sys_created_on>
+        <sys_db_object display_value="" name="sp_theme">sp_theme</sys_db_object>
+        <sys_id>05f689f7159647e6876897ce5bf1bbe4</sys_id>
+        <sys_metadata>a9f6f110ede743107f446c21b633cf91</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Careers Portal Theme</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sp_theme_a9f6f110ede743107f446c21b633cf91</sys_update_name>
+        <sys_update_version display_value="sp_theme_a9f6f110ede743107f446c21b633cf91">2017f510ede743107f446c21b633cf23</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-25 04:38:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

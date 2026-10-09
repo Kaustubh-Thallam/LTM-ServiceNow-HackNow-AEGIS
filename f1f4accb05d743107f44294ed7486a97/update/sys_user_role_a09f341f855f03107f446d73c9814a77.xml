@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Allows candidates to browse jobs, submit applications, upload resumes, and track application status and communications.</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>tXazrZ2jAxe79G8dREuWzBXjBIiT8XxNiGylesxaovE=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_aegis.candidate</name>

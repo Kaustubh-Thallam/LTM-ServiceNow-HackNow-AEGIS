@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="78808d4f05db43107f44294ed7486a3b" extends="task" label="Application" max_length="40" name="x_snc_aegis_application" type="collection">
+        <element label="Resume" max_length="8000" name="resume" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Acknowledged at" max_length="40" name="acknowledged_at" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Screening status" mandatory="true" max_length="40" name="screening_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Error" sequence="2" value="ERROR"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="PENDING"/>
+                <element inactive_on_update="false" label="Completed" sequence="1" value="COMPLETED"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Stage" mandatory="true" max_length="40" name="stage" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Applied" sequence="100" value="APPLIED"/>
+                <element inactive_on_update="false" label="Screening" sequence="300" value="SCREENING"/>
+                <element inactive_on_update="false" label="Interview Completed" sequence="650" value="INTERVIEW_COMPLETED"/>
+                <element inactive_on_update="false" label="Received" sequence="200" value="RECEIVED"/>
+                <element inactive_on_update="false" label="Shortlisted" sequence="500" value="SHORTLISTED"/>
+                <element inactive_on_update="false" label="Recruiter review" sequence="400" value="RECRUITER_REVIEW"/>
+                <element inactive_on_update="false" label="Offered" sequence="700" value="OFFERED"/>
+                <element inactive_on_update="false" label="Interview" sequence="600" value="INTERVIEW"/>
+                <element inactive_on_update="false" label="Closed" sequence="900" value="CLOSED"/>
+                <element inactive_on_update="false" label="Rejected" sequence="800" value="REJECTED"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Application stage value" max_length="40" name="application_stage_value" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Sla state" max_length="40" name="sla_state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Not applicable" sequence="3" value="NOT_APPLICABLE"/>
+                <element inactive_on_update="false" label="Running" sequence="0" value="RUNNING"/>
+                <element inactive_on_update="false" label="Breached" sequence="1" value="BREACHED"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="COMPLETED"/>
+            </choice>
+        </element>
+        <element default="false&#13;&#10;" label="Withdrawn" max_length="40" name="withdrawn" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Screening completed at" max_length="40" name="screening_completed_at" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Rejected at" max_length="40" name="rejected_at" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Received" sequence="100" value="RECEIVED"/>
+                <element inactive_on_update="false" label="Offered" sequence="600" value="OFFERED"/>
+                <element inactive_on_update="false" label="Interview" sequence="500" value="INTERVIEW"/>
+                <element inactive_on_update="false" label="Screening" sequence="200" value="SCREENING"/>
+                <element inactive_on_update="false" label="Shortlisted" sequence="400" value="SHORTLISTED"/>
+                <element inactive_on_update="false" label="Recruiter review" sequence="300" value="RECRUITER_REVIEW"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Candidate" mandatory="true" max_length="32" name="candidate" reference="x_snc_aegis_candidate" type="reference"/>
+        <element attributes="encode_utf8=false" label="Requisition" mandatory="true" max_length="32" name="requisition" reference="x_snc_aegis_job_requisition" type="reference"/>
+    </element>
+</database>

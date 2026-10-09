@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="c660894f05db43107f44294ed7486a7f" extends="task" label="Interview" max_length="40" name="x_snc_aegis_interview" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Feedback synthesis" max_length="4000" name="feedback_synthesis" type="string"/>
+        <element label="Candidate" mandatory="true" max_length="32" name="candidate" reference="x_snc_aegis_candidate" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Scheduled End" max_length="40" name="scheduled_end" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="Interview Status" mandatory="true" max_length="40" name="interview_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="DRAFT"/>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="COMPLETED"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="4" value="CANCELLED"/>
+                <element inactive_on_update="false" label="Pending Confirmation" sequence="1" value="PENDING_CONFIRMATION"/>
+                <element inactive_on_update="false" label="Scheduled" sequence="2" value="SCHEDULED"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="PENDING" label="Synthesis status" max_length="40" name="synthesis_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="PENDING"/>
+                <element inactive_on_update="false" label="Error" sequence="1" value="ERROR"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="COMPLETED"/>
+            </choice>
+        </element>
+        <element label="Candidate Confirmed" max_length="40" name="candidate_confirmed" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Tailored Questions &amp; Rubric" max_length="4500" name="question_set" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Location or Meeting Link" max_length="500" name="location_or_link" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Outcome" mandatory="true" max_length="40" name="outcome" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="PENDING"/>
+                <element inactive_on_update="false" label="Positive" sequence="1" value="POSITIVE"/>
+                <element inactive_on_update="false" label="Negative" sequence="3" value="NEGATIVE"/>
+                <element inactive_on_update="false" label="Mixed" sequence="2" value="MIXED"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Panelist" max_length="32" name="panelist" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Scheduled Start" mandatory="true" max_length="40" name="scheduled_start" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Application" mandatory="true" max_length="32" name="application" reference="x_snc_aegis_application" type="reference"/>
+    </element>
+</database>

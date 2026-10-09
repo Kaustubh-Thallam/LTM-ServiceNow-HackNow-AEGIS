@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="DELETE">
+        <active>true</active>
+        <additional_configurations>{"skill_config_id":"9b7305c4a96303107f4494dd295ecfd7"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>b27305c4a96303107f4494dd295ecf5b</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <documentation/>
+        <max_tokens>1500</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>claude_large</model>
+        <name>AI generated prompt</name>
+        <parent/>
+        <prompt>System Role: You are the AEGIS JD Architect, an expert HR job architect dedicated to creating inclusive, competency-based job descriptions.
+
+Task: Create a professional, inclusive, 5-section job description in HTML format. You cannot publish directly; manager approval is mandatory.
+
+Inputs:
+- Role Title: {{requisition.role_title}}
+- Seniority Level: {{requisition.level}}
+- Department: {{requisition.department}}
+- Mandatory Skills: {{requisition.required_skills}}
+- Nice-to-Have Skills: {{requisition.nice_to_have_skills}}
+
+Strict Guidelines:
+1. Prohibited Terms: Scan all generated text and strictly avoid exclusionary terms including 'rockstar', 'ninja', 'guru', 'wizard', 'young and energetic', 'dominant', 'aggressive', 'work hard play hard', and 'culture fit'. Flag any detected terms for manager review.
+2. Tone: Clear, accessible, gender-neutral, and outcome-focused. Focus on competencies, not just credentials.
+3. Structure: Output exactly the following HTML format:
+   &lt;h2&gt;[Role Title]&lt;/h2&gt;
+   &lt;h3&gt;1. Role Summary&lt;/h3&gt;
+   &lt;h3&gt;2. Key Responsibilities&lt;/h3&gt; (Must contain exactly 4 outcome-driven bullet points)
+   &lt;h3&gt;3. Required Skills &amp; Qualifications&lt;/h3&gt;
+   &lt;h3&gt;4. Nice to Have Skills&lt;/h3&gt;
+   &lt;h3&gt;5. What We Offer&lt;/h3&gt; </prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <provider_company/>
+        <request_tokens>129322</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>published</state>
+        <structured_output_enabled>false</structured_output_enabled>
+        <structured_output_schema/>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:46:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cb7305c4a96303107f4494dd295ecf9d</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>b27305c4a96303107f4494dd295ecf5b</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_generative_ai_config_cb7305c4a96303107f4494dd295ecf9d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:20:14</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>1</version>
+    </sys_generative_ai_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_generative_ai_config_cb7305c4a96303107f4494dd295ecf9d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config"><sys_generative_ai_config action="INSERT_OR_UPDATE"><active>true</active><additional_configurations>{"skill_config_id":"9b7305c4a96303107f4494dd295ecfd7"}</additional_configurations><ai_suggested>false</ai_suggested><definition>b27305c4a96303107f4494dd295ecf5b</definition><definition_table>sys_one_extend_capability_definition</definition_table><documentation/><max_tokens>1500</max_tokens><min_word_count>-1</min_word_count><model>claude_large</model><name>AI generated prompt</name><parent/><prompt>System Role: You are the AEGIS JD Architect, an expert HR job architect dedicated to creating inclusive, competency-based job descriptions.
+
+Task: Create a professional, inclusive, 5-section job description in HTML format. You cannot publish directly; manager approval is mandatory.
+
+Inputs:
+- Role Title: {{requisition.role_title}}
+- Seniority Level: {{requisition.level}}
+- Department: {{requisition.department}}
+- Mandatory Skills: {{requisition.required_skills}}
+- Nice-to-Have Skills: {{requisition.nice_to_have_skills}}
+
+Strict Guidelines:
+1. Prohibited Terms: Scan all generated text and strictly avoid exclusionary terms including 'rockstar', 'ninja', 'guru', 'wizard', 'young and energetic', 'dominant', 'aggressive', 'work hard play hard', and 'culture fit'. Flag any detected terms for manager review.
+2. Tone: Clear, accessible, gender-neutral, and outcome-focused. Focus on competencies, not just credentials.
+3. Structure: Output exactly the following HTML format:
+   &lt;h2&gt;[Role Title]&lt;/h2&gt;
+   &lt;h3&gt;1. Role Summary&lt;/h3&gt;
+   &lt;h3&gt;2. Key Responsibilities&lt;/h3&gt; (Must contain exactly 4 outcome-driven bullet points)
+   &lt;h3&gt;3. Required Skills &amp; Qualifications&lt;/h3&gt;
+   &lt;h3&gt;4. Nice to Have Skills&lt;/h3&gt;
+   &lt;h3&gt;5. What We Offer&lt;/h3&gt; </prompt><prompt_template_role>user</prompt_template_role><provider_company/><request_tokens>129322</request_tokens><show_in_prompt_library>true</show_in_prompt_library><state>published</state><structured_output_enabled>false</structured_output_enabled><structured_output_schema/><sys_class_name>sys_generative_ai_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-20 17:46:54</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cb7305c4a96303107f4494dd295ecf9d</sys_id><sys_mod_count>6</sys_mod_count><sys_name>b27305c4a96303107f4494dd295ecf5b</sys_name><sys_overrides/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_generative_ai_config_cb7305c4a96303107f4494dd295ecf9d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-20 18:20:14</sys_updated_on><temperature>0.2</temperature><thinking_tokens>0</thinking_tokens><version>1</version></sys_generative_ai_config></record_update>]]></payload>
+        <payload_hash>709505803</payload_hash>
+        <record_name>b27305c4a96303107f4494dd295ecf5b</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 18:20:15</sys_created_on>
+        <sys_id>6f1b8dc4a9a303107f4494dd295ecfc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c00c1f9d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:20:15</sys_updated_on>
+        <type>Generative AI Configuration</type>
+        <update_guid>631b8dc48ca30310e96802232c3869c7</update_guid>
+        <update_guid_history>631b8dc48ca30310e96802232c3869c7:709505803,eeda45c404a3031017a379a5051be389:-2048862833,fc88c5408ea30310f4a839576cc62361:517770644,2787c180c1630310a5898219c04b4acb:-1555523523,d754c148a4630310883e35289158240c:-305448242,6e148908036303109eae613c085d3fb3:-1855928957,077305c4c2630310976ba6bf7a44c6a6:39234067</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-01 06:32:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_generative_ai_config">sys_generative_ai_config</sys_db_object>
+        <sys_id>1c879bf33b2e4ea48585c1f4f70e7490</sys_id>
+        <sys_metadata>cb7305c4a96303107f4494dd295ecf9d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b27305c4a96303107f4494dd295ecf5b</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_generative_ai_config_cb7305c4a96303107f4494dd295ecf9d</sys_update_name>
+        <sys_update_version display_value="sys_generative_ai_config_cb7305c4a96303107f4494dd295ecf9d">6f1b8dc4a9a303107f4494dd295ecfc7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-01 06:32:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

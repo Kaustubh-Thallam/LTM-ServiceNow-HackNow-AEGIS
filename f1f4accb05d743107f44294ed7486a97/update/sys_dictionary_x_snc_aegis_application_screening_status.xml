@@ -33,7 +33,7 @@
         <name>x_snc_aegis_application</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>true</read_only>
+        <read_only>false</read_only>
         <read_only_option/>
         <read_roles/>
         <reference/>
@@ -48,7 +48,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>DEEPTHI</sys_created_by>
         <sys_created_on>2026-09-17 15:10:03</sys_created_on>
-        <sys_id>14d20d83051f43107f44294ed7486aed</sys_id>
         <sys_name>Screening status</sys_name>
         <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
         <sys_policy/>

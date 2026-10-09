@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Creates and approves requisitions, reviews Al recommendations, and records the final human hiring decision.</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>I4xwaixqMXERHTtUaszGiUXbE00HILV+u88M/p2MbQQ=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_aegis.hiring_manager</name>

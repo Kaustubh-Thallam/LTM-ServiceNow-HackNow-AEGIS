@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="all_tables.text_index_translations=true,file_root=true,no_labels=true,no_table_trace=true,ref_ac_columns=name,ref_ac_columns_search=true,ref_auto_completer=AJAXTableCompleter,update_synch=true" db_object_id="30a22233292103107f44f3a98c1824a8" extends="sys_metadata" label="Table" max_length="40" name="sys_db_object" text_index="true" type="collection">
+        <element label="Experience Required Years" max_length="40" name="x_snc_aegis_experience_required_years" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Required Skills" max_length="40" name="x_snc_aegis_required_skills" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Nice To Have Skills" max_length="40" name="x_snc_aegis_nice_to_have_skills" type="string"/>
+        <element attributes="encode_utf8=false" label="Hiring Manager" max_length="32" name="x_snc_aegis_hiring_manager" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Level" max_length="40" name="x_snc_aegis_level" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Senior Specialist" sequence="3" value="Senior Specialist"/>
+                <element inactive_on_update="false" label="Director" sequence="6" value="Director"/>
+                <element inactive="true" inactive_on_update="true" label="Senior" sequence="1" value="Senior"/>
+                <element inactive_on_update="false" label="Specialist" sequence="2" value="Specialist"/>
+                <element inactive_on_update="false" label="Senior Manager" sequence="5" value="Senior Manager"/>
+                <element inactive_on_update="false" label="Intern" sequence="0" value="Intern"/>
+                <element inactive_on_update="false" label="Associate" sequence="1" value="Associate"/>
+                <element inactive_on_update="false" label="Manager" sequence="4" value="Manager"/>
+                <element inactive="true" inactive_on_update="true" label="Lead" sequence="2" value="Lead"/>
+                <element inactive="true" inactive_on_update="true" label="Mid" sequence="0" value="Mid"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Requisition Status" max_length="40" name="x_snc_aegis_requisition_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Closed" sequence="5" value="Closed"/>
+                <element inactive_on_update="false" label="Pending Approval" sequence="1" value="Pending Approval"/>
+                <element inactive_on_update="false" label="On Hold" sequence="4" value="On Hold"/>
+                <element inactive_on_update="false" label="Published" sequence="3" value="Published"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="Approved"/>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="Draft"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="6" value="Cancelled"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Education Required" max_length="40" name="x_snc_aegis_education_required" type="string"/>
+        <element attributes="encode_utf8=false" label="Requested by" max_length="32" name="x_snc_aegis_requested_by" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Role Title" max_length="40" name="x_snc_aegis_role_title" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Approval State" max_length="40" name="x_snc_aegis_approval_state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="Approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="Rejected"/>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="Requested"/>
+                <element inactive_on_update="false" label="Under Review" sequence="1" value="Under Review"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Department" max_length="40" name="x_snc_aegis_department" type="string"/>
+        <index name="index">
+            <element name="x_snc_aegis_hiring_manager"/>
+        </index>
+        <index name="index2">
+            <element name="x_snc_aegis_requested_by"/>
+        </index>
+    </element>
+</database>

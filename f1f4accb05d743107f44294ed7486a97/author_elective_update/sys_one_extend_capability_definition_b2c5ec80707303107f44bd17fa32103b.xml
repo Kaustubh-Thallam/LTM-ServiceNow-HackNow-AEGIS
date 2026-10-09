@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_capability_definition">
+    <sys_one_extend_capability_definition action="DELETE">
+        <advanced>false</advanced>
+        <api>52f46aeb9f2c5210da502fca9a0a1cda</api>
+        <api_type>sys_hub_flow</api_type>
+        <capability display_value="Clone of AEGIS JD Architect ">3dc5ac80707303107f44bd17fa321032</capability>
+        <category display_value="Other">04c489f3532121106b38ddeeff7b1215</category>
+        <connection display_value="sn_amz_bedrock_spk.Amazon_Bedrock">52b9aa861bff061090bc0d81604bcb27</connection>
+        <description/>
+        <filter_properties>{"provider":"Amazon BedrockAmazon Bedrock Chat Completions"}</filter_properties>
+        <metadata/>
+        <name>Clone of AEGIS JD Architect _AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)</name>
+        <order>0</order>
+        <postprocessor><![CDATA[(function(outputs) {     	/* write code here to transform definition output to capability output.*/     	     	outputs = JSON.parse(outputs);     	     	return outputs;     })(outputs);]]></postprocessor>
+        <preprocessor><![CDATA[(function(inputs) {     	/* write code here to transform capability input to definition input.*/     	     	inputs = JSON.parse(inputs);     	     	return inputs;     })(inputs);]]></preprocessor>
+        <sys_class_name>sys_one_extend_capability_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 01:52:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b2c5ec80707303107f44bd17fa32103b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Clone of AEGIS JD Architect _AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_one_extend_capability_definition_b2c5ec80707303107f44bd17fa32103b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:52:53</sys_updated_on>
+        <truncate_strategy display_value="Default Truncation Strategy">2b99e1137fb20210f465c3b76d86650d</truncate_strategy>
+    </sys_one_extend_capability_definition>
+    <sys_translated_text action="DELETE" query="documentkey=b2c5ec80707303107f44bd17fa32103b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_one_extend_capability_definition_b2c5ec80707303107f44bd17fa32103b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_one_extend_capability_definition"&gt;&lt;sys_one_extend_capability_definition action="INSERT_OR_UPDATE"&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;api&gt;52f46aeb9f2c5210da502fca9a0a1cda&lt;/api&gt;&lt;api_type&gt;sys_hub_flow&lt;/api_type&gt;&lt;capability display_value="Clone of AEGIS JD Architect "&gt;3dc5ac80707303107f44bd17fa321032&lt;/capability&gt;&lt;category display_value="Other"&gt;04c489f3532121106b38ddeeff7b1215&lt;/category&gt;&lt;connection display_value="sn_amz_bedrock_spk.Amazon_Bedrock"&gt;52b9aa861bff061090bc0d81604bcb27&lt;/connection&gt;&lt;description/&gt;&lt;filter_properties&gt;{"provider":"Amazon BedrockAmazon Bedrock Chat Completions"}&lt;/filter_properties&gt;&lt;metadata/&gt;&lt;name&gt;Clone of AEGIS JD Architect _AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)&lt;/name&gt;&lt;order&gt;0&lt;/order&gt;&lt;postprocessor&gt;&lt;![CDATA[(function(outputs) {     	/* write code here to transform definition output to capability output.*/     	     	outputs = JSON.parse(outputs);     	     	return outputs;     })(outputs);]]&gt;&lt;/postprocessor&gt;&lt;preprocessor&gt;&lt;![CDATA[(function(inputs) {     	/* write code here to transform capability input to definition input.*/     	     	inputs = JSON.parse(inputs);     	     	return inputs;     })(inputs);]]&gt;&lt;/preprocessor&gt;&lt;sys_class_name&gt;sys_one_extend_capability_definition&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-03 01:52:53&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b2c5ec80707303107f44bd17fa32103b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Clone of AEGIS JD Architect _AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_one_extend_capability_definition_b2c5ec80707303107f44bd17fa32103b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-03 01:52:53&lt;/sys_updated_on&gt;&lt;truncate_strategy display_value="Default Truncation Strategy"&gt;2b99e1137fb20210f465c3b76d86650d&lt;/truncate_strategy&gt;&lt;/sys_one_extend_capability_definition&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=b2c5ec80707303107f44bd17fa32103b"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2115723185</payload_hash>
+        <record_name>Clone of AEGIS JD Architect _AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 01:52:54</sys_created_on>
+        <sys_id>c7c5ec80707303107f44bd17fa321051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ff76d9790000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:52:54</sys_updated_on>
+        <type>OneExtend Capability Definition</type>
+        <update_guid>cbc5ec804e730310153d257698125350</update_guid>
+        <update_guid_history>cbc5ec804e730310153d257698125350:2115723185</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 03:54:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_one_extend_capability_definition">sys_one_extend_capability_definition</sys_db_object>
+        <sys_id>01ab9d60f5534c688102f64fd5781890</sys_id>
+        <sys_metadata>b2c5ec80707303107f44bd17fa32103b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Clone of AEGIS JD Architect _AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_one_extend_capability_definition_b2c5ec80707303107f44bd17fa32103b</sys_update_name>
+        <sys_update_version display_value="sys_one_extend_capability_definition_b2c5ec80707303107f44bd17fa32103b">c7c5ec80707303107f44bd17fa321051</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 03:54:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_snc_aegis.AEGISFairHireCalculator</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AEGISFairHireCalculator</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AEGISFairHireCalculator = Class.create();
+AEGISFairHireCalculator.prototype = {
+    initialize: function() {},
+
+    /**
+     * Evaluates selection rates against the EEOC 4/5ths (80%) rule.
+     *
+     * @param {Object} ratesByGroup - Key-value pair of group name to selection rate (0.0 - 1.0)
+     *                                e.g. { 'MALE': 0.80, 'FEMALE': 0.60 }
+     * @returns {Object} Impact ratios and breach flags per group
+     */
+    calculateImpactRatio: function(ratesByGroup) {
+        var highestRate = 0;
+        var benchmarkGroup = 'NONE';
+        var group;
+
+        for (group in ratesByGroup) {
+            if (ratesByGroup[group] > highestRate) {
+                highestRate = ratesByGroup[group];
+                benchmarkGroup = group;
+            }
+        }
+
+        var ratiosMap = {};
+        for (group in ratesByGroup) {
+            var rate = ratesByGroup[group];
+            var ratio = 1.0;
+
+            if (highestRate > 0) {
+                ratio = Math.round((rate / highestRate) * 100) / 100;
+            }
+
+            ratiosMap[group] = {
+                selectionRate: rate,
+                highestRate: highestRate,
+                ratio: ratio,
+                impactRatio: ratio,
+                flagged: ratio < 0.80
+            };
+        }
+
+        return {
+            benchmark_group: benchmarkGroup,
+            benchmark_rate: highestRate,
+            ratios: ratiosMap,
+            details: ratiosMap
+        };
+    },
+
+    /**
+     * Computes stage conversion rates by demographic attribute for a requisition.
+     */
+    computeStageRates: function(requisitionSysId, demographicField, fromStage, toStage) {
+        var groups = {};
+
+        var app = new GlideRecord('x_snc_aegis_application');
+        if (requisitionSysId) {
+            app.addQuery('requisition', requisitionSysId);
+        }
+        app.query();
+
+        var stageOrder = [
+            'APPLIED', 'RECEIVED', 'SCREENING', 'RECRUITER_REVIEW',
+            'SHORTLISTED', 'INTERVIEW', 'OFFERED', 'CLOSED'
+        ];
+        var fromIdx = stageOrder.indexOf(fromStage);
+        var toIdx = stageOrder.indexOf(toStage);
+
+        while (app.next()) {
+            var candId = app.getValue('candidate');
+            if (!candId) continue;
+
+            var demo = new GlideRecord('x_snc_aegis_protected_demographic_store');
+            demo.addQuery('candidate', candId);
+            demo.query();
+            if (!demo.next()) continue;
+
+            var groupVal = demo.getValue(demographicField) || 'UNKNOWN';
+            if (!groups[groupVal]) {
+                groups[groupVal] = { total: 0, advanced: 0 };
+            }
+
+            var appStage = app.getValue('stage');
+            var appStageIdx = stageOrder.indexOf(appStage);
+
+            if (appStageIdx >= fromIdx) {
+                groups[groupVal].total++;
+                if (appStageIdx >= toIdx) {
+                    groups[groupVal].advanced++;
+                }
+            }
+        }
+
+        var rates = {};
+        for (var g in groups) {
+            rates[g] = groups[g].total > 0 ?
+                Math.round((groups[g].advanced / groups[g].total) * 100) / 100 : 0;
+        }
+
+        return rates;
+    },
+
+    type: 'AEGISFairHireCalculator'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-20 11:05:36</sys_created_on>
+        <sys_id>f8876fbf6d5f03107f44d98064d89739</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>AEGISFairHireCalculator</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_script_include_f8876fbf6d5f03107f44d98064d89739</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:38:16</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_script_include_f8876fbf6d5f03107f44d98064d89739</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_snc_aegis.AEGISFairHireCalculator&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;AEGISFairHireCalculator&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var AEGISFairHireCalculator = Class.create();
+AEGISFairHireCalculator.prototype = {
+    initialize: function() {},
+
+    /**
+     * Evaluates selection rates against the EEOC 4/5ths (80%) rule.
+     *
+     * @param {Object} ratesByGroup - Key-value pair of group name to selection rate (0.0 - 1.0)
+     *                                e.g. { 'MALE': 0.80, 'FEMALE': 0.60 }
+     * @returns {Object} Impact ratios and breach flags per group
+     */
+    calculateImpactRatio: function(ratesByGroup) {
+        var highestRate = 0;
+        var benchmarkGroup = 'NONE';
+        var group;
+
+        for (group in ratesByGroup) {
+            if (ratesByGroup[group] &gt; highestRate) {
+                highestRate = ratesByGroup[group];
+                benchmarkGroup = group;
+            }
+        }
+
+        var ratiosMap = {};
+        for (group in ratesByGroup) {
+            var rate = ratesByGroup[group];
+            var ratio = 1.0;
+
+            if (highestRate &gt; 0) {
+                ratio = Math.round((rate / highestRate) * 100) / 100;
+            }
+
+            ratiosMap[group] = {
+                selectionRate: rate,
+                highestRate: highestRate,
+                ratio: ratio,
+                impactRatio: ratio,
+                flagged: ratio &lt; 0.80
+            };
+        }
+
+        return {
+            benchmark_group: benchmarkGroup,
+            benchmark_rate: highestRate,
+            ratios: ratiosMap,
+            details: ratiosMap
+        };
+    },
+
+    /**
+     * Computes stage conversion rates by demographic attribute for a requisition.
+     */
+    computeStageRates: function(requisitionSysId, demographicField, fromStage, toStage) {
+        var groups = {};
+
+        var app = new GlideRecord('x_snc_aegis_application');
+        if (requisitionSysId) {
+            app.addQuery('requisition', requisitionSysId);
+        }
+        app.query();
+
+        var stageOrder = [
+            'APPLIED', 'RECEIVED', 'SCREENING', 'RECRUITER_REVIEW',
+            'SHORTLISTED', 'INTERVIEW', 'OFFERED', 'CLOSED'
+        ];
+        var fromIdx = stageOrder.indexOf(fromStage);
+        var toIdx = stageOrder.indexOf(toStage);
+
+        while (app.next()) {
+            var candId = app.getValue('candidate');
+            if (!candId) continue;
+
+            var demo = new GlideRecord('x_snc_aegis_protected_demographic_store');
+            demo.addQuery('candidate', candId);
+            demo.query();
+            if (!demo.next()) continue;
+
+            var groupVal = demo.getValue(demographicField) || 'UNKNOWN';
+            if (!groups[groupVal]) {
+                groups[groupVal] = { total: 0, advanced: 0 };
+            }
+
+            var appStage = app.getValue('stage');
+            var appStageIdx = stageOrder.indexOf(appStage);
+
+            if (appStageIdx &gt;= fromIdx) {
+                groups[groupVal].total++;
+                if (appStageIdx &gt;= toIdx) {
+                    groups[groupVal].advanced++;
+                }
+            }
+        }
+
+        var rates = {};
+        for (var g in groups) {
+            rates[g] = groups[g].total &gt; 0 ?
+                Math.round((groups[g].advanced / groups[g].total) * 100) / 100 : 0;
+        }
+
+        return rates;
+    },
+
+    type: 'AEGISFairHireCalculator'
+};
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 11:05:36&lt;/sys_created_on&gt;&lt;sys_id&gt;f8876fbf6d5f03107f44d98064d89739&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGISFairHireCalculator&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_f8876fbf6d5f03107f44d98064d89739&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-23 14:38:16&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>45418679</payload_hash>
+        <record_name>AEGISFairHireCalculator</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 14:38:16</sys_created_on>
+        <sys_id>8115f37ce4e343107f44705ba96fabd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ceb3f9320000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:38:16</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>c115f37ce4e34310c66c8992c62368d0</update_guid>
+        <update_guid_history>c115f37ce4e34310c66c8992c62368d0:45418679,d6821ad42aab43103b35b6b9771019cb:1584362086,38a7a3ffe65f03109a9a3ff52cd01b34:980899514</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-30 06:22:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0db02b8959de41a0a569c9a9638ff044</sys_id>
+        <sys_metadata>f8876fbf6d5f03107f44d98064d89739</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGISFairHireCalculator</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_script_include_f8876fbf6d5f03107f44d98064d89739</sys_update_name>
+        <sys_update_version display_value="sys_script_include_f8876fbf6d5f03107f44d98064d89739">8115f37ce4e343107f44705ba96fabd1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-30 06:22:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

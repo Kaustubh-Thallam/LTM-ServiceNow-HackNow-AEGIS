@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_capability">
+    <sys_one_extend_capability action="DELETE">
+        <active>true</active>
+        <description>Coordinates personalized candidate interviews by analyzing the candidate's application, resume, candidate profile, target job requisition, job description, and screening results. Generates evidence-based interview questions and scoring rubrics tailored to the specific candidate and role.</description>
+        <external>true</external>
+        <metadata>{"isGuidedStep":false}</metadata>
+        <name>AEGIS Interview Orchestrator</name>
+        <offglide_enabled>false</offglide_enabled>
+        <short_description/>
+        <sys_class_name>sys_one_extend_capability</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-21 07:26:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>36fe33c8ede703107f446c21b633cfb1</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>AEGIS Interview Orchestrator</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_one_extend_capability_36fe33c8ede703107f446c21b633cfb1</sys_update_name>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:23:58</sys_updated_on>
+        <type>skill</type>
+    </sys_one_extend_capability>
+    <sys_translated_text action="DELETE" query="documentkey=36fe33c8ede703107f446c21b633cfb1"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_one_extend_capability_36fe33c8ede703107f446c21b633cfb1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_capability"><sys_one_extend_capability action="INSERT_OR_UPDATE"><active>true</active><description>Coordinates personalized candidate interviews by analyzing the candidate's application, resume, candidate profile, target job requisition, job description, and screening results. Generates evidence-based interview questions and scoring rubrics tailored to the specific candidate and role.</description><external>true</external><metadata>{"isGuidedStep":false}</metadata><name>AEGIS Interview Orchestrator</name><offglide_enabled>false</offglide_enabled><short_description/><sys_class_name>sys_one_extend_capability</sys_class_name><sys_created_by>RAKESH</sys_created_by><sys_created_on>2026-09-21 07:26:05</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>36fe33c8ede703107f446c21b633cfb1</sys_id><sys_mod_count>6</sys_mod_count><sys_name>AEGIS Interview Orchestrator</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_one_extend_capability_36fe33c8ede703107f446c21b633cfb1</sys_update_name><sys_updated_by>RAKESH</sys_updated_by><sys_updated_on>2026-09-22 06:23:58</sys_updated_on><type>skill</type></sys_one_extend_capability><sys_translated_text action="delete_multiple" query="documentkey=36fe33c8ede703107f446c21b633cfb1"/></record_update>]]></payload>
+        <payload_hash>1442040921</payload_hash>
+        <record_name>AEGIS Interview Orchestrator</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-22 06:23:58</sys_created_on>
+        <sys_id>2e5a786039ab03107f44646bfeef9814</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c7c911780000001</sys_recorded_at>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:23:58</sys_updated_on>
+        <type>OneExtend Capability</type>
+        <update_guid>6e5a7860b2ab0310a769674df2417113</update_guid>
+        <update_guid_history>6e5a7860b2ab0310a769674df2417113:1442040921,ce31fce87c2b0310c2225e68dd68e2ef:1675951253,c0317ce8e02b0310ca3744ecc92bfaab:-1326946634,096030a85c2b03102f79419d7663de32:-1420633444,162ba8acbce70310f523137f8eb6ea91:-128564035,a130c45cabe70310b8986e90e1ce28f9:-1420633444,72fe33c8fce70310d90e9cb3d4016db4:-128564035</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-10-01 06:21:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_one_extend_capability">sys_one_extend_capability</sys_db_object>
+        <sys_id>41ae237a98064baa9ec23ec6445f9059</sys_id>
+        <sys_metadata>36fe33c8ede703107f446c21b633cfb1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Interview Orchestrator</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_one_extend_capability_36fe33c8ede703107f446c21b633cfb1</sys_update_name>
+        <sys_update_version display_value="sys_one_extend_capability_36fe33c8ede703107f446c21b633cfb1">2e5a786039ab03107f44646bfeef9814</sys_update_version>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-10-01 06:21:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

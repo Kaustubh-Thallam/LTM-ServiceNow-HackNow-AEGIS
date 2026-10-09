@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="DELETE">
+        <active>true</active>
+        <additional_configurations>{"skill_config_id":"6967df88ed6303107f446c21b633cf07"}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>34675f88ed6303107f446c21b633cfd3</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <documentation/>
+        <max_tokens>500</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>claude_large</model>
+        <name>Claude prompt</name>
+        <parent/>
+        <prompt>You are an expert HR job architect creating inclusive, competency-based job descriptions for ServiceNow AEGIS.
+
+You will be given a job requisition record with these fields:
+- Role title: {requisition.role_title}
+- Level: {requisition.level}
+- Department: {requisition.department}
+- Required skills: {requisition.required_skills}
+- Nice to have skills: {requisition.nice_to_have_skills}
+- Education required: {requisition.education_required}
+- Experience years required: {requisition.experience_years_required}
+- Headcount: {requisition.headcount}
+- Offerings: {requisition.offerings}
+
+TASK 1 — Draft the job description in 5 sections:
+1. Role Summary: a 2-3 sentence overview of the role, department, and level.
+2. Key Responsibilities: 4 outcome-driven bullet points based on the required and nice-to-have skills.
+3. Required Skills &amp; Qualifications: rewrite the required skills, education, and experience years into a clear, readable list.
+4. Nice to Have Skills: rewrite the nice-to-have skills into a short readable list. If empty, output "None specified."
+5. What We Offer: rewrite the Offerings field into natural, first-person company-voice sentences (e.g. turn "Salary Offered: ₹8L-₹12L per annum" into "We offer a competitive salary of ₹8-12 LPA"). Skip any line in Offerings that is blank or still contains placeholder text such as "___". Never include placeholder characters in your output.
+
+TASK 2 — Bias and exclusionary language check:
+Scan the text you generated in Task 1 for gendered, age-coded, or exclusionary terms (e.g. "rockstar", "ninja", "guru", "young and energetic", "dominant", "aggressive", or similar). If any are found, do not silently remove them — instead append a bracketed flag directly after the term in the relevant section, in the format: [FLAGGED: "term" — suggest "alternative"]. If no such terms are found, do not add any flags.
+
+RULES:
+- Base every section only on the requisition data provided. Do not invent skills, salary figures, or requirements not present in the input.
+- Write in a professional, inclusive tone throughout.
+- Do not include an approval status, publish state, or any language suggesting this JD is final — it is always a draft pending manager approval.
+
+OUTPUT FORMAT — return valid JSON only, no preamble or markdown, with exactly these 5 keys:
+{
+  "role_summary": "...",
+  "key_responsibilities": "...",
+  "required_skills_qualifications": "...",
+  "nice_to_have_skills": "...",
+  "what_we_offer": "..."
+}</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <provider_company/>
+        <request_tokens>130322</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>published</state>
+        <structured_output_enabled>false</structured_output_enabled>
+        <structured_output_schema/>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 05:47:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>865867c8ed2703107f446c21b633cfcf</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>34675f88ed6303107f446c21b633cfd3</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_generative_ai_config_865867c8ed2703107f446c21b633cfcf</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 05:50:23</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>1</version>
+    </sys_generative_ai_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_generative_ai_config_865867c8ed2703107f446c21b633cfcf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config"><sys_generative_ai_config action="INSERT_OR_UPDATE"><active>true</active><additional_configurations>{"skill_config_id":"6967df88ed6303107f446c21b633cf07"}</additional_configurations><ai_suggested>false</ai_suggested><definition>34675f88ed6303107f446c21b633cfd3</definition><definition_table>sys_one_extend_capability_definition</definition_table><documentation/><max_tokens>500</max_tokens><min_word_count>-1</min_word_count><model>claude_large</model><name>Claude prompt</name><parent/><prompt>You are an expert HR job architect creating inclusive, competency-based job descriptions for ServiceNow AEGIS.
+
+You will be given a job requisition record with these fields:
+- Role title: {requisition.role_title}
+- Level: {requisition.level}
+- Department: {requisition.department}
+- Required skills: {requisition.required_skills}
+- Nice to have skills: {requisition.nice_to_have_skills}
+- Education required: {requisition.education_required}
+- Experience years required: {requisition.experience_years_required}
+- Headcount: {requisition.headcount}
+- Offerings: {requisition.offerings}
+
+TASK 1 — Draft the job description in 5 sections:
+1. Role Summary: a 2-3 sentence overview of the role, department, and level.
+2. Key Responsibilities: 4 outcome-driven bullet points based on the required and nice-to-have skills.
+3. Required Skills &amp; Qualifications: rewrite the required skills, education, and experience years into a clear, readable list.
+4. Nice to Have Skills: rewrite the nice-to-have skills into a short readable list. If empty, output "None specified."
+5. What We Offer: rewrite the Offerings field into natural, first-person company-voice sentences (e.g. turn "Salary Offered: ₹8L-₹12L per annum" into "We offer a competitive salary of ₹8-12 LPA"). Skip any line in Offerings that is blank or still contains placeholder text such as "___". Never include placeholder characters in your output.
+
+TASK 2 — Bias and exclusionary language check:
+Scan the text you generated in Task 1 for gendered, age-coded, or exclusionary terms (e.g. "rockstar", "ninja", "guru", "young and energetic", "dominant", "aggressive", or similar). If any are found, do not silently remove them — instead append a bracketed flag directly after the term in the relevant section, in the format: [FLAGGED: "term" — suggest "alternative"]. If no such terms are found, do not add any flags.
+
+RULES:
+- Base every section only on the requisition data provided. Do not invent skills, salary figures, or requirements not present in the input.
+- Write in a professional, inclusive tone throughout.
+- Do not include an approval status, publish state, or any language suggesting this JD is final — it is always a draft pending manager approval.
+
+OUTPUT FORMAT — return valid JSON only, no preamble or markdown, with exactly these 5 keys:
+{
+  "role_summary": "...",
+  "key_responsibilities": "...",
+  "required_skills_qualifications": "...",
+  "nice_to_have_skills": "...",
+  "what_we_offer": "..."
+}</prompt><prompt_template_role>user</prompt_template_role><provider_company/><request_tokens>130322</request_tokens><show_in_prompt_library>true</show_in_prompt_library><state>published</state><structured_output_enabled>false</structured_output_enabled><structured_output_schema/><sys_class_name>sys_generative_ai_config</sys_class_name><sys_created_by>DEEPTHI</sys_created_by><sys_created_on>2026-09-21 05:47:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>865867c8ed2703107f446c21b633cfcf</sys_id><sys_mod_count>3</sys_mod_count><sys_name>34675f88ed6303107f446c21b633cfd3</sys_name><sys_overrides/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_generative_ai_config_865867c8ed2703107f446c21b633cfcf</sys_update_name><sys_updated_by>DEEPTHI</sys_updated_by><sys_updated_on>2026-09-21 05:50:23</sys_updated_on><temperature>0.2</temperature><thinking_tokens>0</thinking_tokens><version>1</version></sys_generative_ai_config></record_update>]]></payload>
+        <payload_hash>1493919127</payload_hash>
+        <record_name>34675f88ed6303107f446c21b633cfd3</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 05:50:23</sys_created_on>
+        <sys_id>c119234ced2703107f446c21b633cf28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c283f8000000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 05:50:23</sys_updated_on>
+        <type>Generative AI Configuration</type>
+        <update_guid>c519234cde270310abaae079721fe627</update_guid>
+        <update_guid_history>c519234cde270310abaae079721fe627:1493919127,d0d8670c22270310756c5a4d6efc6984:-1773937389,48d8670c102703108c40b88a49ec6020:-348577000,8e5867c8c62703105fc2852dafc4c8d5:-923622236</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-10-03 02:40:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_generative_ai_config">sys_generative_ai_config</sys_db_object>
+        <sys_id>27b7b3bc89fe414cae49d5299d1f0a90</sys_id>
+        <sys_metadata>865867c8ed2703107f446c21b633cfcf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>34675f88ed6303107f446c21b633cfd3</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_generative_ai_config_865867c8ed2703107f446c21b633cfcf</sys_update_name>
+        <sys_update_version display_value="sys_generative_ai_config_865867c8ed2703107f446c21b633cfcf">c119234ced2703107f446c21b633cf28</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-10-03 02:40:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

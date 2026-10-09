@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description/>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>EQsFgJ+Qk37RV9W0TEDgtQ3KmLtp2KsbAj2K95xJpj0=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_aegis.ai_decision_log_user</name>

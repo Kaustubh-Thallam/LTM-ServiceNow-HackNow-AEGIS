@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="17dd7b07851703107f446d73c9814a62" label="Interview Feedback" max_length="40" name="x_snc_aegis_interview_feedback" type="collection">
+        <element label="Interview Record" mandatory="true" max_length="32" name="interview" reference="x_snc_aegis_interview" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Submitted At" max_length="40" name="submitted_at" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Strengths Noted" max_length="4000" name="strengths_noted" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Concerns Noted" max_length="4000" name="concerns_noted" type="string"/>
+        <element label="Overall Rating" max_length="38" name="overall_score" type="decimal"/>
+        <element label="Cultural Alignment" max_length="38" name="culture_score" type="decimal"/>
+        <element label="Technical Competency" max_length="38" name="technical_score" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Recommendation" mandatory="true" max_length="40" name="recommendation" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Strong No" sequence="4" value="STRONG_NO"/>
+                <element inactive_on_update="false" label="No" sequence="3" value="NO"/>
+                <element inactive_on_update="false" label="Neutral" sequence="2" value="NEUTRAL"/>
+                <element inactive_on_update="false" label="Strong Yes" sequence="0" value="STRONG_YES"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="YES"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Verbatim Panellist Notes" max_length="4000" name="verbatim_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="PENDING" label="Feedback Status" mandatory="true" max_length="40" name="feedback_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="PENDING"/>
+                <element inactive_on_update="false" label="Submitted" sequence="1" value="SUBMITTED"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Panellist Evaluator&#9;" mandatory="true" max_length="32" name="panellist" reference="sys_user" type="reference"/>
+        <element label="Communication Skills" max_length="38" name="communication_score" type="decimal"/>
+        <index name="index">
+            <element name="panellist"/>
+        </index>
+        <index name="index2">
+            <element name="interview"/>
+        </index>
+    </element>
+</database>

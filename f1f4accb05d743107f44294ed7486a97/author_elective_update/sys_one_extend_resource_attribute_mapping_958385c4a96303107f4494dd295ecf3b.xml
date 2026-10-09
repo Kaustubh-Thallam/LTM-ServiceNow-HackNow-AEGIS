@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_resource_attribute_mapping">
+    <sys_one_extend_resource_attribute_mapping action="DELETE">
+        <attribute_value_script><![CDATA[(function execute(currentInputs, context) {
+    /* @param {Object} currentInputs - Inputs provided for the current step.*/
+    /* @param {Object} context - Execution context, which may include:*/
+    /*						   - Previous tool outputs/inputs (e.g., context['ToolName.attributeName'] or context.getValue('ToolName.attributeName')).*/
+    /*						   - Additional context information (e.g., context.getAllValues()).*/
+    /* @returns {Object} - The computed value for the attribute.*/
+    return '';
+})(currentInputs, context);]]></attribute_value_script>
+        <attribute_value_template/>
+        <attribute_value_type>script</attribute_value_type>
+        <from_resource_mapping/>
+        <resource_attribute_name display_value="golden_response">2d7b81d97f14121071cab6257d86654c</resource_attribute_name>
+        <resource_mapping display_value="Correctness Metric with Golden Response">0d8385c4a96303107f4494dd295ecf15</resource_mapping>
+        <sys_class_name>sys_one_extend_resource_attribute_mapping</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-09-20 17:47:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>958385c4a96303107f4494dd295ecf3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_one_extend_resource_attribute_mapping_958385c4a96303107f4494dd295ecf3b</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:47:03</sys_updated_on>
+        <truncate>false</truncate>
+        <type>input</type>
+    </sys_one_extend_resource_attribute_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_one_extend_resource_attribute_mapping_958385c4a96303107f4494dd295ecf3b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_one_extend_resource_attribute_mapping"&gt;&lt;sys_one_extend_resource_attribute_mapping action="INSERT_OR_UPDATE"&gt;&lt;attribute_value_script&gt;&lt;![CDATA[(function execute(currentInputs, context) {
+    /* @param {Object} currentInputs - Inputs provided for the current step.*/
+    /* @param {Object} context - Execution context, which may include:*/
+    /*						   - Previous tool outputs/inputs (e.g., context['ToolName.attributeName'] or context.getValue('ToolName.attributeName')).*/
+    /*						   - Additional context information (e.g., context.getAllValues()).*/
+    /* @returns {Object} - The computed value for the attribute.*/
+    return '';
+})(currentInputs, context);]]&gt;&lt;/attribute_value_script&gt;&lt;attribute_value_template/&gt;&lt;attribute_value_type&gt;script&lt;/attribute_value_type&gt;&lt;from_resource_mapping/&gt;&lt;resource_attribute_name display_value="golden_response"&gt;2d7b81d97f14121071cab6257d86654c&lt;/resource_attribute_name&gt;&lt;resource_mapping display_value="Correctness Metric with Golden Response"&gt;0d8385c4a96303107f4494dd295ecf15&lt;/resource_mapping&gt;&lt;sys_class_name&gt;sys_one_extend_resource_attribute_mapping&lt;/sys_class_name&gt;&lt;sys_created_by&gt;system&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:47:03&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;958385c4a96303107f4494dd295ecf3b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_one_extend_resource_attribute_mapping_958385c4a96303107f4494dd295ecf3b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 17:47:03&lt;/sys_updated_on&gt;&lt;truncate&gt;false&lt;/truncate&gt;&lt;type&gt;input&lt;/type&gt;&lt;/sys_one_extend_resource_attribute_mapping&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>916348192</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>e37a6e73292503107f44f3a98c18249a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-09-20 17:47:03</sys_created_on>
+        <sys_id>598385c4a96303107f4494dd295ecf3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0bfedbb470000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:47:03</sys_updated_on>
+        <type>OneExtend Resource Attribute Mapping</type>
+        <update_guid>5d8385c44f6303100e509ebb94cddd3c</update_guid>
+        <update_guid_history>5d8385c44f6303100e509ebb94cddd3c:916348192</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-10-03 03:51:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_one_extend_resource_attribute_mapping">sys_one_extend_resource_attribute_mapping</sys_db_object>
+        <sys_id>10ba18b0f5e947c8a5eca5fb963f49c4</sys_id>
+        <sys_metadata>958385c4a96303107f4494dd295ecf3b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_one_extend_resource_attribute_mapping_958385c4a96303107f4494dd295ecf3b</sys_update_name>
+        <sys_update_version display_value="sys_one_extend_resource_attribute_mapping_958385c4a96303107f4494dd295ecf3b">598385c4a96303107f4494dd295ecf3d</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-03 03:51:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="28883787859303107f446d73c9814a80" label="AI Decision Log" max_length="40" name="x_snc_aegis_ai_decision_log" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Action type" mandatory="true" max_length="40" name="action_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Feedback synthesis" sequence="3" value="FEEDBACK_SYNTHESIS"/>
+                <element inactive_on_update="false" label="Stage transition" sequence="6" value="STAGE_TRANSITION"/>
+                <element inactive_on_update="false" label="Fairhire check" sequence="7" value="FAIRHIRE_CHECK"/>
+                <element inactive_on_update="false" label="Interview schedule" sequence="2" value="INTERVIEW_SCHEDULE"/>
+                <element inactive_on_update="false" label="Resume screen" sequence="1" value="RESUME_SCREEN"/>
+                <element inactive_on_update="false" label="Copilot query" sequence="5" value="COPILOT_QUERY"/>
+                <element inactive_on_update="false" label="Hiring recommendation" sequence="4" value="HIRING_RECOMMENDATION"/>
+                <element inactive_on_update="false" label="Jd draft" sequence="0" value="JD_DRAFT"/>
+            </choice>
+        </element>
+        <element label="Execution time ms" max_length="40" name="execution_time_ms" type="integer"/>
+        <element attributes="encode_utf8=false" label="Related application" max_length="32" name="related_application" reference="x_snc_aegis_application" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Logged at" mandatory="true" max_length="40" name="logged_at" type="glide_date_time" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Output Recommendation" mandatory="true" max_length="4000" name="output_summary" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Governance Guardrails" max_length="4000" name="guardrails_applied" type="string"/>
+        <element label="Confidence level" max_length="15" name="confidence_level" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Evaluated Input Data" max_length="4000" name="input_summary" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Governed Agent Persona" mandatory="true" max_length="100" name="agent_name" type="string"/>
+        <element attributes="encode_utf8=false" label="Related requisition" max_length="32" name="related_requisition" reference="x_snc_aegis_job_requisition" type="reference"/>
+        <index name="index">
+            <element name="related_requisition"/>
+        </index>
+        <index name="index2">
+            <element name="related_application"/>
+        </index>
+    </element>
+</database>

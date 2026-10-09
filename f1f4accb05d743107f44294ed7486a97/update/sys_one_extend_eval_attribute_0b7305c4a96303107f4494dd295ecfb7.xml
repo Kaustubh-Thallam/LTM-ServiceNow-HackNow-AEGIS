@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_eval_attribute">
     <sys_one_extend_eval_attribute action="INSERT_OR_UPDATE">
         <advanced>false</advanced>
-        <capability display_value="AEGIS JD Architect">b27305c4a96303107f4494dd295ecf41</capability>
-        <capability_attribute display_value="response">037305c4a96303107f4494dd295ecfb4</capability_attribute>
+        <capability/>
+        <capability_attribute/>
         <data_type>string</data_type>
         <label>Golden Response</label>
         <name>response</name>

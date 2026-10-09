@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function() {
+    // No client-side state needed — all rendering is driven by data.applications
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.aegis-tracker {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 90px;
+
+  &gt; h2 { font-size: 1.7rem; }
+  &gt; .subtitle { color: var(--ink-soft); margin-top: 8px; font-size: 14.5px; }
+
+  .tracker-card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-md);
+    padding: 26px 28px; margin-top: 22px;
+  }
+  .card-top {
+    display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;
+    h3 { font-size: 1.1rem; margin: 0; }
+    .meta { color: var(--ink-soft); font-size: 13px; margin-top: 4px; }
+  }
+  .stage-badge {
+    font-size: 12px; font-weight: 700; padding: 6px 13px; border-radius: 999px; letter-spacing: .2px;
+    &amp;.st-active { background: var(--mustard); color: var(--forest-900); }
+    &amp;.st-done { background: #E4EEE6; color: var(--forest-700); }
+  }
+
+  .journey { display: flex; align-items: center; margin-top: 28px; }
+  .j-step {
+    display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 0 0 auto; width: 76px;
+    .circle {
+      width: 32px; height: 32px; border-radius: 50%; background: var(--cream-2); color: var(--ink-soft);
+      display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;
+      border: 2px solid var(--cream-2);
+    }
+    span { font-size: 11.5px; color: var(--ink-soft); font-weight: 600; text-align: center; }
+    &amp;.completed .circle { background: var(--forest-700); border-color: var(--forest-700); color: #fff; }
+    &amp;.active .circle { background: var(--mustard); border-color: var(--mustard); color: var(--forest-900); }
+    &amp;.completed span, &amp;.active span { color: var(--ink); }
+  }
+  .j-line { flex: 1; height: 2px; background: var(--cream-2); margin-bottom: 22px; &amp;.completed { background: var(--forest-700); } }
+
+  .empty-state { text-align: center; padding: 60px 20px; color: var(--ink-soft); }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>aegis_application_tracker</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>AEGIS Application Tracker</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    data.applications = [];
+    var stageStepMap = {
+        'APPLIED': 1,
+        'RECEIVED': 1,
+        'SCREENING': 2,
+        'RECRUITER_REVIEW': 2,
+        'SHORTLISTED': 3,
+        'INTERVIEW': 4,
+        'OFFERED': 5,
+        'CLOSED': 5
+    };
+
+    var userEmail = gs.getUser().getEmail();
+    var gr = new GlideRecord('x_snc_aegis_application');
+    if (userEmail) {
+        gr.addQuery('candidate.email', userEmail);
+    }
+    gr.orderByDesc('sys_created_on');
+    gr.setLimit(10);
+    gr.query();
+
+    while (gr.next()) {
+        var stageVal = gr.getValue('stage') || 'RECEIVED';
+        var stageIdx = stageStepMap[stageVal] !== undefined ? stageStepMap[stageVal] : 1;
+
+        data.applications.push({
+            sys_id: gr.getUniqueValue(),
+            number: gr.getValue('number') || gr.getUniqueValue(),
+            role_title: gr.requisition ? gr.requisition.role_title.toString() : 'Software Role',
+            department: gr.requisition ? gr.requisition.department.toString() : 'General',
+            stage: stageVal,
+            stage_idx: stageIdx
+        });
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 10:07:15</sys_created_on>
+        <sys_id>63d3a09ced2f03107f446c21b633cf82</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>AEGIS Application Tracker</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sp_widget_63d3a09ced2f03107f446c21b633cf82</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 16:16:15</sys_updated_on>
+        <template><![CDATA[<div class="aegis-tracker">
+  <h2 class="aegis-h">Your application journey</h2>
+  <p class="subtitle">Real-time status, governed by our zero-ghosting commitment.</p>
+
+  <div ng-repeat="app in data.applications" class="tracker-card">
+    <div class="card-top">
+      <div>
+        <h3>{{app.role_title}}</h3>
+        <div class="meta">{{app.department}} · Ref: {{app.number}}</div>
+      </div>
+      <span class="stage-badge" ng-class="app.stage_idx >= 5 ? 'st-done' : 'st-active'">{{app.stage}}</span>
+    </div>
+
+    <div class="journey">
+      <div class="j-step" ng-class="{'completed': app.stage_idx > 1, 'active': app.stage_idx === 1}">
+        <div class="circle"><span ng-if="app.stage_idx > 1">&#10003;</span><span ng-if="app.stage_idx <= 1">1</span></div>
+        <span>Received</span>
+      </div>
+      <div class="j-line" ng-class="{'completed': app.stage_idx > 2}"></div>
+
+      <div class="j-step" ng-class="{'completed': app.stage_idx > 2, 'active': app.stage_idx === 2}">
+        <div class="circle"><span ng-if="app.stage_idx > 2">&#10003;</span><span ng-if="app.stage_idx <= 2">2</span></div>
+        <span>Screening</span>
+      </div>
+      <div class="j-line" ng-class="{'completed': app.stage_idx > 3}"></div>
+
+      <div class="j-step" ng-class="{'completed': app.stage_idx > 3, 'active': app.stage_idx === 3}">
+        <div class="circle"><span ng-if="app.stage_idx > 3">&#10003;</span><span ng-if="app.stage_idx <= 3">3</span></div>
+        <span>Shortlisted</span>
+      </div>
+      <div class="j-line" ng-class="{'completed': app.stage_idx > 4}"></div>
+
+      <div class="j-step" ng-class="{'completed': app.stage_idx > 4, 'active': app.stage_idx === 4}">
+        <div class="circle"><span ng-if="app.stage_idx > 4">&#10003;</span><span ng-if="app.stage_idx <= 4">4</span></div>
+        <span>Interview</span>
+      </div>
+      <div class="j-line" ng-class="{'completed': app.stage_idx >= 5}"></div>
+
+      <div class="j-step" ng-class="{'completed': app.stage_idx >= 5, 'active': app.stage_idx === 5}">
+        <div class="circle">5</div>
+        <span>Outcome</span>
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="data.applications.length === 0" class="empty-state">
+    <p>You haven't submitted any applications yet. <a href="?id=aegis_jobs">Browse open roles →</a></p>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="DELETE">
+        <id>63d3a09ced2f03107f446c21b633cf82</id>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 10:07:15</sys_created_on>
+        <sys_id>2fd3e09ced2f03107f446c21b633cfa3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 10:07:15</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sp_widget_63d3a09ced2f03107f446c21b633cf82</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller = function() {
+    // No client-side state needed — all rendering is driven by data.applications
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.aegis-tracker {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 90px;
+
+  &amp;gt; h2 { font-size: 1.7rem; }
+  &amp;gt; .subtitle { color: var(--ink-soft); margin-top: 8px; font-size: 14.5px; }
+
+  .tracker-card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-md);
+    padding: 26px 28px; margin-top: 22px;
+  }
+  .card-top {
+    display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;
+    h3 { font-size: 1.1rem; margin: 0; }
+    .meta { color: var(--ink-soft); font-size: 13px; margin-top: 4px; }
+  }
+  .stage-badge {
+    font-size: 12px; font-weight: 700; padding: 6px 13px; border-radius: 999px; letter-spacing: .2px;
+    &amp;amp;.st-active { background: var(--mustard); color: var(--forest-900); }
+    &amp;amp;.st-done { background: #E4EEE6; color: var(--forest-700); }
+  }
+
+  .journey { display: flex; align-items: center; margin-top: 28px; }
+  .j-step {
+    display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 0 0 auto; width: 76px;
+    .circle {
+      width: 32px; height: 32px; border-radius: 50%; background: var(--cream-2); color: var(--ink-soft);
+      display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;
+      border: 2px solid var(--cream-2);
+    }
+    span { font-size: 11.5px; color: var(--ink-soft); font-weight: 600; text-align: center; }
+    &amp;amp;.completed .circle { background: var(--forest-700); border-color: var(--forest-700); color: #fff; }
+    &amp;amp;.active .circle { background: var(--mustard); border-color: var(--mustard); color: var(--forest-900); }
+    &amp;amp;.completed span, &amp;amp;.active span { color: var(--ink); }
+  }
+  .j-line { flex: 1; height: 2px; background: var(--cream-2); margin-bottom: 22px; &amp;amp;.completed { background: var(--forest-700); } }
+
+  .empty-state { text-align: center; padding: 60px 20px; color: var(--ink-soft); }
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;aegis_application_tracker&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;AEGIS Application Tracker&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+    data.applications = [];
+    var stageStepMap = {
+        'APPLIED': 1,
+        'RECEIVED': 1,
+        'SCREENING': 2,
+        'RECRUITER_REVIEW': 2,
+        'SHORTLISTED': 3,
+        'INTERVIEW': 4,
+        'OFFERED': 5,
+        'CLOSED': 5
+    };
+
+    var userEmail = gs.getUser().getEmail();
+    var gr = new GlideRecord('x_snc_aegis_application');
+    if (userEmail) {
+        gr.addQuery('candidate.email', userEmail);
+    }
+    gr.orderByDesc('sys_created_on');
+    gr.setLimit(10);
+    gr.query();
+
+    while (gr.next()) {
+        var stageVal = gr.getValue('stage') || 'RECEIVED';
+        var stageIdx = stageStepMap[stageVal] !== undefined ? stageStepMap[stageVal] : 1;
+
+        data.applications.push({
+            sys_id: gr.getUniqueValue(),
+            number: gr.getValue('number') || gr.getUniqueValue(),
+            role_title: gr.requisition ? gr.requisition.role_title.toString() : 'Software Role',
+            department: gr.requisition ? gr.requisition.department.toString() : 'General',
+            stage: stageVal,
+            stage_idx: stageIdx
+        });
+    }
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 10:07:15&lt;/sys_created_on&gt;&lt;sys_id&gt;63d3a09ced2f03107f446c21b633cf82&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS Application Tracker&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_63d3a09ced2f03107f446c21b633cf82&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-21 16:16:15&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="aegis-tracker"&gt;
+  &lt;h2 class="aegis-h"&gt;Your application journey&lt;/h2&gt;
+  &lt;p class="subtitle"&gt;Real-time status, governed by our zero-ghosting commitment.&lt;/p&gt;
+
+  &lt;div ng-repeat="app in data.applications" class="tracker-card"&gt;
+    &lt;div class="card-top"&gt;
+      &lt;div&gt;
+        &lt;h3&gt;{{app.role_title}}&lt;/h3&gt;
+        &lt;div class="meta"&gt;{{app.department}} · Ref: {{app.number}}&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;span class="stage-badge" ng-class="app.stage_idx &gt;= 5 ? 'st-done' : 'st-active'"&gt;{{app.stage}}&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class="journey"&gt;
+      &lt;div class="j-step" ng-class="{'completed': app.stage_idx &gt; 1, 'active': app.stage_idx === 1}"&gt;
+        &lt;div class="circle"&gt;&lt;span ng-if="app.stage_idx &gt; 1"&gt;&amp;#10003;&lt;/span&gt;&lt;span ng-if="app.stage_idx &lt;= 1"&gt;1&lt;/span&gt;&lt;/div&gt;
+        &lt;span&gt;Received&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="j-line" ng-class="{'completed': app.stage_idx &gt; 2}"&gt;&lt;/div&gt;
+
+      &lt;div class="j-step" ng-class="{'completed': app.stage_idx &gt; 2, 'active': app.stage_idx === 2}"&gt;
+        &lt;div class="circle"&gt;&lt;span ng-if="app.stage_idx &gt; 2"&gt;&amp;#10003;&lt;/span&gt;&lt;span ng-if="app.stage_idx &lt;= 2"&gt;2&lt;/span&gt;&lt;/div&gt;
+        &lt;span&gt;Screening&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="j-line" ng-class="{'completed': app.stage_idx &gt; 3}"&gt;&lt;/div&gt;
+
+      &lt;div class="j-step" ng-class="{'completed': app.stage_idx &gt; 3, 'active': app.stage_idx === 3}"&gt;
+        &lt;div class="circle"&gt;&lt;span ng-if="app.stage_idx &gt; 3"&gt;&amp;#10003;&lt;/span&gt;&lt;span ng-if="app.stage_idx &lt;= 3"&gt;3&lt;/span&gt;&lt;/div&gt;
+        &lt;span&gt;Shortlisted&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="j-line" ng-class="{'completed': app.stage_idx &gt; 4}"&gt;&lt;/div&gt;
+
+      &lt;div class="j-step" ng-class="{'completed': app.stage_idx &gt; 4, 'active': app.stage_idx === 4}"&gt;
+        &lt;div class="circle"&gt;&lt;span ng-if="app.stage_idx &gt; 4"&gt;&amp;#10003;&lt;/span&gt;&lt;span ng-if="app.stage_idx &lt;= 4"&gt;4&lt;/span&gt;&lt;/div&gt;
+        &lt;span&gt;Interview&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="j-line" ng-class="{'completed': app.stage_idx &gt;= 5}"&gt;&lt;/div&gt;
+
+      &lt;div class="j-step" ng-class="{'completed': app.stage_idx &gt;= 5, 'active': app.stage_idx === 5}"&gt;
+        &lt;div class="circle"&gt;5&lt;/div&gt;
+        &lt;span&gt;Outcome&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div ng-if="data.applications.length === 0" class="empty-state"&gt;
+    &lt;p&gt;You haven't submitted any applications yet. &lt;a href="?id=aegis_jobs"&gt;Browse open roles →&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;63d3a09ced2f03107f446c21b633cf82&lt;/id&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 10:07:15&lt;/sys_created_on&gt;&lt;sys_id&gt;2fd3e09ced2f03107f446c21b633cfa3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-21 10:07:15&lt;/sys_updated_on&gt;&lt;table&gt;sp_widget&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>755360519</payload_hash>
+        <record_name>AEGIS Application Tracker</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 16:16:15</sys_created_on>
+        <sys_id>f0583990ede743107f446c21b633cfcb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c4c0f5d90000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 16:16:15</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>3458399054e743105fe79ccdf48e0dca</update_guid>
+        <update_guid_history>3458399054e743105fe79ccdf48e0dca:755360519,c114649c822f031080ed6b47acb45947:1043601004,67d3e09c612f0310f7573c28950792a2:1717468868</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AEGIS Application Tracker">93be7791f4a303107f4473c8b3ef4c23</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-25 04:37:25</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>ed2b349f615f4db991d9df34343b4129</sys_id>
+        <sys_metadata>63d3a09ced2f03107f446c21b633cf82</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Application Tracker</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sp_widget_63d3a09ced2f03107f446c21b633cf82</sys_update_name>
+        <sys_update_version display_value="sp_widget_63d3a09ced2f03107f446c21b633cf82">f0583990ede743107f446c21b633cfcb</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-25 04:37:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

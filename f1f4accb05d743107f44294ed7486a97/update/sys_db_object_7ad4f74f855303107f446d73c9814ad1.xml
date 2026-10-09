@@ -16,7 +16,7 @@
         <label>Screening Result</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>x_snc_aegis_screening_result</name>
-        <number_ref display_value="SCR">4725b38f855303107f446d73c9814a58</number_ref>
+        <number_ref display_value="SR">4725b38f855303107f446d73c9814a58</number_ref>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>

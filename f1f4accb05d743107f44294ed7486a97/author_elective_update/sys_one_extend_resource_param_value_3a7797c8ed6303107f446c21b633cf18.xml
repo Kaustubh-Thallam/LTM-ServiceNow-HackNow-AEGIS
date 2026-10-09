@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_resource_param_value">
+    <sys_one_extend_resource_param_value action="DELETE">
+        <resource_mapping display_value="Correctness Metric with Golden Response">f17717c8ed6303107f446c21b633cf9a</resource_mapping>
+        <resource_param_name>enableDynamicTranslation</resource_param_name>
+        <resource_param_value>false</resource_param_value>
+        <sys_class_name>sys_one_extend_resource_param_value</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-09-21 04:33:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3a7797c8ed6303107f446c21b633cf18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_one_extend_resource_param_value_3a7797c8ed6303107f446c21b633cf18</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-09-21 04:33:30</sys_updated_on>
+    </sys_one_extend_resource_param_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_one_extend_resource_param_value_3a7797c8ed6303107f446c21b633cf18</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_resource_param_value"><sys_one_extend_resource_param_value action="INSERT_OR_UPDATE"><resource_mapping display_value="Correctness Metric with Golden Response">f17717c8ed6303107f446c21b633cf9a</resource_mapping><resource_param_name>enableDynamicTranslation</resource_param_name><resource_param_value>false</resource_param_value><sys_class_name>sys_one_extend_resource_param_value</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2026-09-21 04:33:30</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3a7797c8ed6303107f446c21b633cf18</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_one_extend_resource_param_value_3a7797c8ed6303107f446c21b633cf18</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2026-09-21 04:33:30</sys_updated_on></sys_one_extend_resource_param_value></record_update>]]></payload>
+        <payload_hash>-615696681</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>e37a6e73292503107f44f3a98c18249a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-09-21 04:33:31</sys_created_on>
+        <sys_id>7a7797c8ed6303107f446c21b633cf1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c23d957a0000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-09-21 04:33:31</sys_updated_on>
+        <type>OneExtend Resource Param Value</type>
+        <update_guid>7e7797c89563031026e05272584f8d19</update_guid>
+        <update_guid_history>7e7797c89563031026e05272584f8d19:-615696681</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-10-03 02:40:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_one_extend_resource_param_value">sys_one_extend_resource_param_value</sys_db_object>
+        <sys_id>665d41dd15f342c9b8c19889e1435e79</sys_id>
+        <sys_metadata>3a7797c8ed6303107f446c21b633cf18</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_one_extend_resource_param_value_3a7797c8ed6303107f446c21b633cf18</sys_update_name>
+        <sys_update_version display_value="sys_one_extend_resource_param_value_3a7797c8ed6303107f446c21b633cf18">7a7797c8ed6303107f446c21b633cf1a</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-03 02:40:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

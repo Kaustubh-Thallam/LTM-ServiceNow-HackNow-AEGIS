@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <aria_label/>
+        <class_name/>
+        <order>1</order>
+        <semantic_tag/>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">d15cb998ede743107f446c21b633cf35</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 16:33:45</sys_created_on>
+        <sys_id>155cb998ede743107f446c21b633cf38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sp_column_155cb998ede743107f446c21b633cf38</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 16:33:45</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sp_column_155cb998ede743107f446c21b633cf38</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><aria_label/><class_name/><order>1</order><semantic_tag/><size>12</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">d15cb998ede743107f446c21b633cf35</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>DEEPTHI</sys_created_by><sys_created_on>2026-09-21 16:33:45</sys_created_on><sys_id>155cb998ede743107f446c21b633cf38</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sp_column_155cb998ede743107f446c21b633cf38</sys_update_name><sys_updated_by>DEEPTHI</sys_updated_by><sys_updated_on>2026-09-21 16:33:45</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>74936652</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 16:33:45</sys_created_on>
+        <sys_id>915cb998ede743107f446c21b633cf9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c4d0fc500000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 16:33:45</sys_updated_on>
+        <type>Column</type>
+        <update_guid>5d5cb998eee7431092f6906d995f1e39</update_guid>
+        <update_guid_history>5d5cb998eee7431092f6906d995f1e39:74936652</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">db9e3b51f4a303107f4473c8b3ef4ce9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-25 04:36:53</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>75ba6a0783514e5eb93397780807c044</sys_id>
+        <sys_metadata>155cb998ede743107f446c21b633cf38</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sp_column_155cb998ede743107f446c21b633cf38</sys_update_name>
+        <sys_update_version display_value="sp_column_155cb998ede743107f446c21b633cf38">915cb998ede743107f446c21b633cf9e</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-25 04:36:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

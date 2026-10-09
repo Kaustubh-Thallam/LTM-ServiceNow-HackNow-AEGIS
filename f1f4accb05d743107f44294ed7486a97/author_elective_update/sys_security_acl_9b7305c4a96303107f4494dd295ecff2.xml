@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing>Existing</local_or_existing>
+        <name>aegis_jd_architect.9b7305c4a96303107f4494dd295ecfd7</name>
+        <operation display_value="execute">execute</operation>
+        <script/>
+        <security_attribute display_value="UserIsAuthenticated">239bdf0c47d23110ba46ff58936d4330</security_attribute>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:46:55</sys_created_on>
+        <sys_id>9b7305c4a96303107f4494dd295ecff2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>aegis_jd_architect.9b7305c4a96303107f4494dd295ecfd7</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_security_acl_9b7305c4a96303107f4494dd295ecff2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:46:55</sys_updated_on>
+        <type display_value="gen_ai_skill">0d986410ffdd2210c0e9ffffffffffc9</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_security_acl_9b7305c4a96303107f4494dd295ecff2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description/><local_or_existing>Existing</local_or_existing><name>aegis_jd_architect.9b7305c4a96303107f4494dd295ecfd7</name><operation display_value="execute">execute</operation><script/><security_attribute display_value="UserIsAuthenticated">239bdf0c47d23110ba46ff58936d4330</security_attribute><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-20 17:46:55</sys_created_on><sys_id>9b7305c4a96303107f4494dd295ecff2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>aegis_jd_architect.9b7305c4a96303107f4494dd295ecfd7</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_security_acl_9b7305c4a96303107f4494dd295ecff2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-20 17:46:55</sys_updated_on><type display_value="gen_ai_skill">0d986410ffdd2210c0e9ffffffffffc9</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>499171294</payload_hash>
+        <record_name>aegis_jd_architect.9b7305c4a96303107f4494dd295ecfd7</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:46:56</sys_created_on>
+        <sys_id>2b7345c4a96303107f4494dd295ecf0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0bfeda06c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:46:56</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>2f7345c482630310a7e5658be2c1190c</update_guid>
+        <update_guid_history>2f7345c482630310a7e5658be2c1190c:499171294</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-01 06:32:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>a00013f5baf846b198fcea195ee46569</sys_id>
+        <sys_metadata>9b7305c4a96303107f4494dd295ecff2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>aegis_jd_architect.9b7305c4a96303107f4494dd295ecfd7</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_security_acl_9b7305c4a96303107f4494dd295ecff2</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_9b7305c4a96303107f4494dd295ecff2">2b7345c4a96303107f4494dd295ecf0d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-01 06:32:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

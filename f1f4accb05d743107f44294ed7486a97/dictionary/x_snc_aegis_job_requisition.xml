@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="a109e887051b43107f44294ed7486ae4" extends="task" label="Job Requisition" max_length="40" name="x_snc_aegis_job_requisition" type="collection">
+        <element label="Additional Comments" max_length="4000" name="additional_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Role title" mandatory="true" max_length="200" name="role_title" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Nice to have skills" max_length="1000" name="nice_to_have_skills" type="string"/>
+        <element default="3" label="Experience years required" mandatory="true" max_length="40" name="experience_years_required" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="Interview Schedule:&#13;&#10;From:       To: &#13;&#10;&#13;&#10;Daily Timings:&#13;&#10;From:     AM    To:      PM&#13;&#10;&#13;&#10;Lunch Break:&#13;&#10;From:     AM    To:     PM&#13;&#10;&#13;&#10;Normal Breaks:&#13;&#10;From:    AM    To:     PM" label="Interview Dates and Timings" max_length="1000" name="interview_dates_and_timings" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="INITIAL" label="Stage" max_length="40" name="stage" read_only="true" read_only_option="display_read_only" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Initial" sequence="100" value="INITIAL"/>
+                <element inactive_on_update="false" label="Closed" sequence="500" value="CLOSED"/>
+                <element inactive_on_update="false" label="Interview in Progress" sequence="350" value="INTERVIEW_IN_PROGRESS"/>
+                <element inactive_on_update="false" label="Interview completed" sequence="400" value="INTERVIEW_COMPLETED"/>
+                <element inactive_on_update="false" label="Screening" sequence="200" value="SCREENING"/>
+                <element inactive_on_update="false" label="Panel assignment" sequence="300" value="PANEL_ASSIGNMENT"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Responsibilities" mandatory="true" max_length="1000" name="responsibilities" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Interview Location or link" max_length="40" name="location_or_link" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Required skills" mandatory="true" max_length="1000" name="required_skills" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Interview Time per person" max_length="40" name="interview_time_per_person" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="BACHELORS" label="Education required" max_length="100" name="education_required" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Masters" sequence="200" value="MASTERS"/>
+                <element inactive_on_update="false" label="Doctorate" sequence="300" value="DOCTORATE"/>
+                <element inactive_on_update="false" label="Bachelors" sequence="100" value="BACHELORS"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Interview type" mandatory="true" max_length="40" name="interview_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Managerial" sequence="300" value="MANAGERIAL"/>
+                <element inactive_on_update="false" label="Technical" sequence="100" value="TECHNICAL"/>
+                <element inactive_on_update="false" label="Culture fit" sequence="400" value="CULTURAL_FIT"/>
+                <element inactive_on_update="false" label="System design" sequence="200" value="SYSTEM_DESIGN"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="Salary Offered: ₹ ___ – ₹ ___ per annum&#13;&#10;Bonus Offered:&#13;&#10;Work Mode Offered(On-site / Hybrid / Remote):&#13;&#10;Working Hours Offered:&#13;&#10;Others:" label="Offerings" mandatory="true" max_length="4000" name="offerings" type="string"/>
+        <element attributes="encode_utf8=false" label="Requested by" mandatory="true" max_length="32" name="requested_by" reference="sys_user" type="reference"/>
+        <element attributes="encode_utf8=false" label="Hiring manager" mandatory="true" max_length="32" name="hiring_manager" read_only="true" read_only_option="display_read_only" reference="sys_user" reference_qual="javascript:'SUBQUERYsys_id,user,sys_user_grmember^group=89c1f8f400fb03107f440a4ac0cab08e^ENDSUBQUERY^active=true'" type="reference" use_reference_qualifier="advanced"/>
+        <element default="1" label="Headcount" mandatory="true" max_length="40" name="headcount" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="DRAFT" label="Status" mandatory="true" max_length="40" name="status" read_only="true" read_only_option="display_read_only" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" sequence="6" value="CANCELLED"/>
+                <element inactive_on_update="false" label="Pending Approval" sequence="1" value="PENDING_APPROVAL"/>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="DRAFT"/>
+                <element inactive_on_update="false" label="Closed" sequence="4" value="CLOSED"/>
+                <element inactive_on_update="false" label="Published" sequence="3" value="PUBLISHED"/>
+                <element inactive_on_update="false" label="Rejected" sequence="5" value="REJECTED"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="APPROVED"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Level" mandatory="true" max_length="40" name="level" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Junior" sequence="0" value="JUNIOR"/>
+                <element inactive_on_update="false" label="Senior" sequence="2" value="SENIOR"/>
+                <element inactive_on_update="false" label="Mid" sequence="1" value="MID"/>
+                <element inactive_on_update="false" label="Lead" sequence="3" value="LEAD"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Application deadline" mandatory="true" max_length="40" name="application_deadline" type="glide_date_time"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Panel members" max_length="1024" name="panel_members" reference="sys_user" reference_qual="javascript:'SUBQUERYsys_id,user,sys_user_grmember^group=c5c1f8f400fb03107f440a4ac0cab094^ENDSUBQUERY^active=true'" type="glide_list" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="REQUESTED" label="Approval state" max_length="40" name="approval_state" read_only="true" read_only_option="display_read_only" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="APPROVED"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="REJECTED"/>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="REQUESTED"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="ENGINEERING" label="Department" mandatory="true" max_length="100" name="department" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Operations" sequence="500" value="OPERATIONS"/>
+                <element inactive_on_update="false" label="Engineering" sequence="100" value="ENGINEERING"/>
+                <element inactive_on_update="false" label="Analytics" sequence="60" value="ANALYTICS"/>
+                <element inactive_on_update="false" label="Product" sequence="200" value="PRODUCT"/>
+                <element inactive_on_update="false" label="Infrastructure" sequence="70" value="INFRASTRUCTURE"/>
+                <element inactive_on_update="false" label="Design" sequence="300" value="DESIGN"/>
+                <element inactive_on_update="false" label="Sales" sequence="400" value="SALES"/>
+                <element inactive_on_update="false" label="Quality" sequence="80" value="QUALITY"/>
+                <element inactive_on_update="false" label="Others" sequence="600" value="OTHERS"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Created at" max_length="40" name="created_at" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Employment type" mandatory="true" max_length="40" name="employment_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Part time" sequence="1" value="PART_TIME"/>
+                <element inactive_on_update="false" label="Contract" sequence="2" value="CONTRACT"/>
+                <element inactive_on_update="false" label="Internship" sequence="3" value="INTERNSHIP"/>
+                <element inactive_on_update="false" label="Temporary" sequence="4" value="TEMPORARY"/>
+                <element inactive_on_update="false" label="Full time" sequence="0" value="FULL_TIME"/>
+            </choice>
+        </element>
+    </element>
+</database>

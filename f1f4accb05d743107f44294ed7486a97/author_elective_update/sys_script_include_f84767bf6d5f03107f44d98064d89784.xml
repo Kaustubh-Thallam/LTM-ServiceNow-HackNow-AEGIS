@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_snc_aegis.AEGISJDArchitect</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AEGISJDArchitect</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AEGISJDArchitect = Class.create();
+AEGISJDArchitect.prototype = {
+    initialize: function() {},
+
+    BIASED_TERMS: [
+        'rockstar', 'ninja', 'guru', 'wizard',
+        'young and energetic', 'digital native',
+        'culture fit', 'dominant', 'aggressive',
+        'work hard play hard', 'manpower', 'fresh graduate only'
+    ],
+
+    /**
+     * Scans text for biased or exclusionary terms.
+     */
+    checkBiasedLanguage: function(text) {
+        if (!text) return { hasBias: false, flaggedTerms: [] };
+
+        var lowerText = text.toLowerCase();
+        var flagged = [];
+
+        for (var i = 0; i < this.BIASED_TERMS.length; i++) {
+            var term = this.BIASED_TERMS[i];
+            if (lowerText.indexOf(term) !== -1) {
+                flagged.push(term);
+            }
+        }
+
+        return {
+            hasBias: flagged.length > 0,
+            flaggedTerms: flagged
+        };
+    },
+
+    /**
+     * Builds structured prompt for GenAI or template fallback.
+     */
+    buildJDPrompt: function(roleTitle, level, department, requiredSkills, niceToHave, offerings) {
+        return 'Generate an inclusive, professional job description for:\n' +
+            'Role: ' + roleTitle + '\n' +
+            'Level: ' + level + '\n' +
+            'Department: ' + department + '\n' +
+            'Required Skills: ' + requiredSkills + '\n' +
+            'Nice to Have: ' + (niceToHave || 'None') + '\n' +
+            'Company Offerings: ' + (offerings || 'Standard competitive compensation, growth, and benefits') + '\n\n' +
+            'Guidelines:\n' +
+            '- Use gender-neutral, inclusive language\n' +
+            '- Avoid buzzwords (ninja, rockstar, guru)\n' +
+            '- Include: Role Summary, Key Responsibilities, Requirements, Nice to Have, What We Offer\n' +
+            '- Focus on competencies, not credentials';
+    },
+
+    /**
+     * Saves a job description draft with automated bias checking.
+     */
+    saveJD: function(requisitionSysId, jdText, createdByUserId) {
+        var biasCheck = this.checkBiasedLanguage(jdText);
+
+        var ver = 1;
+        var existing = new GlideRecord('x_snc_aegis_job_description');
+        existing.addQuery('requisition', requisitionSysId);
+        existing.orderByDesc('version');
+        existing.setLimit(1);
+        existing.query();
+        if (existing.next()) {
+            ver = (parseInt(existing.getValue('version')) || 1) + 1;
+        }
+
+        var jd = new GlideRecord('x_snc_aegis_job_description');
+        jd.initialize();
+        jd.setValue('requisition', requisitionSysId);
+        jd.setValue('jd_text', jdText);
+        jd.setValue('version', ver);
+        jd.setValue('bias_check_passed', !biasCheck.hasBias);
+        jd.setValue('flagged_terms', biasCheck.flaggedTerms.join(', '));
+        jd.setValue('approval_state', 'DRAFT');
+
+        if (createdByUserId) {
+            jd.setValue('created_by', createdByUserId);
+        }
+
+        var sysId = jd.insert();
+        if (!sysId) {
+            gs.info('[AEGIS] FAILED to save JD: ' + jd.getLastErrorMessage());
+            return null;
+        }
+
+        gs.info('[AEGIS] JD saved: ' + sysId + ' v' + ver +
+            ' (bias check: ' + (biasCheck.hasBias ? 'FLAGGED [' + biasCheck.flaggedTerms.join(', ') + ']' : 'PASSED') + ')');
+
+        return sysId;
+    },
+
+    type: 'AEGISJDArchitect'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-20 11:04:58</sys_created_on>
+        <sys_id>f84767bf6d5f03107f44d98064d89784</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>AEGISJDArchitect</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_script_include_f84767bf6d5f03107f44d98064d89784</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:38:17</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_script_include_f84767bf6d5f03107f44d98064d89784</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_snc_aegis.AEGISJDArchitect&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;AEGISJDArchitect&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var AEGISJDArchitect = Class.create();
+AEGISJDArchitect.prototype = {
+    initialize: function() {},
+
+    BIASED_TERMS: [
+        'rockstar', 'ninja', 'guru', 'wizard',
+        'young and energetic', 'digital native',
+        'culture fit', 'dominant', 'aggressive',
+        'work hard play hard', 'manpower', 'fresh graduate only'
+    ],
+
+    /**
+     * Scans text for biased or exclusionary terms.
+     */
+    checkBiasedLanguage: function(text) {
+        if (!text) return { hasBias: false, flaggedTerms: [] };
+
+        var lowerText = text.toLowerCase();
+        var flagged = [];
+
+        for (var i = 0; i &lt; this.BIASED_TERMS.length; i++) {
+            var term = this.BIASED_TERMS[i];
+            if (lowerText.indexOf(term) !== -1) {
+                flagged.push(term);
+            }
+        }
+
+        return {
+            hasBias: flagged.length &gt; 0,
+            flaggedTerms: flagged
+        };
+    },
+
+    /**
+     * Builds structured prompt for GenAI or template fallback.
+     */
+    buildJDPrompt: function(roleTitle, level, department, requiredSkills, niceToHave, offerings) {
+        return 'Generate an inclusive, professional job description for:\n' +
+            'Role: ' + roleTitle + '\n' +
+            'Level: ' + level + '\n' +
+            'Department: ' + department + '\n' +
+            'Required Skills: ' + requiredSkills + '\n' +
+            'Nice to Have: ' + (niceToHave || 'None') + '\n' +
+            'Company Offerings: ' + (offerings || 'Standard competitive compensation, growth, and benefits') + '\n\n' +
+            'Guidelines:\n' +
+            '- Use gender-neutral, inclusive language\n' +
+            '- Avoid buzzwords (ninja, rockstar, guru)\n' +
+            '- Include: Role Summary, Key Responsibilities, Requirements, Nice to Have, What We Offer\n' +
+            '- Focus on competencies, not credentials';
+    },
+
+    /**
+     * Saves a job description draft with automated bias checking.
+     */
+    saveJD: function(requisitionSysId, jdText, createdByUserId) {
+        var biasCheck = this.checkBiasedLanguage(jdText);
+
+        var ver = 1;
+        var existing = new GlideRecord('x_snc_aegis_job_description');
+        existing.addQuery('requisition', requisitionSysId);
+        existing.orderByDesc('version');
+        existing.setLimit(1);
+        existing.query();
+        if (existing.next()) {
+            ver = (parseInt(existing.getValue('version')) || 1) + 1;
+        }
+
+        var jd = new GlideRecord('x_snc_aegis_job_description');
+        jd.initialize();
+        jd.setValue('requisition', requisitionSysId);
+        jd.setValue('jd_text', jdText);
+        jd.setValue('version', ver);
+        jd.setValue('bias_check_passed', !biasCheck.hasBias);
+        jd.setValue('flagged_terms', biasCheck.flaggedTerms.join(', '));
+        jd.setValue('approval_state', 'DRAFT');
+
+        if (createdByUserId) {
+            jd.setValue('created_by', createdByUserId);
+        }
+
+        var sysId = jd.insert();
+        if (!sysId) {
+            gs.info('[AEGIS] FAILED to save JD: ' + jd.getLastErrorMessage());
+            return null;
+        }
+
+        gs.info('[AEGIS] JD saved: ' + sysId + ' v' + ver +
+            ' (bias check: ' + (biasCheck.hasBias ? 'FLAGGED [' + biasCheck.flaggedTerms.join(', ') + ']' : 'PASSED') + ')');
+
+        return sysId;
+    },
+
+    type: 'AEGISJDArchitect'
+};
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 11:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;f84767bf6d5f03107f44d98064d89784&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGISJDArchitect&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_f84767bf6d5f03107f44d98064d89784&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-23 14:38:17&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1783285747</payload_hash>
+        <record_name>AEGISJDArchitect</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 14:38:17</sys_created_on>
+        <sys_id>5915f37ce4e343107f44705ba96fabd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ceb3fe920000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:38:17</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>1915f37cb8e34310a9efa9bf24e78ed6</update_guid>
+        <update_guid_history>1915f37cb8e34310a9efa9bf24e78ed6:-1783285747,1e821ad460ab431033f130c3d3db4aa0:340948992,d7776bbfd95f0310b4786347fd4064b9:1783394628</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-30 06:22:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>029ee60085994d028009c4970f081739</sys_id>
+        <sys_metadata>f84767bf6d5f03107f44d98064d89784</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGISJDArchitect</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_script_include_f84767bf6d5f03107f44d98064d89784</sys_update_name>
+        <sys_update_version display_value="sys_script_include_f84767bf6d5f03107f44d98064d89784">5915f37ce4e343107f44705ba96fabd7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-30 06:22:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

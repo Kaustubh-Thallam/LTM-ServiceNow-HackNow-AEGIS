@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Views assigned interviews and submits structured interview feedback and scores.</description>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id/>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_snc_aegis.interview_panellist</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>interview_panellist</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-18 20:32:01</sys_created_on>
+        <sys_id>ed06d71b29d703107f44fb98a901a912</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_aegis.interview_panellist</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_user_role_ed06d71b29d703107f44fb98a901a912</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-18 20:32:01</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_user_role_ed06d71b29d703107f44fb98a901a912</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description>Views assigned interviews and submits structured interview feedback and scores.</description><elevated_privilege>false</elevated_privilege><federated_id/><grantable>true</grantable><includes_roles/><name>x_snc_aegis.interview_panellist</name><scoped_admin>false</scoped_admin><suffix>interview_panellist</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-18 20:32:01</sys_created_on><sys_id>ed06d71b29d703107f44fb98a901a912</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_snc_aegis.interview_panellist</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_user_role_ed06d71b29d703107f44fb98a901a912</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-18 20:32:01</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>-1534335466</payload_hash>
+        <record_name>x_snc_aegis.interview_panellist</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-18 20:32:01</sys_created_on>
+        <sys_id>aa165b1b29d703107f44fb98a901a9aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0b6380d100000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-18 20:32:01</sys_updated_on>
+        <type>Role</type>
+        <update_guid>ea165b1b5fd7031017fb7581926116a9</update_guid>
+        <update_guid_history>ea165b1b5fd7031017fb7581926116a9:-1534335466</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_snc_aegis.interview_panellist">12fb6fe400b303107f440a4ac0cab089</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-05 05:35:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>3d192f80965c4f6191330459d56ff469</sys_id>
+        <sys_metadata>ed06d71b29d703107f44fb98a901a912</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_aegis.interview_panellist</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_user_role_ed06d71b29d703107f44fb98a901a912</sys_update_name>
+        <sys_update_version display_value="sys_user_role_ed06d71b29d703107f44fb98a901a912">aa165b1b29d703107f44fb98a901a9aa</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-05 05:35:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

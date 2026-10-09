@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Provides read-only access to recruitment decisions, Al explanations, fairness metrics, and audit records for governance review.</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>FGCy6fbbdkPxr4rU1Uv/sVOJxgKSUTYM+P2GGpRiGVY=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_aegis.compliance_auditor</name>

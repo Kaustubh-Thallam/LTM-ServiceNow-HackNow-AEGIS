@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config">
     <sys_generative_ai_prompt_config action="INSERT_OR_UPDATE">
-        <ai_config display_value="OneExtend Capability Definition: Clone of AEGIS JD Architect _AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)">dbc5ec80707303107f44bd17fa321067</ai_config>
-        <definition display_value="Clone of AEGIS JD Architect _AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)">b2c5ec80707303107f44bd17fa32103b</definition>
+        <ai_config/>
+        <definition/>
         <filter_properties>{}</filter_properties>
         <filter_type>default</filter_type>
         <is_default>false</is_default>

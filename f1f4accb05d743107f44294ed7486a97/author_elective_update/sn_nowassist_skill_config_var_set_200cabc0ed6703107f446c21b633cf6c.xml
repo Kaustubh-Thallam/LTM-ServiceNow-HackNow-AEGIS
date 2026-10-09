@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_var_set">
+    <sn_nowassist_skill_config_var_set action="DELETE">
+        <config_type display_value="Skill builder View Trigger step">b89b1f0b7f821210076726d6ac86650e</config_type>
+        <description/>
+        <hide_step>false</hide_step>
+        <name>View trigger</name>
+        <order>100</order>
+        <parent/>
+        <screen_id/>
+        <screen_table>sys_ux_macroponent</screen_table>
+        <skill_config display_value="AEGIS Resume Intelligence">8a99a78ced2703107f446c21b633cfa2</skill_config>
+        <sys_class_name>sn_nowassist_skill_config_var_set</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 06:03:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>200cabc0ed6703107f446c21b633cf6c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>View trigger</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_var_set_200cabc0ed6703107f446c21b633cf6c</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 06:10:20</sys_updated_on>
+        <title/>
+        <vars/>
+    </sn_nowassist_skill_config_var_set>
+    <sys_translated_text action="DELETE" query="documentkey=200cabc0ed6703107f446c21b633cf6c"/>
+    <sys_variable_value action="DELETE" query="document_key=200cabc0ed6703107f446c21b633cf6c"/>
+    <sys_variable_value action="DELETE">
+        <document>sn_nowassist_skill_config_var_set</document>
+        <document_key>200cabc0ed6703107f446c21b633cf6c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 06:03:12</sys_created_on>
+        <sys_id>e80cabc0ed6703107f446c21b633cf6c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 06:10:20</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Enable Workflow Trigger">5c5623df7f025210076726d6ac8665f9</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_nowassist_skill_config_var_set_200cabc0ed6703107f446c21b633cf6c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_var_set"><sn_nowassist_skill_config_var_set action="INSERT_OR_UPDATE"><config_type display_value="Skill builder View Trigger step">b89b1f0b7f821210076726d6ac86650e</config_type><description/><hide_step>false</hide_step><name>View trigger</name><order>100</order><parent/><screen_id/><screen_table>sys_ux_macroponent</screen_table><skill_config display_value="AEGIS Resume Intelligence">8a99a78ced2703107f446c21b633cfa2</skill_config><sys_class_name>sn_nowassist_skill_config_var_set</sys_class_name><sys_created_by>DEEPTHI</sys_created_by><sys_created_on>2026-09-21 06:03:12</sys_created_on><sys_domain>global</sys_domain><sys_id>200cabc0ed6703107f446c21b633cf6c</sys_id><sys_mod_count>1</sys_mod_count><sys_name>View trigger</sys_name><sys_overrides/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sn_nowassist_skill_config_var_set_200cabc0ed6703107f446c21b633cf6c</sys_update_name><sys_updated_by>DEEPTHI</sys_updated_by><sys_updated_on>2026-09-21 06:10:20</sys_updated_on><title/><vars/></sn_nowassist_skill_config_var_set><sys_translated_text action="delete_multiple" query="documentkey=200cabc0ed6703107f446c21b633cf6c"/><sys_variable_value action="delete_multiple" query="document_key=200cabc0ed6703107f446c21b633cf6c"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sn_nowassist_skill_config_var_set</document><document_key>200cabc0ed6703107f446c21b633cf6c</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>DEEPTHI</sys_created_by><sys_created_on>2026-09-21 06:03:12</sys_created_on><sys_id>e80cabc0ed6703107f446c21b633cf6c</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>DEEPTHI</sys_updated_by><sys_updated_on>2026-09-21 06:10:20</sys_updated_on><value>1</value><variable display_value="Enable Workflow Trigger">5c5623df7f025210076726d6ac8665f9</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-1867444576</payload_hash>
+        <record_name>View trigger</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 06:10:20</sys_created_on>
+        <sys_id>cdade3c4ed6703107f446c21b633cf2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c2963b620000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 06:10:20</sys_updated_on>
+        <type>Now Assist Skill Config Var Set</type>
+        <update_guid>89adab042e67031007ae3faf14264e5f</update_guid>
+        <update_guid_history>89adab042e67031007ae3faf14264e5f:-1867444576,e00cabc0d36703104d4aa8eb45d25b6f:-973509665</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="View trigger">b803258e7df743107f445046e28c7853</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-10-09 11:28:12</sys_created_on>
+        <sys_db_object display_value="" name="sn_nowassist_skill_config_var_set">sn_nowassist_skill_config_var_set</sys_db_object>
+        <sys_id>0ce9937a90cc4e9a80fb228cfb180849</sys_id>
+        <sys_metadata>200cabc0ed6703107f446c21b633cf6c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>View trigger</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_nowassist_skill_config_var_set_200cabc0ed6703107f446c21b633cf6c</sys_update_name>
+        <sys_update_version display_value="sn_nowassist_skill_config_var_set_200cabc0ed6703107f446c21b633cf6c">cdade3c4ed6703107f446c21b633cf2f</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-10-09 11:28:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

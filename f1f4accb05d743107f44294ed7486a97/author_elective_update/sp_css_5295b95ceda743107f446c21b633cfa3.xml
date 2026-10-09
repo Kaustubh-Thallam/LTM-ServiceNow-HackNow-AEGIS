@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css">
+    <sp_css action="DELETE">
+        <css>/* ===== AEGIS Careers — Shared Design Tokens ===== */&#13;
+&#13;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap');&#13;
+&#13;
+:root{&#13;
+  --forest-900:#0F241C;&#13;
+  --forest-800:#173A2C;&#13;
+  --forest-700:#20503C;&#13;
+  --forest-600:#2C6A4F;&#13;
+&#13;
+  --cream:#F4EFE3;&#13;
+  --cream-2:#ECE4D2;&#13;
+  --paper:#FFFFFF;&#13;
+&#13;
+  --terracotta:#E2694B;&#13;
+  --terracotta-dark:#C6543A;&#13;
+&#13;
+  --mustard:#E7A83C;&#13;
+  --mustard-dark:#CC8F28;&#13;
+&#13;
+  --ink:#1E241F;&#13;
+  --ink-soft:#5C6459;&#13;
+  --line:#DED5BE;&#13;
+&#13;
+  --radius-lg:28px;&#13;
+  --radius-md:18px;&#13;
+  --radius-sm:10px;&#13;
+&#13;
+  --shadow-card:0 10px 30px -12px rgba(15,36,28,0.18);&#13;
+&#13;
+  /* ServiceNow Theme Variables */&#13;
+  --now-color--primary-1:var(--forest-900);&#13;
+  --now-color--primary-2:var(--forest-800);&#13;
+  --now-color--secondary-1:var(--terracotta);&#13;
+  --now-color--secondary-2:var(--terracotta-dark);&#13;
+}&#13;
+&#13;
+/* ===== Global ===== */&#13;
+&#13;
+body{&#13;
+  background:var(--cream);&#13;
+  color:var(--ink);&#13;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;&#13;
+}&#13;
+&#13;
+/* ===== Headings ===== */&#13;
+&#13;
+h1,h2,h3,h4,h5,h6,&#13;
+.aegis-h{&#13;
+  font-family:'Poppins',sans-serif;&#13;
+  color:var(--forest-900);&#13;
+}&#13;
+&#13;
+/* ===== Cards ===== */&#13;
+&#13;
+.card,&#13;
+.now-card,&#13;
+.sn-card{&#13;
+  background:var(--paper);&#13;
+  border-radius:var(--radius-md);&#13;
+  box-shadow:var(--shadow-card);&#13;
+}&#13;
+&#13;
+/* ===== Links ===== */&#13;
+&#13;
+a{&#13;
+  color:var(--forest-700);&#13;
+}&#13;
+&#13;
+a:hover{&#13;
+  color:var(--terracotta);&#13;
+}&#13;
+&#13;
+/* ===== Primary Button ===== */&#13;
+&#13;
+.aegis-btn-primary,&#13;
+button.btn-primary{&#13;
+  background:var(--terracotta);&#13;
+  color:#fff;&#13;
+  border:none;&#13;
+  border-radius:999px;&#13;
+  padding:12px 22px;&#13;
+  font-weight:600;&#13;
+  cursor:pointer;&#13;
+}&#13;
+&#13;
+.aegis-btn-primary:hover,&#13;
+button.btn-primary:hover{&#13;
+  background:var(--terracotta-dark);&#13;
+}&#13;
+&#13;
+/* ===== Dark Button ===== */&#13;
+&#13;
+.aegis-btn-dark{&#13;
+  background:var(--forest-900);&#13;
+  color:#fff;&#13;
+  border:none;&#13;
+  border-radius:999px;&#13;
+  padding:13px 24px;&#13;
+  font-weight:600;&#13;
+}&#13;
+&#13;
+.aegis-btn-dark:hover{&#13;
+  background:var(--forest-800);&#13;
+}&#13;
+&#13;
+/* ===== Outline Button ===== */&#13;
+&#13;
+.aegis-btn-outline{&#13;
+  background:transparent;&#13;
+  color:var(--forest-900);&#13;
+  border:1.5px solid var(--forest-900);&#13;
+  border-radius:999px;&#13;
+  padding:11px 22px;&#13;
+  font-weight:600;&#13;
+}&#13;
+&#13;
+.aegis-btn-outline:hover{&#13;
+  background:var(--forest-900);&#13;
+  color:#fff;&#13;
+}&#13;
+&#13;
+/* ===== Inputs ===== */&#13;
+&#13;
+input,&#13;
+textarea,&#13;
+select{&#13;
+  border:1px solid var(--line);&#13;
+  border-radius:var(--radius-sm);&#13;
+}&#13;
+&#13;
+input:focus,&#13;
+textarea:focus,&#13;
+select:focus{&#13;
+  outline:none;&#13;
+  border-color:var(--forest-600);&#13;
+}&#13;
+&#13;
+/* ===== Navbar/Header ===== */&#13;
+&#13;
+header,&#13;
+.navbar,&#13;
+.now-global-header{&#13;
+  background:var(--forest-900);&#13;
+  color:white;&#13;
+}&#13;
+&#13;
+/* ===== Footer ===== */&#13;
+&#13;
+footer{&#13;
+  background:var(--forest-900);&#13;
+  color:white;&#13;
+}</css>
+        <name>aegis_theme</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 16:04:45</sys_created_on>
+        <sys_id>5295b95ceda743107f446c21b633cfa3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>aegis_theme</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sp_css_5295b95ceda743107f446c21b633cfa3</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 18:44:26</sys_updated_on>
+        <turn_off_scss_compilation>false</turn_off_scss_compilation>
+    </sp_css>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sp_css_5295b95ceda743107f446c21b633cfa3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css"><sp_css action="INSERT_OR_UPDATE"><css>/* ===== AEGIS Careers — Shared Design Tokens ===== */&#13;
+&#13;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap');&#13;
+&#13;
+:root{&#13;
+  --forest-900:#0F241C;&#13;
+  --forest-800:#173A2C;&#13;
+  --forest-700:#20503C;&#13;
+  --forest-600:#2C6A4F;&#13;
+&#13;
+  --cream:#F4EFE3;&#13;
+  --cream-2:#ECE4D2;&#13;
+  --paper:#FFFFFF;&#13;
+&#13;
+  --terracotta:#E2694B;&#13;
+  --terracotta-dark:#C6543A;&#13;
+&#13;
+  --mustard:#E7A83C;&#13;
+  --mustard-dark:#CC8F28;&#13;
+&#13;
+  --ink:#1E241F;&#13;
+  --ink-soft:#5C6459;&#13;
+  --line:#DED5BE;&#13;
+&#13;
+  --radius-lg:28px;&#13;
+  --radius-md:18px;&#13;
+  --radius-sm:10px;&#13;
+&#13;
+  --shadow-card:0 10px 30px -12px rgba(15,36,28,0.18);&#13;
+&#13;
+  /* ServiceNow Theme Variables */&#13;
+  --now-color--primary-1:var(--forest-900);&#13;
+  --now-color--primary-2:var(--forest-800);&#13;
+  --now-color--secondary-1:var(--terracotta);&#13;
+  --now-color--secondary-2:var(--terracotta-dark);&#13;
+}&#13;
+&#13;
+/* ===== Global ===== */&#13;
+&#13;
+body{&#13;
+  background:var(--cream);&#13;
+  color:var(--ink);&#13;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;&#13;
+}&#13;
+&#13;
+/* ===== Headings ===== */&#13;
+&#13;
+h1,h2,h3,h4,h5,h6,&#13;
+.aegis-h{&#13;
+  font-family:'Poppins',sans-serif;&#13;
+  color:var(--forest-900);&#13;
+}&#13;
+&#13;
+/* ===== Cards ===== */&#13;
+&#13;
+.card,&#13;
+.now-card,&#13;
+.sn-card{&#13;
+  background:var(--paper);&#13;
+  border-radius:var(--radius-md);&#13;
+  box-shadow:var(--shadow-card);&#13;
+}&#13;
+&#13;
+/* ===== Links ===== */&#13;
+&#13;
+a{&#13;
+  color:var(--forest-700);&#13;
+}&#13;
+&#13;
+a:hover{&#13;
+  color:var(--terracotta);&#13;
+}&#13;
+&#13;
+/* ===== Primary Button ===== */&#13;
+&#13;
+.aegis-btn-primary,&#13;
+button.btn-primary{&#13;
+  background:var(--terracotta);&#13;
+  color:#fff;&#13;
+  border:none;&#13;
+  border-radius:999px;&#13;
+  padding:12px 22px;&#13;
+  font-weight:600;&#13;
+  cursor:pointer;&#13;
+}&#13;
+&#13;
+.aegis-btn-primary:hover,&#13;
+button.btn-primary:hover{&#13;
+  background:var(--terracotta-dark);&#13;
+}&#13;
+&#13;
+/* ===== Dark Button ===== */&#13;
+&#13;
+.aegis-btn-dark{&#13;
+  background:var(--forest-900);&#13;
+  color:#fff;&#13;
+  border:none;&#13;
+  border-radius:999px;&#13;
+  padding:13px 24px;&#13;
+  font-weight:600;&#13;
+}&#13;
+&#13;
+.aegis-btn-dark:hover{&#13;
+  background:var(--forest-800);&#13;
+}&#13;
+&#13;
+/* ===== Outline Button ===== */&#13;
+&#13;
+.aegis-btn-outline{&#13;
+  background:transparent;&#13;
+  color:var(--forest-900);&#13;
+  border:1.5px solid var(--forest-900);&#13;
+  border-radius:999px;&#13;
+  padding:11px 22px;&#13;
+  font-weight:600;&#13;
+}&#13;
+&#13;
+.aegis-btn-outline:hover{&#13;
+  background:var(--forest-900);&#13;
+  color:#fff;&#13;
+}&#13;
+&#13;
+/* ===== Inputs ===== */&#13;
+&#13;
+input,&#13;
+textarea,&#13;
+select{&#13;
+  border:1px solid var(--line);&#13;
+  border-radius:var(--radius-sm);&#13;
+}&#13;
+&#13;
+input:focus,&#13;
+textarea:focus,&#13;
+select:focus{&#13;
+  outline:none;&#13;
+  border-color:var(--forest-600);&#13;
+}&#13;
+&#13;
+/* ===== Navbar/Header ===== */&#13;
+&#13;
+header,&#13;
+.navbar,&#13;
+.now-global-header{&#13;
+  background:var(--forest-900);&#13;
+  color:white;&#13;
+}&#13;
+&#13;
+/* ===== Footer ===== */&#13;
+&#13;
+footer{&#13;
+  background:var(--forest-900);&#13;
+  color:white;&#13;
+}</css><name>aegis_theme</name><sys_class_name>sp_css</sys_class_name><sys_created_by>DEEPTHI</sys_created_by><sys_created_on>2026-09-21 16:04:45</sys_created_on><sys_id>5295b95ceda743107f446c21b633cfa3</sys_id><sys_mod_count>1</sys_mod_count><sys_name>aegis_theme</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sp_css_5295b95ceda743107f446c21b633cfa3</sys_update_name><sys_updated_by>DEEPTHI</sys_updated_by><sys_updated_on>2026-09-21 18:44:26</sys_updated_on><turn_off_scss_compilation>false</turn_off_scss_compilation></sp_css></record_update>]]></payload>
+        <payload_hash>-2076210051</payload_hash>
+        <record_name>aegis_theme</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 18:44:27</sys_created_on>
+        <sys_id>ab3ad618edeb43107f446c21b633cf9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c548a2f30000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 18:44:27</sys_updated_on>
+        <type>Style Sheet</type>
+        <update_guid>eb3ad61813eb431049d98307fc5b4499</update_guid>
+        <update_guid_history>eb3ad61813eb431049d98307fc5b4499:-2076210051,a4b57d5c3ba74310a0a3a9f9d55a55f3:950350356</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="aegis_theme">afce3f91f4a303107f4473c8b3ef4c71</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-25 04:37:44</sys_created_on>
+        <sys_db_object display_value="" name="sp_css">sp_css</sys_db_object>
+        <sys_id>8a8f897160c14337b388ae8e41c94fb1</sys_id>
+        <sys_metadata>5295b95ceda743107f446c21b633cfa3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>aegis_theme</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sp_css_5295b95ceda743107f446c21b633cfa3</sys_update_name>
+        <sys_update_version display_value="sp_css_5295b95ceda743107f446c21b633cfa3">ab3ad618edeb43107f446c21b633cf9a</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-25 04:37:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

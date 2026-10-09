@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_aegis.AEGISResumeScorer</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description> Deterministic scoring engine for resume-to-requisition matching.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>AEGISResumeScorer</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AEGISResumeScorer = Class.create();
+AEGISResumeScorer.prototype = {
+    initialize: function() {},
+
+    /**
+     * Weights: Skills 30%, Experience 25%, Projects 20%, Certifications 15%, Education 10%
+     *
+     * KNOWN SIMPLIFICATIONS (documented by design for hackathon scope):
+     * - If requiredCertsCount=0 is passed, all candidates score 100% on certifications.
+     * - If educationMatchLevel='exact' is passed, all candidates score 100% on education.
+     * - Projects scoring caps at 5 projects = 100%.
+     * To fully implement, add required_certifications and education_level fields to requisition.
+     */
+    PROJECTS_CAP: 5,
+
+    calculateFitScore: function(matchedSkillsCount, totalRequiredSkills,
+                                candidateExpYears, requiredExpYears,
+                                relevantProjectsCount, matchingCertsCount,
+                                requiredCertsCount, educationMatchLevel) {
+
+        var skills_score = totalRequiredSkills > 0
+            ? Math.min((matchedSkillsCount / totalRequiredSkills) * 100, 100) : 0;
+
+        var experience_score;
+        if (requiredExpYears <= 0) experience_score = 100;
+        else if (candidateExpYears >= requiredExpYears) experience_score = 100;
+        else experience_score = (candidateExpYears / requiredExpYears) * 100;
+
+        var projects_score = Math.min((relevantProjectsCount / this.PROJECTS_CAP) * 100, 100);
+
+        var certifications_score;
+        if (requiredCertsCount <= 0) certifications_score = 100;
+        else certifications_score = Math.min((matchingCertsCount / requiredCertsCount) * 100, 100);
+
+        var education_score;
+        switch (educationMatchLevel) {
+            case 'exact':     education_score = 100; break;
+            case 'one_below': education_score = 70;  break;
+            case 'two_below': education_score = 40;  break;
+            default:          education_score = 20;
+        }
+
+        var fit_score = (skills_score * 0.30) + (experience_score * 0.25) +
+                        (projects_score * 0.20) + (certifications_score * 0.15) +
+                        (education_score * 0.10);
+
+        return {
+            fit_score:             Math.round(fit_score * 100) / 100,
+            skills_score:          Math.round(skills_score * 100) / 100,
+            experience_score:      Math.round(experience_score * 100) / 100,
+            projects_score:        Math.round(projects_score * 100) / 100,
+            certifications_score:  Math.round(certifications_score * 100) / 100,
+            education_score:       Math.round(education_score * 100) / 100
+        };
+    },
+
+    generateExplanation: function(scoreResult, matchedSkills, missingSkills) {
+        var classification;
+        if (scoreResult.fit_score >= 70) classification = 'RECOMMENDED FOR SHORTLISTING';
+        else if (scoreResult.fit_score >= 40) classification = 'REQUIRES RECRUITER REVIEW';
+        else classification = 'BELOW THRESHOLD';
+
+        return 'Candidate scored ' + scoreResult.fit_score + '/100. ' +
+               'Skills match: ' + (matchedSkills || 'N/A') + '. ' +
+               'Missing: ' + (missingSkills || 'None') + '. ' +
+               'Factor scores — Skills: ' + scoreResult.skills_score +
+               ', Experience: ' + scoreResult.experience_score +
+               ', Projects: ' + scoreResult.projects_score +
+               ', Certifications: ' + scoreResult.certifications_score +
+               ', Education: ' + scoreResult.education_score + '. ' +
+               'Classification: ' + classification + '.';
+    },
+
+    matchSkills: function(candidateSkills, requiredSkills) {
+        var candArr = (candidateSkills || '').split(',').map(function(s) {
+            return s.trim().toLowerCase();
+        }).filter(function(s) { return s.length > 0; });
+
+        var reqArr = (requiredSkills || '').split(',').map(function(s) {
+            return s.trim().toLowerCase();
+        }).filter(function(s) { return s.length > 0; });
+
+        var matched = [];
+        var missing = [];
+
+        for (var i = 0; i < reqArr.length; i++) {
+            var found = false;
+            for (var j = 0; j < candArr.length; j++) {
+                if (candArr[j].indexOf(reqArr[i]) !== -1 || reqArr[i].indexOf(candArr[j]) !== -1) {
+                    found = true;
+                    break;
+                }
+            }
+            if (found) matched.push(reqArr[i]);
+            else missing.push(reqArr[i]);
+        }
+
+        return {
+            matched: matched,
+            missing: missing,
+            matchedCount: matched.length,
+            totalRequired: reqArr.length
+        };
+    },
+
+    type: 'AEGISResumeScorer'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-18 16:47:40</sys_created_on>
+        <sys_id>e8f16293295303107f44fb98a901a965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGISResumeScorer</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_script_include_e8f16293295303107f44fb98a901a965</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-18 16:47:40</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_script_include_e8f16293295303107f44fb98a901a965</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_snc_aegis.AEGISResumeScorer&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt; Deterministic scoring engine for resume-to-requisition matching.&lt;/description&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;AEGISResumeScorer&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var AEGISResumeScorer = Class.create();
+AEGISResumeScorer.prototype = {
+    initialize: function() {},
+
+    /**
+     * Weights: Skills 30%, Experience 25%, Projects 20%, Certifications 15%, Education 10%
+     *
+     * KNOWN SIMPLIFICATIONS (documented by design for hackathon scope):
+     * - If requiredCertsCount=0 is passed, all candidates score 100% on certifications.
+     * - If educationMatchLevel='exact' is passed, all candidates score 100% on education.
+     * - Projects scoring caps at 5 projects = 100%.
+     * To fully implement, add required_certifications and education_level fields to requisition.
+     */
+    PROJECTS_CAP: 5,
+
+    calculateFitScore: function(matchedSkillsCount, totalRequiredSkills,
+                                candidateExpYears, requiredExpYears,
+                                relevantProjectsCount, matchingCertsCount,
+                                requiredCertsCount, educationMatchLevel) {
+
+        var skills_score = totalRequiredSkills &gt; 0
+            ? Math.min((matchedSkillsCount / totalRequiredSkills) * 100, 100) : 0;
+
+        var experience_score;
+        if (requiredExpYears &lt;= 0) experience_score = 100;
+        else if (candidateExpYears &gt;= requiredExpYears) experience_score = 100;
+        else experience_score = (candidateExpYears / requiredExpYears) * 100;
+
+        var projects_score = Math.min((relevantProjectsCount / this.PROJECTS_CAP) * 100, 100);
+
+        var certifications_score;
+        if (requiredCertsCount &lt;= 0) certifications_score = 100;
+        else certifications_score = Math.min((matchingCertsCount / requiredCertsCount) * 100, 100);
+
+        var education_score;
+        switch (educationMatchLevel) {
+            case 'exact':     education_score = 100; break;
+            case 'one_below': education_score = 70;  break;
+            case 'two_below': education_score = 40;  break;
+            default:          education_score = 20;
+        }
+
+        var fit_score = (skills_score * 0.30) + (experience_score * 0.25) +
+                        (projects_score * 0.20) + (certifications_score * 0.15) +
+                        (education_score * 0.10);
+
+        return {
+            fit_score:             Math.round(fit_score * 100) / 100,
+            skills_score:          Math.round(skills_score * 100) / 100,
+            experience_score:      Math.round(experience_score * 100) / 100,
+            projects_score:        Math.round(projects_score * 100) / 100,
+            certifications_score:  Math.round(certifications_score * 100) / 100,
+            education_score:       Math.round(education_score * 100) / 100
+        };
+    },
+
+    generateExplanation: function(scoreResult, matchedSkills, missingSkills) {
+        var classification;
+        if (scoreResult.fit_score &gt;= 70) classification = 'RECOMMENDED FOR SHORTLISTING';
+        else if (scoreResult.fit_score &gt;= 40) classification = 'REQUIRES RECRUITER REVIEW';
+        else classification = 'BELOW THRESHOLD';
+
+        return 'Candidate scored ' + scoreResult.fit_score + '/100. ' +
+               'Skills match: ' + (matchedSkills || 'N/A') + '. ' +
+               'Missing: ' + (missingSkills || 'None') + '. ' +
+               'Factor scores — Skills: ' + scoreResult.skills_score +
+               ', Experience: ' + scoreResult.experience_score +
+               ', Projects: ' + scoreResult.projects_score +
+               ', Certifications: ' + scoreResult.certifications_score +
+               ', Education: ' + scoreResult.education_score + '. ' +
+               'Classification: ' + classification + '.';
+    },
+
+    matchSkills: function(candidateSkills, requiredSkills) {
+        var candArr = (candidateSkills || '').split(',').map(function(s) {
+            return s.trim().toLowerCase();
+        }).filter(function(s) { return s.length &gt; 0; });
+
+        var reqArr = (requiredSkills || '').split(',').map(function(s) {
+            return s.trim().toLowerCase();
+        }).filter(function(s) { return s.length &gt; 0; });
+
+        var matched = [];
+        var missing = [];
+
+        for (var i = 0; i &lt; reqArr.length; i++) {
+            var found = false;
+            for (var j = 0; j &lt; candArr.length; j++) {
+                if (candArr[j].indexOf(reqArr[i]) !== -1 || reqArr[i].indexOf(candArr[j]) !== -1) {
+                    found = true;
+                    break;
+                }
+            }
+            if (found) matched.push(reqArr[i]);
+            else missing.push(reqArr[i]);
+        }
+
+        return {
+            matched: matched,
+            missing: missing,
+            matchedCount: matched.length,
+            totalRequired: reqArr.length
+        };
+    },
+
+    type: 'AEGISResumeScorer'
+};
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-18 16:47:40&lt;/sys_created_on&gt;&lt;sys_id&gt;e8f16293295303107f44fb98a901a965&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGISResumeScorer&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_e8f16293295303107f44fb98a901a965&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-18 16:47:40&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-942579025</payload_hash>
+        <record_name>AEGISResumeScorer</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-18 16:47:40</sys_created_on>
+        <sys_id>40c26ad3295303107f44fb98a901a900</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0b56aa7170000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-18 16:47:40</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>40c22ad322530310be35c0d0338a52ff</update_guid>
+        <update_guid_history>40c22ad322530310be35c0d0338a52ff:-942579025</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-18 20:52:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>3c25b3fc6e4c480bafd5c083b4311d99</sys_id>
+        <sys_metadata>e8f16293295303107f44fb98a901a965</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGISResumeScorer</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_script_include_e8f16293295303107f44fb98a901a965</sys_update_name>
+        <sys_update_version display_value="sys_script_include_e8f16293295303107f44fb98a901a965">40c26ad3295303107f44fb98a901a900</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-18 20:52:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

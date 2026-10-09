@@ -16,6 +16,6 @@
         <sys_update_name>sn_aia_usecase_config_override_42cbf06439ab03107f44646bfeef98ed</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-09-22 06:30:12</sys_updated_on>
-        <usecase_configuration display_value="AEGIS Feedback Synthesizer">670bb0e039ab03107f44646bfeef983c</usecase_configuration>
+        <usecase_configuration/>
     </sn_aia_usecase_config_override>
 </record_update>

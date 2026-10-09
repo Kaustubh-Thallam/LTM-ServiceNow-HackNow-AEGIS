@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 14:58:38</sys_created_on>
+        <sys_id>3c30414f05db43107f44294ed7486a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_aegis_interview.x_snc_aegis.interview_user</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_security_acl display_value="x_snc_aegis_interview">3030014f05db43107f44294ed7486aec</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_3c30414f05db43107f44294ed7486a01</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 14:58:38</sys_updated_on>
+        <sys_user_role display_value="x_snc_aegis.interview_user" name="x_snc_aegis.interview_user">a430014f05db43107f44294ed7486a79</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_security_acl_role_3c30414f05db43107f44294ed7486a01</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-17 14:58:38</sys_created_on><sys_id>3c30414f05db43107f44294ed7486a01</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_snc_aegis_interview.x_snc_aegis.interview_user</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_security_acl display_value="x_snc_aegis_interview">3030014f05db43107f44294ed7486aec</sys_security_acl><sys_update_name>sys_security_acl_role_3c30414f05db43107f44294ed7486a01</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-17 14:58:38</sys_updated_on><sys_user_role display_value="x_snc_aegis.interview_user" name="x_snc_aegis.interview_user">a430014f05db43107f44294ed7486a79</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1702575531</payload_hash>
+        <record_name>x_snc_aegis_interview.x_snc_aegis.interview_user</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 14:58:38</sys_created_on>
+        <sys_id>f030414f05db43107f44294ed7486a0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0afe0775f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 14:58:38</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>f430414fcddb431000951c48faacdb0c</update_guid>
+        <update_guid_history>f430414fcddb431000951c48faacdb0c:1702575531</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_snc_aegis_interview.x_snc_aegis.interview_user">dc50854f05db43107f44294ed7486ad9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 14:59:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>3426481f66474f2a8aa6fd8aab545504</sys_id>
+        <sys_metadata>3c30414f05db43107f44294ed7486a01</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_aegis_interview.x_snc_aegis.interview_user</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent display_value="">3030014f05db43107f44294ed7486aec</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_3c30414f05db43107f44294ed7486a01</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_3c30414f05db43107f44294ed7486a01">f030414f05db43107f44294ed7486a0d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 14:59:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

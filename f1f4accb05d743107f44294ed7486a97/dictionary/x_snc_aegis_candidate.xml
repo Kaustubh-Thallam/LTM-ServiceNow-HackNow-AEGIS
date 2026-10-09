@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="7849f08f059b43107f44294ed7486ab5" label="Candidate" max_length="40" name="x_snc_aegis_candidate" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="PENDING" label="Consent status" mandatory="true" max_length="40" name="consent_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Granted" sequence="1" value="GRANTED"/>
+                <element inactive_on_update="false" label="Withdrawn" sequence="2" value="WITHDRAWN"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="PENDING"/>
+            </choice>
+        </element>
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Relevant projects" max_length="40" name="relevant_projects" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Phone" max_length="40" name="phone" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="HIGH_SCHOOL" label="Education level" max_length="100" name="education_level" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Masters" sequence="300" value="MASTERS"/>
+                <element inactive_on_update="false" label="Doctorate" sequence="400" value="DOCTORATE"/>
+                <element inactive_on_update="false" label="Bachelors" sequence="200" value="BACHELORS"/>
+                <element inactive_on_update="false" label="High School" sequence="100" value="HIGH_SCHOOL"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" mandatory="true" max_length="150" name="email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Full name" mandatory="true" max_length="150" name="full_name" type="string"/>
+        <element attributes="encode_utf8=false" label="User record" max_length="32" name="user_record" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user_record"/>
+        </index>
+    </element>
+</database>

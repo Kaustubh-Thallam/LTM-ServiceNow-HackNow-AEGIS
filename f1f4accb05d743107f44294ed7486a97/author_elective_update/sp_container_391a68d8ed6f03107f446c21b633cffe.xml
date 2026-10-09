@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <aria_label/>
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>AEGIS Job Listings - Container 1</name>
+        <order>1</order>
+        <semantic_tag/>
+        <sp_page display_value="aegis_job_listings">2b952c50ed6f03107f446c21b633cfde</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 10:34:27</sys_created_on>
+        <sys_id>391a68d8ed6f03107f446c21b633cffe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Job Listings - Container 1</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sp_container_391a68d8ed6f03107f446c21b633cffe</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 10:34:27</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sp_container_391a68d8ed6f03107f446c21b633cffe</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><aria_label/><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>AEGIS Job Listings - Container 1</name><order>1</order><semantic_tag/><sp_page display_value="aegis_job_listings">2b952c50ed6f03107f446c21b633cfde</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>DEEPTHI</sys_created_by><sys_created_on>2026-09-21 10:34:27</sys_created_on><sys_id>391a68d8ed6f03107f446c21b633cffe</sys_id><sys_mod_count>0</sys_mod_count><sys_name>AEGIS Job Listings - Container 1</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sp_container_391a68d8ed6f03107f446c21b633cffe</sys_update_name><sys_updated_by>DEEPTHI</sys_updated_by><sys_updated_on>2026-09-21 10:34:27</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>1382766507</payload_hash>
+        <record_name>AEGIS Job Listings - Container 1</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 10:34:27</sys_created_on>
+        <sys_id>b11aa8d8ed6f03107f446c21b633cf02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c38807b60000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 10:34:27</sys_updated_on>
+        <type>Container</type>
+        <update_guid>351aa8d82a6f031073a017ea3d3d5401</update_guid>
+        <update_guid_history>351aa8d82a6f031073a017ea3d3d5401:1382766507</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AEGIS Job Listings - Container 1">c5f8fdd0ede743107f446c21b633cfdf</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 16:19:01</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>a02ab0f8b7e847c2b9f9e7f6d5524cc4</sys_id>
+        <sys_metadata>391a68d8ed6f03107f446c21b633cffe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Job Listings - Container 1</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sp_container_391a68d8ed6f03107f446c21b633cffe</sys_update_name>
+        <sys_update_version display_value="sp_container_391a68d8ed6f03107f446c21b633cffe">b11aa8d8ed6f03107f446c21b633cf02</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 16:19:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

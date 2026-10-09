@@ -48,7 +48,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-17 14:03:34</sys_created_on>
-        <sys_id>5693fc4f055b43107f44294ed7486acc</sys_id>
         <sys_name>Education required</sys_name>
         <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
         <sys_policy/>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="7ad4f74f855303107f446d73c9814ad1" label="Screening Result" max_length="40" name="x_snc_aegis_screening_result" type="collection">
+        <element attributes="encode_utf8=false" label="Candidate" mandatory="true" max_length="32" name="candidate" reference="x_snc_aegis_candidate" type="reference"/>
+        <element attributes="encode_utf8=false" label="Requisition" mandatory="true" max_length="32" name="requisition" reference="x_snc_aegis_job_requisition" type="reference"/>
+        <element default="True" label="Is blind scored" max_length="255" name="is_blind_scored" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Missing skills" max_length="4000" name="missing_skills" type="string"/>
+        <element label="Projects score" max_length="15" name="projects_score" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="PENDING" label="Screening status" mandatory="true" max_length="40" name="screening_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Error" sequence="2" value="ERROR"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="PENDING"/>
+                <element inactive_on_update="false" label="Completed" sequence="1" value="COMPLETED"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Screened at" mandatory="true" max_length="40" name="screened_at" type="glide_date_time" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Matched skills" mandatory="true" max_length="4000" name="matched_skills" type="string"/>
+        <element label="Education score" max_length="15" name="education_score" type="decimal"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" mandatory="true" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Explanation" mandatory="true" max_length="4000" name="explanation" type="string"/>
+        <element label="Certifications score" max_length="15" name="certifications_score" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Transferable skills" mandatory="true" max_length="4000" name="transferable_skills" type="string"/>
+        <element label="Fit score" mandatory="true" max_length="15" name="fit_score" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Scoring agent" mandatory="true" max_length="100" name="scoring_agent" type="string"/>
+        <element label="Skills score" max_length="15" name="skills_score" type="decimal"/>
+        <element attributes="encode_utf8=false" label="Application" mandatory="true" max_length="32" name="application" reference="x_snc_aegis_application" type="reference"/>
+        <element label="Experience score" max_length="15" name="experience_score" type="decimal"/>
+        <index name="index">
+            <element name="candidate"/>
+        </index>
+        <index name="index2">
+            <element name="requisition"/>
+        </index>
+        <index name="index3">
+            <element name="application"/>
+        </index>
+    </element>
+</database>

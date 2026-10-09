@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_trigger_template">
+    <sys_hub_trigger_template action="INSERT_OR_UPDATE">
+        <accessible_from>public</accessible_from>
+        <active>true</active>
+        <annotation/>
+        <attributes/>
+        <category display_value="Record">8886dd64c3d322002841b63b12d3aed4</category>
+        <comment/>
+        <description/>
+        <designer_source display_value="Workflow Studio">a1fb8738ff0032108282ffffffffff37</designer_source>
+        <name>Approval state set to Pending Approval</name>
+        <order>0</order>
+        <published_trigger_id>74cb07824a778310f5edc4cba25fd145</published_trigger_id>
+        <source_trigger/>
+        <state>published</state>
+        <sys_class_name>sys_hub_trigger_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-09 19:05:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f4cb07827d7783107f445046e28c7845</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Approval state set to Pending Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_hub_trigger_template_f4cb07827d7783107f445046e28c7845</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-09 19:05:51</sys_updated_on>
+        <template_properties>{"showAdvancedProperties":"true","showDefinitionConditions":"true","canAddAdditionalConditions":"true"}</template_properties>
+        <trigger_category/>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_values>[{"name":"table","label":"Table","type":"table_name","displayValue":"","value":"x_snc_aegis_job_description","readOnly":false,"extendable":false},{"name":"condition","label":"Condition","type":"conditions","displayValue":"","value":"approval_state=PENDING_APPROVAL","readOnly":false,"extendable":false},{"name":"run_on_extended","label":"Run On Extended","type":"choice","displayValue":"Run only on current table","value":"false","readOnly":false,"extendable":false},{"name":"run_flow_in","label":"Run Flow In","type":"choice","displayValue":"any","value":"any","readOnly":false,"extendable":false},{"name":"run_when_user_list","label":"Run When User List","type":"glide_list","displayValue":"","value":"","readOnly":false,"extendable":false},{"name":"run_when_setting","label":"Run When Setting","type":"choice","displayValue":"Run for Both Interactive and Non-Interactive Sessions","value":"both","readOnly":false,"extendable":false},{"name":"run_when_user_setting","label":"Run When User Setting","type":"choice","displayValue":"Run for any user","value":"any","readOnly":false,"extendable":false}]</trigger_values>
+        <type>record_update</type>
+    </sys_hub_trigger_template>
+    <sys_translated_text action="delete_multiple" query="documentkey=f4cb07827d7783107f445046e28c7845"/>
+</record_update>

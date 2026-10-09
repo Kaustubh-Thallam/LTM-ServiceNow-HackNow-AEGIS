@@ -4,7 +4,7 @@
         <hint/>
         <name>Protected Demographic Store</name>
         <order/>
-        <roles>x_snc_aegis.protected_demographic_store_user</roles>
+        <roles/>
         <sys_class_name>sys_ui_application</sys_class_name>
         <sys_created_by>CHAITANYA</sys_created_by>
         <sys_created_on>2026-09-18 09:21:19</sys_created_on>

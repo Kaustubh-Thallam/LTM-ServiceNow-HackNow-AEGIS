@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Job Description">ff8f2047055b43107f44294ed7486a0a</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Job Descriptions</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_snc_aegis_job_description</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_snc_aegis.job_description_user</roles>
+        <route/>
+        <screen/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 13:45:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>338f2047055b43107f44294ed7486a0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Job Descriptions</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_app_module_338f2047055b43107f44294ed7486a0f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 13:45:55</sys_updated_on>
+        <timeline_page/>
+        <title>Job Descriptions</title>
+        <uncancelable>false</uncancelable>
+        <ux_list/>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_app_module_338f2047055b43107f44294ed7486a0f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Job Description">ff8f2047055b43107f44294ed7486a0a</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Job Descriptions</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_snc_aegis_job_description</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>x_snc_aegis.job_description_user</roles><route/><screen/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-17 13:45:55</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>338f2047055b43107f44294ed7486a0f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Job Descriptions</sys_name><sys_overrides/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_app_module_338f2047055b43107f44294ed7486a0f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-17 13:45:55</sys_updated_on><timeline_page/><title>Job Descriptions</title><uncancelable>false</uncancelable><ux_list/><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>356277020</payload_hash>
+        <record_name>Job Descriptions</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 13:45:55</sys_created_on>
+        <sys_id>7f8f2047055b43107f44294ed7486a11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0af9de4170000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 13:45:55</sys_updated_on>
+        <type>Module</type>
+        <update_guid>738f2047125b431088ee45b67b82ab11</update_guid>
+        <update_guid_history>738f2047125b431088ee45b67b82ab11:356277020</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Job Descriptions">45efac47055b43107f44294ed7486abc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 13:47:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>09eb2ba58daf4498b21f449ec16da390</sys_id>
+        <sys_metadata>338f2047055b43107f44294ed7486a0f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Job Descriptions</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_app_module_338f2047055b43107f44294ed7486a0f</sys_update_name>
+        <sys_update_version display_value="sys_app_module_338f2047055b43107f44294ed7486a0f">7f8f2047055b43107f44294ed7486a11</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 13:47:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

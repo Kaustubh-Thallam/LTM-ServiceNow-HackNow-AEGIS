@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_resource_mapping">
+    <sys_one_extend_resource_mapping action="DELETE">
+        <active>true</active>
+        <applicability_condition/>
+        <applicability_condition_expression/>
+        <applicability_condition_table/>
+        <applicability_failed_policy/>
+        <applicability_script><![CDATA[(function(currentInputs, context) {
+ /* customize condition logic here, return true or false */
+  var featureInput = currentInputs; 
+  if (typeof featureInput === "string") {
+ featureInput = JSON.parse(featureInput);
+    }
+
+    var metrics = featureInput && featureInput._meta && featureInput._meta.evaluationDetails && featureInput._meta.evaluationDetails.metrics;
+
+    return metrics && metrics.indexOf("a28f0e067f0202105bc49fbefc8665ec") !== -1; //check for capability id of the metric
+})(currentInputs, context);]]></applicability_script>
+        <applicability_type>script</applicability_type>
+        <depends_on_list>ca99a78ced2703107f446c21b633cfbf</depends_on_list>
+        <error_handler_script><![CDATA[(function handleError() {  
+	// customize condition logic here,  
+	return ;
+})();]]></error_handler_script>
+        <error_policy/>
+        <metadata>{}</metadata>
+        <parent_capability display_value="AEGIS Resume Intelligence">6599a78ced2703107f446c21b633cf4c</parent_capability>
+        <resource_capability display_value="Correctness Metric">a28f0e067f0202105bc49fbefc8665ec</resource_capability>
+        <resource_name>Correctness Metric</resource_name>
+        <sys_class_name>sys_one_extend_resource_mapping</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-09-21 05:52:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3a99e78ced2703107f446c21b633cfa3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Correctness Metric</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_one_extend_resource_mapping_3a99e78ced2703107f446c21b633cfa3</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-09-21 05:52:42</sys_updated_on>
+    </sys_one_extend_resource_mapping>
+    <sys_translated_text action="DELETE" query="documentkey=3a99e78ced2703107f446c21b633cfa3"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_one_extend_resource_mapping_3a99e78ced2703107f446c21b633cfa3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_one_extend_resource_mapping"&gt;&lt;sys_one_extend_resource_mapping action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applicability_condition/&gt;&lt;applicability_condition_expression/&gt;&lt;applicability_condition_table/&gt;&lt;applicability_failed_policy/&gt;&lt;applicability_script&gt;&lt;![CDATA[(function(currentInputs, context) {
+ /* customize condition logic here, return true or false */
+  var featureInput = currentInputs; 
+  if (typeof featureInput === "string") {
+ featureInput = JSON.parse(featureInput);
+    }
+
+    var metrics = featureInput &amp;&amp; featureInput._meta &amp;&amp; featureInput._meta.evaluationDetails &amp;&amp; featureInput._meta.evaluationDetails.metrics;
+
+    return metrics &amp;&amp; metrics.indexOf("a28f0e067f0202105bc49fbefc8665ec") !== -1; //check for capability id of the metric
+})(currentInputs, context);]]&gt;&lt;/applicability_script&gt;&lt;applicability_type&gt;script&lt;/applicability_type&gt;&lt;depends_on_list&gt;ca99a78ced2703107f446c21b633cfbf&lt;/depends_on_list&gt;&lt;error_handler_script&gt;&lt;![CDATA[(function handleError() {  
+	// customize condition logic here,  
+	return ;
+})();]]&gt;&lt;/error_handler_script&gt;&lt;error_policy/&gt;&lt;metadata&gt;{}&lt;/metadata&gt;&lt;parent_capability display_value="AEGIS Resume Intelligence"&gt;6599a78ced2703107f446c21b633cf4c&lt;/parent_capability&gt;&lt;resource_capability display_value="Correctness Metric"&gt;a28f0e067f0202105bc49fbefc8665ec&lt;/resource_capability&gt;&lt;resource_name&gt;Correctness Metric&lt;/resource_name&gt;&lt;sys_class_name&gt;sys_one_extend_resource_mapping&lt;/sys_class_name&gt;&lt;sys_created_by&gt;system&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 05:52:42&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;3a99e78ced2703107f446c21b633cfa3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Correctness Metric&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_one_extend_resource_mapping_3a99e78ced2703107f446c21b633cfa3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-21 05:52:42&lt;/sys_updated_on&gt;&lt;/sys_one_extend_resource_mapping&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=3a99e78ced2703107f446c21b633cfa3"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1909082940</payload_hash>
+        <record_name>Correctness Metric</record_name>
+        <reverted_from/>
+        <source>e37a6e73292503107f44f3a98c18249a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-09-21 05:52:42</sys_created_on>
+        <sys_id>be99e78ced2703107f446c21b633cfa5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c286176b0000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-09-21 05:52:42</sys_updated_on>
+        <type>OneExtend Resource Mapping</type>
+        <update_guid>b299e78c56270310632d6daf9c5e76a5</update_guid>
+        <update_guid_history>b299e78c56270310632d6daf9c5e76a5:1909082940</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-10-03 03:53:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_one_extend_resource_mapping">sys_one_extend_resource_mapping</sys_db_object>
+        <sys_id>2ac09bf2a33049789f17e85a2deeec90</sys_id>
+        <sys_metadata>3a99e78ced2703107f446c21b633cfa3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Correctness Metric</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_one_extend_resource_mapping_3a99e78ced2703107f446c21b633cfa3</sys_update_name>
+        <sys_update_version display_value="sys_one_extend_resource_mapping_3a99e78ced2703107f446c21b633cfa3">be99e78ced2703107f446c21b633cfa5</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-03 03:53:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

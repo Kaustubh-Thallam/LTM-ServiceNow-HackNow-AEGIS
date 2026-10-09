@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>labelCacheCleanUpExecuted=true</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>aegis__f9_closure_communication</internal_name>
+        <label_cache>[{"name":"subflow.application_sys_id","label":"Input➛Application sys ID","reference":null,"reference_display":null,"type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{"b5d8e193-5ec0-41b2-b4cd-2dfb5fc6b99e":[null,"conditions"]},"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":"","uiUniqueId":"91c56a63-5ec0-43d8-916e-8c55a7f81ea0"}},{"name":"undefined","label":null,"reference":null,"reference_display":null,"type":"IF","base_type":"IF","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"":""}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>AEGIS - F9 Closure Communication</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 04:49:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>95b4e8a439a703107f44646bfeef9812</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>AEGIS - F9 Closure Communication</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_hub_flow_95b4e8a439a703107f44646bfeef9812</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 04:59:49</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>e307202439e703107f44646bfeef98f2</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_variable_value action="DELETE" query="document_key=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=95b4e8a439a703107f44646bfeef9812^sys_idNOT IN55b4e8a439a703107f44646bfeef9813"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>95b4e8a439a703107f44646bfeef9812</id>
+        <name>AEGIS - F9 Closure Communication</name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 04:49:24</sys_created_on>
+        <sys_id>55b4e8a439a703107f44646bfeef9813</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 04:49:24</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=55b4e8a439a703107f44646bfeef9813"/>
+    <sys_hub_flow_input action="DELETE" query="model=95b4e8a439a703107f44646bfeef9812^sys_idNOT IN2985e0e839a703107f44646bfeef9864,a585e0e839a703107f44646bfeef985f"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiUniqueId=35d4ac6c-f950-46f3-b155-ccdaed877edb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>feedback_type</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Feedback type</label>
+        <mandatory>true</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="AEGIS - F9 Closure Communication">95b4e8a439a703107f44646bfeef9812</model>
+        <model_id>95b4e8a439a703107f44646bfeef9812</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 04:52:57</sys_created_on>
+        <sys_id>2985e0e839a703107f44646bfeef9864</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 04:52:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=2985e0e839a703107f44646bfeef9864"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiUniqueId=91c56a63-5ec0-43d8-916e-8c55a7f81ea0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>application_sys_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Application sys ID</label>
+        <mandatory>true</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="AEGIS - F9 Closure Communication">95b4e8a439a703107f44646bfeef9812</model>
+        <model_id>95b4e8a439a703107f44646bfeef9812</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 04:52:57</sys_created_on>
+        <sys_id>a585e0e839a703107f44646bfeef985f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 04:52:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=a585e0e839a703107f44646bfeef985f"/>
+    <sys_hub_flow_output action="DELETE" query="model=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=95b4e8a439a703107f44646bfeef9812^sys_idNOT IN79b5286439a703107f44646bfeef98c4"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="AEGIS - F9 Closure Communication">95b4e8a439a703107f44646bfeef9812</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 04:53:47</sys_created_on>
+        <sys_id>79b5286439a703107f44646bfeef98c4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 04:54:40</sys_updated_on>
+        <ui_id>b5d8e193-5ec0-41b2-b4cd-2dfb5fc6b99e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VW227iMBD9FeTnCIVCabdvFVWllXqR2qov3ZXlxA5Ya5Ks7XAp4t93fElCIaWwygOrfYoyM/acmTnH9tsKcYquUJgMwpD0zi8vwrDfD8PhsB+TXhT1h3EURuffUIBSMmUQqTKpsV7mDEwzIorKRlQMJspVLsjy1XtIR2edd7DHEy6oZCm6evsZoJxI2E0zia5WW65D4QgSMQGhz5C78+LwNEC0nyvIkfG4/L/zS0elMZPUQOkHiC00SykDDAkRigVoSlJKdCaXlUUyQh9TURsmPNWwGzLBC8XfIV//zMQlDKqKmfNVv9i3yJmTG6LJs5ZFrAvpQx1YBf1YVWVWjWzouYcfroM6/t3Ek+14yjYX9NbQb8oSUgg9+rucvWNznpmcrsDHXPMMpo76Zi4kEmX5mSim6YObJaoQvjaQzXluPuFcoaDZLDcDNRPy40qeJ9n8qZzGLU8tLu8UWUxE9Ue0ljwqtOnLCiUUJ5wJinkqeGoywdgMfZhgU8iApyTPeTrGucxm3O4KtUy7YwE/3URkc9MLPk67JDaVd4FYpHsL9htrfiWSmy7cwzawODAJJ7DU58MqljzXeM7pmOk6exlFMz0n4leT3zMOl4Oy5aF1gNRSjQRRqm420BT/LkwPXOt997AdlF1iUVxDBTPmG2U4YGUbX+yV7fmWRN2gN/iye34cfXIcAKHswqNhZCdafobKHx1u5jbi4/FxaxydB+co6d3aEXIZtnOENEl8V4JHKXBXWoZq/46yjie+680X7B/svbSGvZpnMGQsmYKWqg3298Iw3FVAL3Dm42RwAJZSBvdk0XmqwDQi9EoAkrKxPZk2ZfC9snoNDFrTwOB0NVAOq/EGKmfW8gV0Kmr4SgiX+19vYU2zOEspNxg3dQBoMKc/ClhMVytVRKakLoAVPCYmGLuI9XpXLUetPU5SB1RVSmq0WVZTqeWrdNt217RB+dRqUVbh6Qqr9cvlVFRz0B2yn2SDqOaT265WzQKrNMaEjbnCG3zflcj1B2ebGrDwSg28eHxbcD3z7W/To8ou23pUhf/no+o0rwsAxAUwBLsRqqyQtpUzHItCWYckqXJ7tXi5/PwDzGrBIasQAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=79b5286439a703107f44646bfeef98c4"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=95b4e8a439a703107f44646bfeef9812^sys_idNOT IN8707202439e703107f44646bfeef984e"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">0b07202439e703107f44646bfeef984d</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="AEGIS - F9 Closure Communication">95b4e8a439a703107f44646bfeef9812</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 04:59:37</sys_created_on>
+        <sys_id>8707202439e703107f44646bfeef984e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 04:59:38</sys_updated_on>
+        <ui_id>d95cc958-f126-4e48-9cd1-fcb62465c9d2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXWvbMBT9K0PPxvijDmveSkphsK2wlr6MYq5lORGTJU8fSb2Q/74rW3ZCl7EMuqe9WUe6955zfGTviXK2c9Y8qhtj+FqS5dfniHDpMXzeE16TJbmGoinSpKB5tsizJMneX6XVIq/SrM6BXS1IRCS0DE9SJWtuuZIIbUE4j+FjzU0noH86InTDRa1ZGNiBxnrLNFnuX21dSkBAxQQeXZ0wOEPK9p2HjNVcrsP6Yyh9mECla08lSyLCXiyTNUMSDQjDItKCrMEq3ZOl1Q4BzaC+l6KfT2y4tKPIFl4M/8F8pyTxJxuGumiwYF6WwZ4Rbm7BAlJx1Do9u6U4ZWZ0pGYNOGFXp9h44L4bVA4lFioxVSvhWvl5NIPMDU7ehjNIgnVeqecehDQPG7X7MrG843JwJWwKRUHMK7DoXeWs57MnTLAWG5UtdB06WnZabflQjFzaeC1wETdC7XCoT10M1BOP0ViI7xC/HeAn0Nyr+IRtsBizYEpDNe8mbcNwcoiI6c1KgDFHjWhu+d15hqPioK0c7fElQ6MbHLxlQcYhCnlvEmjSa5qejxvkZ6JVDsCbhv4CFr+E/t2Y5d/z+5v8p3/If0AuugBF8R/l37erwHBaDl9SnOE/FTjn31yMt7sAzz7AY+/ZbMoNUnj02Ifpv+A3ekwUp6fQTulvnvwRO/wEUclMn2EGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_hub_flow_variable action="DELETE" query="model=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_documentation action="DELETE">
+        <element>feedback_type</element>
+        <help/>
+        <hint/>
+        <label>Feedback type</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 04:52:58</sys_created_on>
+        <sys_id>298564e839a703107f44646bfeef984c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 04:52:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>application_sys_id</element>
+        <help/>
+        <hint/>
+        <label>Application sys ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 04:52:57</sys_created_on>
+        <sys_id>e985e0e839a703107f44646bfeef9862</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 04:52:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_95b4e8a439a703107f44646bfeef9812"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=95b4e8a439a703107f44646bfeef9812"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_hub_flow_95b4e8a439a703107f44646bfeef9812</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;labelCacheCleanUpExecuted=true&lt;/attributes&gt;&lt;authored_on_release_version&gt;29000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;aegis__f9_closure_communication&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"subflow.application_sys_id","label":"Input➛Application sys ID","reference":null,"reference_display":null,"type":"string","base_type":"string","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{"b5d8e193-5ec0-41b2-b4cd-2dfb5fc6b99e":[null,"conditions"]},"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":"","uiUniqueId":"91c56a63-5ec0-43d8-916e-8c55a7f81ea0"}},{"name":"undefined","label":null,"reference":null,"reference_display":null,"type":"IF","base_type":"IF","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"":""}}]&lt;/label_cache&gt;&lt;latest_snapshot/&gt;&lt;master_snapshot/&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;AEGIS - F9 Closure Communication&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 04:49:24&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;95b4e8a439a703107f44646bfeef9812&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS - F9 Closure Communication&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_95b4e8a439a703107f44646bfeef9812&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 04:59:49&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record&gt;e307202439e703107f44646bfeef98f2&lt;/version_record&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=95b4e8a439a703107f44646bfeef9812^sys_idNOT IN55b4e8a439a703107f44646bfeef9813"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;95b4e8a439a703107f44646bfeef9812&lt;/id&gt;&lt;name&gt;AEGIS - F9 Closure Communication&lt;/name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 04:49:24&lt;/sys_created_on&gt;&lt;sys_id&gt;55b4e8a439a703107f44646bfeef9813&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 04:49:24&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=55b4e8a439a703107f44646bfeef9813"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=95b4e8a439a703107f44646bfeef9812^sys_idNOT IN2985e0e839a703107f44646bfeef9864,a585e0e839a703107f44646bfeef985f"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiUniqueId=35d4ac6c-f950-46f3-b155-ccdaed877edb&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;feedback_type&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Feedback type&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;65000&lt;/max_length&gt;&lt;model display_value="AEGIS - F9 Closure Communication"&gt;95b4e8a439a703107f44646bfeef9812&lt;/model&gt;&lt;model_id&gt;95b4e8a439a703107f44646bfeef9812&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 04:52:57&lt;/sys_created_on&gt;&lt;sys_id&gt;2985e0e839a703107f44646bfeef9864&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 04:52:57&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2985e0e839a703107f44646bfeef9864"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiUniqueId=91c56a63-5ec0-43d8-916e-8c55a7f81ea0&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;application_sys_id&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Application sys ID&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;65000&lt;/max_length&gt;&lt;model display_value="AEGIS - F9 Closure Communication"&gt;95b4e8a439a703107f44646bfeef9812&lt;/model&gt;&lt;model_id&gt;95b4e8a439a703107f44646bfeef9812&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 04:52:57&lt;/sys_created_on&gt;&lt;sys_id&gt;a585e0e839a703107f44646bfeef985f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 04:52:57&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a585e0e839a703107f44646bfeef985f"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=95b4e8a439a703107f44646bfeef9812^sys_idNOT IN79b5286439a703107f44646bfeef98c4"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Records"&gt;43400a1587003300663ca1bb36cb0b4b&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="AEGIS - F9 Closure Communication"&gt;95b4e8a439a703107f44646bfeef9812&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 04:53:47&lt;/sys_created_on&gt;&lt;sys_id&gt;79b5286439a703107f44646bfeef98c4&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 04:54:40&lt;/sys_updated_on&gt;&lt;ui_id&gt;b5d8e193-5ec0-41b2-b4cd-2dfb5fc6b99e&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+VW227iMBD9FeTnCIVCabdvFVWllXqR2qov3ZXlxA5Ya5Ks7XAp4t93fElCIaWwygOrfYoyM/acmTnH9tsKcYquUJgMwpD0zi8vwrDfD8PhsB+TXhT1h3EURuffUIBSMmUQqTKpsV7mDEwzIorKRlQMJspVLsjy1XtIR2edd7DHEy6oZCm6evsZoJxI2E0zia5WW65D4QgSMQGhz5C78+LwNEC0nyvIkfG4/L/zS0elMZPUQOkHiC00SykDDAkRigVoSlJKdCaXlUUyQh9TURsmPNWwGzLBC8XfIV//zMQlDKqKmfNVv9i3yJmTG6LJs5ZFrAvpQx1YBf1YVWVWjWzouYcfroM6/t3Ek+14yjYX9NbQb8oSUgg9+rucvWNznpmcrsDHXPMMpo76Zi4kEmX5mSim6YObJaoQvjaQzXluPuFcoaDZLDcDNRPy40qeJ9n8qZzGLU8tLu8UWUxE9Ue0ljwqtOnLCiUUJ5wJinkqeGoywdgMfZhgU8iApyTPeTrGucxm3O4KtUy7YwE/3URkc9MLPk67JDaVd4FYpHsL9htrfiWSmy7cwzawODAJJ7DU58MqljzXeM7pmOk6exlFMz0n4leT3zMOl4Oy5aF1gNRSjQRRqm420BT/LkwPXOt997AdlF1iUVxDBTPmG2U4YGUbX+yV7fmWRN2gN/iye34cfXIcAKHswqNhZCdafobKHx1u5jbi4/FxaxydB+co6d3aEXIZtnOENEl8V4JHKXBXWoZq/46yjie+680X7B/svbSGvZpnMGQsmYKWqg3298Iw3FVAL3Dm42RwAJZSBvdk0XmqwDQi9EoAkrKxPZk2ZfC9snoNDFrTwOB0NVAOq/EGKmfW8gV0Kmr4SgiX+19vYU2zOEspNxg3dQBoMKc/ClhMVytVRKakLoAVPCYmGLuI9XpXLUetPU5SB1RVSmq0WVZTqeWrdNt217RB+dRqUVbh6Qqr9cvlVFRz0B2yn2SDqOaT265WzQKrNMaEjbnCG3zflcj1B2ebGrDwSg28eHxbcD3z7W/To8ou23pUhf/no+o0rwsAxAUwBLsRqqyQtpUzHItCWYckqXJ7tXi5/PwDzGrBIasQAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=79b5286439a703107f44646bfeef98c4"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=95b4e8a439a703107f44646bfeef9812^sys_idNOT IN8707202439e703107f44646bfeef984e"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;0b07202439e703107f44646bfeef984d&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="AEGIS - F9 Closure Communication"&gt;95b4e8a439a703107f44646bfeef9812&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 04:59:37&lt;/sys_created_on&gt;&lt;sys_id&gt;8707202439e703107f44646bfeef984e&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 04:59:38&lt;/sys_updated_on&gt;&lt;ui_id&gt;d95cc958-f126-4e48-9cd1-fcb62465c9d2&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+VVXWvbMBT9K0PPxvijDmveSkphsK2wlr6MYq5lORGTJU8fSb2Q/74rW3ZCl7EMuqe9WUe6955zfGTviXK2c9Y8qhtj+FqS5dfniHDpMXzeE16TJbmGoinSpKB5tsizJMneX6XVIq/SrM6BXS1IRCS0DE9SJWtuuZIIbUE4j+FjzU0noH86InTDRa1ZGNiBxnrLNFnuX21dSkBAxQQeXZ0wOEPK9p2HjNVcrsP6Yyh9mECla08lSyLCXiyTNUMSDQjDItKCrMEq3ZOl1Q4BzaC+l6KfT2y4tKPIFl4M/8F8pyTxJxuGumiwYF6WwZ4Rbm7BAlJx1Do9u6U4ZWZ0pGYNOGFXp9h44L4bVA4lFioxVSvhWvl5NIPMDU7ehjNIgnVeqecehDQPG7X7MrG843JwJWwKRUHMK7DoXeWs57MnTLAWG5UtdB06WnZabflQjFzaeC1wETdC7XCoT10M1BOP0ViI7xC/HeAn0Nyr+IRtsBizYEpDNe8mbcNwcoiI6c1KgDFHjWhu+d15hqPioK0c7fElQ6MbHLxlQcYhCnlvEmjSa5qejxvkZ6JVDsCbhv4CFr+E/t2Y5d/z+5v8p3/If0AuugBF8R/l37erwHBaDl9SnOE/FTjn31yMt7sAzz7AY+/ZbMoNUnj02Ifpv+A3ekwUp6fQTulvnvwRO/wEUclMn2EGAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;feedback_type&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Feedback type&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 04:52:58&lt;/sys_created_on&gt;&lt;sys_id&gt;298564e839a703107f44646bfeef984c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 04:52:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;application_sys_id&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Application sys ID&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 04:52:57&lt;/sys_created_on&gt;&lt;sys_id&gt;e985e0e839a703107f44646bfeef9862&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 04:52:57&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=95b4e8a439a703107f44646bfeef9812"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2100212325</payload_hash>
+        <record_name>AEGIS - F9 Closure Communication</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 04:59:49</sys_created_on>
+        <sys_id>4a17242439e703107f44646bfeef98db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c77c06c20000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 04:59:49</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>8a17242493e70310feb0b7dbe65e19da</update_guid>
+        <update_guid_history>8a17242493e70310feb0b7dbe65e19da:2100212325,95f5686c74a70310775c6b9e851e38dd:968856488,14c5e42cf8a70310f6701fac8ca2af0e:-1853589068,8095a8e893a70310eee2f42605b2f9a5:1079201378,d9b4e8a403a70310064831ec20873116:1113066340</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-22 05:47:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>012d0b195ba84ad88003e088b9d51840</sys_id>
+        <sys_metadata>95b4e8a439a703107f44646bfeef9812</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS - F9 Closure Communication</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_95b4e8a439a703107f44646bfeef9812</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_95b4e8a439a703107f44646bfeef9812">4a17242439e703107f44646bfeef98db</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-22 05:47:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

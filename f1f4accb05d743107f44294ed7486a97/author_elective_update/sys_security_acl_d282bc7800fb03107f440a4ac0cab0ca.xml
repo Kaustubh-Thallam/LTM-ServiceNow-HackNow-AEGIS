@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>AEGIS-PANELIST-OWN feedback write</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_snc_aegis_interview_feedback</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[answer = (current.getValue('panellist') == gs.getUserID());]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-05 10:43:59</sys_created_on>
+        <sys_id>d282bc7800fb03107f440a4ac0cab0ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_aegis_interview_feedback</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_security_acl_d282bc7800fb03107f440a4ac0cab0ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-05 10:43:59</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_security_acl_d282bc7800fb03107f440a4ac0cab0ca</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_security_acl"&gt;&lt;sys_security_acl action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;admin_overrides&gt;true&lt;/admin_overrides&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;applies_to/&gt;&lt;condition/&gt;&lt;controlled_by_refs/&gt;&lt;decision_type&gt;allow&lt;/decision_type&gt;&lt;description&gt;AEGIS-PANELIST-OWN feedback write&lt;/description&gt;&lt;local_or_existing&gt;Existing&lt;/local_or_existing&gt;&lt;name&gt;x_snc_aegis_interview_feedback&lt;/name&gt;&lt;operation display_value="write"&gt;write&lt;/operation&gt;&lt;script&gt;&lt;![CDATA[answer = (current.getValue('panellist') == gs.getUserID());]]&gt;&lt;/script&gt;&lt;security_attribute/&gt;&lt;sys_class_name&gt;sys_security_acl&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-05 10:43:59&lt;/sys_created_on&gt;&lt;sys_id&gt;d282bc7800fb03107f440a4ac0cab0ca&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_snc_aegis_interview_feedback&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_security_acl_d282bc7800fb03107f440a4ac0cab0ca&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-05 10:43:59&lt;/sys_updated_on&gt;&lt;type display_value="record"&gt;record&lt;/type&gt;&lt;/sys_security_acl&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>737994708</payload_hash>
+        <record_name>x_snc_aegis_interview_feedback</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-05 10:44:00</sys_created_on>
+        <sys_id>e682bc7800fb03107f440a4ac0cab0ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a10ba9ce3a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-05 10:44:00</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>e682bc789bfb0310c5726628c1f43cec</update_guid>
+        <update_guid_history>e682bc789bfb0310c5726628c1f43cec:737994708</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-10-07 20:35:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>005b4adb6b014986800094323b41aa09</sys_id>
+        <sys_metadata>d282bc7800fb03107f440a4ac0cab0ca</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_aegis_interview_feedback</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent display_value="x_snc_aegis_interview_feedback">701ef787851703107f446d73c9814a25</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_security_acl_d282bc7800fb03107f440a4ac0cab0ca</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_d282bc7800fb03107f440a4ac0cab0ca">e682bc7800fb03107f440a4ac0cab0ed</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-10-07 20:35:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

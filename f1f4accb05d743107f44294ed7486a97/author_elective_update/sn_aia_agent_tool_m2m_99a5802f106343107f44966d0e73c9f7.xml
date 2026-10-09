@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="DELETE">
+        <active>true</active>
+        <agent display_value="Test Agent">34c444ab106343107f44966d0e73c9f7</agent>
+        <description>Getting the record as input is sys_id</description>
+        <display_mode>inline</display_mode>
+        <display_output>true</display_output>
+        <document_status/>
+        <entity>sn_aia_agent</entity>
+        <entity_id>34c444ab106343107f44966d0e73c9f7</entity_id>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"jr_sys_id","value":"","description":"","mandatory":false},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_aegis_job_requisition","displayValue":"Job Requisition"},"query":"sys_id={{jr_sys_id}}","returnFields":[{"name":"sys_id","label":"Sys ID","type":"GUID","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"sys_id","sublabel":"sys_id"},{"name":"interview_dates_and_timings","label":"Interview Dates and Timings","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"interview_dates_and_timings","sublabel":"interview_dates_and_timings"},{"name":"department","label":"Department","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"department","sublabel":"department"},{"name":"hiring_manager","label":"Hiring manager","type":"reference","referenceTable":"sys_user","referenceTableDefaultField":"name","referenceKey":null,"id":"hiring_manager","sublabel":"hiring_manager"},{"name":"nice_to_have_skills","label":"Nice to have skills","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"nice_to_have_skills","sublabel":"nice_to_have_skills"},{"name":"application_deadline","label":"Application deadline","type":"glide_date_time","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"application_deadline","sublabel":"application_deadline"}],"limit":"1","orderBy":"","sortType":""},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Getting JR record</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-01 10:15:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>99a5802f106343107f44966d0e73c9f7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Getting JR record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_99a5802f106343107f44966d0e73c9f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-01 10:18:07</sys_updated_on>
+        <timeout/>
+        <tool display_value="Getting JR record">dda5802f106343107f44966d0e73c9f0</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+        <widgets>db0e858eff62b210f465ffffffffff2c</widgets>
+    </sn_aia_agent_tool_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_aia_agent_tool_m2m_99a5802f106343107f44966d0e73c9f7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="Test Agent">34c444ab106343107f44966d0e73c9f7</agent><description>Getting the record as input is sys_id</description><display_mode>inline</display_mode><display_output>true</display_output><document_status/><entity>sn_aia_agent</entity><entity_id>34c444ab106343107f44966d0e73c9f7</entity_id><execution_mode>autopilot</execution_mode><inputs>[{"name":"jr_sys_id","value":"","description":"","mandatory":false},{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_aegis_job_requisition","displayValue":"Job Requisition"},"query":"sys_id={{jr_sys_id}}","returnFields":[{"name":"sys_id","label":"Sys ID","type":"GUID","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"sys_id","sublabel":"sys_id"},{"name":"interview_dates_and_timings","label":"Interview Dates and Timings","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"interview_dates_and_timings","sublabel":"interview_dates_and_timings"},{"name":"department","label":"Department","type":"choice","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"department","sublabel":"department"},{"name":"hiring_manager","label":"Hiring manager","type":"reference","referenceTable":"sys_user","referenceTableDefaultField":"name","referenceKey":null,"id":"hiring_manager","sublabel":"hiring_manager"},{"name":"nice_to_have_skills","label":"Nice to have skills","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"nice_to_have_skills","sublabel":"nice_to_have_skills"},{"name":"application_deadline","label":"Application deadline","type":"glide_date_time","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"id":"application_deadline","sublabel":"application_deadline"}],"limit":"1","orderBy":"","sortType":""},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs><max_auto_executions>10</max_auto_executions><name>Getting JR record</name><output_transformation_strategy>none</output_transformation_strategy><post_message/><post_processing_script/><pre_message/><pre_run>false</pre_run><requires_text_refined_message>false</requires_text_refined_message><requires_widget_transformation>true</requires_widget_transformation><should_display_refined_message>false</should_display_refined_message><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-10-01 10:15:26</sys_created_on><sys_domain>global</sys_domain><sys_id>99a5802f106343107f44966d0e73c9f7</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Getting JR record</sys_name><sys_overrides/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_99a5802f106343107f44966d0e73c9f7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-01 10:18:07</sys_updated_on><timeout/><tool display_value="Getting JR record">dda5802f106343107f44966d0e73c9f0</tool><tool_attributes>{}</tool_attributes><transformation_instructions/><widgets>db0e858eff62b210f465ffffffffff2c</widgets></sn_aia_agent_tool_m2m></record_update>]]></payload>
+        <payload_hash>574246092</payload_hash>
+        <record_name>Getting JR record</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-01 10:18:07</sys_created_on>
+        <sys_id>68460c6f106343107f44966d0e73c956</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0f6f8ad590000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-01 10:18:07</sys_updated_on>
+        <type>Agent Tool</type>
+        <update_guid>6846886fd7634310c6531ff6b8426a19</update_guid>
+        <update_guid_history>6846886fd7634310c6531ff6b8426a19:574246092,d1a5c02fb4634310dffc8936fba4c447:906380727</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Getting JR record">5617c8ef106343107f44966d0e73c9f3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-01 10:21:47</sys_created_on>
+        <sys_db_object display_value="" name="sn_aia_agent_tool_m2m">sn_aia_agent_tool_m2m</sys_db_object>
+        <sys_id>a642f28be5524c908b3da3bafa725100</sys_id>
+        <sys_metadata>99a5802f106343107f44966d0e73c9f7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Getting JR record</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_aia_agent_tool_m2m_99a5802f106343107f44966d0e73c9f7</sys_update_name>
+        <sys_update_version display_value="sn_aia_agent_tool_m2m_99a5802f106343107f44966d0e73c9f7">68460c6f106343107f44966d0e73c956</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-01 10:21:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

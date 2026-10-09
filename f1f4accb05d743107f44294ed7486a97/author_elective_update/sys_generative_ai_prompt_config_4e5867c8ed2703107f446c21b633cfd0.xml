@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config">
+    <sys_generative_ai_prompt_config action="DELETE">
+        <ai_config display_value="OneExtend Capability Definition: AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)">865867c8ed2703107f446c21b633cfcf</ai_config>
+        <definition display_value="AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)">34675f88ed6303107f446c21b633cfd3</definition>
+        <filter_properties>{}</filter_properties>
+        <filter_type>default</filter_type>
+        <is_default>false</is_default>
+        <order>0</order>
+        <sys_class_name>sys_generative_ai_prompt_config</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 05:47:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4e5867c8ed2703107f446c21b633cfd0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>865867c8ed2703107f446c21b633cfcf</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_generative_ai_prompt_config_4e5867c8ed2703107f446c21b633cfd0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:10:22</sys_updated_on>
+    </sys_generative_ai_prompt_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_generative_ai_prompt_config_4e5867c8ed2703107f446c21b633cfd0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config"><sys_generative_ai_prompt_config action="INSERT_OR_UPDATE"><ai_config display_value="OneExtend Capability Definition: AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)">865867c8ed2703107f446c21b633cfcf</ai_config><definition display_value="AEGIS JD Architect V2 (AWS Claude - Amazon Bedrock Chat Completions)">34675f88ed6303107f446c21b633cfd3</definition><filter_properties>{}</filter_properties><filter_type>default</filter_type><is_default>false</is_default><order>0</order><sys_class_name>sys_generative_ai_prompt_config</sys_class_name><sys_created_by>DEEPTHI</sys_created_by><sys_created_on>2026-09-21 05:47:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>4e5867c8ed2703107f446c21b633cfd0</sys_id><sys_mod_count>2</sys_mod_count><sys_name>865867c8ed2703107f446c21b633cfcf</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_generative_ai_prompt_config_4e5867c8ed2703107f446c21b633cfd0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-23 14:10:22</sys_updated_on></sys_generative_ai_prompt_config></record_update>]]></payload>
+        <payload_hash>-1601831050</payload_hash>
+        <record_name>865867c8ed2703107f446c21b633cfcf</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 14:10:22</sys_created_on>
+        <sys_id>5cbea7fce4a343107f44705ba96fab83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ce9a6d060000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:10:22</sys_updated_on>
+        <type>Generative AI Prompt Config</type>
+        <update_guid>9cbea7fc9ba34310f17e218904f3cb82</update_guid>
+        <update_guid_history>9cbea7fc9ba34310f17e218904f3cb82:-1601831050,8987be749f2f031076f1c79ba63dc5d1:-1588852111,465867c895270310fbb426b9ecc610d3:-206573218</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 20:58:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_generative_ai_prompt_config">sys_generative_ai_prompt_config</sys_db_object>
+        <sys_id>08f5b89e82b64dcc805a963893fc8684</sys_id>
+        <sys_metadata>4e5867c8ed2703107f446c21b633cfd0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>865867c8ed2703107f446c21b633cfcf</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_generative_ai_prompt_config_4e5867c8ed2703107f446c21b633cfd0</sys_update_name>
+        <sys_update_version display_value="sys_generative_ai_prompt_config_4e5867c8ed2703107f446c21b633cfd0">5cbea7fce4a343107f44705ba96fab83</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 20:58:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

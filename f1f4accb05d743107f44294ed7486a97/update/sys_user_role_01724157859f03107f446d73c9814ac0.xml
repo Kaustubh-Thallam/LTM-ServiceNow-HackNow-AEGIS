@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Manages job requisitions, candidates, applications, screening results, interviews, and hiring workflows.</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>QYAafo29eNF8ZZuFjYfsArDLGmV0hGwtScsEugiJNh8=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_aegis.recruiter</name>

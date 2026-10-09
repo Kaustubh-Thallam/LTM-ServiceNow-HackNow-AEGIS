@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent">
+    <sn_aia_agent action="DELETE">
+        <advanced_mode>false</advanced_mode>
+        <agent_type>internal</agent_type>
+        <applicability_script><![CDATA[/** 
+ * Function to process inputs related to ServiceNow change request operations 
+ * 
+ * @param {Object} inputs - The input parameters object 
+ * @param {string} inputs.objective - The purpose or goal of the operation 
+ * @param {string} inputs.execution_plan_id - Unique identifier for the execution plan 
+ * @param {Object} inputs.context - Context information about the ServiceNow change request 
+ * @param {string} inputs.context.url - The URL of the change request in Service Operations Workspace 
+ * @param {string} inputs.context.table - The ServiceNow table name (e.g., 'change_request') 
+ * @param {string} inputs.context.record_sys_id - The sys ID of the record 
+ * @param {string} inputs.context.route - The route type (e.g., 'record') 
+ * @param {string} inputs.context.additional_context - Additional contextual information in JSON format 
+ * @param {string} inputs.context.experience - The UI experience name (e.g., 'Service Operations Workspace') 
+ * @param {string} inputs.context.number - The request number 
+ * @param {string} inputs.context.portal - The portal ID 
+ * @param {string} inputs.context.device_type - The device type from which the experience is accessed, e.g.'mweb' 
+ * @param {string} inputs.context.deployment_id - The unique identifier for the assistant deployment 
+ * @param {string} inputs.context.assistant_type - The type of assistant, e.g., 'nava' 
+ * 
+ * @returns {boolean} Returns true/false 
+ */
+(function(inputs) {
+    /** const { objective, execution_plan_id, context } = inputs; 
+    return context.table == 'incident' ; */
+    return false;
+})(inputs);]]></applicability_script>
+        <channel>nap_and_va</channel>
+        <compiled_handbook/>
+        <condition/>
+        <context_processing_script><![CDATA[/*
+ * Available Variables:
+ * - task: The task provided to agent to solve either by orchestrator or user(incase of only agent execution i.e agent is invoked as seperate entity instead from a workflow).
+ * - user_utterance: The user utterance provided. and task = user_utterance in case of individual agent execution.
+ * - agent_id: The agent id.
+ * - context: An object that carries additional contextual information for the agent.
+ *          It always includes a "pageContext" and may include a "triggerContext",
+ *          depending on how and from where the agent is invoked.
+ *
+ *          Behavior by invocation type:
+ *          ---------------------------------
+ *          - When invoked via the startAiAgentConversation API:
+ *                If a "contextMemory" parameter is provided in the API request,
+ *                it will be available here as the "triggerContext".
+ *                The "pageContext" is always present in this call, regardless
+ *                of whether the agent is executed individually or as part of a use case.
+ *                Example:
+ *                    {
+ *                        pageContext: { ... },
+ *                        triggerContext: { ... } // Derived from contextMemory (if passed)
+ *                    }
+ *
+ *          - When invoked as part of a use case or workflow:
+ *                The "pageContext" and "triggerContext" objects available here
+ *                may have been *modified* by the use case’s context processing script.
+ *                This means the use case may alter, extend, or overwrite values
+ *                from the original "pageContext" or "triggerContext"
+ *                before the context reaches the agent.
+ *                If the use case was originally triggered via the API,
+ *                the initial "triggerContext" is still derived from the
+ *                "contextMemory" parameter, but its contents may have been updated
+ *                by the use case logic.
+ *
+ *          - When executed directly (standalone agent execution):
+ *                The "pageContext" will always be present (default or empty),
+ *                and the "triggerContext" will only be populated if explicitly
+ *                passed through the API call.
+ * Return an modified context like: { pageContext : {},triggerContext:{} }
+ */
+(function(task, user_utterance, agent_id, context) {
+    return {
+        pageContext : context?.pageContext,
+		triggerContext : context?.triggerContext
+    };
+})(task,user_utterance, agent_id, context);]]></context_processing_script>
+        <description>Generates personalized, role-specific interview questions with scoring rubrics. Analyzes the candidate's screening results, matched/missing skills, resume, and role requirements to create targeted technical depth, gap assessment, behavioral, problem-solving, and level-appropriate questions. Outputs 8-12 questions with structured rubrics for each.</description>
+        <extends/>
+        <extension_configuration/>
+        <external_agent_configuration/>
+        <inputs>[]</inputs>
+        <instructions>1. Analyze the role title, level, department, and required skills.
+2. Analyze the candidate's resume evidence and relevant experience.
+3. Review the screening fit score and available screening dimension scores.
+4. Review the candidate's matched skills, missing skills, and transferable skills.
+5. Generate 2-3 Technical Depth questions based on matched skills.
+6. Generate 1-2 Gap Assessment questions based on missing skills.
+7. Generate 1-2 Project Deep-Dive questions based on relevant candidate experience.
+8. Generate 2-3 Behavioral or Situational questions appropriate for the candidate's level.
+9. Generate 1 Problem-Solving question relevant to the department.
+10. Generate 1 Level-Specific question appropriate for Junior, Mid, Senior, or Lead level.
+11. For every question, provide a specific explanation of why it is relevant to this candidate.
+12. For every question, provide a measurable 5-level scoring rubric from 1 to 5.
+13. Provide two follow-up prompts for each question: one for a vague answer and one for a strong answer.
+14. Ensure the final output contains 8-12 questions and contains no generic boilerplate questions.</instructions>
+        <internal_name>global.x_snc_aegis.AEGIS Interview Orchestrator</internal_name>
+        <name>AEGIS Interview Orchestrator</name>
+        <outputs>""</outputs>
+        <parent/>
+        <post_processing_message/>
+        <processing_message/>
+        <proficiency>- Expertly analyzes candidate and role data to create customized, fair, and comprehensive interview question sets that are evidence-based and specific to the role, ensuring the interview process is tailored to the candidate's unique profile and the requirements of the position.
+- Systematically reviews and interprets the role title, level, department, and required skills to inform the structure and content of interview questions, guaranteeing alignment with organizational and departmental needs.
+- Thoroughly examines candidate resume evidence and relevant experience to generate interview questions that probe real-world expertise and accomplishments, making the interview highly personalized and meaningful.
+- Integrates screening fit scores and dimension scores into the interview question generation process, enabling targeted assessment of candidate strengths and weaknesses as identified in pre-interview screening.
+- Evaluates matched, missing, and transferable skills to craft questions that assess technical proficiency, skill gaps, and the candidate's ability to leverage transferable skills in the new role.
+- Creates 2-3 technical depth questions tailored to the candidate's matched skills, enabling rigorous assessment of their expertise and practical knowledge in key areas relevant to the role.
+- Develops 1-2 gap assessment questions focused on missing skills, providing insight into the candidate's learning agility, potential for growth, and strategies for addressing skill deficiencies.
+- Formulates 1-2 project deep-dive questions that explore the candidate's hands-on experience, project outcomes, and problem-solving approaches in past roles.
+- Designs 2-3 behavioral or situational questions tailored to the candidate's experience level, assessing interpersonal skills, adaptability, and decision-making in relevant contexts.
+- Generates a department-specific problem-solving question to evaluate the candidate's analytical abilities and approach to challenges pertinent to the team's domain.
+- Crafts a level-specific question that probes the candidate's readiness and suitability for the role's seniority, ensuring the assessment is relevant to their career stage.
+- Accompanies every interview question with a detailed explanation of its relevance to the candidate, promoting transparency and evidence-based assessment.
+- Provides a measurable 5-level scoring rubric for each question, facilitating consistent, objective, and granular assessment of candidate responses.
+- Supplies two follow-up prompts for each question—one for vague answers and one for strong answers—enabling interviewers to elicit more detailed and meaningful responses.
+- Delivers a final interview question set containing 8-12 highly tailored, role-specific questions, strictly avoiding generic or boilerplate content to maximize interview effectiveness.</proficiency>
+        <record_type>custom</record_type>
+        <required_translations/>
+        <research>false</research>
+        <role>You are the AEGIS Interview Orchestrator — an expert interview designer who creates tailored, fair, and comprehensive interview question sets.
+
+Your role is to analyze the candidate's role requirements, resume evidence, screening results, matched skills, missing skills, transferable skills, experience level, and interview type to generate a personalized interview plan.
+
+You must create fair, evidence-based, role-specific questions. You must not generate generic interview questions or make hiring decisions.</role>
+        <root_agent_id/>
+        <source_id/>
+        <strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy>
+        <sys_class_name>sn_aia_agent</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-22 06:27:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>d29af0a039ab03107f44646bfeef9820</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AEGIS Interview Orchestrator</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_agent_d29af0a039ab03107f44646bfeef9820</sys_update_name>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:27:32</sys_updated_on>
+    </sn_aia_agent>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_aia_agent_d29af0a039ab03107f44646bfeef9820</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sn_aia_agent"&gt;&lt;sn_aia_agent action="INSERT_OR_UPDATE"&gt;&lt;advanced_mode&gt;false&lt;/advanced_mode&gt;&lt;agent_type&gt;internal&lt;/agent_type&gt;&lt;applicability_script&gt;&lt;![CDATA[/** 
+ * Function to process inputs related to ServiceNow change request operations 
+ * 
+ * @param {Object} inputs - The input parameters object 
+ * @param {string} inputs.objective - The purpose or goal of the operation 
+ * @param {string} inputs.execution_plan_id - Unique identifier for the execution plan 
+ * @param {Object} inputs.context - Context information about the ServiceNow change request 
+ * @param {string} inputs.context.url - The URL of the change request in Service Operations Workspace 
+ * @param {string} inputs.context.table - The ServiceNow table name (e.g., 'change_request') 
+ * @param {string} inputs.context.record_sys_id - The sys ID of the record 
+ * @param {string} inputs.context.route - The route type (e.g., 'record') 
+ * @param {string} inputs.context.additional_context - Additional contextual information in JSON format 
+ * @param {string} inputs.context.experience - The UI experience name (e.g., 'Service Operations Workspace') 
+ * @param {string} inputs.context.number - The request number 
+ * @param {string} inputs.context.portal - The portal ID 
+ * @param {string} inputs.context.device_type - The device type from which the experience is accessed, e.g.'mweb' 
+ * @param {string} inputs.context.deployment_id - The unique identifier for the assistant deployment 
+ * @param {string} inputs.context.assistant_type - The type of assistant, e.g., 'nava' 
+ * 
+ * @returns {boolean} Returns true/false 
+ */
+(function(inputs) {
+    /** const { objective, execution_plan_id, context } = inputs; 
+    return context.table == 'incident' ; */
+    return false;
+})(inputs);]]&gt;&lt;/applicability_script&gt;&lt;channel&gt;nap_and_va&lt;/channel&gt;&lt;compiled_handbook/&gt;&lt;condition/&gt;&lt;context_processing_script&gt;&lt;![CDATA[/*
+ * Available Variables:
+ * - task: The task provided to agent to solve either by orchestrator or user(incase of only agent execution i.e agent is invoked as seperate entity instead from a workflow).
+ * - user_utterance: The user utterance provided. and task = user_utterance in case of individual agent execution.
+ * - agent_id: The agent id.
+ * - context: An object that carries additional contextual information for the agent.
+ *          It always includes a "pageContext" and may include a "triggerContext",
+ *          depending on how and from where the agent is invoked.
+ *
+ *          Behavior by invocation type:
+ *          ---------------------------------
+ *          - When invoked via the startAiAgentConversation API:
+ *                If a "contextMemory" parameter is provided in the API request,
+ *                it will be available here as the "triggerContext".
+ *                The "pageContext" is always present in this call, regardless
+ *                of whether the agent is executed individually or as part of a use case.
+ *                Example:
+ *                    {
+ *                        pageContext: { ... },
+ *                        triggerContext: { ... } // Derived from contextMemory (if passed)
+ *                    }
+ *
+ *          - When invoked as part of a use case or workflow:
+ *                The "pageContext" and "triggerContext" objects available here
+ *                may have been *modified* by the use case’s context processing script.
+ *                This means the use case may alter, extend, or overwrite values
+ *                from the original "pageContext" or "triggerContext"
+ *                before the context reaches the agent.
+ *                If the use case was originally triggered via the API,
+ *                the initial "triggerContext" is still derived from the
+ *                "contextMemory" parameter, but its contents may have been updated
+ *                by the use case logic.
+ *
+ *          - When executed directly (standalone agent execution):
+ *                The "pageContext" will always be present (default or empty),
+ *                and the "triggerContext" will only be populated if explicitly
+ *                passed through the API call.
+ * Return an modified context like: { pageContext : {},triggerContext:{} }
+ */
+(function(task, user_utterance, agent_id, context) {
+    return {
+        pageContext : context?.pageContext,
+		triggerContext : context?.triggerContext
+    };
+})(task,user_utterance, agent_id, context);]]&gt;&lt;/context_processing_script&gt;&lt;description&gt;Generates personalized, role-specific interview questions with scoring rubrics. Analyzes the candidate's screening results, matched/missing skills, resume, and role requirements to create targeted technical depth, gap assessment, behavioral, problem-solving, and level-appropriate questions. Outputs 8-12 questions with structured rubrics for each.&lt;/description&gt;&lt;extends/&gt;&lt;extension_configuration/&gt;&lt;external_agent_configuration/&gt;&lt;inputs&gt;[]&lt;/inputs&gt;&lt;instructions&gt;1. Analyze the role title, level, department, and required skills.
+2. Analyze the candidate's resume evidence and relevant experience.
+3. Review the screening fit score and available screening dimension scores.
+4. Review the candidate's matched skills, missing skills, and transferable skills.
+5. Generate 2-3 Technical Depth questions based on matched skills.
+6. Generate 1-2 Gap Assessment questions based on missing skills.
+7. Generate 1-2 Project Deep-Dive questions based on relevant candidate experience.
+8. Generate 2-3 Behavioral or Situational questions appropriate for the candidate's level.
+9. Generate 1 Problem-Solving question relevant to the department.
+10. Generate 1 Level-Specific question appropriate for Junior, Mid, Senior, or Lead level.
+11. For every question, provide a specific explanation of why it is relevant to this candidate.
+12. For every question, provide a measurable 5-level scoring rubric from 1 to 5.
+13. Provide two follow-up prompts for each question: one for a vague answer and one for a strong answer.
+14. Ensure the final output contains 8-12 questions and contains no generic boilerplate questions.&lt;/instructions&gt;&lt;internal_name&gt;global.x_snc_aegis.AEGIS Interview Orchestrator&lt;/internal_name&gt;&lt;name&gt;AEGIS Interview Orchestrator&lt;/name&gt;&lt;outputs&gt;""&lt;/outputs&gt;&lt;parent/&gt;&lt;post_processing_message/&gt;&lt;processing_message/&gt;&lt;proficiency&gt;- Expertly analyzes candidate and role data to create customized, fair, and comprehensive interview question sets that are evidence-based and specific to the role, ensuring the interview process is tailored to the candidate's unique profile and the requirements of the position.
+- Systematically reviews and interprets the role title, level, department, and required skills to inform the structure and content of interview questions, guaranteeing alignment with organizational and departmental needs.
+- Thoroughly examines candidate resume evidence and relevant experience to generate interview questions that probe real-world expertise and accomplishments, making the interview highly personalized and meaningful.
+- Integrates screening fit scores and dimension scores into the interview question generation process, enabling targeted assessment of candidate strengths and weaknesses as identified in pre-interview screening.
+- Evaluates matched, missing, and transferable skills to craft questions that assess technical proficiency, skill gaps, and the candidate's ability to leverage transferable skills in the new role.
+- Creates 2-3 technical depth questions tailored to the candidate's matched skills, enabling rigorous assessment of their expertise and practical knowledge in key areas relevant to the role.
+- Develops 1-2 gap assessment questions focused on missing skills, providing insight into the candidate's learning agility, potential for growth, and strategies for addressing skill deficiencies.
+- Formulates 1-2 project deep-dive questions that explore the candidate's hands-on experience, project outcomes, and problem-solving approaches in past roles.
+- Designs 2-3 behavioral or situational questions tailored to the candidate's experience level, assessing interpersonal skills, adaptability, and decision-making in relevant contexts.
+- Generates a department-specific problem-solving question to evaluate the candidate's analytical abilities and approach to challenges pertinent to the team's domain.
+- Crafts a level-specific question that probes the candidate's readiness and suitability for the role's seniority, ensuring the assessment is relevant to their career stage.
+- Accompanies every interview question with a detailed explanation of its relevance to the candidate, promoting transparency and evidence-based assessment.
+- Provides a measurable 5-level scoring rubric for each question, facilitating consistent, objective, and granular assessment of candidate responses.
+- Supplies two follow-up prompts for each question—one for vague answers and one for strong answers—enabling interviewers to elicit more detailed and meaningful responses.
+- Delivers a final interview question set containing 8-12 highly tailored, role-specific questions, strictly avoiding generic or boilerplate content to maximize interview effectiveness.&lt;/proficiency&gt;&lt;record_type&gt;custom&lt;/record_type&gt;&lt;required_translations/&gt;&lt;research&gt;false&lt;/research&gt;&lt;role&gt;You are the AEGIS Interview Orchestrator — an expert interview designer who creates tailored, fair, and comprehensive interview question sets.
+
+Your role is to analyze the candidate's role requirements, resume evidence, screening results, matched skills, missing skills, transferable skills, experience level, and interview type to generate a personalized interview plan.
+
+You must create fair, evidence-based, role-specific questions. You must not generate generic interview questions or make hiring decisions.&lt;/role&gt;&lt;root_agent_id/&gt;&lt;source_id/&gt;&lt;strategy display_value="ReAct"&gt;f0bff21f9f13c6108f431597d90a1c74&lt;/strategy&gt;&lt;sys_class_name&gt;sn_aia_agent&lt;/sys_class_name&gt;&lt;sys_created_by&gt;RAKESH&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-22 06:27:14&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;d29af0a039ab03107f44646bfeef9820&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS Interview Orchestrator&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_aia_agent_d29af0a039ab03107f44646bfeef9820&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;RAKESH&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 06:27:32&lt;/sys_updated_on&gt;&lt;/sn_aia_agent&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1686957914</payload_hash>
+        <record_name>AEGIS Interview Orchestrator</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-22 06:27:32</sys_created_on>
+        <sys_id>8f2b78e039ab03107f44646bfeef98d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c7cc579e0000001</sys_recorded_at>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:27:32</sys_updated_on>
+        <type>AI Agent</type>
+        <update_guid>cf2b78e069ab031045f1e5131ada4fd0</update_guid>
+        <update_guid_history>cf2b78e069ab031045f1e5131ada4fd0:1686957914,e61bb4e0cfab03105b5bd9acec490b7c:-1249242808</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AEGIS Interview Orchestrator">08935105e42383107f44705ba96fabbe</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-23 21:31:04</sys_created_on>
+        <sys_db_object display_value="" name="sn_aia_agent">sn_aia_agent</sys_db_object>
+        <sys_id>9dc12bbb938a419394124132e8930749</sys_id>
+        <sys_metadata>d29af0a039ab03107f44646bfeef9820</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Interview Orchestrator</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_aia_agent_d29af0a039ab03107f44646bfeef9820</sys_update_name>
+        <sys_update_version display_value="sn_aia_agent_d29af0a039ab03107f44646bfeef9820">8f2b78e039ab03107f44646bfeef98d1</sys_update_version>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:31:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

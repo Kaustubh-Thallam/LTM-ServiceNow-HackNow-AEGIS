@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function() {
+
+    var c = this;
+
+    c.submitted = false;
+    c.submitting = false;
+
+    c.form = {
+        full_name: '',
+        email: '',
+        phone: '',
+        years_experience: '',
+        education_level: 'Bachelors',
+        skills: '',
+        certifications: '',
+        relevant_projects: '',
+        resume: '',
+        consent: false
+    };
+
+    c.submitApplication = function() {
+
+        if (!c.form.consent) {
+            alert('Please accept the consent.');
+            return;
+        }
+
+        c.submitting = true;
+
+        c.server.get({
+
+            action: 'submit_application',
+
+            requisition_id: c.data.req_id,
+
+            full_name: c.form.full_name,
+            email: c.form.email,
+            phone: c.form.phone,
+
+            years_experience: c.form.years_experience,
+            education_level: c.form.education_level,
+
+            skills: c.form.skills,
+            certifications: c.form.certifications,
+            relevant_projects: c.form.relevant_projects,
+
+            resume: c.form.resume
+
+        }).then(function(response) {
+
+            c.submitting = false;
+
+            if (response.data.success) {
+
+                c.submitted = true;
+                c.appNumber = response.data.app_number;
+
+                window.location.href =
+                    "?id=aegis_my_apps&application_id=" +
+                    response.data.app_number;
+
+            } else {
+
+                alert(
+                    'Application submission failed.\n' +
+                    (response.data.error || '')
+                );
+
+            }
+
+        }, function(error) {
+
+            c.submitting = false;
+
+            console.log(error);
+
+            alert('Unexpected error occurred.');
+
+        });
+
+    };
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.aegis-apply {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.apply-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.form-section {
+    margin-bottom: 32px;
+}
+
+.form-section h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f3b2f;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.form-control {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #d8d2c2;
+    border-radius: 14px;
+    padding: 0 14px;
+    font-size: 14px;
+    background: #f9f7f1;
+    box-sizing: border-box;
+}
+
+textarea.form-control {
+    height: 220px;
+    padding: 14px;
+    resize: vertical;
+}
+
+.consent-box {
+    background: #f9f7f1;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.aegis-btn-primary {
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 999px;
+    background: #e16b4d;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.aegis-btn-primary:hover {
+    opacity: 0.95;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>aegis_application_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>AEGIS Application Form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    data.req_id = $sp.getParameter('requisition_id') || '';
+    data.role_title = 'Position';
+
+    if (data.req_id) {
+
+        var reqGr = new GlideRecord(
+            'x_snc_aegis_job_requisition'
+        );
+
+        if (reqGr.get(data.req_id)) {
+
+            data.role_title =
+                reqGr.getValue('role_title');
+        }
+    }
+
+    if (input &&
+        input.action == 'submit_application') {
+
+        try {
+
+            var candidateId = '';
+
+            var candGr =
+                new GlideRecord(
+                    'x_snc_aegis_candidate'
+                );
+
+            candGr.addQuery(
+                'email',
+                input.email
+            );
+
+            candGr.query();
+
+            if (candGr.next()) {
+
+                candidateId =
+                    candGr.getUniqueValue();
+
+                candGr.setValue(
+                    'skills',
+                    input.skills
+                );
+
+                candGr.setValue(
+                    'years_experience',
+                    input.years_experience
+                );
+
+                candGr.setValue(
+                    'education_level',
+                    input.education_level
+                );
+
+                candGr.setValue(
+                    'certifications',
+                    input.certifications
+                );
+
+                candGr.setValue(
+                    'relevant_projects',
+                    input.relevant_projects
+                );
+
+                candGr.update();
+
+            } else {
+
+                candGr.initialize();
+
+                candGr.setValue(
+                    'full_name',
+                    input.full_name
+                );
+
+                candGr.setValue(
+                    'email',
+                    input.email
+                );
+
+                candGr.setValue(
+                    'phone',
+                    input.phone
+                );
+
+                candGr.setValue(
+                    'skills',
+                    input.skills
+                );
+
+                candGr.setValue(
+                    'years_experience',
+                    input.years_experience
+                );
+
+                candGr.setValue(
+                    'education_level',
+                    input.education_level
+                );
+
+                candGr.setValue(
+                    'certifications',
+                    input.certifications
+                );
+
+                candGr.setValue(
+                    'relevant_projects',
+                    input.relevant_projects
+                );
+
+                candGr.setValue(
+                    'consent_status',
+                    'GRANTED'
+                );
+
+                candidateId =
+                    candGr.insert();
+            }
+
+            var appGr =
+                new GlideRecord(
+                    'x_snc_aegis_application'
+                );
+
+            appGr.initialize();
+
+            appGr.setValue(
+                'candidate',
+                candidateId
+            );
+
+            appGr.setValue(
+                'requisition',
+                input.requisition_id
+            );
+
+            appGr.setValue(
+                'stage',
+                'APPLIED'
+            );
+
+            appGr.setValue(
+                'screening_status',
+                'PENDING'
+            );
+
+            appGr.setValue(
+                'resume',
+                input.resume
+            );
+
+            var appId =
+                appGr.insert();
+
+            var appNumber =
+                appId;
+
+            var appRecord =
+                new GlideRecord(
+                    'x_snc_aegis_application'
+                );
+
+            if (appRecord.get(appId)) {
+
+                appNumber =
+                    appRecord.getValue('number');
+            }
+
+            data.success = true;
+            data.app_number = appNumber;
+
+            gs.info(
+                '[AEGIS] Application Created: ' +
+                appNumber
+            );
+
+        } catch (ex) {
+
+            data.success = false;
+            data.error = ex.toString();
+
+            gs.error(
+                '[AEGIS] Error: ' +
+                ex.toString()
+            );
+        }
+    }
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 09:57:36</sys_created_on>
+        <sys_id>d6a1e018ed2f03107f446c21b633cffe</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>AEGIS Application Form</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sp_widget_d6a1e018ed2f03107f446c21b633cffe</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-24 08:04:22</sys_updated_on>
+        <template><![CDATA[<div class="aegis-apply">
+  <div class="apply-card">
+
+    <div ng-if="!c.submitted">
+
+      <div class="apply-eyebrow">
+        {{data.role_title.toUpperCase()}}
+      </div>
+
+      <h2 class="aegis-h">Tell us about your work</h2>
+
+      <p class="subtitle">
+        Complete the form below. Your application is evaluated under blind,
+        governed criteria.
+      </p>
+
+      <form ng-submit="c.submitApplication()">
+
+        <div class="form-section">
+
+          <h4>About You</h4>
+
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text"
+                   ng-model="c.form.full_name"
+                   required
+                   class="form-control">
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email"
+                     ng-model="c.form.email"
+                     required
+                     class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="text"
+                     ng-model="c.form.phone"
+                     class="form-control">
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="form-section">
+
+          <h4>Experience & Skills</h4>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label>Years Experience *</label>
+              <input type="number"
+                     ng-model="c.form.years_experience"
+                     required
+                     class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Education</label>
+              <select ng-model="c.form.education_level"
+                      class="form-control">
+
+                <option value="Bachelors">Bachelors</option>
+                <option value="Masters">Masters</option>
+                <option value="Doctorate">Doctorate</option>
+
+              </select>
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label>Skills *</label>
+
+            <input type="text"
+                   ng-model="c.form.skills"
+                   required
+                   class="form-control">
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label>Certifications</label>
+
+              <input type="text"
+                     ng-model="c.form.certifications"
+                     class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Projects</label>
+
+              <input type="number"
+                     ng-model="c.form.relevant_projects"
+                     class="form-control">
+            </div>
+
+          </div>
+
+          <div class="form-group">
+
+  <label>Resume *</label>
+
+  <textarea
+      ng-model="c.form.resume"
+      class="form-control"
+      rows="10"
+      required
+      placeholder="Paste resume content here">
+  </textarea>
+
+  <small>
+    Paste your complete resume here.
+  </small>
+
+</div>
+
+        </div>
+
+        <div class="form-section">
+
+          <h4>Consent</h4>
+
+          <div class="consent-box">
+
+            <input type="checkbox"
+                   ng-model="c.form.consent"
+                   required>
+
+            <span>
+              I consent to AEGIS screening process.
+            </span>
+
+          </div>
+
+        </div>
+
+        <button type="submit"
+                class="aegis-btn-primary full-width">
+
+          {{c.submitting ?
+          'Submitting...' :
+          'Submit Application'}}
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="DELETE">
+        <id>d6a1e018ed2f03107f446c21b633cffe</id>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 09:57:36</sys_created_on>
+        <sys_id>1ea12418ed2f03107f446c21b633cf01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 09:57:36</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sp_widget_d6a1e018ed2f03107f446c21b633cffe</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller = function() {
+
+    var c = this;
+
+    c.submitted = false;
+    c.submitting = false;
+
+    c.form = {
+        full_name: '',
+        email: '',
+        phone: '',
+        years_experience: '',
+        education_level: 'Bachelors',
+        skills: '',
+        certifications: '',
+        relevant_projects: '',
+        resume: '',
+        consent: false
+    };
+
+    c.submitApplication = function() {
+
+        if (!c.form.consent) {
+            alert('Please accept the consent.');
+            return;
+        }
+
+        c.submitting = true;
+
+        c.server.get({
+
+            action: 'submit_application',
+
+            requisition_id: c.data.req_id,
+
+            full_name: c.form.full_name,
+            email: c.form.email,
+            phone: c.form.phone,
+
+            years_experience: c.form.years_experience,
+            education_level: c.form.education_level,
+
+            skills: c.form.skills,
+            certifications: c.form.certifications,
+            relevant_projects: c.form.relevant_projects,
+
+            resume: c.form.resume
+
+        }).then(function(response) {
+
+            c.submitting = false;
+
+            if (response.data.success) {
+
+                c.submitted = true;
+                c.appNumber = response.data.app_number;
+
+                window.location.href =
+                    "?id=aegis_my_apps&amp;application_id=" +
+                    response.data.app_number;
+
+            } else {
+
+                alert(
+                    'Application submission failed.\n' +
+                    (response.data.error || '')
+                );
+
+            }
+
+        }, function(error) {
+
+            c.submitting = false;
+
+            console.log(error);
+
+            alert('Unexpected error occurred.');
+
+        });
+
+    };
+
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.aegis-apply {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.apply-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.form-section {
+    margin-bottom: 32px;
+}
+
+.form-section h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f3b2f;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.form-control {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #d8d2c2;
+    border-radius: 14px;
+    padding: 0 14px;
+    font-size: 14px;
+    background: #f9f7f1;
+    box-sizing: border-box;
+}
+
+textarea.form-control {
+    height: 220px;
+    padding: 14px;
+    resize: vertical;
+}
+
+.consent-box {
+    background: #f9f7f1;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.aegis-btn-primary {
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 999px;
+    background: #e16b4d;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.aegis-btn-primary:hover {
+    opacity: 0.95;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;aegis_application_form&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;AEGIS Application Form&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+
+    data.req_id = $sp.getParameter('requisition_id') || '';
+    data.role_title = 'Position';
+
+    if (data.req_id) {
+
+        var reqGr = new GlideRecord(
+            'x_snc_aegis_job_requisition'
+        );
+
+        if (reqGr.get(data.req_id)) {
+
+            data.role_title =
+                reqGr.getValue('role_title');
+        }
+    }
+
+    if (input &amp;&amp;
+        input.action == 'submit_application') {
+
+        try {
+
+            var candidateId = '';
+
+            var candGr =
+                new GlideRecord(
+                    'x_snc_aegis_candidate'
+                );
+
+            candGr.addQuery(
+                'email',
+                input.email
+            );
+
+            candGr.query();
+
+            if (candGr.next()) {
+
+                candidateId =
+                    candGr.getUniqueValue();
+
+                candGr.setValue(
+                    'skills',
+                    input.skills
+                );
+
+                candGr.setValue(
+                    'years_experience',
+                    input.years_experience
+                );
+
+                candGr.setValue(
+                    'education_level',
+                    input.education_level
+                );
+
+                candGr.setValue(
+                    'certifications',
+                    input.certifications
+                );
+
+                candGr.setValue(
+                    'relevant_projects',
+                    input.relevant_projects
+                );
+
+                candGr.update();
+
+            } else {
+
+                candGr.initialize();
+
+                candGr.setValue(
+                    'full_name',
+                    input.full_name
+                );
+
+                candGr.setValue(
+                    'email',
+                    input.email
+                );
+
+                candGr.setValue(
+                    'phone',
+                    input.phone
+                );
+
+                candGr.setValue(
+                    'skills',
+                    input.skills
+                );
+
+                candGr.setValue(
+                    'years_experience',
+                    input.years_experience
+                );
+
+                candGr.setValue(
+                    'education_level',
+                    input.education_level
+                );
+
+                candGr.setValue(
+                    'certifications',
+                    input.certifications
+                );
+
+                candGr.setValue(
+                    'relevant_projects',
+                    input.relevant_projects
+                );
+
+                candGr.setValue(
+                    'consent_status',
+                    'GRANTED'
+                );
+
+                candidateId =
+                    candGr.insert();
+            }
+
+            var appGr =
+                new GlideRecord(
+                    'x_snc_aegis_application'
+                );
+
+            appGr.initialize();
+
+            appGr.setValue(
+                'candidate',
+                candidateId
+            );
+
+            appGr.setValue(
+                'requisition',
+                input.requisition_id
+            );
+
+            appGr.setValue(
+                'stage',
+                'APPLIED'
+            );
+
+            appGr.setValue(
+                'screening_status',
+                'PENDING'
+            );
+
+            appGr.setValue(
+                'resume',
+                input.resume
+            );
+
+            var appId =
+                appGr.insert();
+
+            var appNumber =
+                appId;
+
+            var appRecord =
+                new GlideRecord(
+                    'x_snc_aegis_application'
+                );
+
+            if (appRecord.get(appId)) {
+
+                appNumber =
+                    appRecord.getValue('number');
+            }
+
+            data.success = true;
+            data.app_number = appNumber;
+
+            gs.info(
+                '[AEGIS] Application Created: ' +
+                appNumber
+            );
+
+        } catch (ex) {
+
+            data.success = false;
+            data.error = ex.toString();
+
+            gs.error(
+                '[AEGIS] Error: ' +
+                ex.toString()
+            );
+        }
+    }
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 09:57:36&lt;/sys_created_on&gt;&lt;sys_id&gt;d6a1e018ed2f03107f446c21b633cffe&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS Application Form&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_d6a1e018ed2f03107f446c21b633cffe&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-24 08:04:22&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="aegis-apply"&gt;
+  &lt;div class="apply-card"&gt;
+
+    &lt;div ng-if="!c.submitted"&gt;
+
+      &lt;div class="apply-eyebrow"&gt;
+        {{data.role_title.toUpperCase()}}
+      &lt;/div&gt;
+
+      &lt;h2 class="aegis-h"&gt;Tell us about your work&lt;/h2&gt;
+
+      &lt;p class="subtitle"&gt;
+        Complete the form below. Your application is evaluated under blind,
+        governed criteria.
+      &lt;/p&gt;
+
+      &lt;form ng-submit="c.submitApplication()"&gt;
+
+        &lt;div class="form-section"&gt;
+
+          &lt;h4&gt;About You&lt;/h4&gt;
+
+          &lt;div class="form-group"&gt;
+            &lt;label&gt;Full Name *&lt;/label&gt;
+            &lt;input type="text"
+                   ng-model="c.form.full_name"
+                   required
+                   class="form-control"&gt;
+          &lt;/div&gt;
+
+          &lt;div class="form-row"&gt;
+
+            &lt;div class="form-group"&gt;
+              &lt;label&gt;Email *&lt;/label&gt;
+              &lt;input type="email"
+                     ng-model="c.form.email"
+                     required
+                     class="form-control"&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+              &lt;label&gt;Phone&lt;/label&gt;
+              &lt;input type="text"
+                     ng-model="c.form.phone"
+                     class="form-control"&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class="form-section"&gt;
+
+          &lt;h4&gt;Experience &amp; Skills&lt;/h4&gt;
+
+          &lt;div class="form-row"&gt;
+
+            &lt;div class="form-group"&gt;
+              &lt;label&gt;Years Experience *&lt;/label&gt;
+              &lt;input type="number"
+                     ng-model="c.form.years_experience"
+                     required
+                     class="form-control"&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+              &lt;label&gt;Education&lt;/label&gt;
+              &lt;select ng-model="c.form.education_level"
+                      class="form-control"&gt;
+
+                &lt;option value="Bachelors"&gt;Bachelors&lt;/option&gt;
+                &lt;option value="Masters"&gt;Masters&lt;/option&gt;
+                &lt;option value="Doctorate"&gt;Doctorate&lt;/option&gt;
+
+              &lt;/select&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="form-group"&gt;
+            &lt;label&gt;Skills *&lt;/label&gt;
+
+            &lt;input type="text"
+                   ng-model="c.form.skills"
+                   required
+                   class="form-control"&gt;
+          &lt;/div&gt;
+
+          &lt;div class="form-row"&gt;
+
+            &lt;div class="form-group"&gt;
+              &lt;label&gt;Certifications&lt;/label&gt;
+
+              &lt;input type="text"
+                     ng-model="c.form.certifications"
+                     class="form-control"&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+              &lt;label&gt;Projects&lt;/label&gt;
+
+              &lt;input type="number"
+                     ng-model="c.form.relevant_projects"
+                     class="form-control"&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="form-group"&gt;
+
+  &lt;label&gt;Resume *&lt;/label&gt;
+
+  &lt;textarea
+      ng-model="c.form.resume"
+      class="form-control"
+      rows="10"
+      required
+      placeholder="Paste resume content here"&gt;
+  &lt;/textarea&gt;
+
+  &lt;small&gt;
+    Paste your complete resume here.
+  &lt;/small&gt;
+
+&lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class="form-section"&gt;
+
+          &lt;h4&gt;Consent&lt;/h4&gt;
+
+          &lt;div class="consent-box"&gt;
+
+            &lt;input type="checkbox"
+                   ng-model="c.form.consent"
+                   required&gt;
+
+            &lt;span&gt;
+              I consent to AEGIS screening process.
+            &lt;/span&gt;
+
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;button type="submit"
+                class="aegis-btn-primary full-width"&gt;
+
+          {{c.submitting ?
+          'Submitting...' :
+          'Submit Application'}}
+
+        &lt;/button&gt;
+
+      &lt;/form&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;d6a1e018ed2f03107f446c21b633cffe&lt;/id&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 09:57:36&lt;/sys_created_on&gt;&lt;sys_id&gt;1ea12418ed2f03107f446c21b633cf01&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-21 09:57:36&lt;/sys_updated_on&gt;&lt;table&gt;sp_widget&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>700084392</payload_hash>
+        <record_name>AEGIS Application Form</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-24 08:04:22</sys_created_on>
+        <sys_id>7484ab81742b03107f4413d400ccf25d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0d271b52d0000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-24 08:04:22</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>f484ab81122b03109253f1eeac2cea5c</update_guid>
+        <update_guid_history>f484ab81122b03109253f1eeac2cea5c:700084392,7373e3cd32e703103484e67e75e1f201:-768312704,c5b2a8289727031001974f20e7b4c3b2:-710973275,cbf1e0a4ff6703102c8561f2ac6211f9:1410198246,8a31ec600b6703107e98366a71c74b5a:-1320680655,a77d90a433270310fcc4850b3c2b6ea6:505412900,8ffc9064ba270310e217d1ccc44efb09:-1032406761,2ecc1c246d270310fade18ee6fd8657e:-329949219,41ab6a582a6f4310153fbfb1d7fc85ec:-2098082955,17896258916f4310c9a3393d6681d99d:-439591691,731826949f6f43109c30508e68c296af:730013002,2964ee9c702f43103d003e69dd1f83fd:1573920260,b81875902be74310bdcafd56e223221c:360079019,5703a41ccc2f03106c6ca3099507c8f3:-1585897842,d6a12418a22f031003e369a1ffa38800:-448992824</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AEGIS Application Form">13be7791f4a303107f4473c8b3ef4ca1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-25 04:37:26</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>1512d6d6dc1b4e60820f271bb65af090</sys_id>
+        <sys_metadata>d6a1e018ed2f03107f446c21b633cffe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Application Form</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sp_widget_d6a1e018ed2f03107f446c21b633cffe</sys_update_name>
+        <sys_update_version display_value="sp_widget_d6a1e018ed2f03107f446c21b633cffe">7484ab81742b03107f4413d400ccf25d</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-25 04:37:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

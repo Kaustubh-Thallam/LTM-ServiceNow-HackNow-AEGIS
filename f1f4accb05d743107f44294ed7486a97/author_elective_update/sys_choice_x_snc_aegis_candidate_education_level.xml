@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="education_level" table="x_snc_aegis_candidate" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>education_level</element>
+            <name>x_snc_aegis_candidate</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-20 08:59:34</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>education_level</sys_name>
+            <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+            <sys_update_name>sys_choice_x_snc_aegis_candidate_education_level</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-20 08:59:34</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>education_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>High School</label>
+            <language>en</language>
+            <name>x_snc_aegis_candidate</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-20 08:59:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-20 09:01:30</sys_updated_on>
+            <value>HIGH_SCHOOL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>education_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bachelors</label>
+            <language>en</language>
+            <name>x_snc_aegis_candidate</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-20 09:00:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-20 09:01:33</sys_updated_on>
+            <value>BACHELORS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>education_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Masters</label>
+            <language>en</language>
+            <name>x_snc_aegis_candidate</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-20 09:00:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-20 09:01:36</sys_updated_on>
+            <value>MASTERS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>education_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Doctorate</label>
+            <language>en</language>
+            <name>x_snc_aegis_candidate</name>
+            <sequence>400</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-20 09:01:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-20 09:01:41</sys_updated_on>
+            <value>DOCTORATE</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

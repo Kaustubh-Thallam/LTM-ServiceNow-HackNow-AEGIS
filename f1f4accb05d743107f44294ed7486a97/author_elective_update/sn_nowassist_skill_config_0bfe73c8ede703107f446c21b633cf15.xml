@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config">
+    <sn_nowassist_skill_config action="DELETE">
+        <active>false</active>
+        <description><![CDATA[Coordinates personalized candidate interviews by analyzing the candidate&#39;s application, resume, candidate profile, target job requisition, job description, and screening results. Generates evidence-based interview questions and scoring rubrics tailored to the specific candidate and role.]]></description>
+        <edited_in_nask>false</edited_in_nask>
+        <in_product_active>false</in_product_active>
+        <in_product_roles/>
+        <internal_name>aegis_interview_orchestrator.0bfe73c8ede703107f446c21b633cf15</internal_name>
+        <is_template>false</is_template>
+        <name>AEGIS Interview Orchestrator</name>
+        <nap_skill_applicability/>
+        <order>100</order>
+        <parent/>
+        <skill_family display_value="Other">a5efaf1c93764210aa5730f16489186d</skill_family>
+        <skill_id>36fe33c8ede703107f446c21b633cfb1</skill_id>
+        <skill_table>sys_one_extend_capability</skill_table>
+        <state>0</state>
+        <success_message/>
+        <sys_class_name>sn_nowassist_skill_config</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-21 07:26:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>0bfe73c8ede703107f446c21b633cf15</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>AEGIS Interview Orchestrator</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_0bfe73c8ede703107f446c21b633cf15</sys_update_name>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 05:43:55</sys_updated_on>
+    </sn_nowassist_skill_config>
+    <sys_translated_text action="DELETE" query="documentkey=0bfe73c8ede703107f446c21b633cf15"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_nowassist_skill_config_0bfe73c8ede703107f446c21b633cf15</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sn_nowassist_skill_config"&gt;&lt;sn_nowassist_skill_config action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;description&gt;&lt;![CDATA[Coordinates personalized candidate interviews by analyzing the candidate&amp;#39;s application, resume, candidate profile, target job requisition, job description, and screening results. Generates evidence-based interview questions and scoring rubrics tailored to the specific candidate and role.]]&gt;&lt;/description&gt;&lt;edited_in_nask&gt;false&lt;/edited_in_nask&gt;&lt;in_product_active&gt;false&lt;/in_product_active&gt;&lt;in_product_roles/&gt;&lt;internal_name&gt;aegis_interview_orchestrator.0bfe73c8ede703107f446c21b633cf15&lt;/internal_name&gt;&lt;is_template&gt;false&lt;/is_template&gt;&lt;name&gt;AEGIS Interview Orchestrator&lt;/name&gt;&lt;nap_skill_applicability/&gt;&lt;order&gt;100&lt;/order&gt;&lt;parent/&gt;&lt;skill_family display_value="Other"&gt;a5efaf1c93764210aa5730f16489186d&lt;/skill_family&gt;&lt;skill_id&gt;36fe33c8ede703107f446c21b633cfb1&lt;/skill_id&gt;&lt;skill_table&gt;sys_one_extend_capability&lt;/skill_table&gt;&lt;state&gt;0&lt;/state&gt;&lt;success_message/&gt;&lt;sys_class_name&gt;sn_nowassist_skill_config&lt;/sys_class_name&gt;&lt;sys_created_by&gt;RAKESH&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 07:26:06&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;0bfe73c8ede703107f446c21b633cf15&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS Interview Orchestrator&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_nowassist_skill_config_0bfe73c8ede703107f446c21b633cf15&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;RAKESH&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-22 05:43:55&lt;/sys_updated_on&gt;&lt;/sn_nowassist_skill_config&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=0bfe73c8ede703107f446c21b633cf15"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>854869357</payload_hash>
+        <record_name>AEGIS Interview Orchestrator</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-22 05:43:55</sys_created_on>
+        <sys_id>04317ce8392b03107f44646bfeef98bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c7a468310000001</sys_recorded_at>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 05:43:55</sys_updated_on>
+        <type>Now Assist Skill Config</type>
+        <update_guid>48317ce8402b0310715c88b4a98857bc</update_guid>
+        <update_guid_history>48317ce8402b0310715c88b4a98857bc:854869357,8ffe73c816e70310cd7c68570e2b1f1f:685468151,83fe73c835e703102c3f359b4a74a31b:-436098335</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AEGIS Interview Orchestrator">ded09357102b03107f44966d0e73c98a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-10-01 06:24:48</sys_created_on>
+        <sys_db_object display_value="" name="sn_nowassist_skill_config">sn_nowassist_skill_config</sys_db_object>
+        <sys_id>0d0c551e5f2846e88b16cdfe47aae840</sys_id>
+        <sys_metadata>0bfe73c8ede703107f446c21b633cf15</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Interview Orchestrator</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_nowassist_skill_config_0bfe73c8ede703107f446c21b633cf15</sys_update_name>
+        <sys_update_version display_value="sn_nowassist_skill_config_0bfe73c8ede703107f446c21b633cf15">04317ce8392b03107f44646bfeef98bd</sys_update_version>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-10-01 06:24:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

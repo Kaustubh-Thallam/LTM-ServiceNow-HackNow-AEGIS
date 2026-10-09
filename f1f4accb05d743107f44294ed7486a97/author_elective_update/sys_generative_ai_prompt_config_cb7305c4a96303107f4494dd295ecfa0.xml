@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config">
+    <sys_generative_ai_prompt_config action="DELETE">
+        <ai_config display_value="">cb7305c4a96303107f4494dd295ecf9d</ai_config>
+        <definition/>
+        <filter_properties/>
+        <filter_type>default</filter_type>
+        <is_default>true</is_default>
+        <order>0</order>
+        <sys_class_name>sys_generative_ai_prompt_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:46:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cb7305c4a96303107f4494dd295ecfa0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cb7305c4a96303107f4494dd295ecf9d</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_generative_ai_prompt_config_cb7305c4a96303107f4494dd295ecfa0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:46:54</sys_updated_on>
+    </sys_generative_ai_prompt_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_generative_ai_prompt_config_cb7305c4a96303107f4494dd295ecfa0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_prompt_config"><sys_generative_ai_prompt_config action="INSERT_OR_UPDATE"><ai_config display_value="">cb7305c4a96303107f4494dd295ecf9d</ai_config><definition/><filter_properties/><filter_type>default</filter_type><is_default>true</is_default><order>0</order><sys_class_name>sys_generative_ai_prompt_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-20 17:46:54</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cb7305c4a96303107f4494dd295ecfa0</sys_id><sys_mod_count>0</sys_mod_count><sys_name>cb7305c4a96303107f4494dd295ecf9d</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_generative_ai_prompt_config_cb7305c4a96303107f4494dd295ecfa0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-20 17:46:54</sys_updated_on></sys_generative_ai_prompt_config></record_update>]]></payload>
+        <payload_hash>-251399270</payload_hash>
+        <record_name>cb7305c4a96303107f4494dd295ecf9d</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 20:55:23</sys_created_on>
+        <sys_id>956b0585e4af43107f44705ba96fab07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0d00d3da10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 20:55:23</sys_updated_on>
+        <type>Generative AI Prompt Config</type>
+        <update_guid>8b7305c4ae63031061b53a63550800a3</update_guid>
+        <update_guid_history>8b7305c4ae63031061b53a63550800a3:413654357,8b7305c4ae63031061b53a63550800a3:413654357</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:01:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_generative_ai_prompt_config">sys_generative_ai_prompt_config</sys_db_object>
+        <sys_id>a06890221a0c48ec87a892cbd3faa4a4</sys_id>
+        <sys_metadata>cb7305c4a96303107f4494dd295ecfa0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cb7305c4a96303107f4494dd295ecf9d</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_generative_ai_prompt_config_cb7305c4a96303107f4494dd295ecfa0</sys_update_name>
+        <sys_update_version display_value="sys_generative_ai_prompt_config_cb7305c4a96303107f4494dd295ecfa0">956b0585e4af43107f44705ba96fab07</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:01:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

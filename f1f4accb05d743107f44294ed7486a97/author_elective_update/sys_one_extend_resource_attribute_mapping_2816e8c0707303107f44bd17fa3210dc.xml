@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_resource_attribute_mapping">
+    <sys_one_extend_resource_attribute_mapping action="DELETE">
+        <attribute_value_script><![CDATA[(function execute(currentInputs, context) {
+ return new global.OneExtendEvaluationServiceUtil().getSkillContext(currentInputs); 
+})(currentInputs, context);]]></attribute_value_script>
+        <attribute_value_template/>
+        <attribute_value_type>script</attribute_value_type>
+        <from_resource_mapping/>
+        <resource_attribute_name display_value="context">667113fa7f82d21071cab6257d8665d7</resource_attribute_name>
+        <resource_mapping display_value="Correctness Metric">e016e8c0707303107f44bd17fa3210d1</resource_mapping>
+        <sys_class_name>sys_one_extend_resource_attribute_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 01:54:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2816e8c0707303107f44bd17fa3210dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_one_extend_resource_attribute_mapping_2816e8c0707303107f44bd17fa3210dc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:54:05</sys_updated_on>
+        <truncate>false</truncate>
+        <type>input</type>
+    </sys_one_extend_resource_attribute_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_one_extend_resource_attribute_mapping_2816e8c0707303107f44bd17fa3210dc</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_one_extend_resource_attribute_mapping"&gt;&lt;sys_one_extend_resource_attribute_mapping action="INSERT_OR_UPDATE"&gt;&lt;attribute_value_script&gt;&lt;![CDATA[(function execute(currentInputs, context) {
+ return new global.OneExtendEvaluationServiceUtil().getSkillContext(currentInputs); 
+})(currentInputs, context);]]&gt;&lt;/attribute_value_script&gt;&lt;attribute_value_template/&gt;&lt;attribute_value_type&gt;script&lt;/attribute_value_type&gt;&lt;from_resource_mapping/&gt;&lt;resource_attribute_name display_value="context"&gt;667113fa7f82d21071cab6257d8665d7&lt;/resource_attribute_name&gt;&lt;resource_mapping display_value="Correctness Metric"&gt;e016e8c0707303107f44bd17fa3210d1&lt;/resource_mapping&gt;&lt;sys_class_name&gt;sys_one_extend_resource_attribute_mapping&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-03 01:54:05&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;2816e8c0707303107f44bd17fa3210dc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_one_extend_resource_attribute_mapping_2816e8c0707303107f44bd17fa3210dc&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-03 01:54:05&lt;/sys_updated_on&gt;&lt;truncate&gt;false&lt;/truncate&gt;&lt;type&gt;input&lt;/type&gt;&lt;/sys_one_extend_resource_attribute_mapping&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1601119618</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 01:54:06</sys_created_on>
+        <sys_id>2c16e8c0707303107f44bd17fa3210de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ff77f2430000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:54:06</sys_updated_on>
+        <type>OneExtend Resource Attribute Mapping</type>
+        <update_guid>2016e8c0597303103eb8f5d56b6c70de</update_guid>
+        <update_guid_history>2016e8c0597303103eb8f5d56b6c70de:-1601119618</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 03:51:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_one_extend_resource_attribute_mapping">sys_one_extend_resource_attribute_mapping</sys_db_object>
+        <sys_id>5da70eab7f024f02b28462bbb4e8f3e4</sys_id>
+        <sys_metadata>2816e8c0707303107f44bd17fa3210dc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_one_extend_resource_attribute_mapping_2816e8c0707303107f44bd17fa3210dc</sys_update_name>
+        <sys_update_version display_value="sys_one_extend_resource_attribute_mapping_2816e8c0707303107f44bd17fa3210dc">2c16e8c0707303107f44bd17fa3210de</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 03:51:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

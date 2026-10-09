@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_snc_aegis_level" table="sys_db_object" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_snc_aegis_level</element>
+            <name>sys_db_object</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:28:42</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_aegis_level</sys_name>
+            <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+            <sys_update_name>sys_choice_sys_db_object_x_snc_aegis_level</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:28:42</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Intern</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:32:52</sys_updated_on>
+            <value>Intern</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Mid</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:30:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:32:52</sys_updated_on>
+            <value>Mid</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Associate</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:32:52</sys_updated_on>
+            <value>Associate</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Senior</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:30:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:40:28</sys_updated_on>
+            <value>Senior</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Lead</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:30:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:40:28</sys_updated_on>
+            <value>Lead</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Specialist</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:32:52</sys_updated_on>
+            <value>Specialist</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Senior Specialist</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:32:52</sys_updated_on>
+            <value>Senior Specialist</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Manager</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:40:28</sys_updated_on>
+            <value>Manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Senior Manager</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:40:28</sys_updated_on>
+            <value>Senior Manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_aegis_level</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Director</label>
+            <language>en</language>
+            <name>sys_db_object</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-17 13:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-17 13:40:28</sys_updated_on>
+            <value>Director</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

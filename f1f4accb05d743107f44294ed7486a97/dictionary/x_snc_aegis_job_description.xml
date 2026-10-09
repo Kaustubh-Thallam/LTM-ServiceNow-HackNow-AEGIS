@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="799034c7055b43107f44294ed7486a57" label="Job Description" max_length="40" name="x_snc_aegis_job_description" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="3" label="Approval" max_length="40" name="approval" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="requested"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Additional comments" max_length="1000" name="additional_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Jd text" mandatory="true" max_length="8000" name="jd_text" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="AI Additional Comments" max_length="1000" name="ai_additional_comments" type="string"/>
+        <element label="Integrity Check" max_length="40" name="integrity_check" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Integrity Issues" max_length="1000" name="integrity_issues" type="string"/>
+        <element label="Approval History" max_length="40" name="approval_history" type="journal"/>
+        <element default="1" label="Version" mandatory="true" max_length="40" name="version" type="integer"/>
+        <element attributes="encode_utf8=false" label="Created by" max_length="32" name="created_by" reference="sys_user" type="reference"/>
+        <element attributes="encode_utf8=false" label="Job Requisition" mandatory="true" max_length="32" name="requisition" reference="x_snc_aegis_job_requisition" type="reference"/>
+        <element attributes="encode_utf8=false" label="Approved by" max_length="32" name="approved_by" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="DRAFT" label="Approval state" mandatory="true" max_length="40" name="approval_state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="REJECTED"/>
+                <element inactive_on_update="false" label="Pending Approval" sequence="1" value="PENDING_APPROVAL"/>
+                <element inactive_on_update="false" label="Review" sequence="5" value="REVIEW"/>
+                <element inactive_on_update="false" label="Published" sequence="4" value="PUBLISHED"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="APPROVED"/>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="DRAFT"/>
+            </choice>
+        </element>
+        <element label="Bias check passed" max_length="40" name="bias_check_passed" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Flagged terms" max_length="500" name="flagged_terms" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Approved at" max_length="40" name="approved_at" type="glide_date_time"/>
+        <index name="index">
+            <element name="created_by"/>
+        </index>
+        <index name="index2">
+            <element name="requisition"/>
+        </index>
+        <index name="index3">
+            <element name="approved_by"/>
+        </index>
+    </element>
+</database>

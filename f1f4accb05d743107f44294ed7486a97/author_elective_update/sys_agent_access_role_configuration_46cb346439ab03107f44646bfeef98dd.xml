@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_agent_access_role_configuration">
+    <sys_agent_access_role_configuration action="DELETE">
+        <action>limit_to_roles</action>
+        <agent>670bb0e039ab03107f44646bfeef983c</agent>
+        <agent_table>sn_aia_usecase</agent_table>
+        <allow_all_session_roles>false</allow_all_session_roles>
+        <description/>
+        <name>670bb0e039ab03107f44646bfeef983c</name>
+        <role_list/>
+        <sys_class_name>sys_agent_access_role_configuration</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-22 06:30:12</sys_created_on>
+        <sys_id>46cb346439ab03107f44646bfeef98dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>670bb0e039ab03107f44646bfeef983c</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_agent_access_role_configuration_46cb346439ab03107f44646bfeef98dd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:30:12</sys_updated_on>
+    </sys_agent_access_role_configuration>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_agent_access_role_configuration_46cb346439ab03107f44646bfeef98dd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_agent_access_role_configuration"><sys_agent_access_role_configuration action="INSERT_OR_UPDATE"><action>limit_to_roles</action><agent>670bb0e039ab03107f44646bfeef983c</agent><agent_table>sn_aia_usecase</agent_table><allow_all_session_roles>false</allow_all_session_roles><description/><name>670bb0e039ab03107f44646bfeef983c</name><role_list/><sys_class_name>sys_agent_access_role_configuration</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-22 06:30:12</sys_created_on><sys_id>46cb346439ab03107f44646bfeef98dd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>670bb0e039ab03107f44646bfeef983c</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_agent_access_role_configuration_46cb346439ab03107f44646bfeef98dd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-22 06:30:12</sys_updated_on></sys_agent_access_role_configuration></record_update>]]></payload>
+        <payload_hash>627160129</payload_hash>
+        <record_name>670bb0e039ab03107f44646bfeef983c</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-22 06:30:12</sys_created_on>
+        <sys_id>c6cb346439ab03107f44646bfeef98e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c7cec7f70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:30:12</sys_updated_on>
+        <type>Agent Access Role Configuration</type>
+        <update_guid>8acb3464bcab031013e16fb4bac171e0</update_guid>
+        <update_guid_history>8acb3464bcab031013e16fb4bac171e0:627160129</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 21:30:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_agent_access_role_configuration">sys_agent_access_role_configuration</sys_db_object>
+        <sys_id>54e06cb92650406284902115834789a4</sys_id>
+        <sys_metadata>46cb346439ab03107f44646bfeef98dd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>670bb0e039ab03107f44646bfeef983c</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_agent_access_role_configuration_46cb346439ab03107f44646bfeef98dd</sys_update_name>
+        <sys_update_version display_value="sys_agent_access_role_configuration_46cb346439ab03107f44646bfeef98dd">c6cb346439ab03107f44646bfeef98e1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:30:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_snc_aegis.AEGISResumeScorer</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AEGISResumeScorer</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AEGISResumeScorer = Class.create();
+AEGISResumeScorer.prototype = {
+    initialize: function() {},
+
+    /**
+     * Deterministic 5-factor weighted fit calculation.
+     * Weights: Skills 30%, Experience 25%, Projects 20%, Certifications 15%, Education 10%.
+     */
+    calculateFitScore: function(matchedSkillsCount, totalRequiredSkills,
+                                candidateExpYears, requiredExpYears,
+                                relevantProjectsCount, candidateCertsCount,
+                                requiredCertsCount, educationMatch) {
+
+        // Factor 1: Skills (30%)
+        var skillsScore = 0;
+        if (totalRequiredSkills > 0) {
+            skillsScore = Math.min(100, Math.round((matchedSkillsCount / totalRequiredSkills) * 100));
+        }
+
+        // Factor 2: Experience (25%)
+        var expScore = 0;
+        if (requiredExpYears > 0) {
+            expScore = Math.min(100, Math.round((candidateExpYears / requiredExpYears) * 100));
+        } else {
+            expScore = 100;
+        }
+
+        // Factor 3: Projects (20%) — benchmark is 3 projects for full score
+        var projScore = Math.min(100, Math.round((relevantProjectsCount / 3) * 100));
+
+        // Factor 4: Certifications (15%) — benchmark is 2 certs if none required
+        var certScore = 0;
+        if (requiredCertsCount > 0) {
+            certScore = Math.min(100, Math.round((candidateCertsCount / requiredCertsCount) * 100));
+        } else {
+            certScore = Math.min(100, Math.round((candidateCertsCount / 2) * 100));
+        }
+
+        // Factor 5: Education (10%)
+        var eduScore = 50;
+        if (educationMatch === 'exact' || educationMatch === 'exceeds') {
+            eduScore = 100;
+        } else if (educationMatch === 'related') {
+            eduScore = 75;
+        } else if (educationMatch === 'none') {
+            eduScore = 25;
+        }
+
+        var fitScore = Math.round(
+            (skillsScore * 0.30) +
+            (expScore * 0.25) +
+            (projScore * 0.20) +
+            (certScore * 0.15) +
+            (eduScore * 0.10)
+        );
+
+        return {
+            fit_score: fitScore,
+            skills_score: skillsScore,
+            experience_score: expScore,
+            projects_score: projScore,
+            certifications_score: certScore,
+            education_score: eduScore
+        };
+    },
+
+    /**
+     * Case-insensitive skill matching between candidate CSV and requisition CSV.
+     */
+    matchSkills: function(candidateSkillsStr, requiredSkillsStr) {
+        if (!requiredSkillsStr) {
+            return { matched: [], missing: [], matchedCount: 0, totalRequired: 0 };
+        }
+
+        var required = requiredSkillsStr.split(',').map(function(s) { return s.trim(); });
+        var candidate = (candidateSkillsStr || '').split(',').map(function(s) { return s.trim().toLowerCase(); });
+
+        var matched = [];
+        var missing = [];
+
+        for (var i = 0; i < required.length; i++) {
+            var reqSkill = required[i];
+            if (candidate.indexOf(reqSkill.toLowerCase()) !== -1) {
+                matched.push(reqSkill);
+            } else {
+                missing.push(reqSkill);
+            }
+        }
+
+        return {
+            matched: matched,
+            missing: missing,
+            matchedCount: matched.length,
+            totalRequired: required.length
+        };
+    },
+
+    /**
+     * Generates a human-readable, auditable explanation.
+     */
+    generateExplanation: function(breakdown, matchedSkills, missingSkills) {
+        var parts = [];
+        parts.push('Overall Fit Score: ' + breakdown.fit_score + '/100.');
+        parts.push('Skills Match (' + breakdown.skills_score + '/100): Matched [' +
+            matchedSkills + ']' +
+            (missingSkills ? '; Missing [' + missingSkills + ']' : '') + '.');
+        parts.push('Experience (' + breakdown.experience_score + '/100).');
+        parts.push('Projects (' + breakdown.projects_score + '/100).');
+        parts.push('Certifications (' + breakdown.certifications_score + '/100).');
+        parts.push('Education (' + breakdown.education_score + '/100).');
+        return parts.join(' ');
+    },
+
+    /**
+     * Evaluates candidate education against requisition requirement.
+     * Returns: 'exceeds', 'exact', 'related', or 'none'.
+     */
+    evaluateEducation: function(candidateEdu, requiredEdu) {
+        if (!requiredEdu || requiredEdu.trim() === '' || requiredEdu.toUpperCase() === 'ANY') {
+            return 'exact';
+        }
+        if (!candidateEdu || candidateEdu.trim() === '') {
+            return 'none';
+        }
+
+        var rank = {
+            'DOCTORATE': 4, 'PHD': 4,
+            'MASTERS': 3, 'MASTER': 3, 'MS': 3, 'MBA': 3,
+            'BACHELORS': 2, 'BACHELOR': 2, 'BS': 2, 'BA': 2, 'BTECH': 2, 'BE': 2,
+            'ASSOCIATES': 1, 'ASSOCIATE': 1,
+            'HIGHSCHOOL': 0, 'HIGH_SCHOOL': 0, 'DIPLOMA': 0
+        };
+
+        var normalize = function(val) {
+            return (val || '').toUpperCase().replace(/[^A-Z]/g, '');
+        };
+
+        var cKey = normalize(candidateEdu);
+        var rKey = normalize(requiredEdu);
+
+        var cRank = rank[cKey] !== undefined ? rank[cKey] : -1;
+        var rRank = rank[rKey] !== undefined ? rank[rKey] : -1;
+
+        if (cRank === -1 || rRank === -1) {
+            if (cKey && rKey && (cKey.indexOf(rKey) !== -1 || rKey.indexOf(cKey) !== -1)) return 'exact';
+            return 'none';
+        }
+
+        if (cRank > rRank) return 'exceeds';
+        if (cRank === rRank) return 'exact';
+        if (cRank === rRank - 1) return 'related';
+        return 'none';
+    },
+
+    /**
+     * High-level candidate scoring wrapper.
+     * Evaluates all 5 auditable dimensions dynamically against requisition criteria.
+     * @param {Object} candidateProfile - Object with skills, years_experience, relevant_projects, certifications, education_level
+     * @param {string} requiredSkillsStr - CSV of mandatory skills
+     * @param {number} requiredExpYears - Requisition required years of experience
+     * @param {string} requiredEdu - Requisition required education level (e.g. 'Bachelors', 'Masters')
+     * @param {number} [requiredCertsCount] - Optional expected certifications benchmark (defaults to 2 if 0/unspecified)
+     */
+    scoreCandidate: function(candidateProfile, requiredSkillsStr, requiredExpYears, requiredEdu, requiredCertsCount) {
+        var skillMatch = this.matchSkills(candidateProfile.skills, requiredSkillsStr);
+        var certsCount = (candidateProfile.certifications || '').split(',').filter(function(c) { return c.trim().length > 0; }).length;
+        
+        var eduReq = requiredEdu || (candidateProfile.requisition ? candidateProfile.requisition.education_required : '');
+        var eduMatch = this.evaluateEducation(candidateProfile.education_level, eduReq);
+
+        var reqCerts = (requiredCertsCount !== undefined && requiredCertsCount !== null) ? parseInt(requiredCertsCount, 10) : 0;
+
+        var breakdown = this.calculateFitScore(
+            skillMatch.matchedCount,
+            skillMatch.totalRequired,
+            parseFloat(candidateProfile.years_experience) || 0,
+            parseInt(requiredExpYears, 10) || 0,
+            parseInt(candidateProfile.relevant_projects, 10) || 0,
+            certsCount,
+            reqCerts,
+            eduMatch
+        );
+
+        breakdown.matched_skills = skillMatch.matched.join(', ');
+        breakdown.missing_skills = skillMatch.missing.join(', ');
+        breakdown.explanation = this.generateExplanation(breakdown, breakdown.matched_skills, breakdown.missing_skills);
+        return breakdown;
+    },
+
+    type: 'AEGISResumeScorer'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-20 11:03:48</sys_created_on>
+        <sys_id>5f1723bf6d5f03107f44d98064d897ea</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AEGISResumeScorer</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_script_include_5f1723bf6d5f03107f44d98064d897ea</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:38:19</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_script_include_5f1723bf6d5f03107f44d98064d897ea</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_snc_aegis.AEGISResumeScorer&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;AEGISResumeScorer&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var AEGISResumeScorer = Class.create();
+AEGISResumeScorer.prototype = {
+    initialize: function() {},
+
+    /**
+     * Deterministic 5-factor weighted fit calculation.
+     * Weights: Skills 30%, Experience 25%, Projects 20%, Certifications 15%, Education 10%.
+     */
+    calculateFitScore: function(matchedSkillsCount, totalRequiredSkills,
+                                candidateExpYears, requiredExpYears,
+                                relevantProjectsCount, candidateCertsCount,
+                                requiredCertsCount, educationMatch) {
+
+        // Factor 1: Skills (30%)
+        var skillsScore = 0;
+        if (totalRequiredSkills &gt; 0) {
+            skillsScore = Math.min(100, Math.round((matchedSkillsCount / totalRequiredSkills) * 100));
+        }
+
+        // Factor 2: Experience (25%)
+        var expScore = 0;
+        if (requiredExpYears &gt; 0) {
+            expScore = Math.min(100, Math.round((candidateExpYears / requiredExpYears) * 100));
+        } else {
+            expScore = 100;
+        }
+
+        // Factor 3: Projects (20%) — benchmark is 3 projects for full score
+        var projScore = Math.min(100, Math.round((relevantProjectsCount / 3) * 100));
+
+        // Factor 4: Certifications (15%) — benchmark is 2 certs if none required
+        var certScore = 0;
+        if (requiredCertsCount &gt; 0) {
+            certScore = Math.min(100, Math.round((candidateCertsCount / requiredCertsCount) * 100));
+        } else {
+            certScore = Math.min(100, Math.round((candidateCertsCount / 2) * 100));
+        }
+
+        // Factor 5: Education (10%)
+        var eduScore = 50;
+        if (educationMatch === 'exact' || educationMatch === 'exceeds') {
+            eduScore = 100;
+        } else if (educationMatch === 'related') {
+            eduScore = 75;
+        } else if (educationMatch === 'none') {
+            eduScore = 25;
+        }
+
+        var fitScore = Math.round(
+            (skillsScore * 0.30) +
+            (expScore * 0.25) +
+            (projScore * 0.20) +
+            (certScore * 0.15) +
+            (eduScore * 0.10)
+        );
+
+        return {
+            fit_score: fitScore,
+            skills_score: skillsScore,
+            experience_score: expScore,
+            projects_score: projScore,
+            certifications_score: certScore,
+            education_score: eduScore
+        };
+    },
+
+    /**
+     * Case-insensitive skill matching between candidate CSV and requisition CSV.
+     */
+    matchSkills: function(candidateSkillsStr, requiredSkillsStr) {
+        if (!requiredSkillsStr) {
+            return { matched: [], missing: [], matchedCount: 0, totalRequired: 0 };
+        }
+
+        var required = requiredSkillsStr.split(',').map(function(s) { return s.trim(); });
+        var candidate = (candidateSkillsStr || '').split(',').map(function(s) { return s.trim().toLowerCase(); });
+
+        var matched = [];
+        var missing = [];
+
+        for (var i = 0; i &lt; required.length; i++) {
+            var reqSkill = required[i];
+            if (candidate.indexOf(reqSkill.toLowerCase()) !== -1) {
+                matched.push(reqSkill);
+            } else {
+                missing.push(reqSkill);
+            }
+        }
+
+        return {
+            matched: matched,
+            missing: missing,
+            matchedCount: matched.length,
+            totalRequired: required.length
+        };
+    },
+
+    /**
+     * Generates a human-readable, auditable explanation.
+     */
+    generateExplanation: function(breakdown, matchedSkills, missingSkills) {
+        var parts = [];
+        parts.push('Overall Fit Score: ' + breakdown.fit_score + '/100.');
+        parts.push('Skills Match (' + breakdown.skills_score + '/100): Matched [' +
+            matchedSkills + ']' +
+            (missingSkills ? '; Missing [' + missingSkills + ']' : '') + '.');
+        parts.push('Experience (' + breakdown.experience_score + '/100).');
+        parts.push('Projects (' + breakdown.projects_score + '/100).');
+        parts.push('Certifications (' + breakdown.certifications_score + '/100).');
+        parts.push('Education (' + breakdown.education_score + '/100).');
+        return parts.join(' ');
+    },
+
+    /**
+     * Evaluates candidate education against requisition requirement.
+     * Returns: 'exceeds', 'exact', 'related', or 'none'.
+     */
+    evaluateEducation: function(candidateEdu, requiredEdu) {
+        if (!requiredEdu || requiredEdu.trim() === '' || requiredEdu.toUpperCase() === 'ANY') {
+            return 'exact';
+        }
+        if (!candidateEdu || candidateEdu.trim() === '') {
+            return 'none';
+        }
+
+        var rank = {
+            'DOCTORATE': 4, 'PHD': 4,
+            'MASTERS': 3, 'MASTER': 3, 'MS': 3, 'MBA': 3,
+            'BACHELORS': 2, 'BACHELOR': 2, 'BS': 2, 'BA': 2, 'BTECH': 2, 'BE': 2,
+            'ASSOCIATES': 1, 'ASSOCIATE': 1,
+            'HIGHSCHOOL': 0, 'HIGH_SCHOOL': 0, 'DIPLOMA': 0
+        };
+
+        var normalize = function(val) {
+            return (val || '').toUpperCase().replace(/[^A-Z]/g, '');
+        };
+
+        var cKey = normalize(candidateEdu);
+        var rKey = normalize(requiredEdu);
+
+        var cRank = rank[cKey] !== undefined ? rank[cKey] : -1;
+        var rRank = rank[rKey] !== undefined ? rank[rKey] : -1;
+
+        if (cRank === -1 || rRank === -1) {
+            if (cKey &amp;&amp; rKey &amp;&amp; (cKey.indexOf(rKey) !== -1 || rKey.indexOf(cKey) !== -1)) return 'exact';
+            return 'none';
+        }
+
+        if (cRank &gt; rRank) return 'exceeds';
+        if (cRank === rRank) return 'exact';
+        if (cRank === rRank - 1) return 'related';
+        return 'none';
+    },
+
+    /**
+     * High-level candidate scoring wrapper.
+     * Evaluates all 5 auditable dimensions dynamically against requisition criteria.
+     * @param {Object} candidateProfile - Object with skills, years_experience, relevant_projects, certifications, education_level
+     * @param {string} requiredSkillsStr - CSV of mandatory skills
+     * @param {number} requiredExpYears - Requisition required years of experience
+     * @param {string} requiredEdu - Requisition required education level (e.g. 'Bachelors', 'Masters')
+     * @param {number} [requiredCertsCount] - Optional expected certifications benchmark (defaults to 2 if 0/unspecified)
+     */
+    scoreCandidate: function(candidateProfile, requiredSkillsStr, requiredExpYears, requiredEdu, requiredCertsCount) {
+        var skillMatch = this.matchSkills(candidateProfile.skills, requiredSkillsStr);
+        var certsCount = (candidateProfile.certifications || '').split(',').filter(function(c) { return c.trim().length &gt; 0; }).length;
+        
+        var eduReq = requiredEdu || (candidateProfile.requisition ? candidateProfile.requisition.education_required : '');
+        var eduMatch = this.evaluateEducation(candidateProfile.education_level, eduReq);
+
+        var reqCerts = (requiredCertsCount !== undefined &amp;&amp; requiredCertsCount !== null) ? parseInt(requiredCertsCount, 10) : 0;
+
+        var breakdown = this.calculateFitScore(
+            skillMatch.matchedCount,
+            skillMatch.totalRequired,
+            parseFloat(candidateProfile.years_experience) || 0,
+            parseInt(requiredExpYears, 10) || 0,
+            parseInt(candidateProfile.relevant_projects, 10) || 0,
+            certsCount,
+            reqCerts,
+            eduMatch
+        );
+
+        breakdown.matched_skills = skillMatch.matched.join(', ');
+        breakdown.missing_skills = skillMatch.missing.join(', ');
+        breakdown.explanation = this.generateExplanation(breakdown, breakdown.matched_skills, breakdown.missing_skills);
+        return breakdown;
+    },
+
+    type: 'AEGISResumeScorer'
+};
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 11:03:48&lt;/sys_created_on&gt;&lt;sys_id&gt;5f1723bf6d5f03107f44d98064d897ea&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGISResumeScorer&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_5f1723bf6d5f03107f44d98064d897ea&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-23 14:38:19&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1565205052</payload_hash>
+        <record_name>AEGISResumeScorer</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-23 14:38:19</sys_created_on>
+        <sys_id>f115377ce4e343107f44705ba96fab03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ceb4046c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-23 14:38:19</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>3515377ce9e343107f93e74faf172b02</update_guid>
+        <update_guid_history>3515377ce9e343107f93e74faf172b02:1565205052,563727bf895f031019363a7f7eb1c83e:440940073</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-30 06:22:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>608cbddfefbe418390a2690557070fe1</sys_id>
+        <sys_metadata>5f1723bf6d5f03107f44d98064d897ea</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGISResumeScorer</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_script_include_5f1723bf6d5f03107f44d98064d897ea</sys_update_name>
+        <sys_update_version display_value="sys_script_include_5f1723bf6d5f03107f44d98064d897ea">f115377ce4e343107f44705ba96fab03</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-30 06:22:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

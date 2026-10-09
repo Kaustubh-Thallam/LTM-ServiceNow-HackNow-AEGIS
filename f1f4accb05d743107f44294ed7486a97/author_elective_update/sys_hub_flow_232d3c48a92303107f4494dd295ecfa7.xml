@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from>eeeac6897743011031e3b3c64b5a99bd</copied_from>
+        <copied_from_name>FlowTemplate: Record Trigger</copied_from_name>
+        <description>Generates full 5-section job description, executes inclusive language and bias check, and saves draft for manager review.</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>aegis__f2_jd_generation</internal_name>
+        <label_cache>[{"name":"Updated_1.current","label":"Trigger - Record Updated➛ Record","reference":"x_snc_aegis_job_requisition","reference_display":"","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0}],"usedInstances":{"4d185f2a-cace-4092-bf61-3d529080c375":["requisition"]},"attributes":{"":""}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>AEGIS - F2 JD Generation</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:19:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>232d3c48a92303107f4494dd295ecfa7</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>AEGIS - F2 JD Generation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_hub_flow_232d3c48a92303107f4494dd295ecfa7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:31:15</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>599d058ca9a303107f4494dd295ecf4c</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_variable_value action="DELETE" query="document_key=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=232d3c48a92303107f4494dd295ecfa7^sys_idNOT IN2f2d3c48a92303107f4494dd295ecfa7"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>232d3c48a92303107f4494dd295ecfa7</id>
+        <name>AEGIS - F2 JD Generation</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:19:21</sys_created_on>
+        <sys_id>2f2d3c48a92303107f4494dd295ecfa7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:19:21</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=2f2d3c48a92303107f4494dd295ecfa7"/>
+    <sys_hub_flow_input action="DELETE" query="model=232d3c48a92303107f4494dd295ecfa7^sys_idNOT IN232d3c48a92303107f4494dd295ecfb5,272d3c48a92303107f4494dd295ecfaf,632d3c48a92303107f4494dd295ecfba"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AEGIS - F2 JD Generation">232d3c48a92303107f4494dd295ecfa7</model>
+        <model_id>232d3c48a92303107f4494dd295ecfa7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:19:21</sys_created_on>
+        <sys_id>232d3c48a92303107f4494dd295ecfb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:19:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=232d3c48a92303107f4494dd295ecfb5"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="AEGIS - F2 JD Generation">232d3c48a92303107f4494dd295ecfa7</model>
+        <model_id>232d3c48a92303107f4494dd295ecfa7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:19:21</sys_created_on>
+        <sys_id>272d3c48a92303107f4494dd295ecfaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:19:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=272d3c48a92303107f4494dd295ecfaf"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="AEGIS - F2 JD Generation">232d3c48a92303107f4494dd295ecfa7</model>
+        <model_id>232d3c48a92303107f4494dd295ecfa7</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:19:22</sys_created_on>
+        <sys_id>632d3c48a92303107f4494dd295ecfba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:19:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=632d3c48a92303107f4494dd295ecfba"/>
+    <sys_hub_flow_output action="DELETE" query="model=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=232d3c48a92303107f4494dd295ecfa7^sys_idNOT IN7b2d3c48a92303107f4494dd295ecfec"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="AEGIS - F2 JD Generation">232d3c48a92303107f4494dd295ecfa7</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:19:22</sys_created_on>
+        <sys_id>7b2d3c48a92303107f4494dd295ecfec</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:20:20</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+VaW3ObOBT+KwxPuzPpDhjb2NmnrJ1sM5MmHdvtPnQ7jEDCZouFiwSpm8l/3yNu5h7f2rjJk40kpHM+nfOdD8GnB5n7znxO/GvKOKIWma7ZNZbPZWzZSCGDoa53NUVVFU0lmqlZ/a7ZQ8MhsuUz2UUmcWHoJKDSLJ4FWh3KiU+RO1uvCHRaC8+xCLTHf24cxuXzTw+yPSVfAwILyufqmWx/RG4ghns0GmzfJHPfJdfXSzQX/eL/e+SjJYFVmHz+IFP4Dx0h8g1jabA1MxaBaSReGQ5dBdwwzf6wR/qKpalap6MonUFXNfuaqXawhgjqwayYrAjFhHIjFKbA1J9k+XO13ViilVg2te3x8Uz44hKLE8DNRi4j0PKB5a/eOYw5dJ40PJ4V3O/k3A+oA82GtUB0DjbkgLjyfIkgayHFQ6R4yKlC02Dt4WBpObCQe4/WrBgt7lpybIl6XLIC3wfboMEPKBUTnihW7UYfDlk3BxkJib+uhJVolIIVRvy0Aypv5z64wBJLROF2D0DIBvneckaWK1fMmjZ6PgYyO1cV4KbE6dRLxn0YORcohkXSwg6DWdYp1gl1rVIEhScpOd449EuMsLVwXAx7DhiAeY6gXksd9joaHgCCQ62KoNpIvc2W8hIZi+s0BEZpY95p8o2LrdhgWQXOJwiL2M0aFuBd0aZky7izJBJfAA14FDvc8ai0RNxaEHYmwb56IgFEt+34jEej/5DFit+Y810EsCIWs4kfx7NALbs0EtCTcB0jjqbcDywe+CQFWLjHoqLjFqtKaf9S/0X+uE/RbtjE2MksnfwsT/FSWGa0ZBKtYkoxVcNSWie3dR+jZLJR4PLRK3U/3va7lYg2GKKJoEemmwaF5wZLehvni5yBVVIhSeu4Nq8DBsGXEtaGTaYL736SRueVQyOLkk7Xs5CbXSEOiWoGXGzOA7AZ0OnIRYxtrIIoN74G4ha5wJqRR7K4xfKdFb+wuBOSHPkfLulGaaLWCLq0i+VtErQTwbs7xSoZcVm5VdO9BRd4wP4NFEXDF+/fT+4+Xo6rXLsXz5rmEGGCGipVX2/Ao8ZYXgNNgWLzHXnHD6DZIkMqR+LIOuKoZtNOyVTNFVj8gFSRlx4m7jgfeXkBIiBOYTW8FfEFnHCf/PHiZvT24vbvy+mfye/V5O5d+n92B/fdI8qZwT0DYWzkdlMsAb7snqQxSo9ZvF45xMXxyB+Wu8CrsLiRhdahj2SRaXnNKAp8VLOhjid0LqXJf5Lisdng4z69RUFSASpbElJbSnclXp+dNmKtlv8kAb6pDtW4DksRWioKbXG6e7XoW1jtmnpf0QXMkIGmrSq60kM21hRlqLVmYKMLuwnzY1aMY2vqNrTLG1UnNbdKlrCYaZnYbNe7z23aQVo0C+5aMdrm2nEVqoxwKCoS3r8a/lDJKnLLdr174MWDS56JrC9z3wsoLtO5WEFyqLQZIf2W7Mzvp0zmrXYftwrank/awSuOOHXIctY+S83bBHX2nEzX1WoXN+5e17rEwnq/21egnGlQyczecGhaqGPbel8nCm5MsVoTX1Y9eyLbwzq6aCogtcEf1uXMDlXt+Q08qLYlgVxb2eK+11fD7heEGuC2b7iiSlVK2dx1MEn7DmOWylLh5pH9GAcsmj3AvZ6uWzrwMlCL3SUmUrsd8Fvva6T/lOdtpvIaNPJkcxM3/ZTDFlGZhG0NpPMh7jqBg5fXkj6McB4fLe+uA9/khSCFp7VoChRbW37XGPGm50u3Hn1zvRknTQlogOho8CTlzVa2H64KC1BuA6PIFOlXxbHR+CMDaXp8UVHWsP5f0F5YXzynNmzuSR887e7Ms+jyEtOExe2pOYvaZ5P20PMDbdjDtlZfdPVOO182+/dylP2WzB021oA6Bb0tj4W1dFj31nTfkCkFYvYu9al3wq8VlIOeYNJsbzyc28fYV6raInl/ROkmjCeGZ+eL5diLvkKANcUHCYnxBEtm8gWK58JTMKwvCWNOtkru6MWRBUgV1SzPf2FMd/LhyIjGZx0VRQfNUvJceZKQVex8Ph1W4o7Wk9IaePf4SM8emnioNZxt9JrPNpq1Vqn75QiunUk3rOPwVoGx27zlOWslRi48iuG0paJ6wV7/sEPfGitelxiaJe9uS+InQteICKOQ1smXVG1sufksuPTG+5vBqGUgMneY8Z9nGj7UJoeln7Qd4/xXxRipHdJUdQY1fpds5TXu53kwuk26jTs2HrcxYQzZNkQ4+JW+qTs0L2zHhR01YqSZF/iRy5PL0d1kbPxzMRu9vZwYk8vpbHI9ml2Oj5g3n/8H4/+GwoU0AAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=232d3c48a92303107f4494dd295ecfa7^sys_idNOT INbb7db088a92303107f4494dd295ecfe2"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Execute Skill">30468d977f921210f465c3b76d8665c1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="AEGIS - F2 JD Generation">232d3c48a92303107f4494dd295ecfa7</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:20:45</sys_created_on>
+        <sys_id>bb7db088a92303107f4494dd295ecfe2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:30:28</sys_updated_on>
+        <ui_id>4d185f2a-cace-4092-bf61-3d529080c375</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=bb7db088a92303107f4494dd295ecfe2"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_hub_flow_variable action="DELETE" query="model=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:19:21</sys_created_on>
+        <sys_id>632d3c48a92303107f4494dd295ecfb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:19:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:19:22</sys_created_on>
+        <sys_id>b32d3c48a92303107f4494dd295ecfca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:19:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:19:22</sys_created_on>
+        <sys_id>e32d3c48a92303107f4494dd295ecfb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 17:19:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=232d3c48a92303107f4494dd295ecfa7"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_hub_flow_232d3c48a92303107f4494dd295ecfa7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version&gt;29000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build/&gt;&lt;copied_from&gt;eeeac6897743011031e3b3c64b5a99bd&lt;/copied_from&gt;&lt;copied_from_name&gt;FlowTemplate: Record Trigger&lt;/copied_from_name&gt;&lt;description&gt;Generates full 5-section job description, executes inclusive language and bias check, and saves draft for manager review.&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority/&gt;&lt;generation_source/&gt;&lt;internal_name&gt;aegis__f2_jd_generation&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"Updated_1.current","label":"Trigger - Record Updated➛ Record","reference":"x_snc_aegis_job_requisition","reference_display":"","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":[{"label":null,"value":null,"order":0}],"usedInstances":{"4d185f2a-cace-4092-bf61-3d529080c375":["requisition"]},"attributes":{"":""}}]&lt;/label_cache&gt;&lt;latest_snapshot/&gt;&lt;master_snapshot/&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;AEGIS - F2 JD Generation&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:19:21&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;232d3c48a92303107f4494dd295ecfa7&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS - F2 JD Generation&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_232d3c48a92303107f4494dd295ecfa7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 18:31:15&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record&gt;599d058ca9a303107f4494dd295ecf4c&lt;/version_record&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=232d3c48a92303107f4494dd295ecfa7^sys_idNOT IN2f2d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;232d3c48a92303107f4494dd295ecfa7&lt;/id&gt;&lt;name&gt;AEGIS - F2 JD Generation&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:19:21&lt;/sys_created_on&gt;&lt;sys_id&gt;2f2d3c48a92303107f4494dd295ecfa7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 17:19:21&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2f2d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=232d3c48a92303107f4494dd295ecfa7^sys_idNOT IN232d3c48a92303107f4494dd295ecfb5,272d3c48a92303107f4494dd295ecfaf,632d3c48a92303107f4494dd295ecfba"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="AEGIS - F2 JD Generation"&gt;232d3c48a92303107f4494dd295ecfa7&lt;/model&gt;&lt;model_id&gt;232d3c48a92303107f4494dd295ecfa7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:19:21&lt;/sys_created_on&gt;&lt;sys_id&gt;232d3c48a92303107f4494dd295ecfb5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 17:19:21&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=232d3c48a92303107f4494dd295ecfb5"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="AEGIS - F2 JD Generation"&gt;232d3c48a92303107f4494dd295ecfa7&lt;/model&gt;&lt;model_id&gt;232d3c48a92303107f4494dd295ecfa7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:19:21&lt;/sys_created_on&gt;&lt;sys_id&gt;272d3c48a92303107f4494dd295ecfaf&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 17:19:21&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=272d3c48a92303107f4494dd295ecfaf"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="AEGIS - F2 JD Generation"&gt;232d3c48a92303107f4494dd295ecfa7&lt;/model&gt;&lt;model_id&gt;232d3c48a92303107f4494dd295ecfa7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:19:22&lt;/sys_created_on&gt;&lt;sys_id&gt;632d3c48a92303107f4494dd295ecfba&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 17:19:22&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=632d3c48a92303107f4494dd295ecfba"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=232d3c48a92303107f4494dd295ecfa7^sys_idNOT IN7b2d3c48a92303107f4494dd295ecfec"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="AEGIS - F2 JD Generation"&gt;232d3c48a92303107f4494dd295ecfa7&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Updated&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:19:22&lt;/sys_created_on&gt;&lt;sys_id&gt;7b2d3c48a92303107f4494dd295ecfec&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 17:20:20&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Updated"&gt;bb695e60c31322002841b63b12d3aea5&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/+VaW3ObOBT+KwxPuzPpDhjb2NmnrJ1sM5MmHdvtPnQ7jEDCZouFiwSpm8l/3yNu5h7f2rjJk40kpHM+nfOdD8GnB5n7znxO/GvKOKIWma7ZNZbPZWzZSCGDoa53NUVVFU0lmqlZ/a7ZQ8MhsuUz2UUmcWHoJKDSLJ4FWh3KiU+RO1uvCHRaC8+xCLTHf24cxuXzTw+yPSVfAwILyufqmWx/RG4ghns0GmzfJHPfJdfXSzQX/eL/e+SjJYFVmHz+IFP4Dx0h8g1jabA1MxaBaSReGQ5dBdwwzf6wR/qKpalap6MonUFXNfuaqXawhgjqwayYrAjFhHIjFKbA1J9k+XO13ViilVg2te3x8Uz44hKLE8DNRi4j0PKB5a/eOYw5dJ40PJ4V3O/k3A+oA82GtUB0DjbkgLjyfIkgayHFQ6R4yKlC02Dt4WBpObCQe4/WrBgt7lpybIl6XLIC3wfboMEPKBUTnihW7UYfDlk3BxkJib+uhJVolIIVRvy0Aypv5z64wBJLROF2D0DIBvneckaWK1fMmjZ6PgYyO1cV4KbE6dRLxn0YORcohkXSwg6DWdYp1gl1rVIEhScpOd449EuMsLVwXAx7DhiAeY6gXksd9joaHgCCQ62KoNpIvc2W8hIZi+s0BEZpY95p8o2LrdhgWQXOJwiL2M0aFuBd0aZky7izJBJfAA14FDvc8ai0RNxaEHYmwb56IgFEt+34jEej/5DFit+Y810EsCIWs4kfx7NALbs0EtCTcB0jjqbcDywe+CQFWLjHoqLjFqtKaf9S/0X+uE/RbtjE2MksnfwsT/FSWGa0ZBKtYkoxVcNSWie3dR+jZLJR4PLRK3U/3va7lYg2GKKJoEemmwaF5wZLehvni5yBVVIhSeu4Nq8DBsGXEtaGTaYL736SRueVQyOLkk7Xs5CbXSEOiWoGXGzOA7AZ0OnIRYxtrIIoN74G4ha5wJqRR7K4xfKdFb+wuBOSHPkfLulGaaLWCLq0i+VtErQTwbs7xSoZcVm5VdO9BRd4wP4NFEXDF+/fT+4+Xo6rXLsXz5rmEGGCGipVX2/Ao8ZYXgNNgWLzHXnHD6DZIkMqR+LIOuKoZtNOyVTNFVj8gFSRlx4m7jgfeXkBIiBOYTW8FfEFnHCf/PHiZvT24vbvy+mfye/V5O5d+n92B/fdI8qZwT0DYWzkdlMsAb7snqQxSo9ZvF45xMXxyB+Wu8CrsLiRhdahj2SRaXnNKAp8VLOhjid0LqXJf5Lisdng4z69RUFSASpbElJbSnclXp+dNmKtlv8kAb6pDtW4DksRWioKbXG6e7XoW1jtmnpf0QXMkIGmrSq60kM21hRlqLVmYKMLuwnzY1aMY2vqNrTLG1UnNbdKlrCYaZnYbNe7z23aQVo0C+5aMdrm2nEVqoxwKCoS3r8a/lDJKnLLdr174MWDS56JrC9z3wsoLtO5WEFyqLQZIf2W7Mzvp0zmrXYftwrank/awSuOOHXIctY+S83bBHX2nEzX1WoXN+5e17rEwnq/21egnGlQyczecGhaqGPbel8nCm5MsVoTX1Y9eyLbwzq6aCogtcEf1uXMDlXt+Q08qLYlgVxb2eK+11fD7heEGuC2b7iiSlVK2dx1MEn7DmOWylLh5pH9GAcsmj3AvZ6uWzrwMlCL3SUmUrsd8Fvva6T/lOdtpvIaNPJkcxM3/ZTDFlGZhG0NpPMh7jqBg5fXkj6McB4fLe+uA9/khSCFp7VoChRbW37XGPGm50u3Hn1zvRknTQlogOho8CTlzVa2H64KC1BuA6PIFOlXxbHR+CMDaXp8UVHWsP5f0F5YXzynNmzuSR887e7Ms+jyEtOExe2pOYvaZ5P20PMDbdjDtlZfdPVOO182+/dylP2WzB021oA6Bb0tj4W1dFj31nTfkCkFYvYu9al3wq8VlIOeYNJsbzyc28fYV6raInl/ROkmjCeGZ+eL5diLvkKANcUHCYnxBEtm8gWK58JTMKwvCWNOtkru6MWRBUgV1SzPf2FMd/LhyIjGZx0VRQfNUvJceZKQVex8Ph1W4o7Wk9IaePf4SM8emnioNZxt9JrPNpq1Vqn75QiunUk3rOPwVoGx27zlOWslRi48iuG0paJ6wV7/sEPfGitelxiaJe9uS+InQteICKOQ1smXVG1sufksuPTG+5vBqGUgMneY8Z9nGj7UJoeln7Qd4/xXxRipHdJUdQY1fpds5TXu53kwuk26jTs2HrcxYQzZNkQ4+JW+qTs0L2zHhR01YqSZF/iRy5PL0d1kbPxzMRu9vZwYk8vpbHI9ml2Oj5g3n/8H4/+GwoU0AAA=&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_update&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=232d3c48a92303107f4494dd295ecfa7^sys_idNOT INbb7db088a92303107f4494dd295ecfe2"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Execute Skill"&gt;30468d977f921210f465c3b76d8665c1&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="AEGIS - F2 JD Generation"&gt;232d3c48a92303107f4494dd295ecfa7&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:20:45&lt;/sys_created_on&gt;&lt;sys_id&gt;bb7db088a92303107f4494dd295ecfe2&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 18:30:28&lt;/sys_updated_on&gt;&lt;ui_id&gt;4d185f2a-cace-4092-bf61-3d529080c375&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;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&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=bb7db088a92303107f4494dd295ecfe2"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:19:21&lt;/sys_created_on&gt;&lt;sys_id&gt;632d3c48a92303107f4494dd295ecfb3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 17:19:21&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:19:22&lt;/sys_created_on&gt;&lt;sys_id&gt;b32d3c48a92303107f4494dd295ecfca&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 17:19:22&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 17:19:22&lt;/sys_created_on&gt;&lt;sys_id&gt;e32d3c48a92303107f4494dd295ecfb8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 17:19:22&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=232d3c48a92303107f4494dd295ecfa7"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-201778889</payload_hash>
+        <record_name>AEGIS - F2 JD Generation</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 18:31:16</sys_created_on>
+        <sys_id>b0ad058ca9a303107f4494dd295ecfd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c01635620000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:31:16</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>b4ad058c49a303107264603cdfc93ecf</update_guid>
+        <update_guid_history>b4ad058c49a303107264603cdfc93ecf:-201778889,c88dcd4c44a3031051d805a24e4008a8:-30141759,7c2d0d0c17a303104ae302da2fed7d85:970478834,f88c05c818a30310b07a5c7316e25dcd:1223274265,cb6bc908f2a303101486177e99567a13:1527397156,4439cd80dea3031057294f8046195bec:2123224334,37194d8019a3031042024d27a24068c1:-377150260,ee8d7888d2230310e609dd9023a70696:2144893135,2c7d74884d230310915723cbec2ffeef:625886322,c13dbc48952303100528324dc81b3f37:1481925543,f72d3c48dc2303106dfd228d06ce6cf4:-821200304,272d3c48d0230310188939d3c59007ac:2098015185</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 18:31:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>44db19a9bce24ef284f71d488740dca4</sys_id>
+        <sys_metadata>232d3c48a92303107f4494dd295ecfa7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS - F2 JD Generation</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_232d3c48a92303107f4494dd295ecfa7</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_232d3c48a92303107f4494dd295ecfa7">b0ad058ca9a303107f4494dd295ecfd0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:31:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

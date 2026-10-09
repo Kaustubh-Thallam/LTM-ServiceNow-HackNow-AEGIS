@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_version">
+    <sn_aia_version action="DELETE">
+        <condition/>
+        <instructions>1. Analyze the role title, level, department, and required skills.
+2. Analyze the candidate's resume evidence and relevant experience.
+3. Review the screening fit score and available screening dimension scores.
+4. Review the candidate's matched skills, missing skills, and transferable skills.
+5. Generate 2-3 Technical Depth questions based on matched skills.
+6. Generate 1-2 Gap Assessment questions based on missing skills.
+7. Generate 1-2 Project Deep-Dive questions based on relevant candidate experience.
+8. Generate 2-3 Behavioral or Situational questions appropriate for the candidate's level.
+9. Generate 1 Problem-Solving question relevant to the department.
+10. Generate 1 Level-Specific question appropriate for Junior, Mid, Senior, or Lead level.
+11. For every question, provide a specific explanation of why it is relevant to this candidate.
+12. For every question, provide a measurable 5-level scoring rubric from 1 to 5.
+13. Provide two follow-up prompts for each question: one for a vague answer and one for a strong answer.
+14. Ensure the final output contains 8-12 questions and contains no generic boilerplate questions.</instructions>
+        <state>published</state>
+        <sys_class_name>sn_aia_version</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-22 06:27:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>ea1bb4e039ab03107f44646bfeef9877</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>V1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_aia_version_ea1bb4e039ab03107f44646bfeef9877</sys_update_name>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:27:14</sys_updated_on>
+        <target_id>d29af0a039ab03107f44646bfeef9820</target_id>
+        <target_table>sn_aia_agent</target_table>
+        <version_name>V1</version_name>
+        <version_number>1</version_number>
+    </sn_aia_version>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_aia_version_ea1bb4e039ab03107f44646bfeef9877</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_version"><sn_aia_version action="INSERT_OR_UPDATE"><condition/><instructions>1. Analyze the role title, level, department, and required skills.
+2. Analyze the candidate's resume evidence and relevant experience.
+3. Review the screening fit score and available screening dimension scores.
+4. Review the candidate's matched skills, missing skills, and transferable skills.
+5. Generate 2-3 Technical Depth questions based on matched skills.
+6. Generate 1-2 Gap Assessment questions based on missing skills.
+7. Generate 1-2 Project Deep-Dive questions based on relevant candidate experience.
+8. Generate 2-3 Behavioral or Situational questions appropriate for the candidate's level.
+9. Generate 1 Problem-Solving question relevant to the department.
+10. Generate 1 Level-Specific question appropriate for Junior, Mid, Senior, or Lead level.
+11. For every question, provide a specific explanation of why it is relevant to this candidate.
+12. For every question, provide a measurable 5-level scoring rubric from 1 to 5.
+13. Provide two follow-up prompts for each question: one for a vague answer and one for a strong answer.
+14. Ensure the final output contains 8-12 questions and contains no generic boilerplate questions.</instructions><state>published</state><sys_class_name>sn_aia_version</sys_class_name><sys_created_by>RAKESH</sys_created_by><sys_created_on>2026-09-22 06:27:14</sys_created_on><sys_domain>global</sys_domain><sys_id>ea1bb4e039ab03107f44646bfeef9877</sys_id><sys_mod_count>0</sys_mod_count><sys_name>V1</sys_name><sys_overrides/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sn_aia_version_ea1bb4e039ab03107f44646bfeef9877</sys_update_name><sys_updated_by>RAKESH</sys_updated_by><sys_updated_on>2026-09-22 06:27:14</sys_updated_on><target_id>d29af0a039ab03107f44646bfeef9820</target_id><target_table>sn_aia_agent</target_table><version_name>V1</version_name><version_number>1</version_number></sn_aia_version></record_update>]]></payload>
+        <payload_hash>1474317277</payload_hash>
+        <record_name>V1</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-22 06:27:14</sys_created_on>
+        <sys_id>ea1bb4e039ab03107f44646bfeef987a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c7cc0f8d0000001</sys_recorded_at>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:27:14</sys_updated_on>
+        <type>AIA Version</type>
+        <update_guid>ea1bb4e04fab031034bc7da74af75e79</update_guid>
+        <update_guid_history>ea1bb4e04fab031034bc7da74af75e79:1474317277</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="V1">7f835105e42383107f44705ba96fabac</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-23 21:31:03</sys_created_on>
+        <sys_db_object display_value="" name="sn_aia_version">sn_aia_version</sys_db_object>
+        <sys_id>6ebc26c6973f40008822c6746623c100</sys_id>
+        <sys_metadata>ea1bb4e039ab03107f44646bfeef9877</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>V1</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_aia_version_ea1bb4e039ab03107f44646bfeef9877</sys_update_name>
+        <sys_update_version display_value="sn_aia_version_ea1bb4e039ab03107f44646bfeef9877">ea1bb4e039ab03107f44646bfeef987a</sys_update_version>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-23 21:31:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

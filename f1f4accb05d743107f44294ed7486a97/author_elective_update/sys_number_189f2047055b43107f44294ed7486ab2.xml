@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="DELETE">
+        <category display_value="" name="x_snc_aegis_job_description">x_snc_aegis_job_description</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>JOB</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 13:45:57</sys_created_on>
+        <sys_id>189f2047055b43107f44294ed7486ab2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>JOB</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_number_189f2047055b43107f44294ed7486ab2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 13:45:57</sys_updated_on>
+    </sys_number>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_number_189f2047055b43107f44294ed7486ab2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number"><sys_number action="INSERT_OR_UPDATE"><category display_value="" name="x_snc_aegis_job_description">x_snc_aegis_job_description</category><maximum_digits>7</maximum_digits><number>1000</number><prefix>JOB</prefix><sys_class_name>sys_number</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-17 13:45:57</sys_created_on><sys_id>189f2047055b43107f44294ed7486ab2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>JOB</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_number_189f2047055b43107f44294ed7486ab2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-17 13:45:57</sys_updated_on></sys_number></record_update>]]></payload>
+        <payload_hash>54004732</payload_hash>
+        <record_name>JOB</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 13:45:57</sys_created_on>
+        <sys_id>d49f2047055b43107f44294ed7486ace</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0af9ded6f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 13:45:57</sys_updated_on>
+        <type>Number</type>
+        <update_guid>d89f2047a25b43107e2a4d11e9d6bbcd</update_guid>
+        <update_guid_history>d89f2047a25b43107e2a4d11e9d6bbcd:54004732</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 13:47:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_number">sys_number</sys_db_object>
+        <sys_id>1cb819693883494989dc8d7c2f4a1131</sys_id>
+        <sys_metadata>189f2047055b43107f44294ed7486ab2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>JOB</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent display_value="">056f2807055b43107f44294ed7486a4f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_number_189f2047055b43107f44294ed7486ab2</sys_update_name>
+        <sys_update_version display_value="sys_number_189f2047055b43107f44294ed7486ab2">d49f2047055b43107f44294ed7486ace</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 13:47:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

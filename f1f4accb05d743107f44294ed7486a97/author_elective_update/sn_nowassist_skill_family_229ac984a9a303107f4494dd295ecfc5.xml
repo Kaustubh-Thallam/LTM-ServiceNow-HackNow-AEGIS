@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_nowassist_skill_family">
+    <sn_nowassist_skill_family action="DELETE">
+        <advanced_script><![CDATA[(function getMessages() {  //assign string to installPluginMessage  var installPluginMessage = null;  //assign boolean true/false to hideGetPluginButton  var hideGetPluginButton = null;  //assign string to getPluginButtonLabel  var getPluginButtonLabel = null;  return {   'installPluginMessage': installPluginMessage,   'hideGetPluginButton': hideGetPluginButton,   'getPluginButtonLabel': getPluginButtonLabel  }; })();]]></advanced_script>
+        <category>custom</category>
+        <description/>
+        <image_url>images/custom-feature-image.svg</image_url>
+        <name>JD Creation Agent</name>
+        <order>100</order>
+        <parent display_value="HRSD">eebc6453a3a0311079f66bcf26fcda27</parent>
+        <preview_image>images/custom-feature-background-image.svg</preview_image>
+        <sub_title/>
+        <sys_class_name>sn_nowassist_skill_family</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 18:17:59</sys_created_on>
+        <sys_id>229ac984a9a303107f4494dd295ecfc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>JD Creation Agent</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_nowassist_skill_family_229ac984a9a303107f4494dd295ecfc5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:17:59</sys_updated_on>
+        <type>feature</type>
+    </sn_nowassist_skill_family>
+    <sys_translated_text action="DELETE" query="documentkey=229ac984a9a303107f4494dd295ecfc5"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_nowassist_skill_family_229ac984a9a303107f4494dd295ecfc5</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sn_nowassist_skill_family"&gt;&lt;sn_nowassist_skill_family action="INSERT_OR_UPDATE"&gt;&lt;advanced_script&gt;&lt;![CDATA[(function getMessages() {  //assign string to installPluginMessage  var installPluginMessage = null;  //assign boolean true/false to hideGetPluginButton  var hideGetPluginButton = null;  //assign string to getPluginButtonLabel  var getPluginButtonLabel = null;  return {   'installPluginMessage': installPluginMessage,   'hideGetPluginButton': hideGetPluginButton,   'getPluginButtonLabel': getPluginButtonLabel  }; })();]]&gt;&lt;/advanced_script&gt;&lt;category&gt;custom&lt;/category&gt;&lt;description/&gt;&lt;image_url&gt;images/custom-feature-image.svg&lt;/image_url&gt;&lt;name&gt;JD Creation Agent&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;parent display_value="HRSD"&gt;eebc6453a3a0311079f66bcf26fcda27&lt;/parent&gt;&lt;preview_image&gt;images/custom-feature-background-image.svg&lt;/preview_image&gt;&lt;sub_title/&gt;&lt;sys_class_name&gt;sn_nowassist_skill_family&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-20 18:17:59&lt;/sys_created_on&gt;&lt;sys_id&gt;229ac984a9a303107f4494dd295ecfc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;JD Creation Agent&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_nowassist_skill_family_229ac984a9a303107f4494dd295ecfc5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-20 18:17:59&lt;/sys_updated_on&gt;&lt;type&gt;feature&lt;/type&gt;&lt;/sn_nowassist_skill_family&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=229ac984a9a303107f4494dd295ecfc5"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1037270401</payload_hash>
+        <record_name>JD Creation Agent</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 18:17:59</sys_created_on>
+        <sys_id>629ac984a9a303107f4494dd295ecfc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c00a0f6d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:17:59</sys_updated_on>
+        <type>Now Assist Skill Family</type>
+        <update_guid>669ac98468a30310c85b2348ad34f7c7</update_guid>
+        <update_guid_history>669ac98468a30310c85b2348ad34f7c7:-1037270401</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="JD Creation Agent">9bb15908a9e303107f4494dd295ecf49</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 18:49:11</sys_created_on>
+        <sys_db_object display_value="" name="sn_nowassist_skill_family">sn_nowassist_skill_family</sys_db_object>
+        <sys_id>7906d9cee23a4100ae45fcfd03110124</sys_id>
+        <sys_metadata>229ac984a9a303107f4494dd295ecfc5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>JD Creation Agent</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_nowassist_skill_family_229ac984a9a303107f4494dd295ecfc5</sys_update_name>
+        <sys_update_version display_value="sn_nowassist_skill_family_229ac984a9a303107f4494dd295ecfc5">629ac984a9a303107f4494dd295ecfc8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:49:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

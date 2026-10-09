@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>Job Requisition</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Job Requisition</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">6ca46ebf292103107f44f3a98c1824ce</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-17 13:18:16</sys_created_on>
+        <sys_id>ee3924c7051b43107f44294ed7486a87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Job Requisition</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_wizard_answer_ee3924c7051b43107f44294ed7486a87</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-17 13:18:16</sys_updated_on>
+        <table/>
+        <target_url>x_snc_aegis_job_requisition.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

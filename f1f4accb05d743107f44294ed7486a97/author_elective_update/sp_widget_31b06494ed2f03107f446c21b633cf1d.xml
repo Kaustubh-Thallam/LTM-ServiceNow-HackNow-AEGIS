@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function() {
+    var c = this;
+    c.searchQuery = '';
+    c.selectedDept = '';
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.aegis-jobs-page{
+  max-width:1400px;
+  margin:auto;
+  padding-bottom:80px;
+  background:#f7f2e8;
+}
+
+/* HERO */
+
+.hero-section{
+  position:relative;
+  overflow:hidden;
+  border-radius:40px;
+  padding:70px;
+  background:
+  linear-gradient(
+    135deg,
+    #032f26 0%,
+    #014235 100%
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+}
+
+.hero-tag{
+  color:#fff;
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:25px;
+}
+
+.hero-tag .dot{
+  width:12px;
+  height:12px;
+  background:#e4ab39;
+  display:inline-block;
+  border-radius:50%;
+  margin-right:10px;
+}
+
+.hero-section h1{
+  color:white;
+  font-size:72px;
+  line-height:1.05;
+  font-weight:800;
+}
+
+.hero-section h1 span{
+  color:#e4ab39;
+}
+
+.hero-section p{
+  color:#d6e3dd;
+  font-size:22px;
+  line-height:1.8;
+  margin-top:25px;
+}
+
+.hero-stats{
+  display:flex;
+  gap:20px;
+  margin-top:40px;
+}
+
+.stat-card{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:18px 28px;
+}
+
+.stat-card h3{
+  color:white;
+  font-size:30px;
+  margin:0;
+}
+
+.stat-card span{
+  color:#c7d7cf;
+}
+
+.hero-blob-1{
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:#d96b47;
+  right:-100px;
+  top:-40px;
+  opacity:.95;
+}
+
+.hero-blob-2{
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:#e4ab39;
+  right:300px;
+  bottom:-80px;
+}
+
+/* FILTERS */
+
+.filter-bar{
+  margin-top:-35px;
+  position:relative;
+  z-index:5;
+
+  display:flex;
+  gap:20px;
+
+  padding:25px;
+  background:white;
+  border-radius:28px;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+}
+
+.search-box{
+  flex:1;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.search-box input{
+  width:100%;
+  border:none;
+  outline:none;
+  font-size:16px;
+}
+
+.filter-bar select{
+  width:240px;
+  border:none;
+  background:#f7f2e8;
+  border-radius:16px;
+  padding:14px;
+}
+
+/* SECTION */
+
+.section-title{
+  margin:60px 0 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.section-title h2{
+  font-size:42px;
+  color:#032f26;
+}
+
+.role-count{
+  background:white;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:700;
+}
+
+/* JOBS */
+
+.job-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fill,minmax(340px,1fr));
+  gap:24px;
+}
+
+.job-card{
+  background:white;
+  border-radius:30px;
+  padding:28px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.06);
+
+  transition:.3s;
+}
+
+.job-card:hover{
+  transform:translateY(-8px);
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+.dept-icon{
+  width:58px;
+  height:58px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:700;
+  font-size:22px;
+
+  background:
+  linear-gradient(
+      135deg,
+      #032f26,
+      #014235
+  );
+}
+
+.level-badge{
+  background:#f7f2e8;
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:700;
+}
+
+.job-main h3{
+  font-size:28px;
+  color:#032f26;
+  margin-bottom:12px;
+}
+
+.job-meta{
+  color:#6b7280;
+}
+
+.skills{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:22px 0;
+}
+
+.skill-pill{
+  background:#f7f2e8;
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+.card-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.view-role{
+  color:#d96b47;
+  font-weight:700;
+  text-decoration:none;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>aegis_job_listings</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>AEGIS Job Listings</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    data.jobs = [];
+    var gr = new GlideRecord('x_snc_aegis_job_requisition');
+    gr.addQuery('status', 'PUBLISHED');
+    gr.orderByDesc('sys_created_on');
+    gr.query();
+
+    while (gr.next()) {
+        var rawSkills = gr.getValue('required_skills') || '';
+        data.jobs.push({
+            sys_id: gr.getUniqueValue(),
+            role_title: gr.getValue('role_title') || '',
+            department: gr.getValue('department') || '',
+            level: gr.getValue('level') || '',
+            experience_required_years: gr.getValue('experience_required_years') || '0',
+            required_skills: rawSkills,
+            skills_array: rawSkills.split(',').map(function(s) { return s.trim(); }).filter(function(s){ return s; })
+        });
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 09:53:29</sys_created_on>
+        <sys_id>31b06494ed2f03107f446c21b633cf1d</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>AEGIS Job Listings</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sp_widget_31b06494ed2f03107f446c21b633cf1d</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-24 09:13:25</sys_updated_on>
+        <template><![CDATA[<div class="aegis-jobs-page">
+
+  <!-- HERO -->
+
+  <section class="hero-section">
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        <span class="dot"></span>
+        24-hour reply, every time
+      </div>
+
+      <h1>
+        Build what's next.<br>
+        Get hired on <span>merit</span>, not luck.
+      </h1>
+
+      <p>
+        Every application at AEGIS Technologies is reviewed under blind,
+        governed criteria — so the work you've done is what gets you the interview.
+      </p>
+
+      <div class="hero-stats">
+
+        <div class="stat-card">
+          <h3>{{data.jobs.length}}</h3>
+          <span>Open Roles</span>
+        </div>
+
+        <div class="stat-card">
+          <h3>24h</h3>
+          <span>Reply SLA</span>
+        </div>
+
+        <div class="stat-card">
+          <h3>100%</h3>
+          <span>Blind Review</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+
+  </section>
+
+  <!-- FILTERS -->
+
+  <section class="filter-bar">
+
+    <div class="search-box">
+
+      <svg width="18" height="18" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+
+      <input
+        type="text"
+        ng-model="c.searchQuery"
+        placeholder="Search roles, skills, departments..."
+      >
+
+    </div>
+
+    <select ng-model="c.selectedDept">
+
+      <option value="">All Departments</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Analytics">Analytics</option>
+      <option value="Product">Product</option>
+      <option value="Design">Design</option>
+      <option value="Infrastructure">Infrastructure</option>
+
+    </select>
+
+  </section>
+
+  <!-- SECTION TITLE -->
+
+  <section class="section-title">
+
+    <div>
+      <h2>Open Roles</h2>
+      <p>
+        Explore opportunities built around transparent hiring.
+      </p>
+    </div>
+
+    <div class="role-count">
+      {{(data.jobs | filter:c.searchQuery | filter:{department:c.selectedDept}).length}}
+      Positions
+    </div>
+
+  </section>
+
+  <!-- JOBS -->
+
+  <section class="job-grid">
+
+    <div
+      class="job-card"
+      ng-repeat="job in data.jobs | filter:c.searchQuery | filter:{department:c.selectedDept}"
+    >
+
+      <div class="card-top">
+
+        <div
+          class="dept-icon"
+          ng-class="'dept-' + job.department"
+        >
+          {{job.department.charAt(0)}}
+        </div>
+
+        <span class="level-badge">
+          {{job.level}}
+        </span>
+
+      </div>
+
+      <div class="job-main">
+
+        <h3>
+          {{job.role_title}}
+        </h3>
+
+        <p class="job-meta">
+
+          {{job.department}}
+          •
+          {{job.experience_required_years}}+ years experience
+
+        </p>
+
+      </div>
+
+      <div class="skills">
+
+        <span
+          class="skill-pill"
+          ng-repeat="s in job.skills_array | limitTo:4"
+        >
+          {{s}}
+        </span>
+
+      </div>
+
+      <div class="card-bottom">
+
+        <span class="job-ref">
+
+          Ref:
+          {{job.sys_id.substr(0,8)}}
+
+        </span>
+
+        <a
+          ng-href="?id=aegis_job_details&sys_id={{job.sys_id}}"
+          class="view-role"
+        >
+
+          View Role →
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <div
+      ng-if="(data.jobs | filter:c.searchQuery | filter:{department:c.selectedDept}).length===0"
+      class="empty-state"
+    >
+
+      <h3>No Roles Found</h3>
+
+      <p>
+        Try changing filters or search keywords.
+      </p>
+
+    </div>
+
+  </section>
+
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="DELETE">
+        <id>31b06494ed2f03107f446c21b633cf1d</id>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 09:53:29</sys_created_on>
+        <sys_id>c2b02894ed2f03107f446c21b633cfa1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 09:53:29</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sp_widget_31b06494ed2f03107f446c21b633cf1d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller = function() {
+    var c = this;
+    c.searchQuery = '';
+    c.selectedDept = '';
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.aegis-jobs-page{
+  max-width:1400px;
+  margin:auto;
+  padding-bottom:80px;
+  background:#f7f2e8;
+}
+
+/* HERO */
+
+.hero-section{
+  position:relative;
+  overflow:hidden;
+  border-radius:40px;
+  padding:70px;
+  background:
+  linear-gradient(
+    135deg,
+    #032f26 0%,
+    #014235 100%
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+}
+
+.hero-tag{
+  color:#fff;
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:25px;
+}
+
+.hero-tag .dot{
+  width:12px;
+  height:12px;
+  background:#e4ab39;
+  display:inline-block;
+  border-radius:50%;
+  margin-right:10px;
+}
+
+.hero-section h1{
+  color:white;
+  font-size:72px;
+  line-height:1.05;
+  font-weight:800;
+}
+
+.hero-section h1 span{
+  color:#e4ab39;
+}
+
+.hero-section p{
+  color:#d6e3dd;
+  font-size:22px;
+  line-height:1.8;
+  margin-top:25px;
+}
+
+.hero-stats{
+  display:flex;
+  gap:20px;
+  margin-top:40px;
+}
+
+.stat-card{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:18px 28px;
+}
+
+.stat-card h3{
+  color:white;
+  font-size:30px;
+  margin:0;
+}
+
+.stat-card span{
+  color:#c7d7cf;
+}
+
+.hero-blob-1{
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:#d96b47;
+  right:-100px;
+  top:-40px;
+  opacity:.95;
+}
+
+.hero-blob-2{
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:#e4ab39;
+  right:300px;
+  bottom:-80px;
+}
+
+/* FILTERS */
+
+.filter-bar{
+  margin-top:-35px;
+  position:relative;
+  z-index:5;
+
+  display:flex;
+  gap:20px;
+
+  padding:25px;
+  background:white;
+  border-radius:28px;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+}
+
+.search-box{
+  flex:1;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.search-box input{
+  width:100%;
+  border:none;
+  outline:none;
+  font-size:16px;
+}
+
+.filter-bar select{
+  width:240px;
+  border:none;
+  background:#f7f2e8;
+  border-radius:16px;
+  padding:14px;
+}
+
+/* SECTION */
+
+.section-title{
+  margin:60px 0 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.section-title h2{
+  font-size:42px;
+  color:#032f26;
+}
+
+.role-count{
+  background:white;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:700;
+}
+
+/* JOBS */
+
+.job-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fill,minmax(340px,1fr));
+  gap:24px;
+}
+
+.job-card{
+  background:white;
+  border-radius:30px;
+  padding:28px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.06);
+
+  transition:.3s;
+}
+
+.job-card:hover{
+  transform:translateY(-8px);
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+.dept-icon{
+  width:58px;
+  height:58px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:700;
+  font-size:22px;
+
+  background:
+  linear-gradient(
+      135deg,
+      #032f26,
+      #014235
+  );
+}
+
+.level-badge{
+  background:#f7f2e8;
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:700;
+}
+
+.job-main h3{
+  font-size:28px;
+  color:#032f26;
+  margin-bottom:12px;
+}
+
+.job-meta{
+  color:#6b7280;
+}
+
+.skills{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:22px 0;
+}
+
+.skill-pill{
+  background:#f7f2e8;
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+.card-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.view-role{
+  color:#d96b47;
+  font-weight:700;
+  text-decoration:none;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;aegis_job_listings&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;AEGIS Job Listings&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+    data.jobs = [];
+    var gr = new GlideRecord('x_snc_aegis_job_requisition');
+    gr.addQuery('status', 'PUBLISHED');
+    gr.orderByDesc('sys_created_on');
+    gr.query();
+
+    while (gr.next()) {
+        var rawSkills = gr.getValue('required_skills') || '';
+        data.jobs.push({
+            sys_id: gr.getUniqueValue(),
+            role_title: gr.getValue('role_title') || '',
+            department: gr.getValue('department') || '',
+            level: gr.getValue('level') || '',
+            experience_required_years: gr.getValue('experience_required_years') || '0',
+            required_skills: rawSkills,
+            skills_array: rawSkills.split(',').map(function(s) { return s.trim(); }).filter(function(s){ return s; })
+        });
+    }
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 09:53:29&lt;/sys_created_on&gt;&lt;sys_id&gt;31b06494ed2f03107f446c21b633cf1d&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS Job Listings&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_31b06494ed2f03107f446c21b633cf1d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-24 09:13:25&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="aegis-jobs-page"&gt;
+
+  &lt;!-- HERO --&gt;
+
+  &lt;section class="hero-section"&gt;
+
+    &lt;div class="hero-content"&gt;
+
+      &lt;div class="hero-tag"&gt;
+        &lt;span class="dot"&gt;&lt;/span&gt;
+        24-hour reply, every time
+      &lt;/div&gt;
+
+      &lt;h1&gt;
+        Build what's next.&lt;br&gt;
+        Get hired on &lt;span&gt;merit&lt;/span&gt;, not luck.
+      &lt;/h1&gt;
+
+      &lt;p&gt;
+        Every application at AEGIS Technologies is reviewed under blind,
+        governed criteria — so the work you've done is what gets you the interview.
+      &lt;/p&gt;
+
+      &lt;div class="hero-stats"&gt;
+
+        &lt;div class="stat-card"&gt;
+          &lt;h3&gt;{{data.jobs.length}}&lt;/h3&gt;
+          &lt;span&gt;Open Roles&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class="stat-card"&gt;
+          &lt;h3&gt;24h&lt;/h3&gt;
+          &lt;span&gt;Reply SLA&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class="stat-card"&gt;
+          &lt;h3&gt;100%&lt;/h3&gt;
+          &lt;span&gt;Blind Review&lt;/span&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="hero-blob hero-blob-1"&gt;&lt;/div&gt;
+    &lt;div class="hero-blob hero-blob-2"&gt;&lt;/div&gt;
+
+  &lt;/section&gt;
+
+  &lt;!-- FILTERS --&gt;
+
+  &lt;section class="filter-bar"&gt;
+
+    &lt;div class="search-box"&gt;
+
+      &lt;svg width="18" height="18" viewBox="0 0 24 24"&gt;
+        &lt;circle cx="11" cy="11" r="7"&gt;&lt;/circle&gt;
+        &lt;line x1="21" y1="21" x2="16.65" y2="16.65"&gt;&lt;/line&gt;
+      &lt;/svg&gt;
+
+      &lt;input
+        type="text"
+        ng-model="c.searchQuery"
+        placeholder="Search roles, skills, departments..."
+      &gt;
+
+    &lt;/div&gt;
+
+    &lt;select ng-model="c.selectedDept"&gt;
+
+      &lt;option value=""&gt;All Departments&lt;/option&gt;
+      &lt;option value="Engineering"&gt;Engineering&lt;/option&gt;
+      &lt;option value="Analytics"&gt;Analytics&lt;/option&gt;
+      &lt;option value="Product"&gt;Product&lt;/option&gt;
+      &lt;option value="Design"&gt;Design&lt;/option&gt;
+      &lt;option value="Infrastructure"&gt;Infrastructure&lt;/option&gt;
+
+    &lt;/select&gt;
+
+  &lt;/section&gt;
+
+  &lt;!-- SECTION TITLE --&gt;
+
+  &lt;section class="section-title"&gt;
+
+    &lt;div&gt;
+      &lt;h2&gt;Open Roles&lt;/h2&gt;
+      &lt;p&gt;
+        Explore opportunities built around transparent hiring.
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="role-count"&gt;
+      {{(data.jobs | filter:c.searchQuery | filter:{department:c.selectedDept}).length}}
+      Positions
+    &lt;/div&gt;
+
+  &lt;/section&gt;
+
+  &lt;!-- JOBS --&gt;
+
+  &lt;section class="job-grid"&gt;
+
+    &lt;div
+      class="job-card"
+      ng-repeat="job in data.jobs | filter:c.searchQuery | filter:{department:c.selectedDept}"
+    &gt;
+
+      &lt;div class="card-top"&gt;
+
+        &lt;div
+          class="dept-icon"
+          ng-class="'dept-' + job.department"
+        &gt;
+          {{job.department.charAt(0)}}
+        &lt;/div&gt;
+
+        &lt;span class="level-badge"&gt;
+          {{job.level}}
+        &lt;/span&gt;
+
+      &lt;/div&gt;
+
+      &lt;div class="job-main"&gt;
+
+        &lt;h3&gt;
+          {{job.role_title}}
+        &lt;/h3&gt;
+
+        &lt;p class="job-meta"&gt;
+
+          {{job.department}}
+          •
+          {{job.experience_required_years}}+ years experience
+
+        &lt;/p&gt;
+
+      &lt;/div&gt;
+
+      &lt;div class="skills"&gt;
+
+        &lt;span
+          class="skill-pill"
+          ng-repeat="s in job.skills_array | limitTo:4"
+        &gt;
+          {{s}}
+        &lt;/span&gt;
+
+      &lt;/div&gt;
+
+      &lt;div class="card-bottom"&gt;
+
+        &lt;span class="job-ref"&gt;
+
+          Ref:
+          {{job.sys_id.substr(0,8)}}
+
+        &lt;/span&gt;
+
+        &lt;a
+          ng-href="?id=aegis_job_details&amp;sys_id={{job.sys_id}}"
+          class="view-role"
+        &gt;
+
+          View Role →
+
+        &lt;/a&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div
+      ng-if="(data.jobs | filter:c.searchQuery | filter:{department:c.selectedDept}).length===0"
+      class="empty-state"
+    &gt;
+
+      &lt;h3&gt;No Roles Found&lt;/h3&gt;
+
+      &lt;p&gt;
+        Try changing filters or search keywords.
+      &lt;/p&gt;
+
+    &lt;/div&gt;
+
+  &lt;/section&gt;
+
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;31b06494ed2f03107f446c21b633cf1d&lt;/id&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 09:53:29&lt;/sys_created_on&gt;&lt;sys_id&gt;c2b02894ed2f03107f446c21b633cfa1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-21 09:53:29&lt;/sys_updated_on&gt;&lt;table&gt;sp_widget&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1283293586</payload_hash>
+        <record_name>AEGIS Job Listings</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-24 09:13:25</sys_created_on>
+        <sys_id>54547f8174ab03107f4413d400ccf2ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0d2b0eb9d0000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-24 09:13:25</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>94547f81f5ab0310effd268de9efbda7</update_guid>
+        <update_guid_history>94547f81f5ab0310effd268de9efbda7:-1283293586,fc44bb0183ab0310eff175369924244e:1573246662,21e3ff413cab031080125e96fd061ad9:1983842625,1e43bb011bab0310ea2d6711d1380bfe:995987914,4064a781862b03106e5498e6f74f739f:1869985834,e314eb41062b03107a52110af584241d:1694161109,20c9c614876b4310ea0bb968c7238ff7:-840309130,55a7f550d6e743101f4dcb01a5fb2fc7:454370943,f873245c292f031005ac817467f77c30:834300062,e521a0d47e2f03104efc41dc99165ff1:1575175392,0eb028947f2f0310eb2da36cc9abb69f:1546702182</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AEGIS Job Listings">4bbe3791f4a303107f4473c8b3ef4c24</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-25 04:37:25</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>1faa36e0630740a4a14f2ce476037c99</sys_id>
+        <sys_metadata>31b06494ed2f03107f446c21b633cf1d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Job Listings</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sp_widget_31b06494ed2f03107f446c21b633cf1d</sys_update_name>
+        <sys_update_version display_value="sp_widget_31b06494ed2f03107f446c21b633cf1d">54547f8174ab03107f4413d400ccf2ff</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-25 04:37:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

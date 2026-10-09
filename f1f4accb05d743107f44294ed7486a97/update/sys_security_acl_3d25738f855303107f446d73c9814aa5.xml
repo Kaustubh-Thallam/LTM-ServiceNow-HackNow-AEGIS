@@ -7,7 +7,7 @@
         <condition/>
         <controlled_by_refs/>
         <decision_type>allow</decision_type>
-        <description>Default access control on x_snc_aegis_screening_result</description>
+        <description>Allow read for records in x_snc_aegis_screening_result, for users with roles (x_snc_aegis.screening_result_user, x_snc_aegis.recruiter, x_snc_aegis.compliance_auditor, x_snc_aegis.hiring_manager, x_snc_aegis.app_admin).</description>
         <local_or_existing>Existing</local_or_existing>
         <name>x_snc_aegis_screening_result</name>
         <operation display_value="read">read</operation>
@@ -17,14 +17,14 @@
         <sys_created_by>DEEPTHI</sys_created_by>
         <sys_created_on>2026-09-18 04:09:14</sys_created_on>
         <sys_id>3d25738f855303107f446d73c9814aa5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>x_snc_aegis_screening_result</sys_name>
         <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
         <sys_policy/>
         <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
         <sys_update_name>sys_security_acl_3d25738f855303107f446d73c9814aa5</sys_update_name>
-        <sys_updated_by>DEEPTHI</sys_updated_by>
-        <sys_updated_on>2026-09-18 04:09:14</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-05 10:40:54</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($window) {
+
+    var c = this;
+
+    c.goToApply = function() {
+
+        if (!c.data.job)
+            return;
+
+        $window.location.href =
+            '?id=aegis_apply&requisition_id=' +
+            c.data.job.sys_id;
+    };
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.aegis-detail {
+  max-width: 1280px;
+  margin: 30px auto;
+  padding: 40px;
+
+  background: #ffffff;
+
+  border-radius: 36px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+}
+
+/* BACK LINK */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: #6b7280;
+
+  font-weight: 600;
+
+  margin-bottom: 28px;
+}
+
+.back-link:hover {
+  color: #0f3b2f;
+}
+
+/* GRID */
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 420px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* LEFT CONTENT */
+
+.content-area {
+  min-width: 0;
+}
+
+/* DEPARTMENT CHIP */
+
+.role-badge {
+  display: inline-flex;
+
+  background: #eef2ee;
+
+  color: #0f3b2f;
+
+  border-radius: 999px;
+
+  padding: 10px 20px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+/* TITLE */
+
+.detail-head h1 {
+  font-size: 62px;
+
+  line-height: 1.05;
+
+  color: #102a22;
+
+  margin: 0 0 24px;
+}
+
+/* META PILLS */
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+.meta-pill {
+  background: #f8f8f8;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 999px;
+
+  padding: 10px 18px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+/* JOB DESCRIPTION CARD */
+
+.section-card {
+
+  background: #ffffff;
+
+  border-radius: 28px;
+
+  padding: 32px;
+
+  border: 1px solid #f0f0f0;
+
+  box-shadow:
+      0 10px 30px rgba(0,0,0,.06);
+}
+
+.section-card h2 {
+
+  font-size: 40px;
+
+  color: #0f3b2f;
+
+  margin: 0 0 18px;
+}
+
+/* JOB DESCRIPTION CONTENT */
+
+.rich-jd {
+
+  color: #4b5563;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.rich-jd &gt; *:first-child {
+  margin-top: 0;
+}
+
+.rich-jd &gt; *:last-child {
+  margin-bottom: 0;
+}
+
+.rich-jd h1 {
+
+  color: #0f3b2f;
+
+  font-size: 34px;
+
+  margin: 18px 0 10px;
+}
+
+.rich-jd h2 {
+
+  color: #0f3b2f;
+
+  font-size: 28px;
+
+  margin: 22px 0 10px;
+}
+
+.rich-jd h3 {
+
+  color: #0f3b2f;
+
+  font-size: 22px;
+
+  margin: 20px 0 10px;
+}
+
+.rich-jd strong {
+  color: #111827;
+}
+
+.rich-jd p {
+
+  margin: 0 0 12px;
+
+  line-height: 1.7;
+}
+
+.rich-jd ul {
+
+  margin: 8px 0 16px;
+
+  padding-left: 28px;
+}
+
+.rich-jd li {
+
+  margin-bottom: 6px;
+
+  line-height: 1.7;
+}
+
+.rich-jd h2 + ul,
+.rich-jd h3 + ul {
+
+  margin-top: 4px;
+}
+
+/* SIDEBAR */
+
+.side-card {
+
+  background:
+      linear-gradient(
+          135deg,
+          #012b22 0%,
+          #003a2d 55%,
+          #01271f 100%
+      );
+
+  color: white;
+
+  border-radius: 30px;
+
+  padding: 28px;
+
+  position: sticky;
+
+  top: 24px;
+
+  height: fit-content;
+
+  align-self: start;
+
+  overflow: hidden;
+
+  box-shadow:
+      0 18px 40px rgba(0,0,0,.18);
+}
+
+.blob-mini {
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  background: #d4a531;
+
+  opacity: .18;
+
+  top: -40px;
+  right: -40px;
+}
+
+.side-card h4 {
+
+  color: #aabbb2;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  font-size: 12px;
+
+  margin-bottom: 22px;
+}
+
+.side-fact {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 12px 0;
+
+  border-bottom:
+      1px solid rgba(255,255,255,.08);
+}
+
+.side-fact span:first-child {
+  color: #aabbb2;
+}
+
+.side-fact span:last-child {
+  font-weight: 700;
+}
+
+/* BENEFITS */
+
+.benefits-box {
+
+  margin-top: 24px;
+
+  background:
+      rgba(255,255,255,.05);
+
+  border-radius: 20px;
+
+  padding: 20px;
+}
+
+.benefits-box h5 {
+
+  margin: 0 0 14px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+.benefits-box ul {
+
+  margin: 0;
+
+  padding-left: 18px;
+}
+
+.benefits-box li {
+
+  margin-bottom: 10px;
+
+  color: #d8e4dc;
+
+  font-size: 14px;
+}
+
+/* BUTTON */
+
+.aegis-btn-primary {
+
+  width: 100%;
+
+  height: 58px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background:
+      linear-gradient(
+          135deg,
+          #e16b4d,
+          #d45a39
+      );
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-top: 24px;
+
+  transition: all .25s ease;
+}
+
+.aegis-btn-primary:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+      0 12px 28px rgba(225,107,77,.35);
+}
+
+.side-note {
+
+  margin-top: 14px;
+
+  color: #9fb3a6;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* MOBILE BUTTON */
+
+.apply-mobile {
+  display: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .aegis-detail {
+    padding: 20px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-card {
+    position: relative;
+    top: 0;
+  }
+
+  .detail-head h1 {
+    font-size: 42px;
+  }
+
+  .section-card {
+    padding: 24px;
+  }
+
+  .section-card h2 {
+    font-size: 30px;
+  }
+
+  .apply-mobile {
+    display: block;
+    margin-top: 24px;
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>aegis_job_detail</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>AEGIS Job Detail</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+    data.job = null;
+
+    var reqId =
+        $sp.getParameter('sys_id');
+
+    if (!reqId)
+        return;
+
+    function convertMarkdownToHtml(text) {
+
+        if (!text)
+            return '';
+
+        text = text.replace(
+            /^### (.*$)/gim,
+            '<h3>$1</h3>'
+        );
+
+        text = text.replace(
+            /^## (.*$)/gim,
+            '<h2>$1</h2>'
+        );
+
+        text = text.replace(
+            /^# (.*$)/gim,
+            '<h1>$1</h1>'
+        );
+
+        text = text.replace(
+            /\*\*(.*?)\*\*/g,
+            '<strong>$1</strong>'
+        );
+
+        text = text.replace(
+            /^- (.*)$/gim,
+            '<li>$1</li>'
+        );
+
+        text = text.replace(
+            /(<li>.*<\/li>)/gs,
+            '<ul>$1</ul>'
+        );
+
+        text = text.replace(
+            /\n\n/g,
+            '<br><br>'
+        );
+
+        return text;
+    }
+
+    var gr =
+        new GlideRecord(
+            'x_snc_aegis_job_requisition'
+        );
+
+    if (!gr.get(reqId))
+        return;
+
+    var jdText = '';
+
+    var jdGr =
+        new GlideRecord(
+            'x_snc_aegis_job_description'
+        );
+
+    jdGr.addQuery(
+        'requisition',
+        reqId
+    );
+
+    jdGr.orderByDesc('version');
+
+    jdGr.setLimit(1);
+
+    jdGr.query();
+
+    if (jdGr.next()) {
+
+        jdText =
+            jdGr.getValue('jd_text') || '';
+    }
+
+    data.job = {
+
+        sys_id:
+            gr.getUniqueValue(),
+
+        role_title:
+            gr.getValue('role_title'),
+
+        department:
+            gr.getValue('department'),
+
+        level:
+            gr.getValue('level'),
+
+        experience_required_years:
+            gr.getValue(
+                'experience_required_years'
+            ),
+
+        jd_text:
+            convertMarkdownToHtml(
+                jdText
+            )
+    };
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 09:56:24</sys_created_on>
+        <sys_id>6461a8d4ed2f03107f446c21b633cfb6</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>AEGIS Job Detail</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sp_widget_6461a8d4ed2f03107f446c21b633cfb6</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-24 08:29:48</sys_updated_on>
+        <template><![CDATA[<div class="aegis-detail">
+
+  <a href="?id=aegis_jobs" class="back-link">
+    ← Back to all roles
+  </a>
+
+  <div ng-if="data.job" class="detail-grid">
+
+    <div class="content-area">
+
+      <div class="detail-head">
+
+        <span class="role-badge">
+          {{data.job.department}}
+        </span>
+
+        <h1>
+          {{data.job.role_title}}
+        </h1>
+
+        <div class="meta-row">
+
+          <span class="meta-pill">
+            {{data.job.level}}
+          </span>
+
+          <span class="meta-pill">
+            {{data.job.experience_required_years}}+ Years
+          </span>
+
+          <span class="meta-pill">
+            24 Hour Response SLA
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="section-card">
+
+        <h2>About the Role</h2>
+
+        <div class="rich-jd"
+             ng-bind-html="data.job.jd_text">
+        </div>
+
+      </div>
+
+      <button
+        class="aegis-btn-primary apply-mobile"
+        ng-click="c.goToApply()">
+
+        Apply for this role
+
+      </button>
+
+    </div>
+
+    <div class="side-card">
+
+      <div class="blob-mini"></div>
+
+      <h4>Quick Facts</h4>
+
+<div class="side-fact">
+  <span>Department</span>
+  <span>{{data.job.department}}</span>
+</div>
+
+<div class="side-fact">
+  <span>Level</span>
+  <span>{{data.job.level}}</span>
+</div>
+
+<div class="side-fact">
+  <span>Experience</span>
+  <span>{{data.job.experience_required_years}}+ Years</span>
+</div>
+
+<div class="side-fact">
+  <span>Reply Time</span>
+  <span>24 Hours</span>
+</div>
+
+<div class="side-fact">
+  <span>Work Type</span>
+  <span>Full Time</span>
+</div>
+
+<div class="side-fact">
+  <span>Hiring Model</span>
+  <span>Blind Review</span>
+</div>
+      <div class="benefits-box">
+
+  <h5>Why Join AEGIS?</h5>
+
+  <ul>
+    <li>✓ Fair AI-driven screening</li>
+    <li>✓ 24-hour application response</li>
+    <li>✓ Transparent hiring process</li>
+    <li>✓ Growth-focused engineering culture</li>
+  </ul>
+
+</div>
+
+      <button
+        class="aegis-btn-primary full-width"
+        ng-click="c.goToApply()">
+
+        Apply for this role
+
+      </button>
+
+      <p class="side-note">
+        Your application is screened using
+        blind-review principles.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div ng-if="!data.job" class="empty-state">
+
+    <h3>Role Not Found</h3>
+
+    <a href="?id=aegis_jobs">
+      Browse Open Roles
+    </a>
+
+  </div>
+
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="DELETE">
+        <id>6461a8d4ed2f03107f446c21b633cfb6</id>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 09:56:24</sys_created_on>
+        <sys_id>e861a8d4ed2f03107f446c21b633cfb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 09:56:24</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sp_widget_6461a8d4ed2f03107f446c21b633cfb6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller = function($window) {
+
+    var c = this;
+
+    c.goToApply = function() {
+
+        if (!c.data.job)
+            return;
+
+        $window.location.href =
+            '?id=aegis_apply&amp;requisition_id=' +
+            c.data.job.sys_id;
+    };
+
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.aegis-detail {
+  max-width: 1280px;
+  margin: 30px auto;
+  padding: 40px;
+
+  background: #ffffff;
+
+  border-radius: 36px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+}
+
+/* BACK LINK */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: #6b7280;
+
+  font-weight: 600;
+
+  margin-bottom: 28px;
+}
+
+.back-link:hover {
+  color: #0f3b2f;
+}
+
+/* GRID */
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 420px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* LEFT CONTENT */
+
+.content-area {
+  min-width: 0;
+}
+
+/* DEPARTMENT CHIP */
+
+.role-badge {
+  display: inline-flex;
+
+  background: #eef2ee;
+
+  color: #0f3b2f;
+
+  border-radius: 999px;
+
+  padding: 10px 20px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+/* TITLE */
+
+.detail-head h1 {
+  font-size: 62px;
+
+  line-height: 1.05;
+
+  color: #102a22;
+
+  margin: 0 0 24px;
+}
+
+/* META PILLS */
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+.meta-pill {
+  background: #f8f8f8;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 999px;
+
+  padding: 10px 18px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+/* JOB DESCRIPTION CARD */
+
+.section-card {
+
+  background: #ffffff;
+
+  border-radius: 28px;
+
+  padding: 32px;
+
+  border: 1px solid #f0f0f0;
+
+  box-shadow:
+      0 10px 30px rgba(0,0,0,.06);
+}
+
+.section-card h2 {
+
+  font-size: 40px;
+
+  color: #0f3b2f;
+
+  margin: 0 0 18px;
+}
+
+/* JOB DESCRIPTION CONTENT */
+
+.rich-jd {
+
+  color: #4b5563;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.rich-jd &amp;gt; *:first-child {
+  margin-top: 0;
+}
+
+.rich-jd &amp;gt; *:last-child {
+  margin-bottom: 0;
+}
+
+.rich-jd h1 {
+
+  color: #0f3b2f;
+
+  font-size: 34px;
+
+  margin: 18px 0 10px;
+}
+
+.rich-jd h2 {
+
+  color: #0f3b2f;
+
+  font-size: 28px;
+
+  margin: 22px 0 10px;
+}
+
+.rich-jd h3 {
+
+  color: #0f3b2f;
+
+  font-size: 22px;
+
+  margin: 20px 0 10px;
+}
+
+.rich-jd strong {
+  color: #111827;
+}
+
+.rich-jd p {
+
+  margin: 0 0 12px;
+
+  line-height: 1.7;
+}
+
+.rich-jd ul {
+
+  margin: 8px 0 16px;
+
+  padding-left: 28px;
+}
+
+.rich-jd li {
+
+  margin-bottom: 6px;
+
+  line-height: 1.7;
+}
+
+.rich-jd h2 + ul,
+.rich-jd h3 + ul {
+
+  margin-top: 4px;
+}
+
+/* SIDEBAR */
+
+.side-card {
+
+  background:
+      linear-gradient(
+          135deg,
+          #012b22 0%,
+          #003a2d 55%,
+          #01271f 100%
+      );
+
+  color: white;
+
+  border-radius: 30px;
+
+  padding: 28px;
+
+  position: sticky;
+
+  top: 24px;
+
+  height: fit-content;
+
+  align-self: start;
+
+  overflow: hidden;
+
+  box-shadow:
+      0 18px 40px rgba(0,0,0,.18);
+}
+
+.blob-mini {
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  background: #d4a531;
+
+  opacity: .18;
+
+  top: -40px;
+  right: -40px;
+}
+
+.side-card h4 {
+
+  color: #aabbb2;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  font-size: 12px;
+
+  margin-bottom: 22px;
+}
+
+.side-fact {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 12px 0;
+
+  border-bottom:
+      1px solid rgba(255,255,255,.08);
+}
+
+.side-fact span:first-child {
+  color: #aabbb2;
+}
+
+.side-fact span:last-child {
+  font-weight: 700;
+}
+
+/* BENEFITS */
+
+.benefits-box {
+
+  margin-top: 24px;
+
+  background:
+      rgba(255,255,255,.05);
+
+  border-radius: 20px;
+
+  padding: 20px;
+}
+
+.benefits-box h5 {
+
+  margin: 0 0 14px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+.benefits-box ul {
+
+  margin: 0;
+
+  padding-left: 18px;
+}
+
+.benefits-box li {
+
+  margin-bottom: 10px;
+
+  color: #d8e4dc;
+
+  font-size: 14px;
+}
+
+/* BUTTON */
+
+.aegis-btn-primary {
+
+  width: 100%;
+
+  height: 58px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background:
+      linear-gradient(
+          135deg,
+          #e16b4d,
+          #d45a39
+      );
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-top: 24px;
+
+  transition: all .25s ease;
+}
+
+.aegis-btn-primary:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+      0 12px 28px rgba(225,107,77,.35);
+}
+
+.side-note {
+
+  margin-top: 14px;
+
+  color: #9fb3a6;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* MOBILE BUTTON */
+
+.apply-mobile {
+  display: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .aegis-detail {
+    padding: 20px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-card {
+    position: relative;
+    top: 0;
+  }
+
+  .detail-head h1 {
+    font-size: 42px;
+  }
+
+  .section-card {
+    padding: 24px;
+  }
+
+  .section-card h2 {
+    font-size: 30px;
+  }
+
+  .apply-mobile {
+    display: block;
+    margin-top: 24px;
+  }
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;aegis_job_detail&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;AEGIS Job Detail&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+
+    data.job = null;
+
+    var reqId =
+        $sp.getParameter('sys_id');
+
+    if (!reqId)
+        return;
+
+    function convertMarkdownToHtml(text) {
+
+        if (!text)
+            return '';
+
+        text = text.replace(
+            /^### (.*$)/gim,
+            '&lt;h3&gt;$1&lt;/h3&gt;'
+        );
+
+        text = text.replace(
+            /^## (.*$)/gim,
+            '&lt;h2&gt;$1&lt;/h2&gt;'
+        );
+
+        text = text.replace(
+            /^# (.*$)/gim,
+            '&lt;h1&gt;$1&lt;/h1&gt;'
+        );
+
+        text = text.replace(
+            /\*\*(.*?)\*\*/g,
+            '&lt;strong&gt;$1&lt;/strong&gt;'
+        );
+
+        text = text.replace(
+            /^- (.*)$/gim,
+            '&lt;li&gt;$1&lt;/li&gt;'
+        );
+
+        text = text.replace(
+            /(&lt;li&gt;.*&lt;\/li&gt;)/gs,
+            '&lt;ul&gt;$1&lt;/ul&gt;'
+        );
+
+        text = text.replace(
+            /\n\n/g,
+            '&lt;br&gt;&lt;br&gt;'
+        );
+
+        return text;
+    }
+
+    var gr =
+        new GlideRecord(
+            'x_snc_aegis_job_requisition'
+        );
+
+    if (!gr.get(reqId))
+        return;
+
+    var jdText = '';
+
+    var jdGr =
+        new GlideRecord(
+            'x_snc_aegis_job_description'
+        );
+
+    jdGr.addQuery(
+        'requisition',
+        reqId
+    );
+
+    jdGr.orderByDesc('version');
+
+    jdGr.setLimit(1);
+
+    jdGr.query();
+
+    if (jdGr.next()) {
+
+        jdText =
+            jdGr.getValue('jd_text') || '';
+    }
+
+    data.job = {
+
+        sys_id:
+            gr.getUniqueValue(),
+
+        role_title:
+            gr.getValue('role_title'),
+
+        department:
+            gr.getValue('department'),
+
+        level:
+            gr.getValue('level'),
+
+        experience_required_years:
+            gr.getValue(
+                'experience_required_years'
+            ),
+
+        jd_text:
+            convertMarkdownToHtml(
+                jdText
+            )
+    };
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 09:56:24&lt;/sys_created_on&gt;&lt;sys_id&gt;6461a8d4ed2f03107f446c21b633cfb6&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS Job Detail&lt;/sys_name&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_6461a8d4ed2f03107f446c21b633cfb6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-24 08:29:48&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="aegis-detail"&gt;
+
+  &lt;a href="?id=aegis_jobs" class="back-link"&gt;
+    ← Back to all roles
+  &lt;/a&gt;
+
+  &lt;div ng-if="data.job" class="detail-grid"&gt;
+
+    &lt;div class="content-area"&gt;
+
+      &lt;div class="detail-head"&gt;
+
+        &lt;span class="role-badge"&gt;
+          {{data.job.department}}
+        &lt;/span&gt;
+
+        &lt;h1&gt;
+          {{data.job.role_title}}
+        &lt;/h1&gt;
+
+        &lt;div class="meta-row"&gt;
+
+          &lt;span class="meta-pill"&gt;
+            {{data.job.level}}
+          &lt;/span&gt;
+
+          &lt;span class="meta-pill"&gt;
+            {{data.job.experience_required_years}}+ Years
+          &lt;/span&gt;
+
+          &lt;span class="meta-pill"&gt;
+            24 Hour Response SLA
+          &lt;/span&gt;
+
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;div class="section-card"&gt;
+
+        &lt;h2&gt;About the Role&lt;/h2&gt;
+
+        &lt;div class="rich-jd"
+             ng-bind-html="data.job.jd_text"&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;button
+        class="aegis-btn-primary apply-mobile"
+        ng-click="c.goToApply()"&gt;
+
+        Apply for this role
+
+      &lt;/button&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="side-card"&gt;
+
+      &lt;div class="blob-mini"&gt;&lt;/div&gt;
+
+      &lt;h4&gt;Quick Facts&lt;/h4&gt;
+
+&lt;div class="side-fact"&gt;
+  &lt;span&gt;Department&lt;/span&gt;
+  &lt;span&gt;{{data.job.department}}&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="side-fact"&gt;
+  &lt;span&gt;Level&lt;/span&gt;
+  &lt;span&gt;{{data.job.level}}&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="side-fact"&gt;
+  &lt;span&gt;Experience&lt;/span&gt;
+  &lt;span&gt;{{data.job.experience_required_years}}+ Years&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="side-fact"&gt;
+  &lt;span&gt;Reply Time&lt;/span&gt;
+  &lt;span&gt;24 Hours&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="side-fact"&gt;
+  &lt;span&gt;Work Type&lt;/span&gt;
+  &lt;span&gt;Full Time&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="side-fact"&gt;
+  &lt;span&gt;Hiring Model&lt;/span&gt;
+  &lt;span&gt;Blind Review&lt;/span&gt;
+&lt;/div&gt;
+      &lt;div class="benefits-box"&gt;
+
+  &lt;h5&gt;Why Join AEGIS?&lt;/h5&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;✓ Fair AI-driven screening&lt;/li&gt;
+    &lt;li&gt;✓ 24-hour application response&lt;/li&gt;
+    &lt;li&gt;✓ Transparent hiring process&lt;/li&gt;
+    &lt;li&gt;✓ Growth-focused engineering culture&lt;/li&gt;
+  &lt;/ul&gt;
+
+&lt;/div&gt;
+
+      &lt;button
+        class="aegis-btn-primary full-width"
+        ng-click="c.goToApply()"&gt;
+
+        Apply for this role
+
+      &lt;/button&gt;
+
+      &lt;p class="side-note"&gt;
+        Your application is screened using
+        blind-review principles.
+      &lt;/p&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;div ng-if="!data.job" class="empty-state"&gt;
+
+    &lt;h3&gt;Role Not Found&lt;/h3&gt;
+
+    &lt;a href="?id=aegis_jobs"&gt;
+      Browse Open Roles
+    &lt;/a&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;6461a8d4ed2f03107f446c21b633cfb6&lt;/id&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 09:56:24&lt;/sys_created_on&gt;&lt;sys_id&gt;e861a8d4ed2f03107f446c21b633cfb9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-21 09:56:24&lt;/sys_updated_on&gt;&lt;table&gt;sp_widget&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-214816637</payload_hash>
+        <record_name>AEGIS Job Detail</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-24 08:29:48</sys_created_on>
+        <sys_id>d95aef4d742b03107f4413d400ccf2f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0d288fcc90000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-24 08:29:48</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>1d5aef4da52b03107db6bc6084580af0</update_guid>
+        <update_guid_history>1d5aef4da52b03107db6bc6084580af0:-214816637,8a59afc9b62b0310e7e9576dee16f9b7:1711514219,3e686389702b0310092b1872f810ad74:-1134625747,69972b092f2b0310bee5f987505e3d35:-1142903037,2746e385442b03107c7dd4020546e7a9:-1278231146,d8461e9c06ab431028a897f9c55cafeb:-1909046647,5106569c2aab4310b1588a1c91944e0f:-1595242915,8dc51e5c37ab431045b790164d7288a8:-398662998,90a51a5ce3ab4310b313b0db260c0045:-651922225,79b49ad8b8ab43100e2d4728f806b2d0:-2004666091,0f939a5804ab4310865d9a681e1a7b43:-651922225,3fe25618edab43107e6d6987a38674aa:-398662998,fd4f0a104eab4310fda135e86b046d48:-1595242915,072f4610d3ab4310c5a05bf6ce100026:-2085984476,433d421c4b6b43107304fc372682980f:-79546095,3d0d0ad86f6b4310a314b274173ca4bb:493755655,b06cce58dc6b4310e02a9a94ccc998c6:-1909046647,3fd7fd5012e74310537f5fedd940dd09:-2004666091,a7812018c82f0310a40d01423d5c0f42:1407570928,6461a8d4f32f03107eb60d537ad755b8:-2097161528</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AEGIS Job Detail">1bbe7791f4a303107f4473c8b3ef4c6e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-25 04:37:26</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>446a85474d624b358d0783745e338521</sys_id>
+        <sys_metadata>6461a8d4ed2f03107f446c21b633cfb6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Job Detail</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sp_widget_6461a8d4ed2f03107f446c21b633cfb6</sys_update_name>
+        <sys_update_version display_value="sp_widget_6461a8d4ed2f03107f446c21b633cfb6">d95aef4d742b03107f4413d400ccf2f1</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-25 04:37:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

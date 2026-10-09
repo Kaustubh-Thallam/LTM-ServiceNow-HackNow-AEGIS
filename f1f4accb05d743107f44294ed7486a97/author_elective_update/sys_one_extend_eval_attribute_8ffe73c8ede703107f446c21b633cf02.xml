@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_eval_attribute">
+    <sys_one_extend_eval_attribute action="DELETE">
+        <advanced>false</advanced>
+        <capability display_value="AEGIS Interview Orchestrator">36fe33c8ede703107f446c21b633cfb1</capability>
+        <capability_attribute display_value="response">cbfe33c8ede703107f446c21b633cfff</capability_attribute>
+        <data_type>string</data_type>
+        <label>Golden Response</label>
+        <name>response</name>
+        <sys_class_name>sys_one_extend_eval_attribute</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-21 07:26:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8ffe73c8ede703107f446c21b633cf02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Golden Response</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_one_extend_eval_attribute_8ffe73c8ede703107f446c21b633cf02</sys_update_name>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-21 07:26:06</sys_updated_on>
+        <template/>
+        <template_script><![CDATA[(function getValue(response) {
+   // response would give the response from capability 
+})(response);]]></template_script>
+    </sys_one_extend_eval_attribute>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_one_extend_eval_attribute_8ffe73c8ede703107f446c21b633cf02</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_one_extend_eval_attribute"&gt;&lt;sys_one_extend_eval_attribute action="INSERT_OR_UPDATE"&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;capability display_value="AEGIS Interview Orchestrator"&gt;36fe33c8ede703107f446c21b633cfb1&lt;/capability&gt;&lt;capability_attribute display_value="response"&gt;cbfe33c8ede703107f446c21b633cfff&lt;/capability_attribute&gt;&lt;data_type&gt;string&lt;/data_type&gt;&lt;label&gt;Golden Response&lt;/label&gt;&lt;name&gt;response&lt;/name&gt;&lt;sys_class_name&gt;sys_one_extend_eval_attribute&lt;/sys_class_name&gt;&lt;sys_created_by&gt;RAKESH&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 07:26:06&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;8ffe73c8ede703107f446c21b633cf02&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Golden Response&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_one_extend_eval_attribute_8ffe73c8ede703107f446c21b633cf02&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;RAKESH&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-21 07:26:06&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;template_script&gt;&lt;![CDATA[(function getValue(response) {
+   // response would give the response from capability 
+})(response);]]&gt;&lt;/template_script&gt;&lt;/sys_one_extend_eval_attribute&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1315912676</payload_hash>
+        <record_name>Golden Response</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-21 07:26:06</sys_created_on>
+        <sys_id>cbfe73c8ede703107f446c21b633cf11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c2db98310000001</sys_recorded_at>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-21 07:26:06</sys_updated_on>
+        <type>OneExtend Eval Attribute</type>
+        <update_guid>4ffe73c880e70310b7e5758b9d94e510</update_guid>
+        <update_guid_history>4ffe73c880e70310b7e5758b9d94e510:1315912676</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-10-01 06:21:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_one_extend_eval_attribute">sys_one_extend_eval_attribute</sys_db_object>
+        <sys_id>40a8e5bc7c5e4088b11e1f1c928a6840</sys_id>
+        <sys_metadata>8ffe73c8ede703107f446c21b633cf02</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Golden Response</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_one_extend_eval_attribute_8ffe73c8ede703107f446c21b633cf02</sys_update_name>
+        <sys_update_version display_value="sys_one_extend_eval_attribute_8ffe73c8ede703107f446c21b633cf02">cbfe73c8ede703107f446c21b633cf11</sys_update_version>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-10-01 06:21:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

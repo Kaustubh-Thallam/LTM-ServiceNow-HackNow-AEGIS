@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="DELETE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <human_readable_url_structure/>
+        <id>aegis_apply</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>true</public>
+        <roles/>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 16:22:28</sys_created_on>
+        <sys_id>aba9b554ede743107f446c21b633cf22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>aegis_apply</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sp_page_aba9b554ede743107f446c21b633cf22</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 16:22:28</sys_updated_on>
+        <title>Aegis apply</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="DELETE" query="documentkey=aba9b554ede743107f446c21b633cf22"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sp_page_aba9b554ede743107f446c21b633cf22</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page"><sp_page action="INSERT_OR_UPDATE"><category>custom</category><css/><draft>false</draft><dynamic_title_structure/><human_readable_url_structure/><id>aegis_apply</id><internal>false</internal><omit_watcher>false</omit_watcher><public>true</public><roles/><seo_script/><short_description/><sys_class_name>sp_page</sys_class_name><sys_created_by>DEEPTHI</sys_created_by><sys_created_on>2026-09-21 16:22:28</sys_created_on><sys_id>aba9b554ede743107f446c21b633cf22</sys_id><sys_mod_count>0</sys_mod_count><sys_name>aegis_apply</sys_name><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sp_page_aba9b554ede743107f446c21b633cf22</sys_update_name><sys_updated_by>DEEPTHI</sys_updated_by><sys_updated_on>2026-09-21 16:22:28</sys_updated_on><title>Aegis apply</title><use_seo_script>false</use_seo_script></sp_page><sys_translated_text action="delete_multiple" query="documentkey=aba9b554ede743107f446c21b633cf22"/></record_update>]]></payload>
+        <payload_hash>376379853</payload_hash>
+        <record_name>aegis_apply</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 16:22:28</sys_created_on>
+        <sys_id>3fb9b114ede743107f446c21b633cffc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c4c6a7640000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 16:22:28</sys_updated_on>
+        <type>Page</type>
+        <update_guid>3fb9b114a0e743104f0210f2e70d9dfb</update_guid>
+        <update_guid_history>3fb9b114a0e743104f0210f2e70d9dfb:376379853</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="aegis_apply">df9e7b51f4a303107f4473c8b3ef4c3b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-25 04:36:54</sys_created_on>
+        <sys_db_object display_value="" name="sp_page">sp_page</sys_db_object>
+        <sys_id>2f9f31009a924f6c93a6dda8751ce624</sys_id>
+        <sys_metadata>aba9b554ede743107f446c21b633cf22</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>aegis_apply</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sp_page_aba9b554ede743107f446c21b633cf22</sys_update_name>
+        <sys_update_version display_value="sp_page_aba9b554ede743107f446c21b633cf22">3fb9b114ede743107f446c21b633cffc</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-25 04:36:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

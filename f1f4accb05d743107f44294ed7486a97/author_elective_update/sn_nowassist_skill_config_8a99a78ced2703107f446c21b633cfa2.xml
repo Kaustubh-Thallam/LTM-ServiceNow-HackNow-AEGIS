@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config">
+    <sn_nowassist_skill_config action="DELETE">
+        <active>false</active>
+        <description><![CDATA[Invoke when a new application with an attached resume needs to be parsed and scored against a specific job requisition. Input: resume file plus requisition ID. Output: a 5-factor weighted fit score (skills 30%, experience 25%, projects 20%, certifications 15%, education 10%) with per-factor explanation, computed after masking name, gender, photograph, and institution. Can only recommend SHORTLISTED or RECRUITER_REVIEW — never invoke this to reject a candidate.]]></description>
+        <edited_in_nask>false</edited_in_nask>
+        <in_product_active>false</in_product_active>
+        <in_product_roles/>
+        <internal_name>aegis_resume_intelligence.8a99a78ced2703107f446c21b633cfa2</internal_name>
+        <is_template>false</is_template>
+        <name>AEGIS Resume Intelligence</name>
+        <nap_skill_applicability/>
+        <order>100</order>
+        <parent/>
+        <skill_family display_value="Resume intelligence">680cabc0ed6703107f446c21b633cf64</skill_family>
+        <skill_id>6599a78ced2703107f446c21b633cf4c</skill_id>
+        <skill_table>sys_one_extend_capability</skill_table>
+        <state>1</state>
+        <success_message/>
+        <sys_class_name>sn_nowassist_skill_config</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 05:52:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8a99a78ced2703107f446c21b633cfa2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>AEGIS Resume Intelligence</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_8a99a78ced2703107f446c21b633cfa2</sys_update_name>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 06:04:03</sys_updated_on>
+    </sn_nowassist_skill_config>
+    <sys_translated_text action="DELETE" query="documentkey=8a99a78ced2703107f446c21b633cfa2"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_nowassist_skill_config_8a99a78ced2703107f446c21b633cfa2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sn_nowassist_skill_config"&gt;&lt;sn_nowassist_skill_config action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;description&gt;&lt;![CDATA[Invoke when a new application with an attached resume needs to be parsed and scored against a specific job requisition. Input: resume file plus requisition ID. Output: a 5-factor weighted fit score (skills 30%, experience 25%, projects 20%, certifications 15%, education 10%) with per-factor explanation, computed after masking name, gender, photograph, and institution. Can only recommend SHORTLISTED or RECRUITER_REVIEW — never invoke this to reject a candidate.]]&gt;&lt;/description&gt;&lt;edited_in_nask&gt;false&lt;/edited_in_nask&gt;&lt;in_product_active&gt;false&lt;/in_product_active&gt;&lt;in_product_roles/&gt;&lt;internal_name&gt;aegis_resume_intelligence.8a99a78ced2703107f446c21b633cfa2&lt;/internal_name&gt;&lt;is_template&gt;false&lt;/is_template&gt;&lt;name&gt;AEGIS Resume Intelligence&lt;/name&gt;&lt;nap_skill_applicability/&gt;&lt;order&gt;100&lt;/order&gt;&lt;parent/&gt;&lt;skill_family display_value="Resume intelligence"&gt;680cabc0ed6703107f446c21b633cf64&lt;/skill_family&gt;&lt;skill_id&gt;6599a78ced2703107f446c21b633cf4c&lt;/skill_id&gt;&lt;skill_table&gt;sys_one_extend_capability&lt;/skill_table&gt;&lt;state&gt;1&lt;/state&gt;&lt;success_message/&gt;&lt;sys_class_name&gt;sn_nowassist_skill_config&lt;/sys_class_name&gt;&lt;sys_created_by&gt;DEEPTHI&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-21 05:52:39&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;8a99a78ced2703107f446c21b633cfa2&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;AEGIS Resume Intelligence&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_nowassist_skill_config_8a99a78ced2703107f446c21b633cfa2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;DEEPTHI&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-09-21 06:04:03&lt;/sys_updated_on&gt;&lt;/sn_nowassist_skill_config&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=8a99a78ced2703107f446c21b633cfa2"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1911566349</payload_hash>
+        <record_name>AEGIS Resume Intelligence</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-09-21 06:04:03</sys_created_on>
+        <sys_id>813c2304ed6703107f446c21b633cf6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c29079c20000001</sys_recorded_at>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-09-21 06:04:03</sys_updated_on>
+        <type>Now Assist Skill Config</type>
+        <update_guid>c53c230454670310b85d87d770b3996e</update_guid>
+        <update_guid_history>c53c230454670310b85d87d770b3996e:-1911566349,ac0cabc00d6703105cd840ec2b99a269:1970494740,8699a78ce4270310620082577fbc32ad:-1755534549,4e99a78cbc270310463dc458608b61a8:-1342531364</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AEGIS Resume Intelligence">e403258e7df743107f445046e28c780f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>DEEPTHI</sys_created_by>
+        <sys_created_on>2026-10-09 11:28:12</sys_created_on>
+        <sys_db_object display_value="" name="sn_nowassist_skill_config">sn_nowassist_skill_config</sys_db_object>
+        <sys_id>03805e06ae544a1782cd4c57972b2c11</sys_id>
+        <sys_metadata>8a99a78ced2703107f446c21b633cfa2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AEGIS Resume Intelligence</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_nowassist_skill_config_8a99a78ced2703107f446c21b633cfa2</sys_update_name>
+        <sys_update_version display_value="sn_nowassist_skill_config_8a99a78ced2703107f446c21b633cfa2">813c2304ed6703107f446c21b633cf6f</sys_update_version>
+        <sys_updated_by>DEEPTHI</sys_updated_by>
+        <sys_updated_on>2026-10-09 11:28:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

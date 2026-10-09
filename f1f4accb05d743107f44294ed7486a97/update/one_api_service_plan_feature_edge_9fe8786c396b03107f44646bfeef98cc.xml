@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="one_api_service_plan_feature_edge">
+    <one_api_service_plan_feature_edge action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability_condition_expression/>
+        <applicability_failed_policy/>
+        <applicability_script><![CDATA[(function(currentInputs, context) {  
+	/* @param {Object} currentInputs - Inputs provided for the current step.*/  
+	/* @param {Object} context - Execution context, which may include:*/     
+	/*         - Previous tool outputs/inputs (e.g., context['ToolName.attributeName'] or context.getValue('ToolName.attributeName')).*/     
+	/*         - Additional context information (e.g., context.getAllValues()).*/  
+	/* @returns {Boolean} - Return 'true' if the condition is met; otherwise 'false'.*/  
+	return true;
+  })(currentInputs, context);]]></applicability_script>
+        <applicability_type/>
+        <error_handler_script><![CDATA[(function handleError() {  
+	// customize condition logic here,  
+	return ;
+})();]]></error_handler_script>
+        <error_policy/>
+        <from_service_plan_feature display_value="___$y$t3m_bu1163r___-542203de7fe81210a01c7d8b7d86658c, cc801ebaff68a2101dbaffffffffff07-default: 542203de7fe81210a01c7d8b7d86658c-2">5be8786c396b03107f44646bfeef98c9</from_service_plan_feature>
+        <internal_name>InstructionToolSearch__Recommend AIA Tools RAG</internal_name>
+        <name>edge</name>
+        <order>0</order>
+        <sys_class_name>one_api_service_plan_feature_edge</sys_class_name>
+        <sys_created_by>RAKESH</sys_created_by>
+        <sys_created_on>2026-09-22 06:17:44</sys_created_on>
+        <sys_id>9fe8786c396b03107f44646bfeef98cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>edge</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>one_api_service_plan_feature_edge_9fe8786c396b03107f44646bfeef98cc</sys_update_name>
+        <sys_updated_by>RAKESH</sys_updated_by>
+        <sys_updated_on>2026-09-22 06:17:44</sys_updated_on>
+        <to_service_plan_feature display_value="___$y$t3m_bu1163r___-542203de7fe81210a01c7d8b7d86658c, cc801ebaff68a2101dbaffffffffff07-default: cc801ebaff68a2101dbaffffffffff07">93e8786c396b03107f44646bfeef98cb</to_service_plan_feature>
+    </one_api_service_plan_feature_edge>
+</record_update>

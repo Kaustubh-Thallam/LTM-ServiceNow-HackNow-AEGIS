@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config">
+    <sn_nowassist_skill_config action="DELETE">
+        <active>false</active>
+        <description><![CDATA[Drafts structured job descriptions from hiring manager inputs and scans for biased or exclusionary language. Cannot publish directly; manager approval is mandatory.]]></description>
+        <edited_in_nask>false</edited_in_nask>
+        <in_product_active>false</in_product_active>
+        <in_product_roles/>
+        <internal_name>clone_of_aegis_jd_architect_.5bc5ec80707303107f44bd17fa321077</internal_name>
+        <is_template>false</is_template>
+        <name>Clone of AEGIS JD Architect </name>
+        <nap_skill_applicability/>
+        <order>100</order>
+        <parent/>
+        <skill_family display_value="Other">a5efaf1c93764210aa5730f16489186d</skill_family>
+        <skill_id>3dc5ac80707303107f44bd17fa321032</skill_id>
+        <skill_table>sys_one_extend_capability</skill_table>
+        <state>0</state>
+        <success_message/>
+        <sys_class_name>sn_nowassist_skill_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 01:52:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5bc5ec80707303107f44bd17fa321077</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Clone of AEGIS JD Architect </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_5bc5ec80707303107f44bd17fa321077</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:52:55</sys_updated_on>
+    </sn_nowassist_skill_config>
+    <sys_translated_text action="DELETE" query="documentkey=5bc5ec80707303107f44bd17fa321077"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_nowassist_skill_config_5bc5ec80707303107f44bd17fa321077</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sn_nowassist_skill_config"&gt;&lt;sn_nowassist_skill_config action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;description&gt;&lt;![CDATA[Drafts structured job descriptions from hiring manager inputs and scans for biased or exclusionary language. Cannot publish directly; manager approval is mandatory.]]&gt;&lt;/description&gt;&lt;edited_in_nask&gt;false&lt;/edited_in_nask&gt;&lt;in_product_active&gt;false&lt;/in_product_active&gt;&lt;in_product_roles/&gt;&lt;internal_name&gt;clone_of_aegis_jd_architect_.5bc5ec80707303107f44bd17fa321077&lt;/internal_name&gt;&lt;is_template&gt;false&lt;/is_template&gt;&lt;name&gt;Clone of AEGIS JD Architect &lt;/name&gt;&lt;nap_skill_applicability/&gt;&lt;order&gt;100&lt;/order&gt;&lt;parent/&gt;&lt;skill_family display_value="Other"&gt;a5efaf1c93764210aa5730f16489186d&lt;/skill_family&gt;&lt;skill_id&gt;3dc5ac80707303107f44bd17fa321032&lt;/skill_id&gt;&lt;skill_table&gt;sys_one_extend_capability&lt;/skill_table&gt;&lt;state&gt;0&lt;/state&gt;&lt;success_message/&gt;&lt;sys_class_name&gt;sn_nowassist_skill_config&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-03 01:52:55&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;5bc5ec80707303107f44bd17fa321077&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Clone of AEGIS JD Architect &lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="AEGIS" source="x_snc_aegis"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AEGIS"&gt;f1f4accb05d743107f44294ed7486a97&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_nowassist_skill_config_5bc5ec80707303107f44bd17fa321077&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-03 01:52:55&lt;/sys_updated_on&gt;&lt;/sn_nowassist_skill_config&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=5bc5ec80707303107f44bd17fa321077"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>625632195</payload_hash>
+        <record_name>Clone of AEGIS JD Architect </record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 01:52:55</sys_created_on>
+        <sys_id>afc5ec80707303107f44bd17fa3210b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ff76df6c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:52:55</sys_updated_on>
+        <type>Now Assist Skill Config</type>
+        <update_guid>e3c5ec80247303109915304be97130b4</update_guid>
+        <update_guid_history>e3c5ec80247303109915304be97130b4:625632195,23c5ec8088730310b01933a14b75437e:-837608775</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Clone of AEGIS JD Architect ">214ff44c703703107f44bd17fa32106c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 03:44:13</sys_created_on>
+        <sys_db_object display_value="" name="sn_nowassist_skill_config">sn_nowassist_skill_config</sys_db_object>
+        <sys_id>44b5e251d4354f999a848e8102c6c2f9</sys_id>
+        <sys_metadata>5bc5ec80707303107f44bd17fa321077</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Clone of AEGIS JD Architect </sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_nowassist_skill_config_5bc5ec80707303107f44bd17fa321077</sys_update_name>
+        <sys_update_version display_value="sn_nowassist_skill_config_5bc5ec80707303107f44bd17fa321077">afc5ec80707303107f44bd17fa3210b4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 03:44:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

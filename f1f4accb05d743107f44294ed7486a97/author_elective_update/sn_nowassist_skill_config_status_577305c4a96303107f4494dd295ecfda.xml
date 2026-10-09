@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_status">
+    <sn_nowassist_skill_config_status action="DELETE">
+        <active>false</active>
+        <in_mobile_active>false</in_mobile_active>
+        <in_mobile_roles/>
+        <in_product_active>false</in_product_active>
+        <in_product_roles/>
+        <skill_config display_value="AEGIS JD Architect">9b7305c4a96303107f4494dd295ecfd7</skill_config>
+        <sys_class_name>sn_nowassist_skill_config_status</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 17:46:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>577305c4a96303107f4494dd295ecfda</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_status_577305c4a96303107f4494dd295ecfda</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:35:48</sys_updated_on>
+    </sn_nowassist_skill_config_status>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_nowassist_skill_config_status_577305c4a96303107f4494dd295ecfda</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_status"><sn_nowassist_skill_config_status action="INSERT_OR_UPDATE"><active>false</active><in_mobile_active>false</in_mobile_active><in_mobile_roles/><in_product_active>false</in_product_active><in_product_roles/><skill_config display_value="AEGIS JD Architect">9b7305c4a96303107f4494dd295ecfd7</skill_config><sys_class_name>sn_nowassist_skill_config_status</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-20 17:46:55</sys_created_on><sys_domain>global</sys_domain><sys_id>577305c4a96303107f4494dd295ecfda</sys_id><sys_mod_count>2</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sn_nowassist_skill_config_status_577305c4a96303107f4494dd295ecfda</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-20 18:35:48</sys_updated_on></sn_nowassist_skill_config_status></record_update>]]></payload>
+        <payload_hash>1880527634</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 18:35:48</sys_created_on>
+        <sys_id>efae4d00a9e303107f4494dd295ecffa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0c01a5f260000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:35:48</sys_updated_on>
+        <type>Now Assist Skill Config Status</type>
+        <update_guid>e3ae4d0039e30310a04bc174202308fa</update_guid>
+        <update_guid_history>e3ae4d0039e30310a04bc174202308fa:1880527634,ec6ccd88fca30310b29f26fa2afb186a:964860275,df7305c4c1630310ab207788fc7c38dc:1880527634</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">2fd15d08a9e303107f4494dd295ecfa7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 18:49:44</sys_created_on>
+        <sys_db_object display_value="" name="sn_nowassist_skill_config_status">sn_nowassist_skill_config_status</sys_db_object>
+        <sys_id>3734aca9b40044e095c7f6d4ca425ec9</sys_id>
+        <sys_metadata>577305c4a96303107f4494dd295ecfda</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_nowassist_skill_config_status_577305c4a96303107f4494dd295ecfda</sys_update_name>
+        <sys_update_version display_value="sn_nowassist_skill_config_status_577305c4a96303107f4494dd295ecfda">efae4d00a9e303107f4494dd295ecffa</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 18:49:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

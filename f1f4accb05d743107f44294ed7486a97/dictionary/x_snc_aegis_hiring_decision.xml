@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="4915bf4f855303107f446d73c9814a99" extends="task" label="Hiring Decision" max_length="40" name="x_snc_aegis_hiring_decision" type="collection">
+        <element attributes="encode_utf8=false" label="Requisition" mandatory="true" max_length="32" name="requisition" reference="x_snc_aegis_job_requisition" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Final Human Decision" max_length="40" name="human_decision" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Select" sequence="0" value="SELECT"/>
+                <element inactive_on_update="false" label="Reject" sequence="2" value="REJECT"/>
+                <element inactive_on_update="false" label="Hold" sequence="1" value="HOLD"/>
+            </choice>
+        </element>
+        <element label="Candidate" mandatory="true" max_length="32" name="candidate" reference="x_snc_aegis_candidate" type="reference"/>
+        <element default="False" label="Is Human Override" mandatory="true" max_length="40" name="is_override" type="boolean"/>
+        <element default="False" label="Closure complete" mandatory="true" max_length="40" name="closure_complete" type="boolean"/>
+        <element label="AI Evidentiary Confidence" mandatory="true" max_length="15" name="ai_confidence" read_only="true" read_only_option="display_read_only" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Human decision at" max_length="40" name="human_decision_at" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Mandatory Override Reason" max_length="4000" name="override_reason" type="string"/>
+        <element attributes="encode_utf8=false" label="Human decision by" max_length="32" name="human_decision_by" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Synthesis summary" max_length="4000" name="synthesis_summary" type="string"/>
+        <element display="true" label="Application" mandatory="true" max_length="32" name="application" reference="x_snc_aegis_application" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Ai recommendation" mandatory="true" max_length="40" name="ai_recommendation" read_only="true" read_only_option="display_read_only" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Hold" sequence="1" value="HOLD"/>
+                <element inactive_on_update="false" label="Reject" sequence="2" value="REJECT"/>
+                <element inactive_on_update="false" label="Select" sequence="0" value="SELECT"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="PENDING_HUMAN" label="Decision status" mandatory="true" max_length="40" name="decision_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Completed" sequence="1" value="COMPLETED"/>
+                <element inactive_on_update="false" label="Pending human" sequence="0" value="PENDING_HUMAN"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="AI Evidentiary Justification" mandatory="true" max_length="4000" name="ai_reasoning" read_only="true" read_only_option="display_read_only" type="string"/>
+    </element>
+</database>

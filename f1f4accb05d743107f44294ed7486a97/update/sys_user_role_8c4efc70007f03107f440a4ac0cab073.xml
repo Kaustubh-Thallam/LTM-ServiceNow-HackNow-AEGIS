@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Views assigned interviews and submits structured interview feedback and scores.</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>CzFRTq+SLRyeDuXflXhSDLk8oOnG2lqgu5bPhxVk41k=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_aegis.interview_panelist</name>

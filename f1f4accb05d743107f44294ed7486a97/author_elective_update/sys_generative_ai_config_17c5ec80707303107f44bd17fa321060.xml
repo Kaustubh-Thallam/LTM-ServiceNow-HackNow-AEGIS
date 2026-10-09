@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config">
+    <sys_generative_ai_config action="DELETE">
+        <active>false</active>
+        <additional_configurations>{}</additional_configurations>
+        <ai_suggested>false</ai_suggested>
+        <definition>b2c5ec80707303107f44bd17fa32103b</definition>
+        <definition_table>sys_one_extend_capability_definition</definition_table>
+        <documentation/>
+        <max_tokens>2500</max_tokens>
+        <min_word_count>-1</min_word_count>
+        <model>claude_small</model>
+        <name>AI generated prompt</name>
+        <parent/>
+        <prompt>## Role  
+You are a hiring specialist with expertise in crafting job descriptions and identifying biased language. Your task is to draft structured job descriptions from hiring manager inputs, scan for exclusionary or biased language, and ensure compliance with fairness standards. Final publication requires mandatory manager approval.  
+
+## Context  
+The hiring manager’s input for the job description: ' {{requisition.role_title}} '  
+Biased or exclusionary language guidelines: ' {{requisition.level}} '  
+
+## Instructions  
+1. **Analyze the Input**: Review the hiring manager’s job description draft to understand the role, responsibilities, and requirements.  
+2. **Structure the Job Description**: Organize the content into clear sections (e.g., Job Title, Location, Key Responsibilities, Qualifications) while maintaining the manager’s intent.  
+3. **Scan for Bias**: Identify and flag language that may be exclusionary, gendered, or discriminatory (e.g., terms like “native speaker,” “recent graduate,” or culturally specific phrases).  
+4. **Revise for Neutrality**: Rewrite problematic sections to ensure inclusivity and compliance with the provided guidelines.  
+5. **Prepare for Approval**: Highlight changes made and note flagged language in a summary for the hiring manager’s review.  
+
+## Output  
+The output will be a revised job description draft with bias flags and a summary of changes. Format:  
+
+**Revised Job Description**:  
+[Structured, bias-free version of the job description]  
+
+**Bias Summary**:  
+- Flagged phrases: [List of problematic terms/phrases]  
+- Revisions made: [Brief description of changes]  
+
+Ensure the output is concise, professional, and ready for manager approval.</prompt>
+        <prompt_template_role>user</prompt_template_role>
+        <provider_company/>
+        <request_tokens>128322</request_tokens>
+        <show_in_prompt_library>true</show_in_prompt_library>
+        <state>draft</state>
+        <structured_output_enabled>false</structured_output_enabled>
+        <structured_output_schema/>
+        <sys_class_name>sys_generative_ai_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 01:52:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>17c5ec80707303107f44bd17fa321060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b2c5ec80707303107f44bd17fa32103b</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sys_generative_ai_config_17c5ec80707303107f44bd17fa321060</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:52:54</sys_updated_on>
+        <temperature>0.2</temperature>
+        <thinking_tokens>0</thinking_tokens>
+        <version>1</version>
+    </sys_generative_ai_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sys_generative_ai_config_17c5ec80707303107f44bd17fa321060</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_generative_ai_config"><sys_generative_ai_config action="INSERT_OR_UPDATE"><active>false</active><additional_configurations>{}</additional_configurations><ai_suggested>false</ai_suggested><definition>b2c5ec80707303107f44bd17fa32103b</definition><definition_table>sys_one_extend_capability_definition</definition_table><documentation/><max_tokens>2500</max_tokens><min_word_count>-1</min_word_count><model>claude_small</model><name>AI generated prompt</name><parent/><prompt>## Role  
+You are a hiring specialist with expertise in crafting job descriptions and identifying biased language. Your task is to draft structured job descriptions from hiring manager inputs, scan for exclusionary or biased language, and ensure compliance with fairness standards. Final publication requires mandatory manager approval.  
+
+## Context  
+The hiring manager’s input for the job description: ' {{requisition.role_title}} '  
+Biased or exclusionary language guidelines: ' {{requisition.level}} '  
+
+## Instructions  
+1. **Analyze the Input**: Review the hiring manager’s job description draft to understand the role, responsibilities, and requirements.  
+2. **Structure the Job Description**: Organize the content into clear sections (e.g., Job Title, Location, Key Responsibilities, Qualifications) while maintaining the manager’s intent.  
+3. **Scan for Bias**: Identify and flag language that may be exclusionary, gendered, or discriminatory (e.g., terms like “native speaker,” “recent graduate,” or culturally specific phrases).  
+4. **Revise for Neutrality**: Rewrite problematic sections to ensure inclusivity and compliance with the provided guidelines.  
+5. **Prepare for Approval**: Highlight changes made and note flagged language in a summary for the hiring manager’s review.  
+
+## Output  
+The output will be a revised job description draft with bias flags and a summary of changes. Format:  
+
+**Revised Job Description**:  
+[Structured, bias-free version of the job description]  
+
+**Bias Summary**:  
+- Flagged phrases: [List of problematic terms/phrases]  
+- Revisions made: [Brief description of changes]  
+
+Ensure the output is concise, professional, and ready for manager approval.</prompt><prompt_template_role>user</prompt_template_role><provider_company/><request_tokens>128322</request_tokens><show_in_prompt_library>true</show_in_prompt_library><state>draft</state><structured_output_enabled>false</structured_output_enabled><structured_output_schema/><sys_class_name>sys_generative_ai_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-10-03 01:52:54</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>17c5ec80707303107f44bd17fa321060</sys_id><sys_mod_count>0</sys_mod_count><sys_name>b2c5ec80707303107f44bd17fa32103b</sys_name><sys_overrides/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sys_generative_ai_config_17c5ec80707303107f44bd17fa321060</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-03 01:52:54</sys_updated_on><temperature>0.2</temperature><thinking_tokens>0</thinking_tokens><version>1</version></sys_generative_ai_config></record_update>]]></payload>
+        <payload_hash>1610862862</payload_hash>
+        <record_name>b2c5ec80707303107f44bd17fa32103b</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 01:52:54</sys_created_on>
+        <sys_id>dbc5ec80707303107f44bd17fa321066</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ff76dc450000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:52:54</sys_updated_on>
+        <type>Generative AI Configuration</type>
+        <update_guid>dfc5ec808673031008d1a6e259567a65</update_guid>
+        <update_guid_history>dfc5ec808673031008d1a6e259567a65:1610862862</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 03:54:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_generative_ai_config">sys_generative_ai_config</sys_db_object>
+        <sys_id>5dd75d78b47646b49f93707800dc1499</sys_id>
+        <sys_metadata>17c5ec80707303107f44bd17fa321060</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b2c5ec80707303107f44bd17fa32103b</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sys_generative_ai_config_17c5ec80707303107f44bd17fa321060</sys_update_name>
+        <sys_update_version display_value="sys_generative_ai_config_17c5ec80707303107f44bd17fa321060">dbc5ec80707303107f44bd17fa321066</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 03:54:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

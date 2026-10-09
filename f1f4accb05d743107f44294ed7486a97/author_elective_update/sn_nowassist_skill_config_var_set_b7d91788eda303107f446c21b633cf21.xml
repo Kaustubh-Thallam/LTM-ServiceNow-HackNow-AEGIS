@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_var_set">
+    <sn_nowassist_skill_config_var_set action="DELETE">
+        <config_type display_value="Skill builder View Trigger step">b89b1f0b7f821210076726d6ac86650e</config_type>
+        <description/>
+        <hide_step>false</hide_step>
+        <name>View trigger</name>
+        <order>100</order>
+        <parent/>
+        <screen_id/>
+        <screen_table>sys_ux_macroponent</screen_table>
+        <skill_config display_value="AEGIS JD Architect V2">6967df88ed6303107f446c21b633cf07</skill_config>
+        <sys_class_name>sn_nowassist_skill_config_var_set</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-21 04:43:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>b7d91788eda303107f446c21b633cf21</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>View trigger</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_var_set_b7d91788eda303107f446c21b633cf21</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:45:00</sys_updated_on>
+        <title/>
+        <vars/>
+    </sn_nowassist_skill_config_var_set>
+    <sys_translated_text action="DELETE" query="documentkey=b7d91788eda303107f446c21b633cf21"/>
+    <sys_variable_value action="DELETE" query="document_key=b7d91788eda303107f446c21b633cf21"/>
+    <sys_variable_value action="DELETE">
+        <document>sn_nowassist_skill_config_var_set</document>
+        <document_key>b7d91788eda303107f446c21b633cf21</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-21 04:43:58</sys_created_on>
+        <sys_id>c8e91788eda303107f446c21b633cf22</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:45:00</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Enable Workflow Trigger">5c5623df7f025210076726d6ac8665f9</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</application>
+        <file_path/>
+        <instance_id>c2d18dc7c38fcf94a03197af05013197</instance_id>
+        <instance_name>ltm-hck-2876-0029</instance_name>
+        <name>sn_nowassist_skill_config_var_set_b7d91788eda303107f446c21b633cf21</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_var_set"><sn_nowassist_skill_config_var_set action="INSERT_OR_UPDATE"><config_type display_value="Skill builder View Trigger step">b89b1f0b7f821210076726d6ac86650e</config_type><description/><hide_step>false</hide_step><name>View trigger</name><order>100</order><parent/><screen_id/><screen_table>sys_ux_macroponent</screen_table><skill_config display_value="AEGIS JD Architect V2">6967df88ed6303107f446c21b633cf07</skill_config><sys_class_name>sn_nowassist_skill_config_var_set</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-21 04:43:58</sys_created_on><sys_domain>global</sys_domain><sys_id>b7d91788eda303107f446c21b633cf21</sys_id><sys_mod_count>2</sys_mod_count><sys_name>View trigger</sys_name><sys_overrides/><sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package><sys_policy/><sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope><sys_update_name>sn_nowassist_skill_config_var_set_b7d91788eda303107f446c21b633cf21</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-03 01:45:00</sys_updated_on><title/><vars/></sn_nowassist_skill_config_var_set><sys_translated_text action="delete_multiple" query="documentkey=b7d91788eda303107f446c21b633cf21"/><sys_variable_value action="delete_multiple" query="document_key=b7d91788eda303107f446c21b633cf21"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sn_nowassist_skill_config_var_set</document><document_key>b7d91788eda303107f446c21b633cf21</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-21 04:43:58</sys_created_on><sys_id>c8e91788eda303107f446c21b633cf22</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-03 01:45:00</sys_updated_on><value>0</value><variable display_value="Enable Workflow Trigger">5c5623df7f025210076726d6ac8665f9</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>728425336</payload_hash>
+        <record_name>View trigger</record_name>
+        <reverted_from/>
+        <source>3df4accb05d743107f44294ed7486a9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 01:45:01</sys_created_on>
+        <sys_id>77f32c4c703303107f44bd17fa32108e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0ff6fa30e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 01:45:01</sys_updated_on>
+        <type>Now Assist Skill Config Var Set</type>
+        <update_guid>f7f32c4cca330310250f2502c0aec38d</update_guid>
+        <update_guid_history>f7f32c4cca330310250f2502c0aec38d:728425336,292c9380aae3031066bef102b4be3875:-165509575,0ce9178802a3031041468312c7842ba1:728425336</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="View trigger">00c030c870b303107f44bd17fa32104e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 02:40:45</sys_created_on>
+        <sys_db_object display_value="" name="sn_nowassist_skill_config_var_set">sn_nowassist_skill_config_var_set</sys_db_object>
+        <sys_id>03e3579cd6c64260801d3d1dbfe47100</sys_id>
+        <sys_metadata>b7d91788eda303107f446c21b633cf21</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>View trigger</sys_name>
+        <sys_package display_value="AEGIS" source="x_snc_aegis">f1f4accb05d743107f44294ed7486a97</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AEGIS">f1f4accb05d743107f44294ed7486a97</sys_scope>
+        <sys_scope_delete display_value="">8d075afa73204f119796b2534b6fbb59</sys_scope_delete>
+        <sys_update_name>sn_nowassist_skill_config_var_set_b7d91788eda303107f446c21b633cf21</sys_update_name>
+        <sys_update_version display_value="sn_nowassist_skill_config_var_set_b7d91788eda303107f446c21b633cf21">77f32c4c703303107f44bd17fa32108e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 02:40:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
