@@ -177,4 +177,4 @@ AEGIS is a scoped ServiceNow application with these core tables:
 
 ---
 
-*Let AI do the processing. Let humans own the decisions. Let evidence speak for both.*
+*Let AI do the processing, humans own the decisions and evidence speak for both.*
